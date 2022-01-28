@@ -26,13 +26,37 @@ const get_ws_server = () => {
 let Manager = {
     sessionKey:'__MalinkCorpSessionID__',
     sessionId:null,
+    courseInfo:{},
     sayHi:()=>{
         Manager.sessionId = getCookie(Manager.sessionKey);
         if(Manager.sessionId == null){
             Manager.sessionId = md5((new Date().toString()));
             setCookie(Manager.sessionKey, Manager.sessionId, 7); 
         }
-        Ws.conn.send(JSON.stringify({action: 'chk_session',data:Manager.sessionId}));
+        Ws.conn.send(JSON.stringify({
+            action : 'chk_session', 
+            sessionId : Manager.sessionId,
+            courseInfo : Manager.getInfo()
+        }));
+    },
+    getInfo:()=>{
+        const fullUrl       = window.location.href;
+        const protoSplitStr = '://';
+        const fullUrlSplit  = fullUrl.split(protoSplitStr);
+        const proto         = fullUrlSplit[0]; 
+        const urlSplit      = fullUrlSplit[1].split('/');
+        Manager.courseInfo.hostname      = urlSplit[0];
+        Manager.courseInfo.coursePath    = `${urlSplit[1]}/${urlSplit[2]}`;
+        Manager.courseInfo.courseUrl     = `${proto}${protoSplitStr}/${Manager.courseInfo.hostname }/${Manager.courseInfo.coursePath}`; 
+        Manager.courseInfo.courseTitle   = urlSplit[2];
+        Manager.courseInfo.tocs = Manager.getToc();
+        return Manager.courseInfo;
+    },
+    getToc:()=>{
+        const tocContainer = $('.classroom-layout-sidebar-body > .classroom-toc-section');
+        const titleSelector = '.classroom-toc-item__title';
+        const durationSelector = '.';
+
     }
 };
 //**************************************************
