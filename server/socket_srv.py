@@ -3,6 +3,7 @@
 # WS server example that synchronizes state across clients
 
 import asyncio
+from email import message
 import json
 import logging
 import websockets
@@ -12,7 +13,14 @@ logging.basicConfig()
 STATE = {"value": 0}
 
 USERS = set()
+PARAM = {}
+SESSION = {}
 
+async def session_check(sessionId, callback):
+    status = SESSION.get(sessionId) != None
+    message = json.dumps({"type":"session","sessionId":sessionId,"status":status, "callback":callback})
+    if USERS:  # asyncio.wait doesn't accept an empty list
+        await asyncio.wait([user.send(message) for user in USERS])
 
 def state_event():
     return json.dumps({"type": "state", **STATE})
@@ -48,18 +56,30 @@ async def counter(websocket, path):
     # register(websocket) sends user_event() to websocket
     await register(websocket)
     try:
-        await websocket.send(state_event())
+        # await websocket.send(state_event())
         async for message in websocket:
             data = json.loads(message)
-            print(data)
+            # action = PARAM['action']
+            # # print()
+            # if action != None:
+            #     # print(type(action))
+            #     await eval(action + '()')
+            
+
             if data["action"] == "minus":
                 STATE["value"] -= 1
                 await notify_state()
             elif data["action"] == "plus":
                 STATE["value"] += 1
                 await notify_state()
+            
+            # PARAM['action'] = data['action']    
+            if data["action"] == "session_check":
+                await session_check(data['sessionId'],data['callback'])
             else:
                 logging.error("unsupported event: %s", data)
+                # if data["action"] == 'session_check':
+                #     session_check()
     finally:
         await unregister(websocket)
 

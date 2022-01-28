@@ -23,21 +23,50 @@ function eraseCookie(name) {
 const get_ws_server = () => {
     return "127.0.0.1"
 }
+SocketProxy = {
+    send : (_action, _data, _callback) =>{
+        const payload = Object.assign({
+            action : _action,
+            callback : typeof _callback == 'string' ? _callback : 'noop'
+        },_data);
+        Ws.conn.send(JSON.stringify(payload));
+    },
+    Session : {
+        check : (_callback) => {
+            SocketProxy.send('session_check',{sessionId:Manager.getSessionId()},_callback);            
+        },
+        register : () =>{
+
+        }
+    } 
+};
+let Cb = {
+    afterSessionCheck : (data)=>{
+        console.log(data);
+    }
+};
 let Manager = {
     sessionKey:'__MalinkCorpSessionID__',
     sessionId:null,
     courseInfo:{},
-    sayHi:()=>{
+    getSessionId:()=>{
         Manager.sessionId = getCookie(Manager.sessionKey);
         if(Manager.sessionId == null){
             Manager.sessionId = md5((new Date().toString()));
             setCookie(Manager.sessionKey, Manager.sessionId, 7); 
         }
-        Ws.conn.send(JSON.stringify({
-            action : 'chk_session', 
-            sessionId : Manager.sessionId,
-            courseInfo : Manager.getInfo()
-        }));
+        return Manager.sessionId;
+    },
+    sayHi:()=>{
+        Manager.getSessionId();
+        console.log('checking session');
+        SocketProxy.Session.check('afterSessionCheck');        
+    },
+    onMessage:(event)=>{
+            const data = JSON.parse(event.data);
+            if(typeof Cb[data.callback] == 'function'){
+                Cb[data.callback](data)
+            }
     },
     getInfo:()=>{
         const fullUrl       = window.location.href;
@@ -94,7 +123,7 @@ let handleVideoData = {
 }
 
 const handleVideoChanges = () => {
-    console.log('Checking Video Changes');
+    // console.log('Checking Video Changes');
     const videoContainer = $('.vjs-tech');
     const videoUrl  = videoContainer.attr('src');
     let linkUrlSplit   = document.location.href.split('://');
@@ -106,16 +135,16 @@ const handleVideoChanges = () => {
         handleVideoData.lastVideoUrl  = videoUrl;
         handleVideoData.lastPosterUrl = posterUrl;
         handleVideoData.lastVideoSlug = videoSlug;
-        console.log(handleVideoData);
+        // console.log(handleVideoData);
 
     }
 
 };
 
 const handleUrlChanges = () => {
-    console.log('Checking Urls');
+    // console.log('Checking Urls');
     if( Manager.courseInfo.fullUrl != window.location.href || handleUrlData.firstTime){
-        console.log(Manager.getInfo());
+        // console.log(Manager.getInfo());
     }
     handleUrlData.firstTime = false;
 };
@@ -137,9 +166,13 @@ let Ws = {
     autoReconnectInterval : 5*1000,
     init:function() {
         Ws.conn = new WebSocket('ws://'+get_ws_server()+':8080/');
+        
         Ws.conn.onopen = ()=>{
             console.log('Koneksi WebSocket terhubung');
             Manager.sayHi();
+            if(typeof Ws.conn.onmessage != 'function'){
+                Ws.conn.onmessage = Manager.onMessage;
+            }
         };
         Ws.conn.onclose = () =>{
             console.log('Koneksi WebSocket ditutup');
