@@ -35,14 +35,62 @@ SocketProxy = {
         check : (_callback) => {
             SocketProxy.send('session_check',{sessionId:Manager.getSessionId()},_callback);            
         },
-        register : () =>{
-
+        create : (_callback) => {
+            SocketProxy.send('session_create',{sessionId:Manager.getSessionId(),courseInfo:Manager.getInfo()},_callback);
         }
+    },
+    resolveVideoUrl : (videoSlug, videoUrl, posterUrl, _callback) => {
+        SocketProxy.send('resolve_video_url',{sessionId:Manager.getSessionId(),slug: videoSlug, videoUrl: videoUrl, posterUrl: posterUrl},_callback);
     } 
 };
 let Cb = {
+    startWaiters : ()=>{
+        clearInterval(handleUrlData.siHandler);
+        handleUrlData.siHandler = setInterval(()=>{
+            handleUrlChanges();
+        },2000);
+
+        clearInterval(handleVideoData.siHandler);
+        handleVideoData.siHandler = setInterval(()=>{
+            handleVideoChanges();
+        },2000);
+    },
     afterSessionCheck : (data)=>{
+        if(!data.status){
+            SocketProxy.Session.create('afterSessionCreate')
+        }else{
+            Manager.getInfo();
+            Cb.startWaiters();
+        }
         console.log(data);
+    },
+    afterSessionCreate : (data)=>{
+        if(data.status){
+            Manager.getInfo();
+            Cb.startWaiters();
+        }
+        console.log(data);
+    },
+    afterResolveVideoUrl : (data)=>{
+        if(data.status){
+            Cb.resolveNextVideo(data.index, data.videoUrl,data.posterUrl);
+        }
+        console.log(data);
+    },
+    resolveNextVideo: (index,videoUrl,posterUrl) => {
+        Manager.courseInfo.tocs[index].videoUrl=videoUrl;
+        Manager.courseInfo.tocs[index].posterUrl=posterUrl;
+
+        if(index < Manager.courseInfo.tocs.length - 1){
+            const nextToc = Manager.courseInfo.tocs[index+1];
+            const linkSelector = `a[href*=${nextToc.slug}]`;
+            console.log(linkSelector)
+            // $(linkSelector).click();
+            document.location.href = nextToc.url;
+        }else{
+            console.log('You have reach the last video');
+        }
+        console.log(Manager.courseInfo.tocs)
     }
 };
 let Manager = {
@@ -135,6 +183,8 @@ const handleVideoChanges = () => {
         handleVideoData.lastVideoUrl  = videoUrl;
         handleVideoData.lastPosterUrl = posterUrl;
         handleVideoData.lastVideoSlug = videoSlug;
+        console.log('resolveVideoUrl')
+        SocketProxy.resolveVideoUrl(videoSlug, videoUrl, posterUrl, 'afterResolveVideoUrl')
         // console.log(handleVideoData);
 
     }
@@ -149,15 +199,7 @@ const handleUrlChanges = () => {
     handleUrlData.firstTime = false;
 };
 
-clearInterval(handleUrlData.siHandler);
-handleUrlData.siHandler = setInterval(()=>{
-    handleUrlChanges();
-},2000);
 
-clearInterval(handleVideoData.siHandler);
-handleVideoData.siHandler = setInterval(()=>{
-    handleVideoChanges();
-},2000);
 
 //**************************************************
 let Ws = {

@@ -15,13 +15,49 @@ STATE = {"value": 0}
 USERS = set()
 PARAM = {}
 SESSION = {}
+SESSION_DB_PATH = "storage/session.json"
 
+async def resolve_video_url(sessionId, slug, videoUrl, posterUrl, callback):
+    global SESSION
+    tocs = SESSION[sessionId]['tocs']
+    print(slug,videoUrl,posterUrl)
+    idx = 0
+    for i in tocs :
+        if i['slug'] == slug :
+            SESSION[sessionId]['tocs'][idx]['videoUrl'] = videoUrl
+            SESSION[sessionId]['tocs'][idx]['posterUrl'] = posterUrl
+            break
+        idx += 1
+    # SESSION[sessionId]['tocs']  = tocs
+    # print(SESSION[sessionId]['tocs'][idx])
+    update_session_db()
+    message = json.dumps({"type":"video","sessionId":sessionId,"status":True,"index": idx, "slug" : slug, "callback":callback})
+    if USERS:  # asyncio.wait doesn't accept an empty list
+        await asyncio.wait([user.send(message) for user in USERS])
+
+def init_session_db():
+    global SESSION
+    with open(SESSION_DB_PATH) as json_file:
+        SESSION = json.load(json_file)
+        print(len(SESSION))
+def update_session_db():
+    jsonString = json.dumps(SESSION)
+    jsonFile = open(SESSION_DB_PATH, "w")
+    jsonFile.write(jsonString)
+    jsonFile.close()
 async def session_check(sessionId, callback):
+    global SESSION
+    # print(SESSION)
     status = SESSION.get(sessionId) != None
     message = json.dumps({"type":"session","sessionId":sessionId,"status":status, "callback":callback})
     if USERS:  # asyncio.wait doesn't accept an empty list
         await asyncio.wait([user.send(message) for user in USERS])
-
+async def session_create(sessionId, courseInfo, callback):
+    SESSION[sessionId] = courseInfo
+    message = json.dumps({"type":"session","sessionId":sessionId,"status":True, "callback":callback})
+    update_session_db()
+    if USERS:  # asyncio.wait doesn't accept an empty list
+        await asyncio.wait([user.send(message) for user in USERS])
 def state_event():
     return json.dumps({"type": "state", **STATE})
 
@@ -76,6 +112,10 @@ async def counter(websocket, path):
             # PARAM['action'] = data['action']    
             if data["action"] == "session_check":
                 await session_check(data['sessionId'],data['callback'])
+            elif data["action"] == "session_create":
+                await session_create(data['sessionId'],data['courseInfo'],data['callback'])
+            elif data["action"] == "resolve_video_url":
+                await resolve_video_url(data['sessionId'],data['slug'],data['videoUrl'],data['posterUrl'],data['callback'])
             else:
                 logging.error("unsupported event: %s", data)
                 # if data["action"] == 'session_check':
@@ -83,7 +123,7 @@ async def counter(websocket, path):
     finally:
         await unregister(websocket)
 
-
+init_session_db()
 start_server = websockets.serve(counter, "localhost", 8080)
 
 asyncio.get_event_loop().run_until_complete(start_server)
