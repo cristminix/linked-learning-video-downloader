@@ -53,9 +53,23 @@ let Manager = {
         return Manager.courseInfo;
     },
     getToc:()=>{
-        const tocContainer = $('.classroom-layout-sidebar-body > .classroom-toc-section');
-        const titleSelector = '.classroom-toc-item__title';
-        const durationSelector = '.';
+        const tocContainer      = $('.classroom-layout-sidebar-body > .classroom-toc-section');
+        const itemSelector      = '.classroom-toc-item__content';
+        const titleSelector     = '.classroom-toc-item__title';
+        const durationSelector  = '.t-12';
+        
+        let tocs = [];
+
+        for(let i = 0; i < tocContainer.length; i++){
+            const itemContainer = $(tocContainer[i]).find(itemSelector);
+            for(let j = 0; j < itemContainer.length; j++){
+                const titleContainer    = itemContainer.find(titleSelector);
+                const durationContainer  = itemContainer.find(durationSelector);
+
+                tocs[i] = {title : titleContainer.text().trim().replace(/\n.*/g,'')
+                , duration: durationContainer.text().trim().replace(/\n.*/g,'')};
+            }
+        }
 
     }
 };
