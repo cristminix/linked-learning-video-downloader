@@ -50,12 +50,15 @@ let Manager = {
         Manager.courseInfo.courseUrl     = `${proto}${protoSplitStr}/${Manager.courseInfo.hostname }/${Manager.courseInfo.coursePath}`; 
         Manager.courseInfo.courseTitle   = urlSplit[2];
         Manager.courseInfo.tocs = Manager.getToc();
+        Manager.courseInfo.fullUrl = fullUrl;
+
         return Manager.courseInfo;
     },
     getToc:()=>{
         const tocContainer      = $('.classroom-layout-sidebar-body > .classroom-toc-section');
         const itemSelector      = '.classroom-toc-item__content';
         const titleSelector     = '.classroom-toc-item__title';
+        // const linkSelector     = '.classroom-toc-item__link';
         const durationSelector  = '.t-12';
         
         let tocs = [];
@@ -64,15 +67,69 @@ let Manager = {
             const itemContainer = $(tocContainer[i]).find(itemSelector);
             for(let j = 0; j < itemContainer.length; j++){
                 const titleContainer    = itemContainer.find(titleSelector);
+                const linkContainer    = itemContainer.closest('a');
                 const durationContainer  = itemContainer.find(durationSelector);
-
-                tocs[i] = {title : titleContainer.text().trim().replace(/\n.*/g,'')
+                const linkUrl = linkContainer.attr('href');
+                const linkUrlSplit = linkUrl.split('/');
+                const videoSlug = linkUrlSplit[3].split('?')[0];
+                tocs[i] = {slug: videoSlug,url:linkUrl,title : titleContainer.text().trim().replace(/\n.*/g,'')
                 , duration: durationContainer.text().trim().replace(/\n.*/g,'')};
             }
         }
 
+        return tocs;
+
     }
 };
+let handleUrlData = {
+    firstTime : true,
+    siHandler : 0 
+};
+
+let handleVideoData = {
+    siHandler : 0,
+    lastVideoUrl : '',
+    lastPosterUrl: '',
+    lastVideoSlug: ''
+}
+
+const handleVideoChanges = () => {
+    console.log('Checking Video Changes');
+    const videoContainer = $('.vjs-tech');
+    const videoUrl  = videoContainer.attr('src');
+    let linkUrlSplit   = document.location.href.split('://');
+    linkUrlSplit = linkUrlSplit[1].split('/');
+    const videoSlug = linkUrlSplit[3].split('?')[0];
+
+    const posterUrl = $('.vjs-poster')[0].style.backgroundImage.replace(/url\(\"/,'').replace(/\"\)/,'');
+    if( handleVideoData.lastVideoUrl != videoUrl){
+        handleVideoData.lastVideoUrl  = videoUrl;
+        handleVideoData.lastPosterUrl = posterUrl;
+        handleVideoData.lastVideoSlug = videoSlug;
+        console.log(handleVideoData);
+
+    }
+
+};
+
+const handleUrlChanges = () => {
+    console.log('Checking Urls');
+    if( Manager.courseInfo.fullUrl != window.location.href || handleUrlData.firstTime){
+        console.log(Manager.getInfo());
+    }
+    handleUrlData.firstTime = false;
+};
+
+clearInterval(handleUrlData.siHandler);
+handleUrlData.siHandler = setInterval(()=>{
+    handleUrlChanges();
+},2000);
+
+clearInterval(handleVideoData.siHandler);
+handleVideoData.siHandler = setInterval(()=>{
+    handleVideoChanges();
+},2000);
+
 //**************************************************
 let Ws = {
     conn: 0,
