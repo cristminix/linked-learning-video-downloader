@@ -39,8 +39,8 @@ SocketProxy = {
             SocketProxy.send('session_create',{sessionId:Manager.getSessionId(),courseInfo:Manager.getInfo()},_callback);
         }
     },
-    resolveVideoUrl : (videoSlug, videoUrl, posterUrl, _callback) => {
-        SocketProxy.send('resolve_video_url',{sessionId:Manager.getSessionId(),slug: videoSlug, videoUrl: videoUrl, posterUrl: posterUrl},_callback);
+    resolveVideoUrl : (videoSlug, videoUrl, posterUrl,captionUrl, _callback) => {
+        SocketProxy.send('resolve_video_url',{sessionId:Manager.getSessionId(),captionUrl:captionUrl,slug: videoSlug, videoUrl: videoUrl, posterUrl: posterUrl},_callback);
     } 
 };
 let Cb = {
@@ -87,10 +87,11 @@ let Cb = {
             console.log(linkSelector)
             // $(linkSelector).click();
             document.location.href = nextToc.url;
+            
         }else{
             console.log('You have reach the last video');
         }
-        console.log(Manager.courseInfo.tocs)
+        // console.log(Manager.courseInfo.tocs)
     }
 };
 let Manager = {
@@ -132,27 +133,28 @@ let Manager = {
         return Manager.courseInfo;
     },
     getToc:()=>{
-        const tocContainer      = $('.classroom-layout-sidebar-body > .classroom-toc-section');
-        const itemSelector      = '.classroom-toc-item__content';
+        // const tocContainer      = $('.classroom-layout-sidebar-body > .classroom-toc-section');
+        const itemSelector      = '.classroom-toc-item .classroom-toc-item__content';
         const titleSelector     = '.classroom-toc-item__title';
         // const linkSelector     = '.classroom-toc-item__link';
         const durationSelector  = '.t-12';
         
         let tocs = [];
-
-        for(let i = 0; i < tocContainer.length; i++){
-            const itemContainer = $(tocContainer[i]).find(itemSelector);
+        // for(let i = 0; i < tocContainer.length; i++){
+            const itemContainer = $(itemSelector);
             for(let j = 0; j < itemContainer.length; j++){
-                const titleContainer    = itemContainer.find(titleSelector);
-                const linkContainer    = itemContainer.closest('a');
-                const durationContainer  = itemContainer.find(durationSelector);
+                const titleContainer    = $(itemContainer[j]).find(titleSelector);
+                const linkContainer     = $(itemContainer[j]).closest('a.ember-view');
+                const durationContainer  = $(itemContainer[j]).find(durationSelector);
                 const linkUrl = linkContainer.attr('href');
                 const linkUrlSplit = linkUrl.split('/');
                 const videoSlug = linkUrlSplit[3].split('?')[0];
-                tocs[i] = {slug: videoSlug,url:linkUrl,title : titleContainer.text().trim().replace(/\n.*/g,'')
-                , duration: durationContainer.text().trim().replace(/\n.*/g,'')};
+                console.log(titleContainer.text().trim().replace(/\n.*/g,''));
+                if(videoSlug != 'quiz')
+                    tocs.push( {slug: videoSlug,url:linkUrl,title : titleContainer.text().trim().replace(/\n.*/g,'')
+                , duration: durationContainer.text().trim().replace(/\n.*/g,'')});
             }
-        }
+        // }
 
         return tocs;
 
@@ -183,8 +185,26 @@ const handleVideoChanges = () => {
         handleVideoData.lastVideoUrl  = videoUrl;
         handleVideoData.lastPosterUrl = posterUrl;
         handleVideoData.lastVideoSlug = videoSlug;
+        const codeList = $('code');
+        let captionUrl = '';
+        for(let i = 0; i < codeList.length; i++){
+            const t = $(codeList[i]).text();
+            if(t.match(/captionFile/g)){
+                try{
+                    const metaData = JSON.parse(t);
+                    const presentation = metaData.included[2].presentation;
+                    const videoMetaData = presentation.videoPlay.videoPlayMetadata.transcripts[0];
+                    captionUrl = videoMetaData.captionFile;
+                    console.log(captionUrl);
+                }catch(e){
+                    console.log('couldnot load vtt');
+                }
+                
+                break;
+            }
+        }
         console.log('resolveVideoUrl')
-        SocketProxy.resolveVideoUrl(videoSlug, videoUrl, posterUrl, 'afterResolveVideoUrl')
+        SocketProxy.resolveVideoUrl(videoSlug, videoUrl, posterUrl,captionUrl, 'afterResolveVideoUrl')
         // console.log(handleVideoData);
 
     }
