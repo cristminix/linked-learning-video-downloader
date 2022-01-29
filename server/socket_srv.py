@@ -19,6 +19,9 @@ SESSION_DB_PATH = "storage/session.json"
 
 async def resolve_video_url(sessionId, courseTitle, slug, videoUrl, posterUrl, captionUrl, callback):
     global SESSION
+    if SESSION[sessionId][courseTitle] == None:
+        SESSION[sessionId][courseTitle] = {}
+        SESSION[sessionId][courseTitle]['tocs'] = []
     tocs = SESSION[sessionId][courseTitle]['tocs']
     print(slug,videoUrl,posterUrl)
     idx = 0

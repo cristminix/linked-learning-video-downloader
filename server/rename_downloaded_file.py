@@ -3,7 +3,7 @@
 import os
 import json
 
-folder 	= r'C:\Users\Damar\Downloads\Video\python-for-non-programmer\\'
+folder 	= r'C:\Users\Damar\Downloads\Linked_Learning\python_\\'
 
 count 	= 1
 
@@ -21,32 +21,33 @@ def query_filenames():
 
 	for sessionId in session:
 		sessionData = session[sessionId]
-		tocs 	= sessionData['tocs']
-		index   = 1;
-		for item in tocs:
-			# print(item)
-			slug 			= item['slug']
-			videoUrl 		= item['videoUrl']
-			videoUrlSplit	= videoUrl.split('/')
-			captionUrl 		= item['captionUrl']
-			
-			videoFilename 	= videoUrlSplit[len(videoUrlSplit)-1].split('?')[0]+'.mp4'
-			captionFilename	= '' 
+		for courseTitle in sessionData:
+			tocs = sessionData[courseTitle]['tocs']
+			index   = 1;
+			for item in tocs:
+				# print(item)
+				slug 			= item['slug']
+				videoUrl 		= item['videoUrl']
+				videoUrlSplit	= videoUrl.split('/')
+				captionUrl 		= item['captionUrl']
+				
+				videoFilename 	= videoUrlSplit[len(videoUrlSplit)-1].split('?')[0]+'.mp4'
+				captionFilename	= '' 
 
-			if index > 1 :
-				captionFilename = 'ambry' + '_' + str(index) 
-			else:
-				captionFilename = 'ambry'
+				if index > 1 :
+					captionFilename = 'ambry' + '_' + str(index) 
+				else:
+					captionFilename = 'ambry'
 
-			captionFilename += '.html'	
-			index += 1
-			
-			newVideoFilename 	= slug + '.mp4'
-			newCaptionFilename	= slug + '.vtt'
+				captionFilename += '.html'	
+				index += 1
+				
+				newVideoFilename 	= slug + '.mp4'
+				newCaptionFilename	= slug + '.vtt'
 
-			# print('%s|%s ==> %s|%s' %(videoFilename, captionFilename, newVideoFilename, newCaptionFilename))
-			files_to_rename[videoFilename]		=	newVideoFilename
-			files_to_rename[captionFilename]	=	newCaptionFilename
+				# print('%s|%s ==> %s|%s' %(videoFilename, captionFilename, newVideoFilename, newCaptionFilename))
+				files_to_rename[videoFilename]		=	newVideoFilename
+				files_to_rename[captionFilename]	=	newCaptionFilename
 
 def do_rename_files():
 	global folder
