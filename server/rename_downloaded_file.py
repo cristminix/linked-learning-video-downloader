@@ -33,10 +33,10 @@ def query_filenames():
 			videoFilename 	= videoUrlSplit[len(videoUrlSplit)-1].split('?')[0]+'.mp4'
 			captionFilename	= '' 
 
-			# if index > 0 :
-			captionFilename = 'ambry' + '_' + str(index) 
-			# else:
-			# 	captionFilename = 'ambry'
+			if index > 1 :
+				captionFilename = 'ambry' + '_' + str(index) 
+			else:
+				captionFilename = 'ambry'
 
 			captionFilename += '.html'	
 			index += 1
@@ -58,7 +58,7 @@ def do_rename_files():
 	    if os.path.exists(srcFilename) :
 	    	print('Rename : %s to %s' % (oldFilename, files_to_rename[oldFilename]))
 	    	os.rename(srcFilename, dstFilename)
-	    	
+
 	    else:
 	    	print('Skip   : %s' % (oldFilename))
 
