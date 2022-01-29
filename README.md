@@ -1,0 +1,1 @@
+Simple Chrome extension that can allow you grab video url and its caption from LinkedIn Lerarning or Lynda

@@ -23,7 +23,7 @@ async def resolve_video_url(sessionId, courseTitle, slug, videoUrl, posterUrl, c
         SESSION[sessionId][courseTitle] = {}
         SESSION[sessionId][courseTitle]['tocs'] = []
     tocs = SESSION[sessionId][courseTitle]['tocs']
-    print(slug,videoUrl,posterUrl)
+    print("\n",slug,videoUrl,posterUrl)
     idx = 0
     for i in tocs :
         if i['slug'] == slug :
