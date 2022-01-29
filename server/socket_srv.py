@@ -7,55 +7,65 @@ from email import message
 import json
 import logging
 import websockets
+import os
 
 logging.basicConfig()
 
-STATE = {"value": 0}
-
-USERS = set()
-PARAM = {}
-SESSION = {}
+STATE           = {"value": 0}
+USERS           = set()
+PARAM           = {}
+SESSION         = {}
 SESSION_DB_PATH = "storage/session.json"
 
-async def resolve_video_url(sessionId, slug, videoUrl, posterUrl, captionUrl, callback):
+async def resolve_video_url(sessionId, courseTitle, slug, videoUrl, posterUrl, captionUrl, callback):
     global SESSION
-    tocs = SESSION[sessionId]['tocs']
+    tocs = SESSION[sessionId][courseTitle]['tocs']
     print(slug,videoUrl,posterUrl)
     idx = 0
     for i in tocs :
         if i['slug'] == slug :
-            SESSION[sessionId]['tocs'][idx]['videoUrl'] = videoUrl
-            SESSION[sessionId]['tocs'][idx]['posterUrl'] = posterUrl
-            SESSION[sessionId]['tocs'][idx]['captionUrl'] = captionUrl
+            SESSION[sessionId][courseTitle]['tocs'][idx]['videoUrl']     = videoUrl
+            SESSION[sessionId][courseTitle]['tocs'][idx]['posterUrl']    = posterUrl
+            SESSION[sessionId][courseTitle]['tocs'][idx]['captionUrl']   = captionUrl
             break
         idx += 1
-    # SESSION[sessionId]['tocs']  = tocs
-    # print(SESSION[sessionId]['tocs'][idx])
+
     update_session_db()
-    message = json.dumps({"videoUrl":videoUrl,"posterUrl":posterUrl,"type":"video","sessionId":sessionId,"status":True,"index": idx, "slug" : slug, "callback":callback})
+    message = json.dumps({"courseTitle": courseTitle, "videoUrl": videoUrl, "posterUrl": posterUrl, "type": "video", "sessionId": sessionId, "status":True, "index": idx, "slug": slug, "callback": callback})
     if USERS:  # asyncio.wait doesn't accept an empty list
         await asyncio.wait([user.send(message) for user in USERS])
 
 def init_session_db():
     global SESSION
-    with open(SESSION_DB_PATH) as json_file:
-        SESSION = json.load(json_file)
-        print(len(SESSION))
+    if os.path.exists(SESSION_DB_PATH):
+        with open(SESSION_DB_PATH) as json_file:
+            SESSION = json.load(json_file)
+            print('Loading json_db', len(SESSION))
+    else:
+        print('WARNING : file %s doesnt exists' %(SESSION_DB_PATH))
+        update_session_db()
+
 def update_session_db():
     jsonString = json.dumps(SESSION)
     jsonFile = open(SESSION_DB_PATH, "w")
     jsonFile.write(jsonString)
     jsonFile.close()
-async def session_check(sessionId, callback):
+
+async def session_check(sessionId, courseTitle, callback):
     global SESSION
     # print(SESSION)
     status = SESSION.get(sessionId) != None
-    message = json.dumps({"type":"session","sessionId":sessionId,"status":status, "callback":callback})
+    if(status):
+        status = SESSION[sessionId].get(courseTitle) != None 
+    message = json.dumps({"type":"session","sessionId":sessionId,"courseTitle": courseTitle,"status":status, "callback":callback})
     if USERS:  # asyncio.wait doesn't accept an empty list
         await asyncio.wait([user.send(message) for user in USERS])
+
 async def session_create(sessionId, courseInfo, callback):
-    SESSION[sessionId] = courseInfo
-    message = json.dumps({"type":"session","sessionId":sessionId,"status":True, "callback":callback})
+    SESSION[sessionId] = {}
+    SESSION[sessionId][courseInfo['courseTitle']] = courseInfo;
+
+    message = json.dumps({"type":"session","sessionId":sessionId, "courseTitle": courseInfo['courseTitle'],  "status":True, "callback":callback})
     update_session_db()
     if USERS:  # asyncio.wait doesn't accept an empty list
         await asyncio.wait([user.send(message) for user in USERS])
@@ -112,11 +122,11 @@ async def counter(websocket, path):
             
             # PARAM['action'] = data['action']    
             if data["action"] == "session_check":
-                await session_check(data['sessionId'],data['callback'])
+                await session_check(data['sessionId'],data['courseTitle'],data['callback'])
             elif data["action"] == "session_create":
                 await session_create(data['sessionId'],data['courseInfo'],data['callback'])
             elif data["action"] == "resolve_video_url":
-                await resolve_video_url(data['sessionId'],data['slug'],data['videoUrl'],data['posterUrl'],data['captionUrl'],data['callback'])
+                await resolve_video_url(data['sessionId'],data['courseTitle'],data['slug'],data['videoUrl'],data['posterUrl'],data['captionUrl'],data['callback'])
             else:
                 logging.error("unsupported event: %s", data)
                 # if data["action"] == 'session_check':
