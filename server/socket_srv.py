@@ -29,12 +29,17 @@ def get_download_dir(courseTitle):
     return path
 
 def download_file(url, filename):
+    if url == '':
+        return True
     if(os.path.exists(filename)):
         return True
-    r  = requests.get(url, allow_redirects=True)
-    fh = open(filename, 'wb')
-    fh.write(r.content)
-    fh.close()
+    try:    
+        r  = requests.get(url, allow_redirects=True)
+        fh = open(filename, 'wb')
+        fh.write(r.content)
+        fh.close()
+    finally:
+        pass
     return True
 
 
