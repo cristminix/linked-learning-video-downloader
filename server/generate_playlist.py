@@ -6,7 +6,7 @@ import cv2
 import datetime
 import urllib.parse
 
-folder 	= r'D:\Linked_Learning\python-design-patterns\\'
+folder 	= r'D:\Linked_Learning\learning-coffeescript\\'
 
 count 	= 1
 

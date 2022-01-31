@@ -1,7 +1,5 @@
 #!/usr/bin/env python
 
-# WS server example that synchronizes state across clients
-
 import asyncio
 from email import message
 import json
@@ -19,11 +17,11 @@ SESSION_DB_PATH = "storage/session.json"
 
 async def resolve_video_url(sessionId, courseTitle, slug, videoUrl, posterUrl, captionUrl, callback):
     global SESSION
-    if SESSION[sessionId][courseTitle] == None:
+    if SESSION[sessionId].get(courseTitle) == None:
         SESSION[sessionId][courseTitle] = {}
         SESSION[sessionId][courseTitle]['tocs'] = []
     tocs = SESSION[sessionId][courseTitle]['tocs']
-    print("\n",slug,videoUrl,posterUrl)
+    
     idx = 0
     for i in tocs :
         if i['slug'] == slug :
@@ -32,8 +30,9 @@ async def resolve_video_url(sessionId, courseTitle, slug, videoUrl, posterUrl, c
             SESSION[sessionId][courseTitle]['tocs'][idx]['captionUrl']   = captionUrl
             break
         idx += 1
-
+    # print(tocs)    
     update_session_db()
+    print(slug,"\n",videoUrl,"\n",idx,"\n")
     message = json.dumps({"courseTitle": courseTitle, "videoUrl": videoUrl, "posterUrl": posterUrl, "type": "video", "sessionId": sessionId, "status":True, "index": idx, "slug": slug, "callback": callback})
     if USERS:  # asyncio.wait doesn't accept an empty list
         await asyncio.wait([user.send(message) for user in USERS])
@@ -60,6 +59,8 @@ async def session_check(sessionId, courseTitle, callback):
     status = SESSION.get(sessionId) != None
     if(status):
         status = SESSION[sessionId].get(courseTitle) != None 
+    if(status):
+        status = len(SESSION[sessionId][courseTitle]['tocs']) > 0;
     message = json.dumps({"type":"session","sessionId":sessionId,"courseTitle": courseTitle,"status":status, "callback":callback})
     if USERS:  # asyncio.wait doesn't accept an empty list
         await asyncio.wait([user.send(message) for user in USERS])
@@ -109,21 +110,7 @@ async def counter(websocket, path):
         # await websocket.send(state_event())
         async for message in websocket:
             data = json.loads(message)
-            # action = PARAM['action']
-            # # print()
-            # if action != None:
-            #     # print(type(action))
-            #     await eval(action + '()')
             
-
-            if data["action"] == "minus":
-                STATE["value"] -= 1
-                await notify_state()
-            elif data["action"] == "plus":
-                STATE["value"] += 1
-                await notify_state()
-            
-            # PARAM['action'] = data['action']    
             if data["action"] == "session_check":
                 await session_check(data['sessionId'],data['courseTitle'],data['callback'])
             elif data["action"] == "session_create":
@@ -132,8 +119,6 @@ async def counter(websocket, path):
                 await resolve_video_url(data['sessionId'],data['courseTitle'],data['slug'],data['videoUrl'],data['posterUrl'],data['captionUrl'],data['callback'])
             else:
                 logging.error("unsupported event: %s", data)
-                # if data["action"] == 'session_check':
-                #     session_check()
     finally:
         await unregister(websocket)
 

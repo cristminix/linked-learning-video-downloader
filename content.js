@@ -40,6 +40,9 @@ SocketProxy = {
         }
     },
     resolveVideoUrl : (videoSlug, videoUrl, posterUrl,captionUrl, _callback) => {
+        Manager.UI.setCurrentVideo(videoSlug);
+        Manager.UI.setTotalVideos(Manager.courseInfo.tocs.length);
+
         SocketProxy.send('resolve_video_url',{sessionId:Manager.getSessionId(),courseTitle: Manager.getCourseTitle(),captionUrl:captionUrl,slug: videoSlug, videoUrl: videoUrl, posterUrl: posterUrl},_callback);
     } 
 };
@@ -72,24 +75,55 @@ let Cb = {
         console.log(data);
     },
     afterResolveVideoUrl : (data)=>{
-        if(data.status){
-            Cb.resolveNextVideo(data.index, data.videoUrl,data.posterUrl);
-        }
+        Manager.UI.setCurrentIndex(data.index);
+        let firstIndexChecked = Manager.isFirstIndexChecked();
+        Manager.UI.setChkIndex(firstIndexChecked?'Yes':'No');
+        
         console.log(data);
+        
+        if(data.status){
+            if(data.index == 0 && !firstIndexChecked){
+                Manager.createFirstIndexState();
+                Cb.resolveNextVideo(data.index, data.videoUrl,data.posterUrl);
+
+            }
+            else if(data.index > 0 && !firstIndexChecked  ){
+                Manager.createFirstIndexState();
+                console.log('Starting from the first videos');
+
+                Cb.resolveNextVideo(-1, data.videoUrl,data.posterUrl);
+            }else{
+                Cb.resolveNextVideo(data.index, data.videoUrl,data.posterUrl);
+            }
+        }
+        
     },
     resolveNextVideo: (index,videoUrl,posterUrl) => {
-        Manager.courseInfo.tocs[index].videoUrl=videoUrl;
-        Manager.courseInfo.tocs[index].posterUrl=posterUrl;
+        try{
+            Manager.courseInfo.tocs[index].videoUrl=videoUrl;
+            Manager.courseInfo.tocs[index].posterUrl=posterUrl;
+        }catch(e){
+            Manager.courseInfo.tocs[0].videoUrl=videoUrl;
+            Manager.courseInfo.tocs[0].posterUrl=posterUrl;
+        }
+        
 
         if(index < Manager.courseInfo.tocs.length - 1){
             const nextToc = Manager.courseInfo.tocs[index+1];
             const linkSelector = `a[href*=${nextToc.slug}]`;
-            console.log(linkSelector)
+            console.log(nextToc.url)
+            console.log('waiting for 5 sec to redirect')
+            // window.history.replaceState({urlPath:nextToc.url},"",nextToc.url)
+            // window.history.go()
             // $(linkSelector).click();
-            document.location.href = nextToc.url;
+            setTimeout(()=>{
+                document.location.href = nextToc.url;
+            },5000)
+            
             
         }else{
             console.log('You have reach the last video');
+            eraseCookie(Manager.sessionKey+'_chkFirstIndex');
         }
         // console.log(Manager.courseInfo.tocs)
     }
@@ -100,6 +134,7 @@ let Manager = {
     currentCourseTitle: null,
     courseInProgress: false,
     courseIsComplete: false,
+    firstIndexChecked: false,
     courseInfo: {},
     getSessionId: ()=>{
         Manager.sessionId = getCookie(Manager.sessionKey);
@@ -109,26 +144,35 @@ let Manager = {
         }
         return Manager.sessionId;
     },
+    isFirstIndexChecked:()=>{
+        return getCookie(Manager.sessionKey+'_chkFirstIndex') == 'yes';
+    },
+    createFirstIndexState:()=>{
+        setCookie(Manager.sessionKey+'_chkFirstIndex','yes', 7); 
+    },
     UI:{
         html: `
-<div id="__MalinkCorpSessionID__">
-    <div class="ui_title"><h4>Lynda Course Downloader</h4></div>
-    <table class="ui_table">
+<div id="__MalinkCorpSessionID__" style="display:none">
+    <div class="ui_title"><h4 style="font-size:90%;padding:0 0 6px 0">Lynda Course Downloader</h4></div>
+    <table class="ui_table table">
         <tbody>
             <tr>
-                <th>Course Title</th><td><span class="course_title"></span></td>
+                <th width="50px">Title</th><td><span class="course_title"></span></td>
             </tr>
             <tr>    
-                <th>Total Videos</th><td><span class="total_videos"></span></td>
+                <th>Total</th><td><span class="total_videos"></span></td>
             </tr>
             <tr>
-                <th>Current Video</th><td><span class="current_video"></span></td>
+                <th>Current</th><td><span class="current_video"></span></td>
             </tr>
             <tr>
-                <th>Progress</th><td><span class="dl_progress"></span></td>
+                <th>Idx</th><td><span class="current_index"></span></td>
             </tr>
             <tr>
-                <td colspan="2"><button>Continue</button><button>Pause</button><button>Stop</button></td>
+                <th>Idx Chk</th><td><span class="chk_index"></span></td>
+            </tr>
+            <tr>
+                <td colspan="2" class="btn-cnt"><button class="continue">Continue</button><button class="pause">Pause</button><button class="stop">Stop</button></td>
             </tr>
         </tbody>
     </table>
@@ -139,7 +183,10 @@ let Manager = {
         `,
         applyUIStyle:()=>{
             setTimeout(()=>{
-                $('#__MalinkCorpSessionID__').css({'font-size':'80%', position: 'absolute',padding:'1em',background:'#fff','text-align':'left','z-index':'10000'})
+                $('#__MalinkCorpSessionID__').css({'font-size':'60%', position: 'absolute',padding:'1em',background:'#fff','text-align':'left','z-index':'10000','bottom':'1em',left:'39%',border:'solid 1px #000'})
+                $('#__MalinkCorpSessionID__ .btn-cnt').css({padding:'6px 0 0em'});
+                $('.btn-cnt > .continue,.btn-cnt > .pause,.btn-cnt > .stop').css({display:'none'});
+                $('#__MalinkCorpSessionID__').slideDown()
             },1000);
         },
         constructUI:()=>{
@@ -149,22 +196,28 @@ let Manager = {
             }
         },
         setCourseTitle:(title)=>{
-            $(`${Manager.sessionKey} .course_title`).text(title);
+            $(`#${Manager.sessionKey} .course_title`).text(title);
         },
         setTotalVideos:(title)=>{
-            $(`${Manager.sessionKey} .total_videos`).text(title);
+            $(`#${Manager.sessionKey} .total_videos`).text(title);
         },
         setCurrentVideo:(title)=>{
-            $(`${Manager.sessionKey} .current_video`).text(title);
+            $(`#${Manager.sessionKey} .current_video`).text(title);
+        },
+        setCurrentIndex:(title)=>{
+            $(`#${Manager.sessionKey} .current_index`).text(title);
+        },
+        setChkIndex:(title)=>{
+            $(`#${Manager.sessionKey} .chk_index`).text(title);
         },
         waning:(message)=>{
             setTimeout(()=>{
-                $(`${Manager.sessionKey} .ui_warning code`).text(message);
+                $(`#${Manager.sessionKey} .ui_warning code`).text(message);
             },3000);
         },
         error:(message)=>{
             setTimeout(()=>{
-                $(`${Manager.sessionKey} .ui_error code`).text(message);
+                $(`#${Manager.sessionKey} .ui_error code`).text(message);
             },3000);
         }
     },
@@ -241,6 +294,7 @@ let Manager = {
         Manager.courseInfo.tocs = Manager.getToc();
         Manager.courseInfo.fullUrl = fullUrl;
 
+
         return Manager.courseInfo;
     },
     getToc:()=>{
@@ -257,12 +311,12 @@ let Manager = {
             const linkUrl = linkContainer.attr('href');
             const linkUrlSplit = linkUrl.split('/');
             const videoSlug = linkUrlSplit[3].split('?')[0];
-            console.log(titleContainer.text().trim().replace(/\n.*/g,''));
+            // console.log(titleContainer.text().trim().replace(/\n.*/g,''));
             if(videoSlug != 'quiz')
                 tocs.push( {slug: videoSlug,url:linkUrl,title : titleContainer.text().trim().replace(/\n.*/g,'')
             , duration: durationContainer.text().trim().replace(/\n.*/g,'')});
         }
-        Manager.UI.setTotalVideos(tocs.length);
+        
         return tocs;
 
     }
@@ -281,40 +335,45 @@ let handleVideoData = {
 
 const handleVideoChanges = () => {
     // console.log('Checking Video Changes');
-    const videoContainer = $('.vjs-tech');
-    const videoUrl  = videoContainer.attr('src');
-    let linkUrlSplit   = document.location.href.split('://');
-    linkUrlSplit = linkUrlSplit[1].split('/');
-    const videoSlug = linkUrlSplit[3].split('?')[0];
-    Manager.UI.setCurrentVideo(videoSlug);
-    const posterUrl = $('.vjs-poster')[0].style.backgroundImage.replace(/url\(\"/,'').replace(/\"\)/,'');
-    if( handleVideoData.lastVideoUrl != videoUrl){
-        handleVideoData.lastVideoUrl  = videoUrl;
-        handleVideoData.lastPosterUrl = posterUrl;
-        handleVideoData.lastVideoSlug = videoSlug;
+    try{
+        const videoContainer = $('.vjs-tech');
+        const videoUrl  = videoContainer.attr('src');
+        let linkUrlSplit   = document.location.href.split('://');
+        linkUrlSplit = linkUrlSplit[1].split('/');
+        const videoSlug = linkUrlSplit[3].split('?')[0];
+        
 
-        const codeList = $('code');
-        let captionUrl = '';
-        for(let i = 0; i < codeList.length; i++){
-            const t = $(codeList[i]).text();
-            if(t.match(/captionFile/g)){
-                try{
-                    const metaData = JSON.parse(t);
-                    const presentation = metaData.included[2].presentation;
-                    const videoMetaData = presentation.videoPlay.videoPlayMetadata.transcripts[0];
-                    captionUrl = videoMetaData.captionFile;
-                    console.log(captionUrl);
-                }catch(e){
-                    console.log('couldnot load vtt');
+        const posterUrl = $('.vjs-poster')[0].style.backgroundImage.replace(/url\(\"/,'').replace(/\"\)/,'');
+        if( handleVideoData.lastVideoUrl != videoUrl){
+            handleVideoData.lastVideoUrl  = videoUrl;
+            handleVideoData.lastPosterUrl = posterUrl;
+            handleVideoData.lastVideoSlug = videoSlug;
+
+            const codeList = $('code');
+            let captionUrl = '';
+            for(let i = 0; i < codeList.length; i++){
+                const t = $(codeList[i]).text();
+                if(t.match(/captionFile/g)){
+                    try{
+                        const metaData = JSON.parse(t);
+                        const presentation = metaData.included[2].presentation;
+                        const videoMetaData = presentation.videoPlay.videoPlayMetadata.transcripts[0];
+                        captionUrl = videoMetaData.captionFile;
+                        console.log(captionUrl);
+                    }catch(e){
+                        console.log('couldnot load vtt');
+                    }
+                    
+                    break;
                 }
-                
-                break;
             }
-        }
-        console.log('resolveVideoUrl')
-        SocketProxy.resolveVideoUrl(videoSlug, videoUrl, posterUrl,captionUrl, 'afterResolveVideoUrl')
-        // console.log(handleVideoData);
-
+            console.log('resolveVideoUrl')
+            SocketProxy.resolveVideoUrl(videoSlug, videoUrl, posterUrl,captionUrl, 'afterResolveVideoUrl')
+            // console.log(handleVideoData);
+            
+        }   
+    }catch(e){
+        console.log(e)
     }
 
 };
