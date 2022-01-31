@@ -205,7 +205,7 @@ let Manager = {
             $(`#${Manager.sessionKey} .current_video`).text(title);
         },
         setCurrentIndex:(title)=>{
-            $(`#${Manager.sessionKey} .current_index`).text(title);
+            $(`#${Manager.sessionKey} .current_index`).text(title+1);
         },
         setChkIndex:(title)=>{
             $(`#${Manager.sessionKey} .chk_index`).text(title);

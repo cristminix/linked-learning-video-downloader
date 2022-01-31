@@ -6,6 +6,8 @@ import json
 import logging
 import websockets
 import os
+import requests
+import re
 
 logging.basicConfig()
 
@@ -14,6 +16,27 @@ USERS           = set()
 PARAM           = {}
 SESSION         = {}
 SESSION_DB_PATH = "storage/session.json"
+
+def get_download_dir(courseTitle):
+    path = "storage/downloads"
+    if not os.path.exists(path):
+        os.makedirs(path)
+        print("MKDIR : %s " %(path))
+    path = path + "/" + courseTitle 
+    if not os.path.exists(path):
+        os.makedirs(path)
+        print("MKDIR : %s " %(path))
+    return path
+
+def download_file(url, filename):
+    if(os.path.exists(filename)):
+        return True
+    r  = requests.get(url, allow_redirects=True)
+    fh = open(filename, 'wb')
+    fh.write(r.content)
+    fh.close()
+    return True
+
 
 async def resolve_video_url(sessionId, courseTitle, slug, videoUrl, posterUrl, captionUrl, callback):
     global SESSION
@@ -33,6 +56,11 @@ async def resolve_video_url(sessionId, courseTitle, slug, videoUrl, posterUrl, c
     # print(tocs)    
     update_session_db()
     print(slug,"\n",videoUrl,"\n",idx,"\n")
+
+    download_dir = get_download_dir(courseTitle) 
+    download_file(videoUrl, download_dir + '/' + slug+'.mp4')
+    download_file(captionUrl, download_dir + '/' + slug+'.vtt')
+
     message = json.dumps({"courseTitle": courseTitle, "videoUrl": videoUrl, "posterUrl": posterUrl, "type": "video", "sessionId": sessionId, "status":True, "index": idx, "slug": slug, "callback": callback})
     if USERS:  # asyncio.wait doesn't accept an empty list
         await asyncio.wait([user.send(message) for user in USERS])
