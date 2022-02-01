@@ -36,9 +36,31 @@ def get_video_duration(path):
 	# print("video time:", video_time)
 	return seconds
 
-def query_filenames(courseTitle_):
+def query_filenames(courseTitle_, useLocal=False):
 	global files_to_rename
+	if useLocal:
+		for sessionId in session:
+			sessionData = session[sessionId]
+			for courseTitle in sessionData:
+				if courseTitle == courseTitle_:
+					tocs = sessionData[courseTitle]['tocs']
+					index   = 1;
+					for item in tocs:
+						# print(item)
+						slug 			= item['slug']
+						
+						videoFilename 	= slug+'.mp4'
+						captionFilename	= slug+'.vtt' 
 
+						index += 1
+						
+						newVideoFilename 	= slug + '.mp4'
+						newCaptionFilename	= slug + '.vtt'
+
+						# print('%s|%s ==> %s|%s' %(videoFilename, captionFilename, newVideoFilename, newCaptionFilename))
+						files_to_rename[videoFilename]		=	newVideoFilename
+						files_to_rename[captionFilename]	=	newCaptionFilename
+				return True
 	for sessionId in session:
 		sessionData = session[sessionId]
 		for courseTitle in sessionData:
@@ -92,7 +114,7 @@ def do_generate_m3u(courseTitle):
 		f.close()
 	print(buffer)
 
-courseTitle='python-quick-start'
+courseTitle='python-essential-training-2018'
 init_session_db()
-query_filenames(courseTitle)
+query_filenames(courseTitle, True)
 do_generate_m3u(courseTitle)

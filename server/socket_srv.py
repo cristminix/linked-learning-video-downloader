@@ -38,9 +38,11 @@ def download_file(url, filename):
         fh = open(filename, 'wb')
         fh.write(r.content)
         fh.close()
+        return True
     finally:
-        pass
-    return True
+        return False
+    
+    
 
 
 async def resolve_video_url(sessionId, courseTitle, slug, videoUrl, posterUrl, captionUrl, callback):
@@ -63,10 +65,12 @@ async def resolve_video_url(sessionId, courseTitle, slug, videoUrl, posterUrl, c
     print(slug,"\n",videoUrl,"\n",idx,"\n")
 
     download_dir = get_download_dir(courseTitle) 
-    download_file(videoUrl, download_dir + '/' + slug+'.mp4')
-    download_file(captionUrl, download_dir + '/' + slug+'.vtt')
+    # download_file(videoUrl, download_dir + '/' + slug+'.mp4')
+    vttFile = download_dir + '/' + slug+'.vtt'
+    download_file(captionUrl, vttFile )
+    status = os.path.exists(vttFile)
 
-    message = json.dumps({"courseTitle": courseTitle, "videoUrl": videoUrl, "posterUrl": posterUrl, "type": "video", "sessionId": sessionId, "status":True, "index": idx, "slug": slug, "callback": callback})
+    message = json.dumps({"courseTitle": courseTitle, "videoUrl": videoUrl, "posterUrl": posterUrl, "type": "video", "sessionId": sessionId, "status":status, "index": idx, "slug": slug, "callback": callback})
     if USERS:  # asyncio.wait doesn't accept an empty list
         await asyncio.wait([user.send(message) for user in USERS])
 
@@ -81,7 +85,7 @@ def init_session_db():
         update_session_db()
 
 def update_session_db():
-    jsonString = json.dumps(SESSION)
+    jsonString = json.dumps(SESSION,indent=4, sort_keys=True)
     jsonFile = open(SESSION_DB_PATH, "w")
     jsonFile.write(jsonString)
     jsonFile.close()

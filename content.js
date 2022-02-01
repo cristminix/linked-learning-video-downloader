@@ -29,6 +29,7 @@ SocketProxy = {
             action : _action,
             callback : typeof _callback == 'string' ? _callback : 'noop'
         },_data);
+        console.log(payload);
         Ws.conn.send(JSON.stringify(payload));
     },
     Session : {
@@ -41,6 +42,7 @@ SocketProxy = {
     },
     resolveVideoUrl : (videoSlug, videoUrl, posterUrl,captionUrl, _callback) => {
         Manager.UI.setCurrentVideo(videoSlug);
+        Manager.UI.setCurrentIndex(Manager.getTocIndex(videoSlug));
         Manager.UI.setTotalVideos(Manager.courseInfo.tocs.length);
 
         SocketProxy.send('resolve_video_url',{sessionId:Manager.getSessionId(),courseTitle: Manager.getCourseTitle(),captionUrl:captionUrl,slug: videoSlug, videoUrl: videoUrl, posterUrl: posterUrl},_callback);
@@ -48,11 +50,6 @@ SocketProxy = {
 };
 let Cb = {
     startWaiters : ()=>{
-        clearInterval(handleUrlData.siHandler);
-        handleUrlData.siHandler = setInterval(()=>{
-            handleUrlChanges();
-        },2000);
-
         clearInterval(handleVideoData.siHandler);
         handleVideoData.siHandler = setInterval(()=>{
             handleVideoChanges();
@@ -75,10 +72,10 @@ let Cb = {
         console.log(data);
     },
     afterResolveVideoUrl : (data)=>{
-        Manager.UI.setCurrentIndex(data.index);
+        
         let firstIndexChecked = Manager.isFirstIndexChecked();
         Manager.UI.setChkIndex(firstIndexChecked?'Yes':'No');
-        
+        // $('video')[0].stop();
         console.log(data);
         
         if(data.status){
@@ -95,6 +92,8 @@ let Cb = {
             }else{
                 Cb.resolveNextVideo(data.index, data.videoUrl,data.posterUrl);
             }
+        }else{
+            Cb.resolveNextVideo(data.index-1, data.videoUrl,data.posterUrl);
         }
         
     },
@@ -111,21 +110,15 @@ let Cb = {
         if(index < Manager.courseInfo.tocs.length - 1){
             const nextToc = Manager.courseInfo.tocs[index+1];
             const linkSelector = `a[href*=${nextToc.slug}]`;
-            console.log(nextToc.url)
-            console.log('waiting for 5 sec to redirect')
-            // window.history.replaceState({urlPath:nextToc.url},"",nextToc.url)
-            // window.history.go()
-            // $(linkSelector).click();
+            console.log(nextToc.url);
+            console.log('waiting for 5 sec to redirect');
             setTimeout(()=>{
                 document.location.href = nextToc.url;
-            },5000)
-            
-            
+            },5000);
         }else{
             console.log('You have reach the last video');
             eraseCookie(Manager.sessionKey+'_chkFirstIndex');
         }
-        // console.log(Manager.courseInfo.tocs)
     }
 };
 let Manager = {
@@ -135,6 +128,7 @@ let Manager = {
     courseInProgress: false,
     courseIsComplete: false,
     firstIndexChecked: false,
+    fullUrl : '',
     courseInfo: {},
     getSessionId: ()=>{
         Manager.sessionId = getCookie(Manager.sessionKey);
@@ -186,14 +180,24 @@ let Manager = {
                 $('#__MalinkCorpSessionID__').css({'font-size':'60%', position: 'absolute',padding:'1em',background:'#fff','text-align':'left','z-index':'10000','bottom':'1em',left:'39%',border:'solid 1px #000'})
                 $('#__MalinkCorpSessionID__ .btn-cnt').css({padding:'6px 0 0em'});
                 $('.btn-cnt > .continue,.btn-cnt > .pause,.btn-cnt > .stop').css({display:'none'});
-                $('#__MalinkCorpSessionID__').slideDown()
+                
             },1000);
         },
         constructUI:()=>{
-            if($(`${Manager.sessionKey}`).length == 0){
+            if($(`${Manager.sessionKey}`).length == 0 && $('#__MalinkCorpSessionID__').length == 0){
                 $(document.body).prepend(Manager.UI.html);
                 Manager.UI.applyUIStyle();
             }
+        },
+        showUI:()=>{
+            setTimeout(()=>{
+                $('#__MalinkCorpSessionID__').fadeIn()
+            },500);
+        },
+        hideUI:()=>{
+            setTimeout(()=>{
+                $('#__MalinkCorpSessionID__').fadeOut()
+            },500);
         },
         setCourseTitle:(title)=>{
             $(`#${Manager.sessionKey} .course_title`).text(title);
@@ -227,15 +231,6 @@ let Manager = {
     checkCourseIsComplete:()=>{
         return Manager.courseIsComplete;
     },
-    checkFirstPageIndex:()=>{
-        const tocs = Manager.getToc();
-
-        if(Manager.currentCourseTitle != null){
-            if(Manager.courseInProgress == false){
-
-            }
-        }
-    },
     sayHi:()=>{
         //0. Show UI
         Manager.UI.constructUI();
@@ -245,12 +240,35 @@ let Manager = {
         //2. getToc 
 
         //3. is current page is index 0 in tocs
-        const isFirstIndex = Manager.checkFirstPageIndex();
+        // const isFirstIndex = Manager.checkFirstPageIndex();
         //4. wait user to confirm to go to course hompage to reach 0 index of tocs
         
         //5. check session
         console.log('checking session');
-        SocketProxy.Session.check('afterSessionCheck');        
+        Manager.checkValidCourseUrl(()=>{
+            Manager.UI.showUI();
+            SocketProxy.Session.check('afterSessionCheck');
+        },()=>{
+            Manager.UI.hideUI();
+        });
+    },
+    checkValidCourseUrl:(callback_,callback_non)=>{
+        const extractedUrl = Manager.extractUrl();
+        const urlSegment3 = extractedUrl.urlSplit[2]; 
+        if(urlSegment3.match(/\?/)){
+            return;
+        }
+        if(Manager.isValidCoursePage()){
+            // console.log(extractedUrl);
+            if(typeof callback_ == 'function'){
+                callback_();
+            }
+        }else{
+            if(typeof callback_non == 'function'){
+                callback_non();
+            }
+        }
+        
     },
     onMessage:(event)=>{
             const data = JSON.parse(event.data);
@@ -308,7 +326,7 @@ let Manager = {
             const titleContainer    = $(itemContainer[j]).find(titleSelector);
             const linkContainer     = $(itemContainer[j]).closest('a.ember-view');
             const durationContainer  = $(itemContainer[j]).find(durationSelector);
-            const linkUrl = linkContainer.attr('href');
+            const linkUrl = linkContainer.attr('href').replace(/autoplay=true/,'autoplay=false');
             const linkUrlSplit = linkUrl.split('/');
             const videoSlug = linkUrlSplit[3].split('?')[0];
             // console.log(titleContainer.text().trim().replace(/\n.*/g,''));
@@ -319,6 +337,20 @@ let Manager = {
         
         return tocs;
 
+    },
+    getTocIndex:(videoSlug)=>{
+        try{
+            const tocs = Manager.courseInfo.tocs;
+            for (var i = 1; i < tocs.length; i++) {
+                if(tocs[i].slug == videoSlug){
+                    return i;
+                }
+            }
+        }catch(e){
+            return -1;
+        }
+        
+        return -1;
     }
 };
 let handleUrlData = {
@@ -359,7 +391,7 @@ const handleVideoChanges = () => {
                         const presentation = metaData.included[2].presentation;
                         const videoMetaData = presentation.videoPlay.videoPlayMetadata.transcripts[0];
                         captionUrl = videoMetaData.captionFile;
-                        console.log(captionUrl);
+                        // console.log(captionUrl);
                     }catch(e){
                         console.log('couldnot load vtt');
                     }
@@ -367,8 +399,9 @@ const handleVideoChanges = () => {
                     break;
                 }
             }
-            console.log('resolveVideoUrl')
-            SocketProxy.resolveVideoUrl(videoSlug, videoUrl, posterUrl,captionUrl, 'afterResolveVideoUrl')
+            // console.log('resolveVideoUrl')
+            // videoUrl = videoUrl
+            SocketProxy.resolveVideoUrl(videoSlug, videoUrl, posterUrl,captionUrl, 'afterResolveVideoUrl');
             // console.log(handleVideoData);
             
         }   
@@ -380,12 +413,22 @@ const handleVideoChanges = () => {
 
 const handleUrlChanges = () => {
     // console.log('Checking Urls');
-    if( Manager.courseInfo.fullUrl != window.location.href || handleUrlData.firstTime){
+    if( Manager.fullUrl != window.location.href || handleUrlData.firstTime){
         // console.log(Manager.getInfo());
+        Manager.fullUrl = window.location.href;
+        try{
+            Manager.sayHi();
+        }catch(e){
+            console.log(e);
+        }
+        
     }
     handleUrlData.firstTime = false;
 };
-
+clearInterval(handleUrlData.siHandler);
+handleUrlData.siHandler = setInterval(()=>{
+    handleUrlChanges();
+},2000);
 //**************************************************
 let Ws = {
     conn: 0,
