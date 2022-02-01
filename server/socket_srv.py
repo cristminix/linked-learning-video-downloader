@@ -68,9 +68,13 @@ async def resolve_video_url(sessionId, courseTitle, slug, videoUrl, posterUrl, c
     # download_file(videoUrl, download_dir + '/' + slug+'.mp4')
     vttFile = download_dir + '/' + slug+'.vtt'
     download_file(captionUrl, vttFile )
-    status = os.path.exists(vttFile)
+    status_vtt = os.path.exists(vttFile)
+    if status_vtt :
+        status_vtt = os.path.getsize(vttFile) > 10
+        if status_vtt == False:
+            os.remove(vttFile)
 
-    message = json.dumps({"courseTitle": courseTitle, "videoUrl": videoUrl, "posterUrl": posterUrl, "type": "video", "sessionId": sessionId, "status":status, "index": idx, "slug": slug, "callback": callback})
+    message = json.dumps({"courseTitle": courseTitle, "videoUrl": videoUrl, "posterUrl": posterUrl, "type": "video", "sessionId": sessionId, "status":status_vtt, "index": idx, "slug": slug, "callback": callback})
     if USERS:  # asyncio.wait doesn't accept an empty list
         await asyncio.wait([user.send(message) for user in USERS])
 

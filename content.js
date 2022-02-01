@@ -44,7 +44,8 @@ SocketProxy = {
         Manager.UI.setCurrentVideo(videoSlug);
         Manager.UI.setCurrentIndex(Manager.getTocIndex(videoSlug));
         Manager.UI.setTotalVideos(Manager.courseInfo.tocs.length);
-
+        let firstIndexChecked = Manager.isFirstIndexChecked();
+        Manager.UI.setChkIndex(firstIndexChecked?'Yes':'No');
         SocketProxy.send('resolve_video_url',{sessionId:Manager.getSessionId(),courseTitle: Manager.getCourseTitle(),captionUrl:captionUrl,slug: videoSlug, videoUrl: videoUrl, posterUrl: posterUrl},_callback);
     } 
 };
@@ -111,10 +112,10 @@ let Cb = {
             const nextToc = Manager.courseInfo.tocs[index+1];
             const linkSelector = `a[href*=${nextToc.slug}]`;
             console.log(nextToc.url);
-            console.log('waiting for 5 sec to redirect');
+            console.log('waiting for 1 sec to redirect');
             setTimeout(()=>{
                 document.location.href = nextToc.url;
-            },5000);
+            },1000);
         }else{
             console.log('You have reach the last video');
             eraseCookie(Manager.sessionKey+'_chkFirstIndex');

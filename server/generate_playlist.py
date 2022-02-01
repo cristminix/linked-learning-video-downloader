@@ -114,7 +114,7 @@ def do_generate_m3u(courseTitle):
 		f.close()
 	print(buffer)
 
-courseTitle='python-essential-training-2018'
+courseTitle='advanced-python'
 init_session_db()
 query_filenames(courseTitle, True)
 do_generate_m3u(courseTitle)
