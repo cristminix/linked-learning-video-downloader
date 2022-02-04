@@ -1,209 +1,704 @@
 {
     "2ab178c0ae5ace53838e7144cbcafca0": {
-        "web-scraping-with-python": {
-            "coursePath": "learning/web-scraping-with-python",
-            "courseTitle": "web-scraping-with-python",
-            "courseUrl": "https:///www.linkedin.com/learning/web-scraping-with-python",
-            "fullUrl": "https://www.linkedin.com/learning/web-scraping-with-python/how-to-learn-to-stop-worrying-and-love-the-bot?autoAdvance=true&autoSkip=false&autoplay=true&resume=true&u=95231473",
+        "advanced-python-working-with-databases": {
+            "coursePath": "learning/advanced-python-working-with-databases",
+            "courseTitle": "advanced-python-working-with-databases",
+            "courseUrl": "https:///www.linkedin.com/learning/advanced-python-working-with-databases",
+            "fullUrl": "https://www.linkedin.com/learning/advanced-python-working-with-databases/using-databases-to-level-up-your-python-applications?autoAdvance=true&autoSkip=false&autoplay=true&resume=true&u=95231473",
+            "hostname": "www.linkedin.com",
+            "tocs": [
+                {
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQLgZABjhDVkDAAAAX7E2CooQUlxqnZM3iTJviIafFSFbQpFdT-ifqn3-2kZhfDMhZewGUZqsTbNLDrX5CZTDLMOxXfuuZ7cCVloEjRLMxIRBKYuOWW9IZPrLslSt_csSgZwMwgSJ0eMvj38ItBxBxnXzGfTBdaeYcgkURqGaDs7-aHQkT_Ey-Mo6BzNUrw5n7qOzxeyxUQqOS-GdcKEoOxxs5CdJLDQZG1w3UPocVDXZ86rKdz6PctCcAISRe4fWkIF4yW8Q9hQl_1UbBnGwglM73wpK5LhUBsZayW0ViokzIA3fMFCy4PgAwrNOjhNrjT_ngRzPgqaqzdji9sKMRwz8tm62OIG-bzUqP_IL93GRa71pIjWYvCcW946GDNFpi2HCe1M9xe5q5NLlGO-DBVeLJZ2u7xanfG7aKNuQvQMqlujsESC0NF58N5dQgDSr8fuDTp1dVD_IymQY9TkUgr1kwG8ZrtdpYXSN03QR08d8DEKlPJWRaATi6qd",
+                    "duration": "1m 37s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQEOEmbzCTUr3w/learning-public-crop_675_1200/0/1602085368651?e=1644069600&v=beta&t=ueiuORi6EyWd0NGk-4yKLIFVlF4iQ0wvUH2Wp4rEMis",
+                    "slug": "using-databases-to-level-up-your-python-applications",
+                    "title": "Using databases to level up your Python applications",
+                    "url": "/learning/advanced-python-working-with-databases/using-databases-to-level-up-your-python-applications?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C4E0DAQFv0E7BHtXkIA/learning-original-video-vbr-720/0/1602001419986?e=1644069600&v=beta&t=fCMTuzpnptmQqbz3Bk4EF7ay5zEioN-kDV4d-VdLsik"
+                },
+                {
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQJ225xapYUYBQAAAX7E2Icsj5obzNKlfSaUozYEwgBUPcu8yaZtntYVFmdkP1lCmvbgwkmb5YWEpHHyc057Fg3WNLOxszL7wuWTf0ea9HEjAky8khtm03VK51a0GQrjnovP5euPjbmjsuF0PR8JsJhIFg98DDjNAWT1k1e1uiP6AjeUdkxWjD9EdgT00J3X2TgQ3CyUlMbixPnkgnistMcSHei6jE3Sdl9jJpQ8MUacwJ007FkqlJaZ5cvTU8DfKgFXPEeRRpCV7LendPEyqaXdYYi9QxHj0i6nwwXGJs27Prja3CJ_5BxheRU9LahDGqzBYWx4dHZI2lqr0Boc73NLc-gvVsgt2yOZhFAoJ9T0vVQ8MWH9rwU0QGcO1WUp5fwqH-hF1ud7y0TUq8idPfEt8Zx58dJejQXXWi3gVIzcoMvaeCoZeWLZURMfxh_huptGvCPF3V268lam2YAZkV01YV3b9N6P8EMBgKv-6hFn2rXtGmFC-8l8jk2f",
+                    "duration": "2m 22s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQEOEmbzCTUr3w/learning-public-crop_675_1200/0/1602085368651?e=1644069600&v=beta&t=ueiuORi6EyWd0NGk-4yKLIFVlF4iQ0wvUH2Wp4rEMis",
+                    "slug": "what-you-need-to-know",
+                    "title": "What you need to know",
+                    "url": "/learning/advanced-python-working-with-databases/what-you-need-to-know?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C4E0DAQHGWsFgwNxXmw/learning-original-video-vbr-720/0/1602001376300?e=1644069600&v=beta&t=s7R9Pw3jPSeXEUHCkb3_VQuK1QPVMzbS7x-d58D-cgA"
+                },
+                {
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQJSuMfT-1SoQAAAAX7E2LO6xDsDPC7_szERDSTpwA6PFnp43dHF0T3jN2wJJBQRJYhzACk3zQNZUsv1G0TgToRcoCsVFyRenBQmCLebhz2FUmc4IIHewLdeuunIZs4EZ_CUMWIvGA51Tb2BeW1WQQHdoDXMEETNgt_O5qL48c-JeDN1cTMOjS469Nk_wYIuIdqhrVSEzgZLg9KnU1jK20_yJuDpDa9E9mRPVaQBk2L3OGYjCN8JCrKB4fCAe_2i0HqeeM_EwZWxoIJAcm07H0WtLha9F10snsVPEIaaawPopfLpH1Sus3MkXudnm0S5W8bPXCqZuaJzs8EA0ispKk64hVzGkw7wrbrOTBl8NzhVnBTWRVxwImhOYtVwUJ80Wv8AbviCloXzK6wKoxa4OjuUtIeyj_ShIdNHnHkl9yzpzPmo6NunSLGMRlNMEEHWaRyGYkDMhKIbUAiV6G5YT18c142mJ1KvjfGZXkq29iMxwGn2VVcEYIt9KhIh",
+                    "duration": "2m",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQEOEmbzCTUr3w/learning-public-crop_675_1200/0/1602085368651?e=1644069600&v=beta&t=ueiuORi6EyWd0NGk-4yKLIFVlF4iQ0wvUH2Wp4rEMis",
+                    "slug": "what-is-a-database",
+                    "title": "What is a database?",
+                    "url": "/learning/advanced-python-working-with-databases/what-is-a-database?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C4E0DAQE1LqfQBYnbvQ/learning-original-video-vbr-720/0/1602001331525?e=1644069600&v=beta&t=wJ12BT3ARAwfcb1cezShHKHrYIvPRfvYoI56sfjiTWo"
+                },
+                {
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQIVYgHAKJA_JwAAAX7E2NultKcurotE4TXv15YqrOnFARsbLE4DSdfbLz-Hok8sF4TzVvavERZ95ofD4J2fSL2pznMFGBNwTQR8K0IyrgwJdSVUHFtXbdDoMpLRmrsx2QX8AgJCZGxsOu6XDABc4aPdBRDJWGcJv7dJdvOk07YBrIPcrUHR7yEaEhIwSjJC4fOxM2oPfD-e3oWm4c7D6dp9zcG1IKiYFwIHR6cth7cGY8f34467CyhQBvaA6sGC7Nt_SELdV-usP6UOKIJRLRinUMDy6mZIX-PBnsVLldbHtyM8VsVLg9GTK3GdUIlQwWKqnjVkI4DkqyKdr0qswD7DLFOtbwORboZ7goqhmM652_GxYoUk5xVzD_AHkP3mlbCkjaZeB_JdTJ7bx17COqohBd4GK-JSt2ks59gJtns1w2HxEUHjmlUMsK9PzRRXQ6chZ9o8wyWZrViQO2E-fLL5sX-mZKW1nbORiM_9w2W_3jA83oN4bUjYBMlk",
+                    "duration": "4m 14s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQEOEmbzCTUr3w/learning-public-crop_675_1200/0/1602085368651?e=1644069600&v=beta&t=ueiuORi6EyWd0NGk-4yKLIFVlF4iQ0wvUH2Wp4rEMis",
+                    "slug": "relational-databases",
+                    "title": "Relational databases",
+                    "url": "/learning/advanced-python-working-with-databases/relational-databases?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQHMOvjCJGJpAQ/learning-original-video-vbr-720/0/1602001416627?e=1644069600&v=beta&t=ZMl0kqNwjkrsmp4K2fXOMXzC5xDGzqaM7GM81ttU3BM"
+                },
+                {
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQK3sh7GbpxqEwAAAX7E2P6faxvHtcTI0spI7G71qdRBUEk4VSIZM0CI-N9yGMHzqsh32ALKAh6JtfEkfxQmEZum8JB4u9tsCCn8VwcH7FhhZSmxTmcZq6OYXA9znL3CXReD3PzlmdwEHVhXXBLGby_O543G1Z1-weHQ_6lslVx3stJmZQqaRgFhDNk4EjHcS5E17cyCcFzD2nIDN8sc62Jsr7RoTsmcQK5uZRSUuphLyGtnA6sFP3zvifxFMgRjdY9IH4wstoXGWk7DUic2AuaYbLUnkCdDRTFgj1LCt95V3ZZbTAC1TsdN6Pmv5wwzMycRCMo5gDydad5qSSWMXBCY6HoEJVzGzghEo_4-6lsH3-4ZOFnOxHMWIsEwtPvHAKw1qwOVRI8gH9Yf7te0gTCQdnhQLaPF8oa-0OQQyfI-41O3LGThbZBrrsKk1AaVHBnqPLkqJ7KN64S9ZCyjIw33UNWVGl4pujBHWtOTucfy-W3V4i1uvefKt6Cp",
+                    "duration": "4m 27s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQEOEmbzCTUr3w/learning-public-crop_675_1200/0/1602085368651?e=1644069600&v=beta&t=ueiuORi6EyWd0NGk-4yKLIFVlF4iQ0wvUH2Wp4rEMis",
+                    "slug": "non-relational-databases",
+                    "title": "Non-relational databases",
+                    "url": "/learning/advanced-python-working-with-databases/non-relational-databases?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQG-JGFg8A3org/learning-original-video-vbr-720/0/1602001491672?e=1644069600&v=beta&t=vqcw818KZEOlMbzET5vYS_X7hbPdqKwlG4VNEtuHYI4"
+                },
+                {
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQIjdh7IKWqCPQAAAX7E2SG9gZfO6oTnMtP-cY-pCMlYdXsvzQ_YXoeNeorWyYX9sCpt2VLg36UPDzjmt9IUdx9aoQVUX5B7pbvWZeKjXlxKO-NdXBm-FIGsyBg2yMMESXfu0L-B4mxr5HrkvW_ZTTfIyGqQCjjAuFQdeGTi2pn51_Dyvbk2XHL2NfnUjOgfjQOX1BW3gfrVn3sxSQyU4AZ0I67VEiHZBbcC2zd2XZ657dm7bseokd8I8gdxS8_L-LycyzbwS_zB3m7d2qy4bcicX_8Y3--wH9Um9zgAnAjMZZOy3_uA_oQAv2MeOzqg_QI-lLL7MOPB23zbtFv4X6ekIRwkw4eIyuyE7ruM5dMcQHPc3T-Pbt4QdcAHRbGvY6YFLI6vRH9S5-lVvyFdYqkN-aZQhMRANKxPVKIiElScHxk-youtOUpXjufP4GhMvsyqA62n6HZKBSHvpNRSmuDWWLliDw2wmCf0Ev6nghGFmVWMObAVmi6G9zZG",
+                    "duration": "3m 7s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQEOEmbzCTUr3w/learning-public-crop_675_1200/0/1602085368651?e=1644069600&v=beta&t=ueiuORi6EyWd0NGk-4yKLIFVlF4iQ0wvUH2Wp4rEMis",
+                    "slug": "python-database-api",
+                    "title": "Python Database API",
+                    "url": "/learning/advanced-python-working-with-databases/python-database-api?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQFewsZ-8J8shg/learning-original-video-vbr-720/0/1602001460543?e=1644069600&v=beta&t=8EvuzGQaG92Tl3BdCyvgGlxr5qxeJS-6BqgIhUHbqP0"
+                },
+                {
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQKuTcTxCvJiNQAAAX7E2U5I_XQ7gZ3lO7tNclFspdo10mwsu6cnBZiav0F7UOwtz0cz1Sfvb8QhvO-952Nd7d1-hQXJIZz-7ltfeoNcemLL5SJeX3dPtmLH2gTJsJwy2p-vDeaa2c1-6orvLH-ZeaJtw4IOFmRsUa3C_ZP4lBPw3V8OP9le0ndjEbopP5_U4fW6ROXpeBfZxa8_r3WZSSZabgktgfzyHjnmU_LJiRVhsLo4Tbimtk-DgDhjdyD78P_aMXZnpkLwq_adKlmd1zLYIvvru36Sj5VP3uU-8i2wjbZXXnMwlrSzMXQcvpYCuHEHteWvXcolYrFXkWKlms3kBvicA1sSGYTOFZUSi1s1PTbPPQ1BsmxKlLQ20iQC8qbhtO8r29kMvQ1aFEY8PzJPvZezF_xBtBinYtaM9ixB1m5DUb9VKtcRPY8K1F7Ocgqko4ABX0dIc9NZpoSAYxCsb4Gh9UXMe_PJELI2KRsULrpoT_NfDC7KVAfq",
+                    "duration": "2m 15s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQEOEmbzCTUr3w/learning-public-crop_675_1200/0/1602085368651?e=1644069600&v=beta&t=ueiuORi6EyWd0NGk-4yKLIFVlF4iQ0wvUH2Wp4rEMis",
+                    "slug": "what-is-sqlite",
+                    "title": "What is SQLite?",
+                    "url": "/learning/advanced-python-working-with-databases/what-is-sqlite?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQFAOxqsAVQ7bg/learning-original-video-vbr-720/0/1602001393352?e=1644069600&v=beta&t=xuKNDmzvurAeBDZKS1YU8Gul7qdhU2R697vtCA_o2sM"
+                },
+                {
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQLMRpdizudAdwAAAX7E2XMd38GH1xVaiMYtqFkJfxfjuWXDvTpMctnJYEyJB4vRThS5UUyUx-ICusYnYrdEBTkHr8Z4xikl-6AwQfaG3zRIEgapSmQ3GgN262OFS3JNsjnjVbGSAQOaqCM2eRZHcCZA07yApJNhP-DOSSr_UpWUXJCluGlWTa0G5oCxcdpA-g6gkjQUaZtofy68RsUUY1iDz7FwhQ0JIqaCMSvWrrCs-ubV-PPCsibmegt4IPIio82PdwE9pi8G5ivpADJUtM5YzLpxMQJmaN3tA7n-Mb3IfzdY06Z7EDoMegYxUW9TM0CfsK1yrWcgnexgkO1O9lkUKAXK5lJB2zVApsQsd3PsrunWN19IcOQwdqDltFK6gSNaNYlVu8T6wnTlc8PiVyZE1I8i4k3IZCULegnh9XSusaESh6Tnk54GCMRupJjNXD8FYC2O4OqqALwyEe0WQ2qTwbSr1tYRyAKULPavA7qg-_fhwg785ZvpxCZ-",
+                    "duration": "3m 31s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQEOEmbzCTUr3w/learning-public-crop_675_1200/0/1602085368651?e=1644069600&v=beta&t=ueiuORi6EyWd0NGk-4yKLIFVlF4iQ0wvUH2Wp4rEMis",
+                    "slug": "creating-an-sqlite-database",
+                    "title": "Creating an SQLite database",
+                    "url": "/learning/advanced-python-working-with-databases/creating-an-sqlite-database?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C4E0DAQFuYNJPYQbmdg/learning-original-video-vbr-720/0/1602001408875?e=1644069600&v=beta&t=p8YKR1-iyv-D2hxYUsiLeej59UvPN2D2Q-C1iT12vS8"
+                },
+                {
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQKCVdYkp9LIlwAAAX7E2ZqYib6PGCnNGEgx5XgRPtXylMnySP6QJpwRkR8mqcddpB9q2ih_PtG036kH54OGlxSNHLuV32eueUN8YueGj_jMgTO-mBR92lsBllLE6OKcFq2rmKXl2AFa2crXjwIJgzniVuvxydpAhLfaEuwa34e7sZWqNMm5KKgupmtnTvb_zKT0SOugpcuwrshvNeEsBReuSFN4waAOrwjbRY6COD8ZrmsXeAVgqKJFK3qjoa9n3qkfFYgkZ0CXECUzjn5eAbf_aVdElZbU_d0tegMFJf6ObXBCHji8DZV-x-oZsAgGmQMCx2-dQV8t2sv0DcLO74a65yx0tM-xHL5g6FMl1eNSVnDel0az3WS1pg_id6q2iEiA2jefBXhazNQV24mDEmey71AHGF7hK7LyBr4QFX6zn0_2042AFcmbB0b_gaUd5FGlFkHFEShLZuMfIIna2vk4gtXTb_KJZvXrZoebxR_S5nPyEGuqGYhRV7Fd",
+                    "duration": "7m 20s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQEOEmbzCTUr3w/learning-public-crop_675_1200/0/1602085368651?e=1644069600&v=beta&t=ueiuORi6EyWd0NGk-4yKLIFVlF4iQ0wvUH2Wp4rEMis",
+                    "slug": "manipulating-records-in-a-sqlite-database",
+                    "title": "Manipulating records in a SQLite database",
+                    "url": "/learning/advanced-python-working-with-databases/manipulating-records-in-a-sqlite-database?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C4E0DAQEQau_iQNkYzA/learning-original-video-vbr-720/0/1602001441375?e=1644069600&v=beta&t=qgRgmbLZDaFrppkkypIr9J5_gnWqKvZg2bewTSvzEHE"
+                },
+                {
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQLLSvrjP0ZhOAAAAX7E2c1czjf6C8yCe1NIUzjkKUGhJAfPbtWdnO3pBiQ31Oiqm38Kipw5zaNOG_vv4uNMcnEcTXjq3Ycnb6uutoPlyJ9n2J7EtRcR0vmkieMese_aIjiJ2PriR-G6pMvM1aa9Kd5db_GyUpkd_cNtroqJshYgO3sovlQoj0vjMqswzHB7Xa1dzxt2_8QR5Spmz7YBuG8jBWzHzcv-uB2f8oA5rJaVqpNb2TGOoNVMjeIjsUyH6htalvxBU4fF-eW1-aDVIGMmFsUDb8Uaaj2YgEoayMcu3WPlYTzXYW_aaAAwAxgwYqAns0AXM7e0Ct4ThHJfeummMVwLmjK6i5kGKsYdDy8p-_IsUtexQprKoKzkpTPevLBtPBHKHAw2p6ltLFb5E_qHDC9bnhu2qBGwHA438Rd4n6bsXbDfxOM3bmPnRXDXn-mYEzJOruWedR7gEBvb73rRffmbDtV01jbh2XQFfsDTVHnbPkzmbX1ArGup",
+                    "duration": "3m 56s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQEOEmbzCTUr3w/learning-public-crop_675_1200/0/1602085368651?e=1644069600&v=beta&t=ueiuORi6EyWd0NGk-4yKLIFVlF4iQ0wvUH2Wp4rEMis",
+                    "slug": "what-is-sqlalchemy",
+                    "title": "What is SQLAlchemy?",
+                    "url": "/learning/advanced-python-working-with-databases/what-is-sqlalchemy?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQFb0bRNPYHciw/learning-original-video-vbr-720/0/1602001408793?e=1644069600&v=beta&t=dwMAZJHjdloB7Ya6VKU_IwbVlZBcjKCouqTtcLF7v0c"
+                },
+                {
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQK1ySQP4yVT8QAAAX7E2fE0fV21pw79YkMGRKsS8ICZzHchq4hMjILKvXjixDaGDMZHyCrn072hZcBIj-v4Qwn335Agwyz5a2V8MK5xsVFYKa2U3ycFaDo2onkv7uSpn_PvEEbZYRLsOkgfdm2CKJEPXG8Sn0lt0juKlBILtjPxB1M027PfZ_BoucH7M9iC4T5ym-r4w-zUjGrq9VmCl3rTUYbnzTFkbzRO45TMBGEpgSdguFZU1uAI724SGvLq-KcGtT8HwYwIeUktQR8B7Rmb88ubCfC33wlGn6FCwQWC1ClYpYUe4BmUeEBez9wkwhxMZ9GZRdKRsqABWcCmn7nazkrsW8nOlXc-4Np--0ii9vUEPRHqXDrT7odDmz9iFLa_kvZRZupp5dBAY598BwN0V-47HErWO84BNGQcePaOS2a_fNui6gK6_h2x9xFTosXFy-x8Kj_8Yryq0j3UUl0llv2THyfRxXEXsgkNfixyRXO-4-oFCzDparW4",
+                    "duration": "2m 38s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQEOEmbzCTUr3w/learning-public-crop_675_1200/0/1602085368651?e=1644069600&v=beta&t=ueiuORi6EyWd0NGk-4yKLIFVlF4iQ0wvUH2Wp4rEMis",
+                    "slug": "setting-up-a-virtual-environment-for-sqlalchemy",
+                    "title": "Setting up a virtual environment for SQLAlchemy",
+                    "url": "/learning/advanced-python-working-with-databases/setting-up-a-virtual-environment-for-sqlalchemy?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQEIoUkzUvq7rw/learning-original-video-vbr-720/0/1602001377475?e=1644069600&v=beta&t=UyliFBhlDpEq7eNJawRggfoOTHv5DYgbwH-m04Ib4hs"
+                },
+                {
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQIx9fJCPNX6DQAAAX7E3FVZAvZ1H6Jz2EH1dMtyDyzpaT_0pod1AJZieg7gGhBsV9PHz0LKzF76gD7mLsn16BdnRMxGxA1l43CsNTASTVI2fu_dr0nDx03teRArWgv8ypxjWlhG4Gxojx4ni4hk-ZnBqIv4_UJe_NEF8330JBN-UIFXXM747oNMZHS5DUeDi_8i3apRJrLOjSxqIJtCan3RF_p77HXIRSN91-N95I7ZRJ1wu9WZlqGVsFerFbF-CJUKRXM5GSvLj0GOQ0Q325dtEFYdOClx6Ij-j1mLk5sf0hOyZgDHL90UoW2V-1G_bpSePS2r-JRAuD0wfv_K_ntJiWfgGZ_tdpucvEhjGfRAqDDGl7zDKqYY8WuhCVqqh7HhirPPWJAeV3PjZI7qoMm9UlnMcIVMo-kXkj5OTBXOGXRJ2Z9EM53Xz9dkN-irPGmswinDRMODremZtvuxLFm-9zg79Rxzt6Qq0KWW0rCV9KZhsZJmo-UPiTUo",
+                    "duration": "9m 37s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQEOEmbzCTUr3w/learning-public-crop_675_1200/0/1602085368651?e=1644069600&v=beta&t=ueiuORi6EyWd0NGk-4yKLIFVlF4iQ0wvUH2Wp4rEMis",
+                    "slug": "using-sqlalchemy-core-with-an-sqlite-database",
+                    "title": "Using SQLAlchemy Core with an SQLite database",
+                    "url": "/learning/advanced-python-working-with-databases/using-sqlalchemy-core-with-an-sqlite-database?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C4E0DAQFVv79PlTfiGw/learning-original-video-vbr-720/0/1602001456982?e=1644069600&v=beta&t=eUkTj3CTIpmfKl_lWX7gPTbhtIldrmRJySUbtihNH3w"
+                },
+                {
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQI1FjL-jiRiNgAAAX7E3IRRP7YlSNXsWVhKf1eMH9jmwVC1bWqgC1Ej3XTMks4ISk0XE5tl6yGqsv6rHRF3k8bS0knfTX4DArQLFBBQcJpVlsy-w896VLg5b8X9Ogq1U0fx8m0BJiJpPPG87H7WwRiPmukYcGRn2oTAfP2JtWEcbOiL3Fk_FNU5Y3zkqDqh0cP3-RJQPKp9elYTTWuDiv9c8bi_gadHy7LPfR8ITFagUhrk72zOfR02ptQCwp76LwjB2CP4hiriWZIatRu4ihlU8pzxgOMe-5Jow1BUEvEO9tYLuxdLQZ3zpXFsk9d9cvdV10z5KLWtXFcBPCl9PfDORPWREswomWd8RUcdOJpBIwew9w2TzdJUKfD4KOeqfl03faG_1KO6WueBclQOGgAUZSExpc8ZiEq1HR_ykb0CMiOlZn484Ku0fhCF57KDdRE7hGU5u3ILqJrUYQbOgarW_qb7FI1kqiArsDjnBNu1StnvEtbKuPEDbOg1",
+                    "duration": "58s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQEOEmbzCTUr3w/learning-public-crop_675_1200/0/1602085368651?e=1644069600&v=beta&t=ueiuORi6EyWd0NGk-4yKLIFVlF4iQ0wvUH2Wp4rEMis",
+                    "slug": "challenge-create-an-sqlite-database",
+                    "title": "Challenge: Create an SQLite database",
+                    "url": "/learning/advanced-python-working-with-databases/challenge-create-an-sqlite-database?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQHQEVrDuoxD5w/learning-original-video-vbr-720/0/1602001351823?e=1644069600&v=beta&t=EictnMcsxf0t28aungxj-TUe19IKJgYfit_ijB_qeBQ"
+                },
+                {
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQKYoJAZpXhiqwAAAX7E3KjRMY5dvKFdagK8v8CYOx9BSyIb9FtndhkCKhKyOj4-Iv3cG3gGTB7r8OJtH6gZyJUCCHDsOhkkow3FFWnVCqSiOazmk2p0o89rSRSqkEyLVw-O7r4GwGw0UsVdEUF6JR7o_xmCjqdHMAVpEghhH9ZVP1w532XKVcdsU_vX1_4W6e6WAFm6A5KCgOIBJULfaHh6QxYHea7QYjll99IQgU_-VXecfcSChGzP3CDJ91Ewe95WTIHNNS47C45L5EM0EppR6Dr2BEt6sOdsUw9JYrhXLz0wfOtpC8MctomXY3eee6GryJvy7yJJrCKnE6ZG2k7Szi4hgXUWmLhyqt307zNi-UXotEqCt2_MOnQdtXuHYXR7W0Dx_wTHZdtP7rjOdAeuO2bjnMQeZfGzGrrF_Q0sDfgKIqDkBpiCdbfKs50cWaKkwqhUwJMyjgN3oejXeBUg3BUPi2YqFlIs2HOSb_D6Bs7AffF9J_AomXqy",
+                    "duration": "8m 45s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQEOEmbzCTUr3w/learning-public-crop_675_1200/0/1602085368651?e=1644069600&v=beta&t=ueiuORi6EyWd0NGk-4yKLIFVlF4iQ0wvUH2Wp4rEMis",
+                    "slug": "solution-create-an-sqlite-database",
+                    "title": "Solution: Create an SQLite database",
+                    "url": "/learning/advanced-python-working-with-databases/solution-create-an-sqlite-database?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C4D0DAQFNg2udXJgDyg/learning-original-video-vbr-720/0/1612801129100?e=1644069600&v=beta&t=QA8kudssHPUAvwnT0rbR9jjxoj2UwqLUp6oDX2zmQdU"
+                },
+                {
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQLuCbOsfrw5IgAAAX7E3M-nregshdCJQjHXDRnHjNlr_eIALiGEyw33a3YoLIyXmidd6BRAnGmcEfZvcBYoN24Qr_SsVCGvL6nWsIJNu9dnqvVFm-V5lMMkspDaqU_V5mSpeXFaRTSW1ty2UPyh5ACaxHS8x19rrUIw2lIAu8VsPVdJAT3SxstKneV7WBADAbvTNhmRmEtuP6B6YZd5278cMqDmwea2x4PaQ61ULX_vbf2pP06bfdRwP50d89mcosp4-2_nOQCNzXKw4pNlvl34QPnmcRIxj-fe88o7Y38b8ajS9LtM5APwXH_raytpj5XXg_56fbqFTRHd_P3y0IhjhHXDJBk7iMHFpmAML-FV-c-Zg9RHDqlhs7R17JhAN5yzW8_11t9yHnj749SkVCL1ueba98iYA06U8z8pGPOX4hWmuALFnZ0KMWTl-wtZ802TLs0idJHGTWMFrX_hPySXVTicXHR3AiRPsDE1ZuuFrYnTfJ_2FIb_gvJX",
+                    "duration": "4m 4s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQEOEmbzCTUr3w/learning-public-crop_675_1200/0/1602085368651?e=1644069600&v=beta&t=ueiuORi6EyWd0NGk-4yKLIFVlF4iQ0wvUH2Wp4rEMis",
+                    "slug": "what-is-mysql",
+                    "title": "What is MySQL?",
+                    "url": "/learning/advanced-python-working-with-databases/what-is-mysql?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQHNRVi_ydR6Mg/learning-original-video-vbr-720/0/1602001436242?e=1644069600&v=beta&t=w1Bv5ktSp3MI68LMFydDaiF5CVfuxxojBft9Ja_q01I"
+                },
+                {
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQIgqs7zdhICXAAAAX7E3QGQjsTtNMBPlUV5XWd6rwMQrMHdGXCReFs-XDKwpKgnAVFVfmuaefNcVJ7pxpnyTcAW16cW7Pk0J2UhlrK2gdAIejbe0tjBcvLH0KFlXYNk7pPTk9iEs4_yoUQjoQHYEtqzjoNjSH8xUUh3u4wkMLcuTSUP5kjI0Za6Y-RWVq1VPUc26cNjLQr3ETD8pQBFfn6QnF7L8-gGUcWZWDJsyl3Ym0-Pld7aqjgsIshReL6Sr6doMadUHdql7HAV9EOJWDTnip1Cvtq_Ds2TMdepn3RDtgKeuPnqH-xthWEEJ3UAlbboQDUFmBf31S-ETWyRF-dyRYeg7jopLQ1JM9BNmzlAShu3NJ_oOcUb5ut4CUKTKErkqQ_Pu68jESLUoZI3Yk7G7WJGUUykRfaEuBayT2bA1CQiG0UD1p9lAZiJAK5iKVO3DSUtYPTp8q17hnuy0PFlWMx77vszEVrH-P3x6KzXcSAAfTT4pXXsqRFY",
+                    "duration": "3m 57s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQEOEmbzCTUr3w/learning-public-crop_675_1200/0/1602085368651?e=1644069600&v=beta&t=ueiuORi6EyWd0NGk-4yKLIFVlF4iQ0wvUH2Wp4rEMis",
+                    "slug": "creating-a-mysql-database",
+                    "title": "Creating a MySQL database",
+                    "url": "/learning/advanced-python-working-with-databases/creating-a-mysql-database?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQE-acjlI45iQA/learning-original-video-vbr-720/0/1602001415876?e=1644069600&v=beta&t=1zG3hHq95_3PhV-EGyJ0Fn9XJBC7zuMBWpcKK4mojys"
+                },
+                {
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQKebvjZzMBS-AAAAX7E3Sx4RhYhDrWy44XcvkAICFIPUy297tNXx1bciW4vYrMAidz2zj-Oaa_nQRc_UDwEQGP5weEceU3h40BzmHNwY73o2CValCh97Rz-vM7E5fOnSfDrgbvBsuHd6dsqa6V3iUvm_ZLtBRZ3Zq3Z1OeyJdHiEOIn0Z0oaTvs-Vi_T-rvJklMvYxqSzQQ8GySAxoGl0MgkmUlcVeRKWRJ_SUflZcel8PKSqrfGK4RUTfoRujw4P6Towaa6G0sdsiLo8ozHZlrpd_3FFJxUQhk1jo90FG6IGNmLhFLeq9vL3lyBw7aot_lsS-nZII7vNqw5zevCdklKLFO9qtl8SINQMfSmT4uNO4YwUJJfkQ4JNwPwLxI4wFmeWm0HAbHNSXegV-G0dPruPWWS9sw1QJJvVsEXTogTkzOZkEoaUpLOOIxHnM1z-NkQ44nuuyLrFq_yAAIWj-s-J1YJw0JXPQFhqpyQ-F2IQ2yZqcis0z1TsZx",
+                    "duration": "9m 1s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQEOEmbzCTUr3w/learning-public-crop_675_1200/0/1602085368651?e=1644069600&v=beta&t=ueiuORi6EyWd0NGk-4yKLIFVlF4iQ0wvUH2Wp4rEMis",
+                    "slug": "building-tables-in-a-mysql-database",
+                    "title": "Building tables in a MySQL database",
+                    "url": "/learning/advanced-python-working-with-databases/building-tables-in-a-mysql-database?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQEvaI8tA3_f7Q/learning-original-video-vbr-720/0/1602001474782?e=1644069600&v=beta&t=XMJBsx2d3_iIyE0RTwYX6zJDNZKiZe6dLKwOTxLOzxk"
+                },
+                {
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQKm6gLXP5M3LAAAAX7E3VeNiEw77lKrSxN_dUf8ypl8fwPXC7GOz2WnzyBmwlxkmLDbnCTexLpdW5Ty200A7fF1ivmf51BDF-2b7M68bpg7BKZxnY5nF_mFf8sNK9UbcqjtXytM_Dht1y0484ZtS8D2tP2uK3fH3XbYULdPzHpiuevr21cqKg4z4pmpNREuTvNVvYJcLyUTXXP9BqEQ6W3nUuPvShbTZtdm_q4XhaHjU8ZG7yhlBLckGATCg5g5RalbpxhdVfDzbhGvTlClw5u_tQ_j_0TOSVDs5Up3wCZZNVhvZylUDZmiA5lSIrY5R-QtASOFgI8T9fIudK7pxQXSHXT-616d7gkEzOeW5ADZqUNnWwKgTGW2uQBIIm7VlZKOVodiJrc19G63UU1yRAoZFPSkvwXdNPhPyBxBDkBrgCQ8UqBd0PHNPYgS6QN253KkaOdyaNc6S01gK9590xJ_BAfQ4nA7qOSGyWQRkeUnkUX2MDJfMi4MI0Ye",
+                    "duration": "6m 35s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQEOEmbzCTUr3w/learning-public-crop_675_1200/0/1602085368651?e=1644069600&v=beta&t=ueiuORi6EyWd0NGk-4yKLIFVlF4iQ0wvUH2Wp4rEMis",
+                    "slug": "connecting-a-python-application-to-a-mysql-database",
+                    "title": "Connecting a Python application to a MySQL database",
+                    "url": "/learning/advanced-python-working-with-databases/connecting-a-python-application-to-a-mysql-database?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C4E0DAQHx22YQKBxnvw/learning-original-video-vbr-720/0/1602001437394?e=1644069600&v=beta&t=S6ZeYEtH1nXHxJklgcU1MVUH6sU8EO7HgPFZIVxbHmM"
+                },
+                {
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQIGK5-fCGMFXAAAAX7E3YJY1ZaPjunSvRn_CfMYAIA7KLNAmACEbzR3T804PB5lfxVBWiRwpgvUf99ZL-4T2E9yf8RIR3YgqtkbIJZfI4xbllXF05WuWcXzkwqDufaAPYbG2YyIMdEubpzuvf6kKpSzmwjCoDVMz1-rv1MbraD7n3h4fM3fv1-y51bH_Vk-LZ2B753DDm_G-3C9Gryc1wIHoPdMKlY6w3x4YKQsbNTgE5Eb9bHCAZIm4DjAqYEZGiBpQ7TQXBu2rpED4JtBXCUpRIXvo4QQTrtEGY9S_bnn3-gjfpDkmilNIBhAR3u3iD8h73TTvr-CL-9JxO-vPiRxxGqw_vE9v49NoEXZOViCFTkRJmpj11-2XZGJQN6niFcxrRps-G25hmVGgL8v5hc-h20SVNtwu-dZ1tyA-SHlowUF__eTtRiAXqYPwl_ZFNvNAHelaL7UXlSrOVC6BlRPnh0_3EIwbu2yzjDyB0XYXTfoVtV-4f84TZV-",
+                    "duration": "9m 39s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQEOEmbzCTUr3w/learning-public-crop_675_1200/0/1602085368651?e=1644069600&v=beta&t=ueiuORi6EyWd0NGk-4yKLIFVlF4iQ0wvUH2Wp4rEMis",
+                    "slug": "encaspulating-database-operations-to-make-better-applications",
+                    "title": "Encaspulating database operations to make better applications",
+                    "url": "/learning/advanced-python-working-with-databases/encaspulating-database-operations-to-make-better-applications?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQEsWXQ19W85PA/learning-original-video-vbr-720/0/1602001458893?e=1644069600&v=beta&t=FNJkcQ8wiHlhnNKB9BUQf3ORfEjbzaDkDoxonbsEQ2M"
+                },
+                {
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQKZ3KNcJu1btAAAAX7E3aaynJH_jzFeCaSTTzaBW5Z0cZGJfmFPn5n8_MNGISiTpwEEgctA5a_A0qxv0FzwQExHm86Y0XGrQMrV3P0Hmr0jJfCF_WUpElKDG_pZELWvcePNzDjxcF5-LLcMa-_t-OMOAI1AME0eTFTnE6D5L6XHCKk4Xt_ramTMBcAN6UhQYW_X52KvAqw53tgMXXDxBNBWEfpPPH8Wcg7xELMOK0HwHcrt1ANXKH29kvN_2Pd9ZJiYgGiNMqfaAQTF3B4Ntr_36z5tM-yjUiKfxh5LhYy4A3pdtCySmXT7QnDfxr5g11UhRLZlZ7iKQq12p1bj7H8oSCmKufavJ20D-TLFeOjDDEcxwnG3xGiZ7oLILQIiZ2aEklKmA_FIzvzgoI-lFeEwsGcBuYIvy5NyGR05b7mYpgI9Pr_M15-9323St-KDxHt5665sd-CVgS-AXzam1kKTDVE93-uuxPrggejr2othYcG7M807--cNXoyY",
+                    "duration": "9m 14s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQEOEmbzCTUr3w/learning-public-crop_675_1200/0/1602085368651?e=1644069600&v=beta&t=ueiuORi6EyWd0NGk-4yKLIFVlF4iQ0wvUH2Wp4rEMis",
+                    "slug": "developing-pythonic-applications-with-sqlalchemy-orm",
+                    "title": "Developing Pythonic applications with SQLAlchemy ORM",
+                    "url": "/learning/advanced-python-working-with-databases/developing-pythonic-applications-with-sqlalchemy-orm?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C4E0DAQEgMlSLGa8C6g/learning-original-video-vbr-720/0/1602001457319?e=1644069600&v=beta&t=XBaryyZcuYO2E7d46-oRy6mGeCUdmwFiqTLWSj4YupA"
+                },
+                {
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQJ8xZlJSBUryQAAAX7E3chuXX6_fMm5lZkcgbqZfPMcVUod44dhwetZM6pAS88Vy4A2POyHbUgh-HTaJQ9949Cngxe_ymw8_xHPxCBb5XzabLNuqAy_4uzV46fcobezFM_B-CzyH_u21uwDPjetmaapfKqvPeGqnRyaX_qOe8OenTDzr-1xd4OEZ9Tiax0F7b25-ccAaEyowekRawd8jmUDwhPMC5C9C65eEb8oYiSVg7JEuOeWsDu0BpLbhInotBZH7M4HOvMK5bowBxfmsjcvXSzO1A4LD891aVF98OtqHcrgUDcxUxAwiJG6s9n-Ei45XfQIgX0ZOrmxnSE1zWgB78lLtiwn63Vrm2mNhh_40qWAgvHiSEAI2b0TGypfRzHhefVa6VFzOkDLZL0edrSiSHlbVNNzUhUvs2xcchtZnCUTSxurExstu2FTRTsMeiMLGzRd8GsNEYwW1LRy1yyzsSH1aVPo-pSH4AJmwxl0LZVRR1F4vRFj-Jwg",
+                    "duration": "7m 7s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQEOEmbzCTUr3w/learning-public-crop_675_1200/0/1602085368651?e=1644069600&v=beta&t=ueiuORi6EyWd0NGk-4yKLIFVlF4iQ0wvUH2Wp4rEMis",
+                    "slug": "using-sqlalchemy-sessions-to-transact-on-a-mysql-database",
+                    "title": "Using SQLAlchemy Sessions to transact on a MySQL database",
+                    "url": "/learning/advanced-python-working-with-databases/using-sqlalchemy-sessions-to-transact-on-a-mysql-database?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQFzlPDt3t46Zw/learning-original-video-vbr-720/0/1602001653136?e=1644069600&v=beta&t=RAG5NdWlpZC-e9MvA8JBKTtnw2osThi1yshhXbH4MUA"
+                },
+                {
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQJyIAIRY7YP7gAAAX7E3fgfRKUs0Vbw8sgNYmEUZHqL56LtVvnVBfvIRBWaElJxOe-hexAHd6kaC5M8kIROF59YIuGvuefIjdZs5D_6nrNNoFXu0goxlZ_5ghsdyJf8HmcVC575ipS1-Dn45bAHH1zqQqz99sb5AmG0Pk3hi2-Y8jdMc3hrc_zaHRfDycy18Yt3Cfd57Ouhff7-mPSb3cvWuktBz5N2lRZvmfqtn4gzkrEjB0z2AoURzDWS5hrlpCHQ6oj8wMQhTBp0dAXM5BgsuRGABv0s5LPb8hiX0s2u0DCNI1dFRBbM_6Vs7DQ0OC4X4zbNOiciFdcV32L8imy_-lkOWPIB_tBa5OqV58sIQMwGqSqY5XXXUCsUtQDpjrBGlSDJxNUOtprNB8NpFRV1nqoMCaWNYr_y5BCUQS-z5dEE8fn0rk_ird0Kt0ILSnqhcfiApi41sWUWVfNCs-3QZO_llv1joPQG6O9xBEm9feNHvdsHiJH-WW2p",
+                    "duration": "13m 1s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQEOEmbzCTUr3w/learning-public-crop_675_1200/0/1602085368651?e=1644069600&v=beta&t=ueiuORi6EyWd0NGk-4yKLIFVlF4iQ0wvUH2Wp4rEMis",
+                    "slug": "using-sql-to-import-csv-data",
+                    "title": "Using SQL to import CSV data",
+                    "url": "/learning/advanced-python-working-with-databases/using-sql-to-import-csv-data?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQFaGVGgzFYPRA/learning-original-video-vbr-720/0/1602001478491?e=1644069600&v=beta&t=YG7KzqMCMf_b--bbUQEy83D7GyzHMpSdeRFGiNS5iXA"
+                },
+                {
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQLmAAFl37bD8gAAAX7E39S0twlNNpCtChJHFHt6h5-QRvJWyY8NF5nldaAV0fuRmtFVBURDdrLDVMbYtbHJ11RPLw_HCqzOgYLeHnjTnRU7cZtTTvQUGlm-1Z5KIPpT_Kpi-nqajljRIOkXtOGuVUZariECCJv2ZEc3nYCSTygVBWVIOpONG3tPCYebm6sSWEeLl54jR8NIEUH53ju1xeHJp7PK5yvkNwBx2j_i_WzFx515MuLawKoCBIO6fU0igTqMnGHYCRUXnH243AZwKn21Bft43Y9C9HVT9sHqqWG2tCw8Hfs3xCxO5ipRJIjfl0gHWmb67-OpmhFRuqF_1CEJb9z-b8iGLxQThuLTm59-77uVa8P8wpR09AaJr1beM3fWLRW3g1uMz9QuzM8Ry8SGmQFzAN7hsTVa6mHOq1LJ0T97QNUD1p8q7Kc8Y7YDbba9l51hA117BUd1hbdiLisu-PK5nWQMjFCGqXPZjjWeK08p35eflZJbaFF7",
+                    "duration": "7m 19s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQEOEmbzCTUr3w/learning-public-crop_675_1200/0/1602085368651?e=1644069600&v=beta&t=ueiuORi6EyWd0NGk-4yKLIFVlF4iQ0wvUH2Wp4rEMis",
+                    "slug": "leveraging-sqlalchemy-and-pandas-to-import-csv-data",
+                    "title": "Leveraging SQLAlchemy and pandas to import CSV data",
+                    "url": "/learning/advanced-python-working-with-databases/leveraging-sqlalchemy-and-pandas-to-import-csv-data?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQEA34t0rRtBZg/learning-original-video-vbr-720/0/1602001438993?e=1644069600&v=beta&t=vxga4mdSzdE-HuB32eUa--I5L1C6UHSYHnwreJdb3KA"
+                },
+                {
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQKb_7UEDUD9mAAAAX7E3_b_jnVMHDA_AMTU2Ix0XCnIDI3Hl_9d1QPz8WHW9QWERqt2cAbSD4Hxs6kAYWJL6emP_cevkkBQrNIb3qJON-5VkbjSiQAji7BuUpF_bVx51-G1Z5eG7bBwxEhM4v6WXY63Pd2MryAuaEyJKLWAKra85ZWzRInnC1Osz6UdKzHnzOAwb7BUtDoGGEcaxnW0iYFxdboNX3v4E4XcCJF92jO1a0x3rUPGlesi4Sj2ERL5EM1buEl2iGfkQRPZczx2q4iLm5z8TrqGPzsloBQXj9XQQRelDRPET3ssO_UiaCgaimPuCPCo03Gvwlsp2GfQxN-3hbCQlHebqvmwk2ScgXS4EnlmT4YzbZ7URTsJrLNfJ9d2jmCIDFJluvYRCCbG0AqfAikcq1VywZKq65gDeaUHuwnSLJQNGSZBEo-L4qwrSaZ--GK4Jmz0FOWub0HSTMqc_ohPa6MFkScdhswQWlHjfDiO90fS-89CyPNr",
+                    "duration": "1m 19s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQEOEmbzCTUr3w/learning-public-crop_675_1200/0/1602085368651?e=1644069600&v=beta&t=ueiuORi6EyWd0NGk-4yKLIFVlF4iQ0wvUH2Wp4rEMis",
+                    "slug": "challenge-create-a-mysql-database",
+                    "title": "Challenge: Create a MySQL database",
+                    "url": "/learning/advanced-python-working-with-databases/challenge-create-a-mysql-database?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C4E0DAQHyC9MRtQvDQA/learning-original-video-vbr-720/0/1602001331118?e=1644069600&v=beta&t=lYL-PtgiJM8wEG9Lk7vA79SmY3swadjFkuLKaVJRKEM"
+                },
+                {
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQI1qff-u59OAAAAAX7E4CYaqNV3gB6of2ZbMmWlMNiTjzCV8n-WedkcAAUNlCLqSJUXnxqGiKKEDNbPjAcvod0pSHMScwi8cB7X3Dwh4SZ2W7_EfyV3xEMUzJxLj04fJqbWkP930Tn6g37ojvpyzl_ivUOY5fmlMWfCzvmnz0pfMLZNlGrp5bGTqBUVYi9wEVrHk9qF6sjgTeghv4xqiMSQv6Iji1nPody05qsXUmr9oTDLbpjw2gL_KlLJx7Z-bsYk60wx9zssrhloZ-JdsH39oLp8ogkbhTs23ZhHDjXsGmOSbAmjYc0UhSmFEytC--ZpdsBoXWhSKkSAJHGoNGLWQfmxTj1vAnfDRxzcoDF9t7n5Uwuo_On7qHOPgmeEKwDH3SiAMipfejStX7RTSb6t7AMmCjwBCL5BYIgkNguE-vBvznm-yTUm8yeuvv42ShtYNm4mgmznljNB9njNk56u8t7wK2YOqtov_TzPtRNWl8R0mWIXi1OkTaoF",
+                    "duration": "8m 18s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQEOEmbzCTUr3w/learning-public-crop_675_1200/0/1602085368651?e=1644069600&v=beta&t=ueiuORi6EyWd0NGk-4yKLIFVlF4iQ0wvUH2Wp4rEMis",
+                    "slug": "solution-create-a-mysql-database",
+                    "title": "Solution: Create a MySQL database",
+                    "url": "/learning/advanced-python-working-with-databases/solution-create-a-mysql-database?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C4E0DAQHx8FJojfRgzQ/learning-original-video-vbr-720/0/1602001465976?e=1644069600&v=beta&t=u0FwoqVnGVY8uvzPaU6QUFhqTToWbM021-m9oAza4S0"
+                },
+                {
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQIOUizVjvVAKAAAAX7E4FXkbK0UufqNfosfaHt9tYW4p7LUmrB4DNCQRk-JjRSIlPnlpJvedLxCMwRxvAmrB8c9F9xeN4TADTkNWAvlqxuXgINQP5x0z10EjMxh9KJZD05J6oq4N19e035_TG2b86c6wYMJ7H8YmesKCeBs2EOHbvVR1ghNMXxFKLGxxWbQzGv1nLAoS6ZS0mSNgFq9NBG45e5Uajfy7ztxDwYz8RhnC7FBMI8MiBOg-i0QQaRTBXLdOemEQPEc0a5ygraRoEQoBirufrpc-cFJdEhly1gczsU0UBI_na8Urjl1CAprUM3cf58AsBPv1rV3grSQOBBEK8mwFoTZ7obugqVvHw3fuIwFwKQPnWk7sERiQJxAXTe18Sxwy0z9bwExQtPSs_-B7SdM_mpm2h_F8LgVlM71uZ4btP5KYGE-hcdHJ2pywJS-mNe6jZBrCEuBjNrSyDP6PCQHYWtwObaS47QqBkhOlL7Ui40rbRhuZ7ur",
+                    "duration": "2m 22s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQEOEmbzCTUr3w/learning-public-crop_675_1200/0/1602085368651?e=1644069600&v=beta&t=ueiuORi6EyWd0NGk-4yKLIFVlF4iQ0wvUH2Wp4rEMis",
+                    "slug": "what-is-postgresql",
+                    "title": "What is PostgreSQL?",
+                    "url": "/learning/advanced-python-working-with-databases/what-is-postgresql?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQHQb24FuLaHSA/learning-original-video-vbr-720/0/1602001423113?e=1644069600&v=beta&t=nbYxR79AV_s9nM2YlnV2zUsEHYhd4AqwOmU-EhP4rL8"
+                },
+                {
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQIOOP6YEhHMHQAAAX7E4Hzy-wugbmnJ6_TlQWGTuqVRssjARnXoveFxO0lgT-4uQgNEQL8ccDQKZhWJ0BwW1RdZp127i_2ny4kVm5Wb9sKzpkJIuY1T2zR1L9oRayChKbNZn2rdcq7YkrZHT6dD_8lV-vyDXFySdHmVqLDQMCedG6bzcwmuZjg8mb2Q9XBTkgc30RgaFKV1fkxGoiE74uX4HPSePTIi5ARni1JyYwfrV8HfYphyiS0-kFMTzGqrxyzOIZghENFaZOv3Xu1RUNkN3hbV2B5qsWcyK7rHlvsQS4gFw5aIGDNKwXbuq9jSU1j6YGYscu39wY5k6HZo_v_fuRw0sMugFO9tf_QFfA89y2MIjF3IJpStFCk2J_0g09wzPTlm7vhYzYBFOzRwFsNdtku_jo0UhODrDYQ4-qgFsCFjR7zymv7Ujl7fDMvSyID7TOqx6ON9gcKOfvu0Mf-G7swg9HOcKBblMThEo7WN67Hhod5XQSyp_W6U",
+                    "duration": "4m 53s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQEOEmbzCTUr3w/learning-public-crop_675_1200/0/1602085368651?e=1644069600&v=beta&t=ueiuORi6EyWd0NGk-4yKLIFVlF4iQ0wvUH2Wp4rEMis",
+                    "slug": "creating-a-postgresql-database",
+                    "title": "Creating a PostgreSQL database",
+                    "url": "/learning/advanced-python-working-with-databases/creating-a-postgresql-database?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C4E0DAQFVg9epUOopiw/learning-original-video-vbr-720/0/1602001423253?e=1644069600&v=beta&t=q2Xi9RYlpf2NPzf4f2A4vOnNsvswYXFibR9olVFmdX0"
+                },
+                {
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQI28iOAFQuRDQAAAX7E4J70AFs0guQFR4G93LNfjjzvLuumzSt3i9LPzpNkmULzQ8__Q5V1ajrtR6-8_qIfS6wmZdhhBqOLrXjMAcTbkXScK22v47YahQ7-6WMIEFOgRBQ-Kh98D5fou2tOjW1azjxPptxCeOF_cMZYTC5bJ0P5ZWTObNFI1XH8vL7E-7JBJdHUU67COq54d4GXKNSqbOjZW8DCbCO8jJ17OF2y2F1xWrk_O28q8LBr5K6BRmcCsEOCIaHe33KbyEqhV4UfvA9iCbeEdOvNz4cIsSQbjmOOb3ktDUZGgnTFCiEu7mOtOlnT0reuAhanFQttZGfC9Ap6A00ggb6w6LHstnCuj48tPPYWypiiQ7dohTEXHoQMDajZwwjyfMqRxgIm5B-uztcRyD5XIK8UHXFjDoOuVpcz5uI4C0Hu4cL7aufY11XUlctXpbkOXiLelqqnv7PKJvittEqc7afTnbeIBSBzmpniaMd_wI0c-me88ZyO",
+                    "duration": "4m 55s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQEOEmbzCTUr3w/learning-public-crop_675_1200/0/1602085368651?e=1644069600&v=beta&t=ueiuORi6EyWd0NGk-4yKLIFVlF4iQ0wvUH2Wp4rEMis",
+                    "slug": "creating-a-table-in-postgres-using-python",
+                    "title": "Creating a table in Postgres using Python",
+                    "url": "/learning/advanced-python-working-with-databases/creating-a-table-in-postgres-using-python?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C4E0DAQHxTLXfEapPNQ/learning-original-video-vbr-720/0/1602001356702?e=1644069600&v=beta&t=uwmFHHLH1Rtw_Ga8SG6vVM9VRNAZhboNmPY2NfNxRQ0"
+                },
+                {
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQJEbJooGlr4dgAAAX7E4MngE-i-vryi99fPQSPYZZiOgawiUKWbIBOh83_v8I8jxg40v9gACuK9XBPTMqo3W0R7T4rwJX9WnPss35VLhWHh2ybY_CFT_1b2jkCNnf458brFke_1LdpVgIxt7qTueGrNQd5RWUj89XjrHzXAUqjXMcaNOZDOeHdkDmrIB23AzKiFdrSEiA0qneu-J2dr8X8oVwy4KDvJS4fVH4SS1MjQ9bydPKF0HA2xJx7WE2tyNbk6qWEkc3RefJLcrpoVInnk3rWZ2AkgGMTzlt0in79uHQRFkFt6TppV2FHS1-eMTomRA_8ixmq-93CrjTl-6PCEfyfub1jq-iTydjPQWI1tuSERU2MrKxcLj_et0kunRbzUY7NRZ77N0TTLlloKEUMoVpk2hub1rEYdKXzCEzOaDqkRXntRS1uSymsN_PSyp9uPlrBi-xUtiD5Nj2EBsaO0KoZHclwrSKBbpV_-sIGXCm-fa_QL1x4AWgvA",
+                    "duration": "7m 49s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQEOEmbzCTUr3w/learning-public-crop_675_1200/0/1602085368651?e=1644069600&v=beta&t=ueiuORi6EyWd0NGk-4yKLIFVlF4iQ0wvUH2Wp4rEMis",
+                    "slug": "inserting-data-into-a-postgres-database",
+                    "title": "Inserting data into a Postgres database",
+                    "url": "/learning/advanced-python-working-with-databases/inserting-data-into-a-postgres-database?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C4E0DAQHml04ugutRDw/learning-original-video-vbr-720/0/1602001454031?e=1644069600&v=beta&t=LMjuXoNzpVbt8G91YXkDaZeEAScTB3-CYn29em9E25g"
+                },
+                {
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQKpX_xhPF_AhQAAAX7E4O1Sauxz7kmjwP2bVGqE0216Z2wAl2h4QVKed8KdR3t3ehAX5Lr6rkyJ9RAZEq14N70dhG0Uc2q8pewZge7HzgcKMa3TNG6IYOiUbL77aqJGmVHoP1qKw0OZ8GoxfIpQtSibSsOHJq2UEYCs5NuUs3v8883BRms4JznCbZ86bDPF1A6-ShoTLZMStl2D_Pi9veJqRThuFiyXT4prUtO8T_Awx1SVcuz5oxH5JP4kJWGMHiux-Q4EfixRPPoRL2s2nfER7tvnyInSo3O6dY5NEnc_rUQ23_zB3k6mN0374DlMo9uSWOfIa1Clqm8NrsuaM8NW4ACNS1nK0jd_NnwPUemoNp469PPvlmMRvS0CzAhTtEizUkzYiSGwC7oEXXUXq_C4Ba1nUxwqpv7e1n1kRlpLBsmhPUsBwoAyqaH8wQz_AwTv1k5HrIWsDUB0gwID7cNxxDyCjrd66BtkoTcPdMGicTFYc9TiGced-BCp",
+                    "duration": "9m 44s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQEOEmbzCTUr3w/learning-public-crop_675_1200/0/1602085368651?e=1644069600&v=beta&t=ueiuORi6EyWd0NGk-4yKLIFVlF4iQ0wvUH2Wp4rEMis",
+                    "slug": "interacting-with-a-postgres-database-using-python",
+                    "title": "Interacting with a Postgres database using Python",
+                    "url": "/learning/advanced-python-working-with-databases/interacting-with-a-postgres-database-using-python?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQFpPe7et0tYhQ/learning-original-video-vbr-720/0/1602001427350?e=1644069600&v=beta&t=B15hi8tpXz5QdmvMabwO605igru6tUPXuV5Dqz1YxhM"
+                },
+                {
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQInnI3liUAdKQAAAX7E4Rl0DdUY5tGjR1xvWMlWCuFn924oSgDHM9nExazZvgkPO7PPsP6IRnib30WGKQcVU09qIdfSOmrBkH6IcTgkxct1OxSbrSua5v3-Cko_7cXbbdSd9sq983gJwOfbcg6wH8J-xGdbeB0wSxucU28bKR87Bed3HRDHUuJbTChkW7rZ3Fj7lJ5FjKU36hlTLURUnFnNe9u7_cvZlktgkuMi9IiGp27Y49IvgnRdYeepRS1M96iOG2rhXvIuNnvivnv_rnzI5Aw6TIq8-q8pJXdKx7AS43iyJXOx_TyIV45CzsOZWmvmd4g7w6wJYxMU1MHVpNknMX7f0tV_RBIE6mS39MpX6iUjVAwnW7uih8mSGXs3Xwo5wL6sCi7YBWnnBfMDjJKMHqUNfExpQ2nkh0eJu76iSKfhYCd4UXwA-oMsGTWz8uTAI3rSN2OIkEGnI8HzACKZpvXcQUkvl2dfzl5NmYJN9xkpDBiZFLsoeVox",
+                    "duration": "9m 28s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQEOEmbzCTUr3w/learning-public-crop_675_1200/0/1602085368651?e=1644069600&v=beta&t=ueiuORi6EyWd0NGk-4yKLIFVlF4iQ0wvUH2Wp4rEMis",
+                    "slug": "pythonic-postgres-interactions-with-sqlalchemy-core",
+                    "title": "Pythonic Postgres interactions with SQLAlchemy Core",
+                    "url": "/learning/advanced-python-working-with-databases/pythonic-postgres-interactions-with-sqlalchemy-core?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQEfKyfifZpejA/learning-original-video-vbr-720/0/1602001456476?e=1644069600&v=beta&t=9DAZen36gJlCEw0J5VLGFNqBtaIBGwHaPSH-E02Wr6w"
+                },
+                {
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQLoo_42pkwo2AAAAX7E4UcGqU7-0CFBMedjDNA-k28YRSf2T4mtfpoJ6whv0s5UODXXs7L73R0dbKnQeiLXRE4KjLChTGEXqtW6WnIxe0T0X4Dh_JeC-atPD-meBbcRmyPYq9eyi5FL1XJE-l_fCbU8Vh0bbmVL3seBcR3iSY758KdbIYj0pp8KpvYPdbC80wn3wwx_d7AKhGE24Ja8YUGT4FpZzbuNJ0GdnNaT3SCKH44n0v2ctURtWRc99oUzb4lP30bTQlCTt_Uc6rK7jAaM5UMpXQ2U6QOwHKNqKNs8T6bPDHVFuuMxkQDFvLP_d9eVGTQdGnQJ-l76Xps3mMN0_gLSN1ob5GwzhAFvHQ3k46Oh_ycokNT0lio_tsXTfNN_9AXMNV2XAsg_y57_5VgOicKHYNruB16CzDKnZ8wn_tOJcBYTDS3EOjc5ve46RL7MduDtRpTTQHbdMuFA_i3nRG9BYYYkt1QFitlQp797K1vV82aNtO2VDOJ_",
+                    "duration": "7m 50s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQEOEmbzCTUr3w/learning-public-crop_675_1200/0/1602085368651?e=1644069600&v=beta&t=ueiuORi6EyWd0NGk-4yKLIFVlF4iQ0wvUH2Wp4rEMis",
+                    "slug": "pythonic-postgres-interactions-with-sqlalchemy-orm",
+                    "title": "Pythonic Postgres interactions with SQLAlchemy ORM",
+                    "url": "/learning/advanced-python-working-with-databases/pythonic-postgres-interactions-with-sqlalchemy-orm?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C4E0DAQEIHCw7Obd1Yg/learning-original-video-vbr-720/0/1602001478554?e=1644069600&v=beta&t=DyeASaMpzppPyrZR1guM0tVWwyWPktR5UAbbkn4aSDU"
+                },
+                {
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQLYkXVizIprAQAAAX7E4XLoxxXnaE8vcM8Jfvr2rWxYFluR74KOtLC83NDQmK0eQMrL6oSJh03O9wWNF2ombxSetPcovh2OFNbZPCp1WXoDNerd0NShqVjYBv8az0n3Vn0itPtpIP78qOhD3coVMOb65421UORUf9IS0uaQSmO8XLJ9nBiK4-BUXRswXhxpjBlURQ1QTbc2rMCzWm7wuEPcMmcsM1WEd0D8HVp3NpgNmqCAMvcvf7h2wlMWgLPWpzqau1LBxojgtD_lB4oQ9enYA3Pxv77O__3WEU-uS8xPd16neFCLekwEC1zrwExaRHUH4VpXgAUSJJm7s8ONjE1hUiXFkoHoQnGoWF0FwhJ8uBOEvRM2sJAbhAGOl7M8ERjP0B7OyuhsDsm4p3eFfkI5t88VrzbpkAeMh7H6bbDdODfqylRbMHZTX4DXJLRh7BpwIbZsdxAo8IGImexhAwuNnkcxDl-brsHjboL4sS_fsdzt9Sa01fjs0ZPC",
+                    "duration": "2m 12s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQEOEmbzCTUr3w/learning-public-crop_675_1200/0/1602085368651?e=1644069600&v=beta&t=ueiuORi6EyWd0NGk-4yKLIFVlF4iQ0wvUH2Wp4rEMis",
+                    "slug": "grouping-sql-statements-with-stored-procedures",
+                    "title": "Grouping SQL statements with stored procedures",
+                    "url": "/learning/advanced-python-working-with-databases/grouping-sql-statements-with-stored-procedures?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C4E0DAQH3dvtbAvf-GA/learning-original-video-vbr-720/0/1602001364822?e=1644069600&v=beta&t=QUaCuLJoIiH7_2n8_r_DplMfsTOko2NuIsSg-e59I44"
+                },
+                {
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQKYj6MNSYakIgAAAX7E4ZUetDc3dnC5FOaSZtz8Q3MhC5MjR8SZYXo0nCbNNrpHJvNG5IW4-48eyuAWCjrHoZyeAZd8PVBE8kptaDQ5Yb0ZE-CX4yGyPf4EiskjNIOdpR7gCRq5GQyOyA23Shm4p0-E24Pjnbtrzqw47LHNV6nvJSWLcdokaSwZqFHXMYeAHSqudKoXbBwZovs4nQJLs378wyDYULtzgjm7YjPZQGj7lVIE5cERoQtryTa7Gr9NDT9B61i0E4fb_q-Z25ozOO6WAj1EcGfmuLT602Aja_oprBxxBy_VxPjpOhr-tY4i6ofbYpAXVriB_lQyEdGn5e2bhBm1kgPZkDFPfSWIF0elWO_Ocmdm9N71QKV9HXmLzDuWCStEBFy0O_qyMwZc5JMp6Bgfd0JVGqhD2l6C6cEk5UnSQHspt25d7nBubFbWcz_xS-FyhrCngaJ9IPImj6ef15_9wh10jhgGEvx80x4rxJKv5scc9PvqeFxN",
+                    "duration": "6m 46s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQEOEmbzCTUr3w/learning-public-crop_675_1200/0/1602085368651?e=1644069600&v=beta&t=ueiuORi6EyWd0NGk-4yKLIFVlF4iQ0wvUH2Wp4rEMis",
+                    "slug": "creating-a-stored-procedure-in-postgresql",
+                    "title": "Creating a stored procedure in PostgreSQL",
+                    "url": "/learning/advanced-python-working-with-databases/creating-a-stored-procedure-in-postgresql?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQGjx4FtESdbrg/learning-original-video-vbr-720/0/1602001614896?e=1644069600&v=beta&t=3htmenqbfvolmKm0GU3OnwL_q_4KaZKZh3m9_pwSkgc"
+                },
+                {
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQIlxbu08ffZZwAAAX7E4cFAV3Ks6FO8oX0x_wTMG4PCxDk7dSKf7zEuilPbA38_W3rCucMyNYqvN8Nl0Zcg1g16ngcJ_KwuonPUReJi6vB9ZMcoAWA3_sLhkizYYKhpUIASdIHfa5uLDqBb0BsaXsoCaXjnDFhMhbzvs4U9sG6QLTp9FxB3bDtx13P8CwXL8rLsZmwic_tOJ5aQQg6XMvrMCeiEMmgQF4Y11f4xh4jNaB1NbXiTNNCLREwDOPAJKx54JIm99TFV4B0P10naAZ-zYSjssqTi8W1iMvldipq_tG35-OdgQtBsPYTX4XhP43sNqITxCW2QlA-En5bUcvsSN-axo-lldPNvr0xHoBG9TB8btiIHBUB_MVA22K4wW2jbGAm7CBHmsP4ztwOG4QTAnLdQZPAlUlqw5lgfOalycHVIcH27a1iXYk2FbcvaM9BrJ9ffhKTrGgsJXttAkwj_pNK0Srfr82cHAf6hPMekZh6-zZWSCq97RucY",
+                    "duration": "8m 49s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQEOEmbzCTUr3w/learning-public-crop_675_1200/0/1602085368651?e=1644069600&v=beta&t=ueiuORi6EyWd0NGk-4yKLIFVlF4iQ0wvUH2Wp4rEMis",
+                    "slug": "using-postgres-stored-procedures-and-functions-in-python",
+                    "title": "Using Postgres stored procedures and functions in Python",
+                    "url": "/learning/advanced-python-working-with-databases/using-postgres-stored-procedures-and-functions-in-python?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQEvCcPZhZCuLA/learning-original-video-vbr-720/0/1602001498482?e=1644069600&v=beta&t=c13yPSAWF0Ai6dxxJUrmq_HkQWwDpDP_LOHTIzmnC6w"
+                },
+                {
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQLnTXW9XRebmQAAAX7E4eSUSVjioc-xgexzRbSrpFCvkAh4MzszEt2vVaX40paWOnQkHqUEAaMNlrNV5DTUUFa9plSQi0OB8Q5fg-6Dk0U1HX18Vju2NtW4H0KHUCy2T-27MZk5u2rufFyggh7IZhTo6bNx9WIngvXaetHkWq4OduTCpUHR6Yj45eFt201F9jZX-KgPyBqSc2oDOEN-7Ut-6Dqcmk10kudPHAr50Ktx7FVPZEslCul0h5KA5V7NEFLXgrL4v-V8oUMUrlrVB0fioeP2k1BaP-ioBw6GGeH3nvxknDSiZx8CIBSUxASgk2PwphblARey-6M9TuVrO9g1zIH1Pc-r7p1AX6WnMqED4nkQrmUY8IKgfP64hvEaNcMRUFk8FfzDmoqPtb924-qCNdn5WQDPbEc2V51C0geFyxLv2ToDYM9aj__kZLWVCESt8wqQrBOetQULXOkZdhGbDLroA4Z_QdRKMw7hCUs79jHWdY3rri4wOvzB",
+                    "duration": "2m 12s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQEOEmbzCTUr3w/learning-public-crop_675_1200/0/1602085368651?e=1644069600&v=beta&t=ueiuORi6EyWd0NGk-4yKLIFVlF4iQ0wvUH2Wp4rEMis",
+                    "slug": "challenge-create-a-postgres-database",
+                    "title": "Challenge: Create a Postgres database",
+                    "url": "/learning/advanced-python-working-with-databases/challenge-create-a-postgres-database?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQHflBQjOy6uuw/learning-original-video-vbr-720/0/1602001413238?e=1644069600&v=beta&t=wPvW1USg62b1wJTrZvC-kDIEndugbLO4Eyt_znWUfoQ"
+                },
+                {
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQKHLWEjuakG8gAAAX7E4g49lZilGAbWdwGTOYC0jBPj9qMW-NB6zz7MKBUzwpB4gB7RGL7sClrkOGXAvI9vrIaTLlbK4lhcmH4JLoFlB0dfP__7U8mS_4Hmoss7Ar_YuWCIu4vNrHiMBQOD8WEoZKMuKwyQicyTouO2qWOVCnBnox29pC5DdZhjyBig0E65WvlORBV-rIIpgUf7pelu8_JKYS2dJZGyN6lOtSl69bxiR1EMSpawOa39c5IgCRmcMt2krQY85Z9Lg5aYFV-uP-1I0E48LmeFzv8A1byY6H9KGvVlpNzYTFnIL0sWenBlSElqODKlz2x0G_AYqaU1-raLKLeTGZk-6Z81BY7mqHE4KlWsvm1Ae7oL8hLQE8lzEBOclhD7xch95sIc6wWYPNNyuctZrCkssX9UrA8UnBORGImUIARhGPS6-PwO6j955R9q3Tnx20cHbp99-nf6zS_niCnhEahsfqs36JQzMIWYSA6lNx5BE0BmSGJ1",
+                    "duration": "12m 20s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQEOEmbzCTUr3w/learning-public-crop_675_1200/0/1602085368651?e=1644069600&v=beta&t=ueiuORi6EyWd0NGk-4yKLIFVlF4iQ0wvUH2Wp4rEMis",
+                    "slug": "solution-create-a-postgres-database",
+                    "title": "Solution: Create a Postgres database",
+                    "url": "/learning/advanced-python-working-with-databases/solution-create-a-postgres-database?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C4E0DAQEmm4Q7-uZkbg/learning-original-video-vbr-720/0/1602001469104?e=1644069600&v=beta&t=bXRJzRB_J3LOdxHOlt1zbnt99WWVkR524a95onMuUhM"
+                },
+                {
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQLJ114j-Ae9UAAAAX7E4j1TC8yU8OuZbl6DLUIvzr2Y-nBbNUrACvMja0EbjdQYeDM7l5fxlIRnOLBGJFQOIKigyVvYIpI8lyzFylfG3PXOG6uyBf-b67OnN4jX84ZQQp1qhzEXwPhVXFx_HTiyhwWL2ylTH7bclLqLl76bItzqixsOU2BYYZruYnLIfCAn_jUgrbZttj-TAx5P0zxcinJ8LnxCPBURjcwyFDnISfJ6nzdUO_Gwk1GwU18MAgccAmJwJH3qOjjto5Hx7em9gBswJI8Zj1zG0HyeGo3ecUq5nRrcjcuGzVLMjS8FKi6CIpo7Miis6aDRtcNoRNiBP8T1pfw7LAFXkUtJGPU2GJ-_JeaAtCkiVvss3Jip5vjiNyowmuqLLTfcbv4jS-b0mnT3ZSWFn9EcPo0ci3E88eEXwxLBkoxLdK2Lqoj1ztjFcvy-UrSFaOkoTvb_sGMK-XDQBYXqW6iSWRmr2S24Q-bhtFNyi3tD9NDKKDWp",
+                    "duration": "2m 19s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQEOEmbzCTUr3w/learning-public-crop_675_1200/0/1602085368651?e=1644069600&v=beta&t=ueiuORi6EyWd0NGk-4yKLIFVlF4iQ0wvUH2Wp4rEMis",
+                    "slug": "setting-up-flask-in-a-python-application",
+                    "title": "Setting up Flask in a Python application",
+                    "url": "/learning/advanced-python-working-with-databases/setting-up-flask-in-a-python-application?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQGQ0Og6DluUGw/learning-original-video-vbr-720/0/1602001458548?e=1644069600&v=beta&t=M0XRygS-I8CpohoaGNFNm6IndK4yUCXyhaoqRd3Agmg"
+                },
+                {
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQI4UbviDE6ZigAAAX7E4mCF225vpNDFjpOCnwzb3U7aHgWCkniNt9e-UdYghb6uiFrT6wQS2sRXus_I3XudlG_vcMssEZ3JzD7mWhtT3oY1AYpiJEOKK566xqaxpMZYx2x9jyEuxRUFUpdZDrWlw1H_gnz5_9uAxtaXUy13wfgQsKEW3wbR-g4pg9EcPq81CawbUUWGZUZ-cPz0oK2C9v1Mb4_5IDJFBfBkH2kHXtOLLPfXeG_AwMFNbZ2UhLlss4FC7jLLxgA0BnHaIO03sXd_UpU9qN1B5VVZF2LExklW7zOECcw2hFHpI6U-EFRlSKtwib2XB2RFz2p8bNkctvw0KpDkqwxp7Vw1mqSOpspRCeJrvpRZR-1h3fA8hk1kMrZ-yHcYZa7Nis8VWT0egRyvP5DXcIiEJoGqD59o7G03li8INHN-KDAd_9QtHDGzwd6KxWEMUtdHjXLGDMI9Cw4lHkvmCgP0MtkllfyWjBGYvXrWvxZ51NHUhwrz",
+                    "duration": "6m 17s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQEOEmbzCTUr3w/learning-public-crop_675_1200/0/1602085368651?e=1644069600&v=beta&t=ueiuORi6EyWd0NGk-4yKLIFVlF4iQ0wvUH2Wp4rEMis",
+                    "slug": "creating-a-webpage-with-flask",
+                    "title": "Creating a webpage with Flask",
+                    "url": "/learning/advanced-python-working-with-databases/creating-a-webpage-with-flask?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQHGPycps0KPSQ/learning-original-video-vbr-720/0/1602001527628?e=1644069600&v=beta&t=apUavn4tP3p_4qAoRzfy8Pwu7v3SQEItDTA1wl950SI"
+                },
+                {
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQLESQStg0PEWgAAAX7E4oWeOAYZiz1ZohShSvd4-AIc4Dg6VCOcvFHeHnDZ3fToGIhAbz5IueAlPBmG1ndpsiVJGw_l-lq4O0tBODrl35EYG2OPPgIphsy5WlNija5fifW-JoUoNfOH5AfhU0gdexI0IEe7TbhhbjI4yUSapOf6EKGgFhYIZeF-2Vsjexi1iM1soBSX3iVufXgBqXpDtKtHzkvtzp9W8XDgb9pV06ksU5j4j4ekK47uNAkUulz6OfMFFduK2aXj6my2j_6mGXfiZYKtUrHl7eOCWNQ9PB_wifpbARz1YQtQoqOXyFYP3WdOdIOb86HzGRcIgr7qua7dgjaccDCQnUt8NVEkSePCpF4FuTKg3jpLMpcdZHr2xneuOEGNXX4Me07yjfSQz_eMVpZsuH8jKeYA9doAk9NQP--G9f4xqshDTeY6QarHl-NSVWPpLLRbT0UsyFXgXbz2B0b3NA0dqvlXesqICDo_FBABr_ZulVaW4nD4",
+                    "duration": "8m 19s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQEOEmbzCTUr3w/learning-public-crop_675_1200/0/1602085368651?e=1644069600&v=beta&t=ueiuORi6EyWd0NGk-4yKLIFVlF4iQ0wvUH2Wp4rEMis",
+                    "slug": "developing-additional-routes-to-enhance-your-application",
+                    "title": "Developing additional routes to enhance your application",
+                    "url": "/learning/advanced-python-working-with-databases/developing-additional-routes-to-enhance-your-application?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C4E0DAQEYfejAovtqIg/learning-original-video-vbr-720/0/1602001358263?e=1644069600&v=beta&t=Up_JcUu6rKNURH4r3cSk-_v_Ery4KvCMC6O6U_6egks"
+                },
+                {
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQJtW8Sp2JqNcQAAAX7E4radawWDvcxT_qvPZloJwF38hG2y0vvoQ9hX8cIiQcuDEAjzWz6JKzqMSu_wRShZUouL22eYkuOFir2KWOHFZcR_Eky0B_Sll4lMlcGZ0-9KS1bjLRwV3N6acO9H_py2RduPlO5TBB4RRTTPAwMhdV6Z4Ipoav6eE1obyHtvjw28xxtvxA8NFsNALbC4OSkkK9Z1h5Xi9nRGqYbljkMhXaiyCGoYegWPvmYE2_5vnyW2ZJQ096XEr0J5c7d9gPlcitn1Ym3JlA08SQzqPuiACoAEygsQZLP74hck15Bj6SLKMdL_wP-Hjuqm5LH2mokRhf-QleTV4UvZM1Gru6ZMnUYG_uo9oAAXxizsr5bX0BuaJWuv3v9dlzAXPAcUBBCnNw8jqxPXv4LmsqfiNEPTFd_teXUk1P7zLDxXDHlMzWzsBo_G904vVefU1rNacZqUaVGHXRKlWK9UILtUChMdPberBQh4XIH6scqlvFJu",
+                    "duration": "5m 12s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQEOEmbzCTUr3w/learning-public-crop_675_1200/0/1602085368651?e=1644069600&v=beta&t=ueiuORi6EyWd0NGk-4yKLIFVlF4iQ0wvUH2Wp4rEMis",
+                    "slug": "instantiating-a-postgres-database-using-python",
+                    "title": "Instantiating a Postgres database using Python",
+                    "url": "/learning/advanced-python-working-with-databases/instantiating-a-postgres-database-using-python?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQENeRqSDj533g/learning-original-video-vbr-720/0/1602001377057?e=1644069600&v=beta&t=Pv6ODZ9KXFHsC828SCJ-T9M3w3fH7qN76KxPlPXE10E"
+                },
+                {
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQLmKt9Ckl6cEgAAAX7E4tgo180qAR4dufy8tnbp17tkX0KoT6czAzH5Kf53SDC0PgYSJE0pq0qh0kFdZO450EmesLczAgV7uYJ2TEftygsF07bRvs3Fv0aQDBHnZwGTilJid4J0ya6WkLtEw2sfQDjWzWsjhNWaGLc8EXtxEw77hrDLsNr7kdZ_L9JEl4BxouiVD0ux1utk0kpiYFigKSLwlUhZYSDK9p4OlRbpsaJMrrAY_8-r7zAFmrwm2De6rkhK9dBnFz7rbMIbZF_fQNl1i6pSYaLY0WePnRs-D5kG8SoYhcw2eHON9B7NpW2Y0DWTBTzLqvlKccJAytsRo_B0p6GOzhnPmOVc1KeytW17fN6ORNQCxvRGemFBrkkzK0VLweOWLyyAAYa5AbvwX56powN7-t5f0QWzBMx6x0E5ndkctrSZiiu4EYpruyIJzerg-5uW04IwPWi4tIQtJLxoAfSf5P8DqcFZjSnB5aYOovfgdzSm3nM8QzyJ",
+                    "duration": "7m 8s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQEOEmbzCTUr3w/learning-public-crop_675_1200/0/1602085368651?e=1644069600&v=beta&t=ueiuORi6EyWd0NGk-4yKLIFVlF4iQ0wvUH2Wp4rEMis",
+                    "slug": "connecting-a-database-to-a-pythonic-flask-project",
+                    "title": "Connecting a database to a Pythonic Flask project",
+                    "url": "/learning/advanced-python-working-with-databases/connecting-a-database-to-a-pythonic-flask-project?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQGFpR2Q74PcBg/learning-original-video-vbr-720/0/1602001464248?e=1644069600&v=beta&t=IM6p8IRSZ0RAe3nvMUauIq6A0gCA3QB-HsmiFA4u5PU"
+                },
+                {
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQKM3kP7fnv2JAAAAX7E4v5jeSyYgnRaidzFcF7P-oKUV9YLCuWk0HgMLSEg2-01FIcVAanSYEc3jT5nSX_htjuyiLGWDzDv_CMkHb5tWa5mnV9hdDC3Xodvbh-DHFfRZyNLGngYH0CbGVl6zI_Zaj5bmKb9bgh-ApBtr-u0qwHJVb2_YiAwRnJZ_ETw3RnbMf40ic7lA3GI2yiOEyw59t3VCAycUOcfh4yWB6lruKHQ5sZkL4U5PAUZHNiypps9GMIm6aeJtDU6unENaz4sTNhNXPk1zdtvqm8znADo5Ll3W5S_pPB_l84IuZLsDYvniBpyzUUGyztBpquqfyiKyrCXANN8Hv07_j-KSzmyBiu5sUJ0_cDeWk7jEqsx6UZKKLWlLEfox1mmaBk-ZuCpZmSZkMQaBogY3dqJt-qbjbuF7XTmMT4HZnTvPdri1LWq7xyeNdMcJJCohYfs_b9Pn2YaiZkWXRg-uluOQ7becoQmPyL_87TC_ZwxUS0F",
+                    "duration": "4m 45s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQEOEmbzCTUr3w/learning-public-crop_675_1200/0/1602085368651?e=1644069600&v=beta&t=ueiuORi6EyWd0NGk-4yKLIFVlF4iQ0wvUH2Wp4rEMis",
+                    "slug": "feeding-data-from-a-database-into-a-flask-application",
+                    "title": "Feeding data from a database into a Flask application",
+                    "url": "/learning/advanced-python-working-with-databases/feeding-data-from-a-database-into-a-flask-application?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQH7c_Z4W0TShg/learning-original-video-vbr-720/0/1602001431385?e=1644069600&v=beta&t=mR8L9mFqB489Wu_cL3pbaNW9Ew8Wn_I_1Hp-r68kYfg"
+                },
+                {
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQLVW8SNoIFggAAAAX7E5YLhsaPHBHEpvHktnO9JRF4jU-CvnM3FeXuWlybJpeH5ujOs71OsRTUCEXG20LU912rtg1p89up8kIU8i48jVkbs_0AEcUoISSpmOc6wt3CYfQk04aZ49Su_xDlxRqSlgVYkIKt-1Qws6Hl41hTmY6iDJASxrVCwYVi0btFCwJoiVgTp8xO_lM57doEoockyHsTxuD9DV3wFVfn35egCLqLAnW-wKW3Z7oUnEWiU1dy_SXGKjmKCLe2gAjCe7EBHJ6mnz8rzzYIXl_-I_kCwss9V2Bhvlg4g9u95kYrUpkOzLc3rhe839ydPXzeQUzSW5Ye-ZZEHHclsolTJirdbQWm5Q77qcuTMZW2_wbokGEvfoyVh3SwvLQJz5fao0K75jNe1MpLYSFhaqAZqfi5FLQkhnEBs9MDPy1JzCU2kh3jJUEEaukujiXesDRS9oAlHv8LQ_qSFThLmgFj6Z2hAZN4Esk4S2h7weMkMKTN0",
+                    "duration": "8m 44s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQEOEmbzCTUr3w/learning-public-crop_675_1200/0/1602085368651?e=1644069600&v=beta&t=ueiuORi6EyWd0NGk-4yKLIFVlF4iQ0wvUH2Wp4rEMis",
+                    "slug": "develop-add-functionality-to-a-flask-application",
+                    "title": "Develop add functionality to a Flask application",
+                    "url": "/learning/advanced-python-working-with-databases/develop-add-functionality-to-a-flask-application?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQEw2_n88c7r3A/learning-original-video-vbr-720/0/1602001516844?e=1644069600&v=beta&t=RQ3kT0rhm-fS3VL56FNFYUqE3UaBN8pTXE7V8xtuqD4"
+                },
+                {
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQKcpRNCZRm3cAAAAX7E5agU73zPv4y2QGkypQnKHSwY5bD8a1CeTOtn5ph-zkmWBnHZIdg48g91XNRUkfrxgs4szERCM-VuqIa-96ja5nhLioy1DlnQljipQOC4Gn_LkgVwHgyetEp7lpC-jGCg6vKFSuTGU76MXMRlTTZ8ju0cXeIAaLyV8SJcTBIzPIKGfNj9Yi9y-l38xXlZkqUZniMp25gXCWn5D9s6JSWLY_3lH5GmbG7Qe1FIsD_t0wGTYK8DgpyqI9RSdEHuXDj5GmuyD8xeZLgtnZXSpeK2dLkmu4vQ1M4qDAtorWHWnGRsUKHsBYjqiYDYT1PMGIOGsjWpHyh6PW6hP55KXM4ZTTU7hPT6UN_4yqETYPca0-r3ZwhuEcJOOnYPKX7evBUZpPswWd5QOODdvzzlzEBZGSog6B13irKYXE2bRauQWqsxT6J6PvL8JDM5ORPlZoeizo6-r7-WeJsyD5VNY8Wa9hu5q47BPpaqY6nvG0tX",
+                    "duration": "1m",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQEOEmbzCTUr3w/learning-public-crop_675_1200/0/1602085368651?e=1644069600&v=beta&t=ueiuORi6EyWd0NGk-4yKLIFVlF4iQ0wvUH2Wp4rEMis",
+                    "slug": "challenge-develop-delete-functionality",
+                    "title": "Challenge: Develop delete functionality",
+                    "url": "/learning/advanced-python-working-with-databases/challenge-develop-delete-functionality?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C4E0DAQGRKuBpmeZydg/learning-original-video-vbr-720/0/1602001337538?e=1644069600&v=beta&t=91cE3_zyWR0Ga3ymglCe-b4DNAtDZ5qmNFCAJzIqG8A"
+                },
+                {
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQLtHDeELd3BYAAAAX7E5ctIfSLUtZt2lt2Q9Ll0t8cQgwF2-T5AEknbPb0NYR-p5K0JeTl7ilPHQYWESheqUz7tYvUBwYdt8Qs7F3rNvTdBJREZcIR2U6rEveceNFRvpoPtWcKHspS5-dCL346B5IE3CfoyhwJnf1ujBHreH3WCork146iEx9OnCu294MfeuVE-F53dOWkj9Gdxx6XoqMgaitHMrFeDUiLWCsR9fH7T3Lr4XDZ75Zrv_o5JROCohBmegr0HPwFaaK8jJPBFNb_MxMNHelDKobWb-hgqPd77JuRY-YylBISmuHueDmSxWXtr0OMY8wrBXjD3ySUb84FrKnnssUjFSFCJeeuEV_uEuP4J0hKgvCtVE_ChDfpTI7Q_omj50tbplyXq7uBvlLwWmwEP0dWRqbosoFBRboSYKnCI59WEstkIbSNN69c-2ZqkrfrTebW4fpndwavAlFzJYyyB9pVTM0N7nrxdqr39-sos2TNmvPFjoVxA",
+                    "duration": "11m 9s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQEOEmbzCTUr3w/learning-public-crop_675_1200/0/1602085368651?e=1644069600&v=beta&t=ueiuORi6EyWd0NGk-4yKLIFVlF4iQ0wvUH2Wp4rEMis",
+                    "slug": "solution-develop-delete-functionality",
+                    "title": "Solution: Develop delete functionality",
+                    "url": "/learning/advanced-python-working-with-databases/solution-develop-delete-functionality?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQHPxDhgt05rrw/learning-original-video-vbr-720/0/1602001718964?e=1644069600&v=beta&t=DfvrwLgZ0a6kg-n1F6uYkiAohzZlF7jTyhZMx-rg1BE"
+                },
+                {
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQKM2zoHfF4PCAAAAX7E5e3j5tXqC13VeVpQJsgicEOp4-ftBz_46gJAm-p5CMmTwTA7DQHj49PKBqHBTgwK8ppQl7Z97mRLqcquKPCxGl-Bdv6vBDfcmh_XNw5bCTpjkHN_xIHVQzpiU4kv_2_-SgTou3oU38t2qrrfzaltX0xTTWVB2CvFTcqMNQOn8OaAIAnc2BabuwuIlUTChZnoj5enKgmWJTHGCX7DfFCnplbKRkfunHK1Do4f-r0-7Cll2ADtvD76HClsCcspU8XIi9d3q19iockD3V1TuyPCvC40OsFa9a3LrLJmbzIFQjfBcXcUYLFJIgUX9YJb8TNJfTbQsvzaITyAXtaAAJBPNjA7Ee4GIutnBvQnvVvGfjw-Txzd9Of0rsH18imJ1xVBA8b4kEMs1vcBIL5PD6DxWStmjUfM8qCNt7rafirGRSkx45E1jm4ZUaTkyMxsgVKlmRY9RzygAp3PEy4QLYGO1Yj5SvFyc4kk_zKvUlS-",
+                    "duration": "2m 9s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQEOEmbzCTUr3w/learning-public-crop_675_1200/0/1602085368651?e=1644069600&v=beta&t=ueiuORi6EyWd0NGk-4yKLIFVlF4iQ0wvUH2Wp4rEMis",
+                    "slug": "introduction-to-pandas",
+                    "title": "Introduction to pandas",
+                    "url": "/learning/advanced-python-working-with-databases/introduction-to-pandas?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C4E0DAQHf6GJJ0q7ZGw/learning-original-video-vbr-720/0/1602001387525?e=1644069600&v=beta&t=QsdA-vrtx-F5vO2BVyyjktMm929zWP-h3KfIJhfVgPM"
+                },
+                {
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQKRTmK7BD7-KAAAAX7E6QRuQBzyorlz9xmkSydcMb-a7wyrePSTx44k327hhqdEVwxBi6p1VV3WNA6b62Ce4DQiwx2AuLd_nqNpYSZF268mL1jlfE_c6wW6d9FLVzdEh-Qoq6CB--j3rV9HirmozpeAxFY3sW24Cm7FoPlJ8ymFS9W1S6f3ADlcZZ6-to1axhFdmnDaGD_V8HYPOk1-eoNYUbwhs7P-r5dH4fXWyMNb1htuO5C-v4FrqxEnpwuaXbbipsEu3OaUjEfuTHuMMR3ShU24ngKLtOKSP7w9Nuj5ippaBvdu9uuXAgN7ZjoYd3-UKkpXAcBtwmOBszbN-O-mqKHDnU5lvpQFXDXpENzOt2ocPXPqAmM118ktPGGMKvDBNopb6t9C611HNkol0X6Ny2M_FmMhQXEKGI-zY7RKucSUpUF-bsiNShdxAjJTVzbvuEoFLUtcaGgEtcdamB3M9of9Cgsx9YiwXcfAieasqfqE0bUdCYegbwZy",
+                    "duration": "2m 18s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQEOEmbzCTUr3w/learning-public-crop_675_1200/0/1602085368651?e=1644069600&v=beta&t=ueiuORi6EyWd0NGk-4yKLIFVlF4iQ0wvUH2Wp4rEMis",
+                    "slug": "setting-up-pandas-and-jupyter-notebook",
+                    "title": "Setting up pandas and Jupyter Notebook",
+                    "url": "/learning/advanced-python-working-with-databases/setting-up-pandas-and-jupyter-notebook?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQE0takptGb8sg/learning-original-video-vbr-720/0/1602001346574?e=1644069600&v=beta&t=fJ9JGtxgZZeUdaYOLT6W6dmDLpPMZPvMPofdgycUabE"
+                },
+                {
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQIouD6vdJAPxQAAAX7E6SrCwj7keW9Ura53N6Fk-xQCoCqTQDTkoC3khHTu0fa69LcXHGkjLiuPSR0BnpIFFr2XgoXdXymcistuC_RfBfCBa6ZBuDmEt-bnpHoUx94FY3JHeJ58PZNjrWpUsro_yz1VcZhWz5GnVGsLzPukd4lLYu1al2AiXs9smewhmbFdkIx1_fNyZFz0GIw5TteQOp4CjX4HEc8puRvUpsVCQB7gYXiTGm9Kh4XhMUAN4pHP4RdZfBWWngoWvK7nGpSF2F9HHQg3mJVRlz5iqOTy6LVJsszXe5wYzpmwWWq28lFXt7U5IZViyeHXTV2uGngQnbcqPQ0s9lQ8GZ8n1LbJlmI5ziKCVQkkFB-igaoT-roJbUj38khmEkbFv4u_KyfJUSeh8dImRrZxn07fr3E5kzdhrO4m2iNmn8QiT7bOv2tm9TM41F5Fg1vsD1lYQ5tKiJaXp9v48fhN34Bqrr6KM-BzsEnjG2hEU-ReKu9M",
+                    "duration": "5m 44s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQEOEmbzCTUr3w/learning-public-crop_675_1200/0/1602085368651?e=1644069600&v=beta&t=ueiuORi6EyWd0NGk-4yKLIFVlF4iQ0wvUH2Wp4rEMis",
+                    "slug": "analyzing-data-with-pandas",
+                    "title": "Analyzing data with pandas",
+                    "url": "/learning/advanced-python-working-with-databases/analyzing-data-with-pandas?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQGAzU6iJW35pA/learning-original-video-vbr-720/0/1602001371178?e=1644069600&v=beta&t=I3guEHA0JSAt2K2M68k7ielS4GCUel7tGFRlle-qMhA"
+                },
+                {
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQL6JCkOyPZiAgAAAX7E6U6urC-1rifyniPEcS1K_BpFbVPh3STPgr47Flmja8lTDVESUHGGg503ttH2MaX6NamczFaBO8J5ca65mZtRux0VpqkECkN84oWkXvC1tUuE26e7BvkDM6LYpcjNv9SendWILcjV8i6cNrwOBqAkyM_29ul4Jpfd-Jce5GvKixkV8JViRFr8ovgO6XEZkPVuppVIvUV9dgoI8mvvjVDZA9M8KdEkS1Sxq_hNfPxASPtRepTuvNns36mYOxdmlvc1amfLrt2Kqbe2QB5_eKQFckiIMvO9AVWeAvjMPeSN3wyQgn9gqEcAxb8DgjC2FIaGNb9y6MlfumgWgKimaBHTPn0lB1pwVXUWbMtEX5TFB8iEtgXh9JCl8hEAS-nD4wyBN2tUFLHhKhfSZTayMDAm-2PCMEoFZVxumOEmPlCSgugWr-e2ZKqkfCNS8vtwpoSAx63IfNHLP6iUgS1hjPCeHAmtnenIfbdWiZH6KVYu",
+                    "duration": "8m 35s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQEOEmbzCTUr3w/learning-public-crop_675_1200/0/1602085368651?e=1644069600&v=beta&t=ueiuORi6EyWd0NGk-4yKLIFVlF4iQ0wvUH2Wp4rEMis",
+                    "slug": "integrating-sqlalchemy-with-pandas",
+                    "title": "Integrating SQLAlchemy with pandas",
+                    "url": "/learning/advanced-python-working-with-databases/integrating-sqlalchemy-with-pandas?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C4E0DAQHeTGGGCrK3xg/learning-original-video-vbr-720/0/1602001478832?e=1644069600&v=beta&t=A7WlMW-eOecBUhTOOrgrnMIe_w0M8lwuLPZjMxCKZHk"
+                },
+                {
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQLop2KBvx_aeAAAAX7FAuz2QUK3IgXV-fgw9R18fbPmWpIh0lPiRcbtoGmvhcGzW-XUizWsMcn2zAbdAI1Dda4JA2Wp4cs_UshgSRGVtvv6wqmwFy_RGl_nA00RScry2HHfz92iNMCsIxXsptbc9Ht8EW79tFMKuvkWQ8MudBDfw2Vuvod6_lyEp_utQoMI-QOGYg_AL4OEevNoMjSSVLbRrcvPzbMegjArX2KOeDc5mdTJc9KpkwYPMAI-bVxMwJVXCiEekHGEg91OjkXZbzPPYlBuAR9HJ45V6DLF9i-u0vqKT6nVodqAcVEHTFWg-KvnQ2oVW3OmNhRXpCzBG4vmzGSXTaULTx8WIo4SO7MX1CO6U9s7vUKur73MbPyQQqNDUUqUpERRYigRWahKoBb-kA7cPaB-KRr8Fh5l3nnNYFPuM_dQMRqHVMuvTYqhVpjM2XHVyXIMsdguMueuUXyS6rGvxWAMYrN-8rtxcuJ7FGgVekQiznWZkFcB",
+                    "duration": "1m 27s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQEOEmbzCTUr3w/learning-public-crop_675_1200/0/1602085368651?e=1644069600&v=beta&t=ueiuORi6EyWd0NGk-4yKLIFVlF4iQ0wvUH2Wp4rEMis",
+                    "slug": "next-steps",
+                    "title": "Next steps",
+                    "url": "/learning/advanced-python-working-with-databases/next-steps?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQGvPUkxcuNCPA/learning-original-video-vbr-720/0/1602001406667?e=1644069600&v=beta&t=YaKER0_aBzTesiU_lmWJNm8_ZD_Yo33BJM4LL44yRq0"
+                }
+            ]
+        },
+        "using-sql-with-python": {
+            "coursePath": "learning/using-sql-with-python",
+            "courseTitle": "using-sql-with-python",
+            "courseUrl": "https:///www.linkedin.com/learning/using-sql-with-python",
+            "fullUrl": "https://www.linkedin.com/learning/using-sql-with-python/use-sql-with-python?autoAdvance=true&autoSkip=false&autoplay=true&resume=true&u=95231473",
             "hostname": "www.linkedin.com",
             "tocs": [
                 {
                     "captionUrl": "",
-                    "duration": "55s",
-                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQGT_oCEAqNaGg/learning-public-crop_675_1200/0/1607698091454?e=1644037200&v=beta&t=s8GUT7wYtYB-dBTA6aW3rW49jUM_k5SCxlnO4k9HTLs",
-                    "slug": "how-to-learn-to-stop-worrying-and-love-the-bot",
-                    "title": "How to learn to stop worrying and love the bot",
-                    "url": "/learning/web-scraping-with-python/how-to-learn-to-stop-worrying-and-love-the-bot?autoplay=false&resume=false&u=95231473",
-                    "videoUrl": "https://dms.licdn.com/playlist/C4D0DAQFpmEAxpbXtew/learning-original-video-vbr-720/0/1606253634126?e=1644037200&v=beta&t=PGzlFJ4cdznLl3fBlPddOS_Gs-LpwJc526VzGNlni40"
+                    "duration": "53s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C560DAQGiI_t79dOGAw/learning-public-crop_675_1200/0/1625163615628?e=1644066000&v=beta&t=DkwBeY8aejpd0k2yu5Igb_OmhePDxNn6jkcqdfMlZc0",
+                    "slug": "use-sql-with-python",
+                    "title": "Use SQL with Python",
+                    "url": "/learning/using-sql-with-python/use-sql-with-python?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C4D0DAQEWrEAJlnSW3A/learning-original-video-vbr-720/0/1621973420344?e=1644066000&v=beta&t=zDHehViYmn4qydWoi5ubSlivdctXbUAoeuHzsSa0704"
                 },
                 {
-                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQKlDuEqfbWqcwAAAX7DAtKm20etXZqfiCw9awdqfMxHi4ehYvQB5-8j1yQ_lR1s1z8inuhxNVGSVFw-SfRu6SfR0cEwQk2blGMExyuOiFVfqu5YxoMcOxOKEbvJnuGVYUEbC10V4nfQyVA7tObokAlX95EZ0QHe8rVDhmfToY29xvfdhKaowvNIDCesOiUb2BxsAaZCt-7owv7kCEfKFItAlfymK2Y83TqosvrVE6PW-lA5M077L-3xO4N_kjWNSBF1ImSpfwzVp0dyybfBmcTnjMeI7rW_3RAAQ-GevibOi4oGArRLAgq4z7wG0fFxYV254JZS5uY9o44lkT9KtALJhVQI8D3ffJpCbYTGXdJabuKUzJEF_iAWzzVEc-oG0EH9t-VCDAhTv9wNUWd2uHQTAa2H99iqKi8LZf9BLXw_owyXfiyAAPBqLv75DujdJ4g5kH44SI4T-GUh63JUYEMNVYRyznJSDbfY9XX4KFP5xDcsP8jF4ES-rFfu",
-                    "duration": "1m 51s",
-                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQGT_oCEAqNaGg/learning-public-crop_675_1200/0/1607698091454?e=1644037200&v=beta&t=s8GUT7wYtYB-dBTA6aW3rW49jUM_k5SCxlnO4k9HTLs",
-                    "slug": "what-you-should-know",
-                    "title": "What you should know",
-                    "url": "/learning/web-scraping-with-python/what-you-should-know?autoplay=false&resume=false&u=95231473",
-                    "videoUrl": "https://dms.licdn.com/playlist/C4E0DAQFzaGuQAIQSZQ/learning-original-video-vbr-720/0/1611269746221?e=1644037200&v=beta&t=Z-4wfWvYbPH28_E3Z7AEZIM1gt3mMyHZfXh01suQZkw"
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQLchrd0PgB3VgAAAX7Eu4t8BO7d2A3P6WBRuziD1S0JlXHke8DyNs2SRJ9rCvF4qptcV3kD_W7SVemXOA6ptPA7LKMDv5lPCKz8ZoBEaRjBjC_aJ75lYzO_A_1ArFuGSMAJWtUKv72N3I0GPqV6jsNKHxcrEQLhYX77wpLExjanjQNsAAYrR-ouXVv_lb6guN5HVAwIl3ZyEj3pZP9IZrZtMa0TxsBMMEuP_LrZTibJEVgdKmgwmaDnLewfzZqNeC2h33LTt3Bybjsi-mOCQWMWudZSFth1mgBezZd3K_aUjuW6-94uuIbid85kDDBVWW0FxE7lv1253tkWxyQo770BEXVV2FqvoWUW5HBCHzB17OfAwp5QxORNuSCNNKyG_96G6RrT6iU8oQGZWnTBfwE8y24YjTrla5mgXWuWBI9lR45-TDyjUooDcTvlG8qX9vSSomXicsX5sr34zDv129HlOoE4U8mSEDbPqwUCgrJ-DfH99y8UuLJIqtWq",
+                    "duration": "1m 13s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C560DAQGiI_t79dOGAw/learning-public-crop_675_1200/0/1625163615628?e=1644066000&v=beta&t=DkwBeY8aejpd0k2yu5Igb_OmhePDxNn6jkcqdfMlZc0",
+                    "slug": "using-the-exercise-files",
+                    "title": "Using the exercise files",
+                    "url": "/learning/using-sql-with-python/using-the-exercise-files?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQFPH9SqkVV-LQ/learning-original-video-vbr-720/0/1621973414919?e=1644066000&v=beta&t=RUBInUkG-gBsMV8oDgB3LL2JQ04DYUaoqedWkLlxc8g"
                 },
                 {
-                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQIS8KXU_EGIvAAAAX7DAvi2layuVIvHAIU9OEmlILxAdQHAohQ48um4bpAO4cTdVQirJfOzv4jexAd72msoOjZhzdJGqfdkMxPGzbC91qFU7Vr3E-5ks5z8kNm2U5MqTdZra7PfoX7AgZGW6altr_qBXnAc58rEE3srubLv92Ok7rXXyPfVDuAoxteGzwC6EEGSEozsNHaknO3lDJHiByzWto9sl9jab6xQ-sqRpon1ewHw7_IuqnV8v4MQFHw9lJ3Es7yW7xComsPwiJmKpsl8cJYqQ1aW0_TCRl9pNzSq3z-Xe3JaF1jIQ8UbfCxzgZD2IRKksXrmFmLLzI7eXXQVT2QiWByAkhKAk52XzqZIMCkRwHYGczz_dCzgtfZ_nR3H9dcXchcICBcuuoKlZPz6-WGF8azYHtMFjkv_c2lUSH-gupeL4dRUT38LBumrSHX_oPwvMaSjiAJziX2sGq2wzgF4Pqlnk8a0R9qBgiyVzMFQVn5OUL7zhJee",
-                    "duration": "4m 19s",
-                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQGT_oCEAqNaGg/learning-public-crop_675_1200/0/1607698091454?e=1644037200&v=beta&t=s8GUT7wYtYB-dBTA6aW3rW49jUM_k5SCxlnO4k9HTLs",
-                    "slug": "what-is-web-scraping",
-                    "title": "What is web scraping?",
-                    "url": "/learning/web-scraping-with-python/what-is-web-scraping?autoplay=false&resume=false&u=95231473",
-                    "videoUrl": "https://dms.licdn.com/playlist/C4D0DAQGDuvSZJ2YuOw/learning-original-video-vbr-720/0/1606253668948?e=1644037200&v=beta&t=TRVdCX6nNi4nRZc5DfVxxBlRvqnchUElCGmeQVlZ9eU"
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQJ7zHo1P_jElgAAAX7Eu69_uDRSPZ-B3UOrISrg28wCcoIZp7gyOi99gFZ82yHxTQZyucc5D3toCsdGHHPoFdatn67zpKzhWtR0QzczwY8wxycZJZAenXpfApqtNFTdC-19O-jemcOfuc43lgxjuPGgkwZwj7EqG9BxHEl0a7LzFtQq4uQdBJBTrgOveFFRRCluQevVVy7zMm6E_2mIreNlgAFRP3ndJV7SZAP8AJ6QKRMI_rgROkYJdzBwvZZgZU5z0KOzgS0h2E6cPIjf067HEgIN5MG7useA7W_a_k2EIA6hPZE1_OtFvQck0Xh-Sc5AJnqKaR6i_F_uSyS_64348gWhC5c25I7Qu1ufnTWKUpA-6u0f79k-3k5l2uK8HWqWrd8IXlZbIMz1J38xLF2DtKWNRTVjD0kaQ5uzI26FjxDavq7-5AdHphbIM1xWgMw2u8uLp1fmrQQirdhcJ974ZUriPAF6c4hYyodbHD__pUh9gkFPgf3PkuXq",
+                    "duration": "1m 35s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C560DAQGiI_t79dOGAw/learning-public-crop_675_1200/0/1625163615628?e=1644066000&v=beta&t=DkwBeY8aejpd0k2yu5Igb_OmhePDxNn6jkcqdfMlZc0",
+                    "slug": "what-do-you-need-for-this-course",
+                    "title": "What do you need for this course?",
+                    "url": "/learning/using-sql-with-python/what-do-you-need-for-this-course?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQFgh3EWSMha3A/learning-original-video-vbr-720/0/1624919411795?e=1644066000&v=beta&t=BUejNwFkPLSOcR9Uzs3lYmGUbkhr33Ky3viPBM2xyPE"
                 },
                 {
-                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQJvjZloLrGpPAAAAX7DAx0SjGOLHBxEFaVBCGNMlubnSTE9fA0pwBx_rimUz8bLQx3bW7Yc2tRlqOaMx_fQ1ie8E1eL2UrV2Wz59e-3-QNHlSAMy9XDw6ONpJhbsxbGItyb4Cmcvh0jj-EL0XrMUaWrTXp8-pxkh83sDKG0mOplEEO4-s-sQm91l05llu_M6je4kG7ATUUhfGtbLstlODE4uPpdybhMO8tevsCyjQA9STaMhQusQKcoTJkVuiAt2e9fPGUvVgJVXv1YpO6zTr5J19djpff84W1m89J1Ycf6-AZJRa90e9qd5KBxluwAICZEMKENNBbu_MIdRmYL93-nCp_l938-FrAmdb9D1oCrFSRh97oS-g6dolEnoN1MdcV3ISS49dc60nXL1-obd3MEIPGdM4mC0FSNL3lQzPmAFuHW6udZAITTZVMybOg9-kPezQjYGv8SUVB_xQD_OzG3IMCBeYXPJKD0WZRsoUsdfUji5qYpdLXIYxc0",
-                    "duration": "4m 19s",
-                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQGT_oCEAqNaGg/learning-public-crop_675_1200/0/1607698091454?e=1644037200&v=beta&t=s8GUT7wYtYB-dBTA6aW3rW49jUM_k5SCxlnO4k9HTLs",
-                    "slug": "how-the-internet-works-a-brief-summary",
-                    "title": "How the internet works: A brief summary",
-                    "url": "/learning/web-scraping-with-python/how-the-internet-works-a-brief-summary?autoplay=false&resume=false&u=95231473",
-                    "videoUrl": "https://dms.licdn.com/playlist/C4D0DAQFigBTJ3ZJ3Nw/learning-original-video-vbr-720/0/1606253655526?e=1644037200&v=beta&t=gp8tOTShbIoKDh0qrHqsw8UdWINrUkBWxZ8Sk_TyBZQ"
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQIloIobU3n1WwAAAX7Eu84yYhi39L5rOcEmUvV94F2Y4sZhFwyV77FJQQotWsRmCcLe0YlI7ub9fyLmTYX-85ZAYJB_NphjSBz3w0DmH7amYmgyUT_TE-Cd2pi6_uBgCq_PLeodntxBAh-0lP2t9iokeJZ_dmqFgzWE34hFTlofjTOtRMcAbJci2utKRO2wUgtG_zvJsFA79AEEYf2IBLzC47g1RSuEZFuCx2BEOGkh1g5T7-TfQyzbDSvaAG1W2CmwgwgsSy2I8od1gdkIi7yXRIE7ZdTtDh3htPSpp4NAJy4Ocp8mgWKKDegqQ6slojTl_zMih-tqmpNn-vRXKy_lS88O3kxRYFRaxzhCR6DtdXK1lwGm_FbY8YbZxZFP8utQ3fHUMlxThzLht6b03qwEUw07cSy0LzRu4Ysjjj-TIcuutgJbchnTYEVuIjEv_CCo7teKZlQe1Gpz1NLhQo8OTJd-LrlhoOt_2OZVAkrn45e3iYoHHKLSQPvW",
+                    "duration": "9m 19s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C560DAQGiI_t79dOGAw/learning-public-crop_675_1200/0/1625163615628?e=1644066000&v=beta&t=DkwBeY8aejpd0k2yu5Igb_OmhePDxNn6jkcqdfMlZc0",
+                    "slug": "installing-the-tools",
+                    "title": "Installing the tools",
+                    "url": "/learning/using-sql-with-python/installing-the-tools?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C4D0DAQEQvTiSrp-GLg/learning-original-video-vbr-720/0/1624919431972?e=1644066000&v=beta&t=74puwLSW0Z8WFlRF8G2QiK6TdhPk5GIjM0QfIg3uRmA"
                 },
                 {
-                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQKBUbwjbA1WoQAAAX7DA0PIvIwfrOkIEhW9HTP0ZiNhcM-eZeAzX0suwFvovcvilTwFXz7-No00MEOOaLECDJNDZJpODhNLeUzusg3f9iHhJLqf1H_GraGCMtK_gkHC4FtBqWoMXusI7VzUd-JBY79y3bOaUIleSDaKKrH4kwcTJB5wC2U3qvZBuPqdT0LW1nGvdTTsaF1-bERW1Iwiu1u2Mjo1V00ChJhGKGVuacvJAsHL8AZOC9GNm9Q2grST0ZeQ1eru4PkC0B2KmTVsaANcWoUAuI7H-XQp02vvo8Tn-b8zZVdM021f5Pk2V9H5uy-g-j_s7AiFw5wvVH-DH0RRLk6qZ_qT_ACx3fQvBbRfLI8ncpHalNaVFJYBB24NE76XVUWOUIg9TyUHJSMFDy4Ijtz3L8VAd3IvrtGe6EIRw5ii2Q4YPwjtT4MhuaDkPgnjB5HIz1YVgok2raRNXut8zj9hYFCmkNsde4aesm-O_MpPZMkYVilxR-Qg",
-                    "duration": "4m 30s",
-                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQGT_oCEAqNaGg/learning-public-crop_675_1200/0/1607698091454?e=1644037200&v=beta&t=s8GUT7wYtYB-dBTA6aW3rW49jUM_k5SCxlnO4k9HTLs",
-                    "slug": "hello-world-with-scrapy",
-                    "title": "Hello world with Scrapy",
-                    "url": "/learning/web-scraping-with-python/hello-world-with-scrapy?autoplay=false&resume=false&u=95231473",
-                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQE_IKcvVaYlKw/learning-original-video-vbr-720/0/1607718073687?e=1644037200&v=beta&t=IG8jIox0OcrWriuiDn8qCzRFkQvjtZMKGwML50yqiW4"
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQKVqHwX9LrVvwAAAX7Eu-5KbnbTDAEEZI9rbW0efmtOo0xHYB3EXhkzdmEaNIUwdmIpaYEUIw2P3Wa6z33D_OAsHcnOy4LtCe-Vbdz0N-OPGtPWpD2cuOiVLdA7m-CDTFAMJEumJz0hUCaz5ndWc-EObRikIWJb103iP2s23iCgn6yvNMeE4Nl_Ft0S0-L8fWc43FqnkbGU05ui1KCRA96oQGFpacCehWgSBvYUIPwM8bWfHU278ujy2ovkwhMEMU5C1dhaI2apR6OpyT8EnI1v4Aj1b1Gsy3j0yZV4cAdmv-QotTZD9rNF99DCPHe7DPbQCJOaqhcSc9x3TCVqvv243iRTynZRgFXLay0B5tuw24l0vbzu7gczq3P02tnJwKUHtQUIDTcyKfqlDgz2OXaxcKGN6uBcW3o4WRiJmuqb-0VS9ANPU0w06rTXKltGnDY9HL5XaB6QysPQZNU9f-GNuQn4zSL2_NueWLjfjeWjeBqJuI0vuqw0KLxO",
+                    "duration": "2m 16s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C560DAQGiI_t79dOGAw/learning-public-crop_675_1200/0/1625163615628?e=1644066000&v=beta&t=DkwBeY8aejpd0k2yu5Igb_OmhePDxNn6jkcqdfMlZc0",
+                    "slug": "the-python-db-api",
+                    "title": "The Python DB-API",
+                    "url": "/learning/using-sql-with-python/the-python-db-api?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQHODNH4Amm1jg/learning-original-video-vbr-720/0/1621973415311?e=1644066000&v=beta&t=ykzzHyWmp7CaJl0UBQWcWWD1hOVKZ7g5SYH7pmCYIy8"
                 },
                 {
-                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQK6KNZoH8DcBQAAAX7DA2bL-2E3aFw0wnbAaP9ypYBQOOcVAWYwsIwyEhIMB-QOfKwfQqBxaRCnfNclRDFTtWZvVY1fIN--467R0fagzrg_tjprefo1ffDhF4OB4U8Y-lxNazCByF3BU0VemnQxV63KbKoZ4GYrJKiDEkWLxf35fyTZD5a0EOJYa4N214Rur858X5-YfgXpdaRBTNoXvjyBPzkXGf9BBl3fxOPJUiA2sE1ZaUuh0ElrscWFziRc0X9Yoq6Pn1stgX6DoNHB6oJDmrZbBc-3z8Yq0i40WhyJdCT4MlFb_1rkA1yNjraPiJxneVBK8DJrTfek05JSgvhPCN6wuwMpZ3pQvLavYaIPs-s3FWLSeh2K62EYtUz-V_JRR6enOVxJpszZ7Il6I6YUkUPqRAYukHe0rHf-_pcO4fnHY9qAJ-Xoci1znbkndHEpPihVReVhNGImVD2_vMCC_DFUCZ0tqMFRAw3PWZMNBdOxJ2aNxZGCslUh",
-                    "duration": "3m 34s",
-                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQGT_oCEAqNaGg/learning-public-crop_675_1200/0/1607698091454?e=1644037200&v=beta&t=s8GUT7wYtYB-dBTA6aW3rW49jUM_k5SCxlnO4k9HTLs",
-                    "slug": "challenge-scraping-all-data-on-a-page",
-                    "title": "Challenge: Scraping all data on a page",
-                    "url": "/learning/web-scraping-with-python/challenge-scraping-all-data-on-a-page?autoplay=false&resume=false&u=95231473",
-                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQHljCboj-BX7w/learning-original-video-vbr-720/0/1607718075064?e=1644037200&v=beta&t=Xkr2g3ok0Lg8Em0T_XwO9nDpckTS-aDK6kAn7DGh9B0"
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQI9KNoZ_lYd1wAAAX7EvAvnDbiKtBMZ41gJEhrFcwZ1sYGw0wWItFwDc9C27oftgzqtOexQRK5INhisJSVGiMTc-MBgONyqx1x_jaE8KAFwIrUXTSby5I8YT3BJVk-RZDXO_5z35xXNLuojUS8kxQyQMeVLx0E7qG19SEjgKR_S6QywTW0VndK7rG8o9CAzKFjApZ5bVhCFCbDwg8XUlkqgaUJb8WXy8YrRfTtv7b_i_Pj2pIi2hR6wCxqqZkJc0EPaw21pWxd_9Q-zFMrjl5q-xwKG2xzuCJobIub0YxyFEp3PmNGK4Q19iow7CpDuzsDO7DUARbDiqvS7417UkhgwXsbWDBJSzdRDys1ullzN80b7G2DqPUjm_1FBy7WaJeMGmGaD8HJPj_kk_2HEvykjHL8MDRl0DLzy4t5veBMzbxd6Zw67qf5wwFb3um_3x9XiTgQ9AC6yjHoGjig5M3ZZbkEOx1pgc1EHzlQULvinJeITTfbY_PZsU1uJ",
+                    "duration": "5m 19s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C560DAQGiI_t79dOGAw/learning-public-crop_675_1200/0/1625163615628?e=1644066000&v=beta&t=DkwBeY8aejpd0k2yu5Igb_OmhePDxNn6jkcqdfMlZc0",
+                    "slug": "creating-a-connection",
+                    "title": "Creating a connection",
+                    "url": "/learning/using-sql-with-python/creating-a-connection?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C4D0DAQEMMMSMIT1Lug/learning-original-video-vbr-720/0/1621973437251?e=1644066000&v=beta&t=I9ZmHbmaAk-ReXRfnOJIjOVz6WcWyzUBiBzVCo5oqGo"
                 },
                 {
-                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQLAbrOn4aORAQAAAX7DA42mAC642rav4TRIJCmL1KTG3rV1RSva0jN_x52aOC-LIaIFmwKQ-9DAnd61VKWViE08z2o7idYNRsgGFRr-3wuCG-R7XycbzAXnvcAuyOa7OQ61zBlwM0hTd0bIc8OouE9phwcqB0fAEkuhkQ_q4mYcdwvi5Ch8VDuSwdlmoysxH582F85d-oBSD6SslChceF6wER3G4UqCUUz_zJgqNeGzBEt7C6sBr3IY3_0C9Yb7cZOkNfL00_ut1lRgrelcPr5GGteLpD6XHnhFwpL4NVgE3Xa_CMRj16l0w8vpDzyiFs-dKrk8G_7LARzKMis8gqQ6vDqwsxQfH8UnWN9SGMk6GzFWtdYjSFZ50wVIBmBtxVJ5zbBO8d_rLssperTcV3JdleStdlF__VKWsIZ7MXyxYII1ftqNCor0AI0g5ewxes2pMiAWPCrFjoxVnvbH2499HWsIp587x0fegPl9YzZ7MQ2hXCHnGmYbA0wL",
-                    "duration": "2m 45s",
-                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQGT_oCEAqNaGg/learning-public-crop_675_1200/0/1607698091454?e=1644037200&v=beta&t=s8GUT7wYtYB-dBTA6aW3rW49jUM_k5SCxlnO4k9HTLs",
-                    "slug": "solution-scraping-all-data-on-a-page",
-                    "title": "Solution: Scraping all data on a page",
-                    "url": "/learning/web-scraping-with-python/solution-scraping-all-data-on-a-page?autoplay=false&resume=false&u=95231473",
-                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQFWZR3fIRLjnQ/learning-original-video-vbr-720/0/1607718078761?e=1644037200&v=beta&t=rkRTA5DTpKWSJL5rdZSpKR5ZNqkEKKME9NJhY0J9PkY"
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQI6Uk4sQTpraAAAAX7EvC1S1R1en8N0uk4A6ttNZr1zElbvzHayFfys0Ni3cuMdQY41U8ONeoAsOEdehM2b1nDv3aMUVKqB6xVWFsk3hYSXGgTL9pNMdxfjgCrZbnb6DfnmMJAGC5TruCGWjjQoYTOQMoCRNHTdwovoEKu-aSnLaZ_WhmdoVDBS5luki-3WC_WHUpwjtmv9WunlApXjaHqUXIPFPJ2Fi-9DTNItZp11TN0qGa9NVTMFFva8TUBKLV1GsG29glMlcKdPMT8YL2lMWnnulMyc5GgqnV1ld-a36t2vl8YW58Wg06Kc4Y5719jofwWrOhEvPXcVfi7Jo14cUskGKGxSM1OJib5vcbX5iank8dqWy4ZUyJRR4VGh8b3PBJMyRrH86_Huvn0f5y1iN1DUj7I4FJyEQhUGbvDOIoNpLyxYSdqZXE-fi5QxFwBQSgZP9MNTKraw8_CVNxBKbseOuJI6n9KLNXh4rWA2xVf8H7bbgSbW5mWC",
+                    "duration": "5m 13s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C560DAQGiI_t79dOGAw/learning-public-crop_675_1200/0/1625163615628?e=1644066000&v=beta&t=DkwBeY8aejpd0k2yu5Igb_OmhePDxNn6jkcqdfMlZc0",
+                    "slug": "simple-queries",
+                    "title": "Simple queries",
+                    "url": "/learning/using-sql-with-python/simple-queries?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQGsrUvVhGlsUQ/learning-original-video-vbr-720/0/1625159228115?e=1644066000&v=beta&t=bx8HKkPe7CYzVcMCd_nE9q1UEyJEp14Qa6_ULJmc1Jw"
                 },
                 {
-                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQI0UfeLYzrvGAAAAX7DA7Mi8NVFjgqqAxODa9v0mAVxzZhNmOnpqFHpdjoiuqawfplX4KL-lcezqtIu2uAXTIJVGqnDG9ETbl_c0-0RxP3tERGP9yxeSTfXf3tMz1HN24fe4nciWrNhqAHkK7E85_klTLOGaTPL9DEIojSFRKWTXEj1ODn5LAp3eUUuQoXk5Y0mG5SM80vlwNuqqF6cAurgVQWulgSxpXRjtQW8K2_I2m_3fu2ScSNuQ6tU2mlXULEl2Wt3jldq_LcbxghleQlEvnvYTeQNw_n9S9PcqXn4_LmkXmIbAmSjaN-PY2TurVY7KrS6yTizq1KSPFLSg5zt27BzsaP4Zazbpa_vOq3gfOTm_V9wbPvENeUjsM1n5dS9JbI63HL-lYxcDj793HL8tv3O8pRZinYwGowZfaJ79yFzdC9tMh5lgBr291Q8ckpomYTpPzJ7INr5jqz9lWk71N4W6MiSAytIWrqe75x31O_UG5Qx5LG6V7GN",
-                    "duration": "6m 26s",
-                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQGT_oCEAqNaGg/learning-public-crop_675_1200/0/1607698091454?e=1644037200&v=beta&t=s8GUT7wYtYB-dBTA6aW3rW49jUM_k5SCxlnO4k9HTLs",
-                    "slug": "crawling-a-website",
-                    "title": "Crawling a website",
-                    "url": "/learning/web-scraping-with-python/crawling-a-website?autoplay=false&resume=false&u=95231473",
-                    "videoUrl": "https://dms.licdn.com/playlist/C4D0DAQEfQZ-7viW3-A/learning-original-video-vbr-720/0/1607718083603?e=1644037200&v=beta&t=ZTSLthGHhT9r5z4fvhhQ7QEPT6mU4tHoN5H0OFGEj-g"
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQK5xJaxu6eqmQAAAX7EvFTYYHIH8iCUBVrLxkxrLtBX72hyBxpYil-VYXAUOTDWNioQfh12oUK3MeHxZ4PaMrS5hLIWLVrW6LtCHzk8JX_I7RfjMhk5aTr5RovH3z3jTZxWS3jMIG-14IzFD18ugi0eZ3c7bfv_LGmh3gwSQC_VCtZfn2_kq_PEqAHytmet2_Pbqc26Ztf-eG8KCyLTXjONhi4-7Wae5r_ie8QJpSK_LWqHKyAOa5H9SVvllGDnSNJpu-rUMqmX-VqG8dxhkEaHrl4oAPCbUMSQ4tUcu7J2lKHoIcchhTxrw7IcEAhfdDI1-Fxhng5EOfPeoYNpIsEdv6dhhrTj-NVrnPZc3sV4XPQwaYXDheWwmxvR9uCfKUUFK2eHkJ301uKepk1Q0sA0DmiLlAhSrqvyScYTXbgHevcgmPEP2Bs_URdz-so5m60TGcJxheHFEk7u_fi0Tbqx95iMAN6HkjKbguWeXzEDA5Ih6B0d1lkntAys",
+                    "duration": "5m 13s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C560DAQGiI_t79dOGAw/learning-public-crop_675_1200/0/1625163615628?e=1644066000&v=beta&t=DkwBeY8aejpd0k2yu5Igb_OmhePDxNn6jkcqdfMlZc0",
+                    "slug": "prepared-statements",
+                    "title": "Prepared statements",
+                    "url": "/learning/using-sql-with-python/prepared-statements?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C4D0DAQH1D46Chxcd3A/learning-original-video-vbr-720/0/1621973423980?e=1644066000&v=beta&t=q-F5ZhH6E3kzWHt_gxhlBgfDuCLklpcYapJBrBfdxrc"
                 },
                 {
-                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQLx83AyN06kcwAAAX7DA9lgB2gDJRwXOkT3vquzulmL7PfDJUbKQGoIGFgsvAUIANoesd-4KqY2BIgFoqurCRgqJCO-pWcA2UWGwoishWTQCvzw3drAMwqtQUx879BpZnszHKaDlIqT1va26wceRYzkCSSICQ3Ofc-9zqR39ljPUH5l-QnBUP3LZ_q3WVh7J_LnGQwAGHzXKdntWbP84sLU2qfuAhwyvDqkZV3NTeiciXO8K8DbS-C_4CK5czMu5EP-vzFqeb9UbLJ62ILts_cTq77MVjqnyxEZbpVINo7e7CJ4PQ2SxcFRDt89jzv1mNpW8LFQ872Ri_DP3iq967gCXsKxy0Z1pqRZQVepu2DN3WIK3VkDfg9KZjCwHVYiNbhM0mH1XlqLVhka8fLeNYlCvldvpi1Nh-oFpw5Yr735NWpe5Kra1aQxKV97SnE-uHgQuCmgLGAQUKmK0FiYvzRKoq5h89EWJ3eMlBMONyvDVQYEgX2DsJrxbD2m",
-                    "duration": "4m 17s",
-                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQGT_oCEAqNaGg/learning-public-crop_675_1200/0/1607698091454?e=1644037200&v=beta&t=s8GUT7wYtYB-dBTA6aW3rW49jUM_k5SCxlnO4k9HTLs",
-                    "slug": "recording-data",
-                    "title": "Recording data",
-                    "url": "/learning/web-scraping-with-python/recording-data?autoplay=false&resume=false&u=95231473",
-                    "videoUrl": "https://dms.licdn.com/playlist/C4D0DAQEHNbbxU4h63w/learning-original-video-vbr-720/0/1607718076080?e=1644037200&v=beta&t=fJdnNfD7FrMC4mseeLKPqJn73c2wIhh5LoJh8IYPKkk"
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQIP2--SmnvI0AAAAX7EvHmgKK1o_Qgsktk2ObDsa8pknOmOTmZmzOMycLccQ6FfHu8-9SHBR4FgLjfCZYB5H7Zaos5Gv56Fnq0W2VaTuvqVMh3Jci_pBhFol5Hu4rlDurddNOCg4jS7RzAT_W3UyxUXrHO2yanyGaH1Iv77d5vaNye8HUbBeoDVxiNiE6MNMSnpWABKTf6mEUb5F4nUjhRheF3ZZWBQOxBJYhaE0YQUewz0slXlWUwdP3KMvezUAK10FjfoQ2Ne9dcLT6odVOkqduj9cCDYChYwlxI7hPeMd_fH2fZVPwT46_ix8X7LHihZqQ6XY9qebYUtT2hBaC1999qcGEtNrE2hs0ErapaKQ11NFc8GDaI5sGwCe4RDfnZgeesSGt15jDGgOdKSduUFth_GGqUlumevcLYlqYbPi4YU_D3iETQ6ul9onYL1B0U9mwyEYNVSnkIpU7GkWbHP3myvqbS6_HLeOol-57iChL5rxYD0WSrAQAL2",
+                    "duration": "5m 43s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C560DAQGiI_t79dOGAw/learning-public-crop_675_1200/0/1625163615628?e=1644066000&v=beta&t=DkwBeY8aejpd0k2yu5Igb_OmhePDxNn6jkcqdfMlZc0",
+                    "slug": "hello-sqlite",
+                    "title": "Hello, SQLite",
+                    "url": "/learning/using-sql-with-python/hello-sqlite?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQHCoR2KeqA57w/learning-original-video-vbr-720/0/1621973422375?e=1644066000&v=beta&t=43A6lN8WfIIZJDUFg-2tHdfh9PQH6iMAy7Yoo0MfzNE"
                 },
                 {
-                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQKfol_mh3iFqQAAAX7DA_uLLDyFIJ0-ntzHlNSXwXIPkC5vHoLWj-NCSyOefvoLbdUHC0AR39C1ZUdxRMH09aE7Hr5zCG8mutKmDwyN_tp4N1b086qxSJaXODA0BGq5Sh5nFH7Xl5JRQriifNKDVG6NNsjY-KCfMJ6xg5Qd9MgFA3wmkKeLIjsE4TTVLmBXcGFshzByjAGi02i9QonvgVcJQFP2Sb3Wxvhb0jj9zei9SfK0Ul6XWVB2w96E6ZY_PTlb61QPCTTXBSADcolUkU7ewNYLz_ofyzMOIwgC0Uxx3K9_JAsmiXWK0FLDjAaCwY3J7hUcq9IxNl-Z7zi2PYVueQNy0Qrw6rLRVcb_DYKgtXMNepuzcqBxQ7qA3OlUH7culI8i0dvf5ZhmSz66ZZc89KGwMDpGZa8XZYt_umacaBbhQFoNWvDYffWbhKJbA2hxvbYL-a65pvrw9RYAXZ65DdfQf2nHNmyrbeiLlgCaLuwgTek3lqSii_xZ",
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQI3mOWoKM3v6QAAAX7EvJq1mC1TLWlhDqUdAr6fb8XbzvPpIqCgHiFkenNFdFkdDwQhOz6JXAQV9EeF0crKkBwyd8GA8mAfTE9nORWGtryJdEnyMvDwELcSLKML3fj8hlANgRlHucgNfAKmmd1bHe8GzcDZRq08NsthZ-zuljHAutETkY0_uQK9Q6y1vbyaVKpKK3mZz3AVFjWhhGBVbeXVgSaMlJ1h5SbNgbv1PA2bZqVfzrcwpk2rOPInVYWnjLTZbPc0hgegq8B9gjaQcx7M9II3qv6NUznKECPOekcdJmLLVvpTsNpRL4JkMuwJsRLNWaIyqdLYYyj-DflEh0IeBJ7vo99LOiUO96Ilkp96w5x7nBrEk3BeJMfYMIXi_aA02GAkVCVkWyMu_DX5gVkOnwR43h0wbQqmSe4jzZDV5l1pUQud82N1qZU1sLBxfi-AdreeKaKFs-PnPCgdKywdCXrGP1Bax6SDB0kT4qjHLVNQ-SBPRpkge0mF",
+                    "duration": "4m 52s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C560DAQGiI_t79dOGAw/learning-public-crop_675_1200/0/1625163615628?e=1644066000&v=beta&t=DkwBeY8aejpd0k2yu5Igb_OmhePDxNn6jkcqdfMlZc0",
+                    "slug": "hello-mysql",
+                    "title": "Hello, MySQL",
+                    "url": "/learning/using-sql-with-python/hello-mysql?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQF-oXYr8VS_Gw/learning-original-video-vbr-720/0/1621973418684?e=1644066000&v=beta&t=SIh7Nk1OHxMUAUD_tn3TtvGAZT3L1mDmTa_ZA3coRv4"
+                },
+                {
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQLSnSSa4fTFTAAAAX7EvLz0F6Vsw2-fwZRQnqExR8zPH3nb9sbFjpHxNLF5zdTDeJEMXAsYC4kum0rjBT9nLjlWRu9X5Qky9rFt8HSrGd774tRMkhbZnMUGdsIhyBM12iV16_TqVPnAKS8iCN1zMjmCaPAOYSpUh5E78c1NWoMgxfzoWPqlAlxiN_4S4O_iRIPzziFVnM20UnudMLzC80TZd2Qd6x-wmKxDwEk4z2PUPVeuUd9w4Q-7Nr9VQfuADVv4-LJpCF6_beMKnkqUV7zLWp9QigfIvaHUu1ehaxGkuB9T2lVZ1NcVJC1MmkFRL7m8TQA0HpAFLYLthcO3XpgcpBlxG700sR4ou_WbpWUGtfCKVniphXOWh_hY39mVxeMP6_W7w8pgLego1Ys0_m0KTh8LNds1h-auJfJgH-125h-DwqPP6C5ais6pfDRfMAgYNYffojr8r5GfXTUUdPVkND1NN0T4BKT_GUaU3WbI8dgt1wQsmXyxjc-J",
+                    "duration": "1m 1s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C560DAQGiI_t79dOGAw/learning-public-crop_675_1200/0/1625163615628?e=1644066000&v=beta&t=DkwBeY8aejpd0k2yu5Igb_OmhePDxNn6jkcqdfMlZc0",
+                    "slug": "challenge-13976721",
+                    "title": "Challenge",
+                    "url": "/learning/using-sql-with-python/challenge-13976721?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQFSF4w5f7SVMg/learning-original-video-vbr-720/0/1624919418471?e=1644066000&v=beta&t=mqsUdmOLKrX2oKZQT7C0-HMqIRzzF4MC_mC2eJAEU_o"
+                },
+                {
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQKGrYBeOHOwLQAAAX7EvOFRyqKMwRv0GODWAsGkuduFQQH0xIX2dbnx8MJB7Se4xBJfGcQV36zpUs5nWocsI3XTspCFKSqeBJPr4MlAcwjydYLBLz_3grwNh0DR5XZbvjg9Epz1uSTUx6T06wafl0lwY8XY-X9pwjJKbzW_SGPf-NnSfoRIcFG9JA87aIZniktCEWla-p4J7h8foZhTr0G2wYp_k9JXmhYVQeNA7sizZ4UcOlVjFahXnD3YSzHdhlmmktzpNsvgyjOMJZZoPhcLv5rooOZ94CmmmKaU-Njjv_hgug9PZoy1avXjuM1rIdV_T4G_X7ckq2rwyfueORAxTZDJqMjjDJKiw179j0G5SzZFQeviVBiD10KNz4d0vcPiG5vOZVH4T9tSxiiojcVHjrW4h8pSWre9CvQebZw0PUrf5UtcrGnqAGXV07aqxB7C2qZVRS_t9XDf7zwxlmRBaUoU2oNivDs1BqUbgmEB9XQDNhNlrGhgK50N",
+                    "duration": "5m 12s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C560DAQGiI_t79dOGAw/learning-public-crop_675_1200/0/1625163615628?e=1644066000&v=beta&t=DkwBeY8aejpd0k2yu5Igb_OmhePDxNn6jkcqdfMlZc0",
+                    "slug": "solution-13980328",
+                    "title": "Solution",
+                    "url": "/learning/using-sql-with-python/solution-13980328?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQH3fhfrfRIOQQ/learning-original-video-vbr-720/0/1624919424941?e=1644066000&v=beta&t=8og3YrPcf6wEMyAa5KaILwr9YKQeC2etJj8G4bNSOrk"
+                },
+                {
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQKKb6v8mfvGkgAAAX7EvRYEc9XlzSrDBFHApN2zA7WcVrYIpj62vDcHrg1ONnlI1gRXlQSuoZtdtVDVQr1I2T_tFhcAr1l0qHhwm4tlp8CqMAUAL1gTGDqnXYSfgOcfewe0KgHW-bHj1GZbUhFk-0quFkWYiiMDNtBcUVqru1io04McIclbIjoyEEcefF5e0hn3Yp9Qys6bJ2FFimdPEUqkOrmGeX1nuoqce5oBiy5QF4HQtGLHcgobPj9hThrEirR6GKpGwjXfjImSLsl6xgSagA_SaAJ33NUlvnunDqYMvCICJ05r235AoiRQ-AoAtvYItM72LsYUtbxpDJViGPslMtcoPCja4jEJyKiPC4vX3QahHmEbuRF8PXcFolSJnpvHOg3h8kQ0jNMsiXMukm5WT31DsZxzvztDl_EVDdzTEpMaG0EwukbTsLZbx071gpNOrmHZw1TbHbT8a9swBBTxARHMMdFHcxuht8tgYCf9-WwaMe2Eh0uyZzM8",
+                    "duration": "1m",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C560DAQGiI_t79dOGAw/learning-public-crop_675_1200/0/1625163615628?e=1644066000&v=beta&t=DkwBeY8aejpd0k2yu5Igb_OmhePDxNn6jkcqdfMlZc0",
+                    "slug": "the-essential-four",
+                    "title": "The essential four",
+                    "url": "/learning/using-sql-with-python/the-essential-four?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQFl26Rwpy-gzA/learning-original-video-vbr-720/0/1621973417779?e=1644066000&v=beta&t=wx0Es3jgd5qz3KUQ2MBkYAYOrQwmwF_PxVlCJa5C30k"
+                },
+                {
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQJbfQNRd4OeSgAAAX7EvT6MME7EhAvuBRk_yiiBfjKHJ0Nc4h3aI9Zr9bd_GOWNKgve8KdFPPQ3eBF6H9-liR4UFlue--HcZeI7kdKUSypx9BT_HA35ThyOCTwf1KVy2VQrR3Ht4YPFnVn63EliCIRYrzC9WYIFRJVK_yHZhDSTeH-ywitzfpJDj9CN3RKuGwZZyP_4WVeHt_1w756Ul84gN1H1GWsv-DERy_G9lOhfosuKsb47XV2cbu68nY9EKjEUuDOJEcdYoEvp1WnGBY0O6zRA_4JY8s_lnUB8cDFJWAZrl44zZ1_o7OvidkNshQ73r6vyotNHOhX4iwkm2cnbEOAj3-GocFVfCXRVBELHkGgWzHwYuLfFmQ7t8b6sqdTS38vAl2nz3PgdRvH9pr1zGN5IbW0as-YP96hdbZPaGgvSme0RI0nau51Qm0OB9UQgiPyk4Gve_2Pg4bNtNwdTwiE3DUCVvtMB1t6ZiHHCHqAYKFiyWACCPd2Y",
+                    "duration": "9m 40s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C560DAQGiI_t79dOGAw/learning-public-crop_675_1200/0/1625163615628?e=1644066000&v=beta&t=DkwBeY8aejpd0k2yu5Igb_OmhePDxNn6jkcqdfMlZc0",
+                    "slug": "sql-wrapper",
+                    "title": "SQL Wrapper",
+                    "url": "/learning/using-sql-with-python/sql-wrapper?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQHhs6S6dCrFmg/learning-original-video-vbr-720/0/1621973428502?e=1644066000&v=beta&t=fjcsIsa6U1RhIcO1303NB-lUA5a9fAzaqCaKvRoHSXo"
+                },
+                {
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQKDVNYirkZcdwAAAX7EvWZmbkYdCwETzqEFinotPA7E8qnH55_WYHcG8YRkJpcim4aIIk4DfqVe41quEJc0FndMKiHsAKB178RCxfVi4XS08sGtPhyHHN34nItQnCe7STRXGwok_YIo6oTEljWzBg3txU4I6VDhUfzAeYvqVv2yDdtilYqzusPqGEMnJwuijfO9qpMX2nKaq5CISTzVqpG2WgfPHRii--Da2hPehfyN3ukrmw8WH0PcuqwnV-botvYqztzpJyOEBTvSeZmtMYvnE033jnoWK5dg3EqybRX4-f_ne0kBU6P2Bd9l9-f8OZEqk6_rMNeBcbG0-f4Zg8cLrY0EuoGA1AeSe5FkLIbS8XSK7TaMiTtZKb2TUzPqibx9HBsZBjf3CkxyCfaeiaAagvO0l0Z1DroVG3F7P61P7TCoczELmk37_NuHxfFgufDY5tjuI4xTa_wwpYhN4UnDs6YGi4K6g8yPTvczQhq5GIIOLjB_1Tbyf8_u",
+                    "duration": "6m 43s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C560DAQGiI_t79dOGAw/learning-public-crop_675_1200/0/1625163615628?e=1644066000&v=beta&t=DkwBeY8aejpd0k2yu5Igb_OmhePDxNn6jkcqdfMlZc0",
+                    "slug": "adding-crud-methods",
+                    "title": "Adding CRUD methods",
+                    "url": "/learning/using-sql-with-python/adding-crud-methods?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C4D0DAQGij3NwXMCF3Q/learning-original-video-vbr-720/0/1624919435873?e=1644066000&v=beta&t=61x63F8eMv4m92f-rWeL5hfJm7amJa4-ulNe9CfVFZg"
+                },
+                {
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQJPzLXTJkIAVQAAAX7EvZAkLIiQZNGRWKnsuG60RIhTK43LZlVTa6sM1D6P62gH7bnOY78s9p8w32zycaXHOgrle59xrHQf3_ZxS7spKhVzJrQZJRbWnClLgF0gzqeAgMEZWjrHn9CPPyyb7SFq93MSajM5NF6Y8mXL9u25sFfCgFSjd3cInPWFaDIZiK8jjQrDSOBM6sggV-uR1hGDtdtrhVtxAoA7eufjbB4smM9RQXHpvdZzvjeUG2YP0BrfPZTbvnUQGfRUt1hNfEHP2qv4kdD9b6EsqCok890HSTRTFWqVaQjwBxNPUdaeC12DsEVNnaNuFVZSlIcbjjEQ6RJ8-g8xziTvKN27i3UhWb3zyPLinCDmsBTnb62skAWjIAREiJ520tiInDR431_bqyhj7O-iMWfvPW_Pckxr0CdILZ3fNfIyRg7-Nd5Q8lde-t2FFlsgCowyZzuf_I-_3_4gvwyCJohBgRj6pNAevV5-xgycW7Y5x6Xeoz47",
                     "duration": "3m 53s",
-                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQGT_oCEAqNaGg/learning-public-crop_675_1200/0/1607698091454?e=1644037200&v=beta&t=s8GUT7wYtYB-dBTA6aW3rW49jUM_k5SCxlnO4k9HTLs",
-                    "slug": "scrapy-settings-file",
-                    "title": "Scrapy settings file",
-                    "url": "/learning/web-scraping-with-python/scrapy-settings-file?autoplay=false&resume=false&u=95231473",
-                    "videoUrl": "https://dms.licdn.com/playlist/C4E0DAQHGGNe3DqFnPA/learning-original-video-vbr-720/0/1607718081794?e=1644037200&v=beta&t=4Rjqd0DjCD9unOsBpsi6G09BQ20dAWBYTjaWz9pYC54"
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C560DAQGiI_t79dOGAw/learning-public-crop_675_1200/0/1625163615628?e=1644066000&v=beta&t=DkwBeY8aejpd0k2yu5Igb_OmhePDxNn6jkcqdfMlZc0",
+                    "slug": "using-the-module",
+                    "title": "Using the module",
+                    "url": "/learning/using-sql-with-python/using-the-module?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQH0MPGOjTpBdg/learning-original-video-vbr-720/0/1621973420798?e=1644066000&v=beta&t=aJhnjZqQqVlQfoTcMcQXk37mwopml6hICopU3UPEcZ0"
                 },
                 {
-                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQJS0A5fpZmstwAAAX7DBCJWVIoKwDI02fH4O5XEc8CNJkIMopLXE9Yiz-MicI6ak7wf5J4lSt1JOgVtFgClhhkEiyg1HaAvBzEWncFgSl5iR8BAG98EeQ7-z0Xo5wgCbvjLozd5Ap_ppxWDMTvMHEk4Hg-0zK4Armv8LeA22CvJhfHyaC6YN-7Ohwlke6tqu82RXkgnAl70sOzW0QWYrbODgfpCSUdEQ3ltUjaFNz75Qn1jAfHcHaeleEUarCaNav03mXZ_zhkRFGR9TaWVCtaPirC7q1cfHBzy_JMGfu1DDgU9o03FvBkq-K9msO_fA4xNcIPq9LlRfC3tK-mOBhb0G2Or23FTXCGyRJlw03HDNYtEkwF6mZDy1-_0mqGgdAFqEVi6QmAyZpXeMYCn8G9NyahVl72kUz_f225u8DgxtyMwnzF_uiDpiz7GRawxg1Mt_ySjLAXoEajxScRuBk2eQTGqgepWHAgmcNtMX_XkeBnLRkXt3pFav2IS",
-                    "duration": "5m 30s",
-                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQGT_oCEAqNaGg/learning-public-crop_675_1200/0/1607698091454?e=1644037200&v=beta&t=s8GUT7wYtYB-dBTA6aW3rW49jUM_k5SCxlnO4k9HTLs",
-                    "slug": "structuring-your-scrapers-for-extensibility-reusability",
-                    "title": "Structuring your scrapers for extensibility/reusability",
-                    "url": "/learning/web-scraping-with-python/structuring-your-scrapers-for-extensibility-reusability?autoplay=false&resume=false&u=95231473",
-                    "videoUrl": "https://dms.licdn.com/playlist/C4D0DAQE5jYCG8sQI6g/learning-original-video-vbr-720/0/1607718090165?e=1644037200&v=beta&t=_x7Q7RzbmliO7TvHYK8n-h8aghzyS-RiWB_OCKz33c8"
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQKKpqipv3CkjQAAAX7EvbKTv4KK6FZccEN6unRbr6yB8EnesHPM_H_LlXgPj02PHtwo754vA53HoMYbhpvPtwWbxvSCSsI6g63X8xqgy_7Fn4vVI0J2XXOtVnYW1_Byn63atcn3YOjSoT-8EB9ZzmGfmy6DdV5P4QFZ5NPB6qWMz1Fmn2WVeDCBSYXtxtOxoyCRrDWR7rIKJzvV5h82vK3ENShrVxEWf_thvu2iS08mw3_7DyZ39Xw3kwry5-O5z0j-D8xD6s_cBdxwL_rsaiZksU3bvlqfZ5rfQG6wNU2oBpj6S9yJqkffYI65nXZTmwzjUZARUx7HPi4M0Pxk9RhDM4CjzktIW3fByhiwU_RfN92ZrartDorg9OZQp0GLssYmzpTx96zzqINEV6iyGujKLdpfELdRe4WhVmCaXKRzgVUbglP-iCIAHANo4a70s331eZ3pZ5oGKiAiXGKPjq54dcXSkrv_-0bdkkBq5GoBT7hEqRjjFuPDHCuj",
+                    "duration": "2m 31s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C560DAQGiI_t79dOGAw/learning-public-crop_675_1200/0/1625163615628?e=1644066000&v=beta&t=DkwBeY8aejpd0k2yu5Igb_OmhePDxNn6jkcqdfMlZc0",
+                    "slug": "challenge-13980329",
+                    "title": "Challenge",
+                    "url": "/learning/using-sql-with-python/challenge-13980329?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQFlmc2b1w3r7g/learning-original-video-vbr-720/0/1624919420250?e=1644066000&v=beta&t=38_bbi6D0YtTh2lq7kvs52BzXxnHm2GCgM_8ln_X60c"
                 },
                 {
-                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQK99oERmA4xtQAAAX7DBd9LeORjQKi4hdzd8ZLQQn9NtFmailtKLlXGul_lvjXxTWFVCAOZjKcFOXiEGd6otRbnqRiY_IAf1QvRJtK6nG4B8Oec3v4fIIl7bdvVQyozhrJMnk_ZKRa_VAEmZUCqkwZJIZPMAfbcOfK9C-_7Kt1joYSXvtwO1WKLM01ikEA3Kz8N48i4uUPv8Z0ozy6u9GRG0cTSo-nUxtBh9LB7PnnCGOejoElxzzTr48qMCUgm_GCdSfUgA28b5q4-itQbZSPzVhVgGa33dJdUXvqYNm3oriNIR-VHTuLS_H8SGDp1vJvDkC4nLiO7vz-S8NDwhm8ObCUwMXVa9E6LFDE-ZskAdVH0oumevDOk6iH8oTkUC1DQ_JQZIN-vpfzCwZC-r15HEjdUqnNioXJ9XSlH4imqShLZ1VhbtVsFT7hFFPUHwlt6oasxuyitF7I9wMUWAN3M1oWzBx_kYOKZCCg15L0c9tVwgIIN9jjkhdDw",
-                    "duration": "1m 20s",
-                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQGT_oCEAqNaGg/learning-public-crop_675_1200/0/1607698091454?e=1644037200&v=beta&t=s8GUT7wYtYB-dBTA6aW3rW49jUM_k5SCxlnO4k9HTLs",
-                    "slug": "challenge-scraping-news-sites",
-                    "title": "Challenge: Scraping news sites",
-                    "url": "/learning/web-scraping-with-python/challenge-scraping-news-sites?autoplay=false&resume=false&u=95231473",
-                    "videoUrl": "https://dms.licdn.com/playlist/C4D0DAQEiCqJrFWt-Dg/learning-original-video-vbr-720/0/1607718077149?e=1644037200&v=beta&t=J4kYGibnnWJWJYwdgm6xrVf1Kj56JVzo5EIU0L5f7k0"
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQIqnFzmvquYtwAAAX7EvdfXtb3hMY9XjQ2Fm-sloqmyQ4eLZiR1mFKqlI7MDabOIfWhKINnaxjSnPtQJ2-LsIJHkO5wsbvZnLaSDNPTQwNb_EZeAexpoYUrl9FvuAxgSPtLBeeP3ige9BhcfWO0Yjb3gV_lpY8kOyMSNUpuWEq-PjZinDvthtBHYfZZr-5qrWZN8GcpZtoJT3DkoKtPWNMyoEovEviRcyydX2NuhM5t_d47v4mfp6Tz65MpdnENe89-4njW3xaoTY7NKQSRea2wxj-yh7eclFPDBJU3Pmzb2b2Jy-DJpaoj31a2eoc7maPdiSiFWcEuLajufOVtaYgOwATBKZovxQLs4JYikLV6sF7F805ZSEs_yYaQt2t4x0MQEbm0IByEXMH2e8NLNOAUwyL0KfUa1t6z9ZBS14p33rCZRcynjh80p-U95FJWoUvs2gIVC7tR8TuBsuicPZHKdQiwrLrMs4ihF6b68O1K-5uC6H2dssG7OWYr",
+                    "duration": "4m 7s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C560DAQGiI_t79dOGAw/learning-public-crop_675_1200/0/1625163615628?e=1644066000&v=beta&t=DkwBeY8aejpd0k2yu5Igb_OmhePDxNn6jkcqdfMlZc0",
+                    "slug": "solution",
+                    "title": "Solution",
+                    "url": "/learning/using-sql-with-python/solution?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQGUixdjbjWiww/learning-original-video-vbr-720/0/1624919424089?e=1644066000&v=beta&t=wAffyxvaNc0TjDH5EWhKli8CnNB5LmsDdz4SQFMs66U"
                 },
                 {
-                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQILTAlLnY9TzgAAAX7DBipSxbgi5xTWCsBY4wW4e2w8PFQrVdT2IDgaYGxjh5y9cK1j8XyY3CgzcFNyqqcx6FgOMF2xsob6eWs2dkjImnyIsUEcC8PsPQ5aebkVKcYMpKyo5Sc75SX9Hn7PrMO8H1mz-OS5ex-lnlLiV76QsSoTvnLHJqCZ4dr7bJ7QFts1gFZG7h39a06VdxpoqV2XACi0vo4dzaCntK5cL7ZcAXh3Pv0zh07HxEe11FEkyS4n7uYuEZoZh4kOrPwd4r84qVHHBEwmXwsdcR9VpyE8Lj7TCCEZMftReOjM1EPFwvzXE76ZoLvIaxnF2C8eAsTeZfgY5JiE7gp_QY_ygrL31nR5vzUVtkgzuLxaYNjarSayEKbjwMXobLf3filY4hC1Gm_8Y7kg5phHt-1phzKXK7UsTm1gPEp9BKqxwOCy0cjqYq9V30Bxw75DuHBpK0tvD2tl8zz7trtIMhv1tEgeAQDIp1nUGuU4iOOO1sTl",
-                    "duration": "3m 30s",
-                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQGT_oCEAqNaGg/learning-public-crop_675_1200/0/1607698091454?e=1644037200&v=beta&t=s8GUT7wYtYB-dBTA6aW3rW49jUM_k5SCxlnO4k9HTLs",
-                    "slug": "solution-scraping-news-sites",
-                    "title": "Solution: Scraping news sites",
-                    "url": "/learning/web-scraping-with-python/solution-scraping-news-sites?autoplay=false&resume=false&u=95231473",
-                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQGh83cHVyN2Uw/learning-original-video-vbr-720/0/1607718071043?e=1644037200&v=beta&t=FmQoUK7Qeo2lT_N0IODE93sBtPJHIn9-RXQPE1QfkhE"
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQLxraIN5d-kVgAAAX7EvgHHzKYjB1EQuCIs_iKHWRiwxe_Z9hT1AvcE96PIqk_1Uojl-kQRkdkexDR4JA8VpwbMeo0yfE7nK4c_wdW40rkfnz7Qo-xJ4Qo6ZtsyYrMllmrZDURQLTFsEiKUWxWhFGdzm69BG0a5Ssuvt5bnEmZ1aXt5xUYYYWlXXEJpeQ9dBtq7vfU3x6j6DUwayC89-Gmb9J5p2MLy1jnNgnKLYzLo1EkwfP6sYVOE0vcyMpaTyGtaAx3JeCHiy9FFshiJQ4AQyvJOZAEEYBr2atU7UfdGCmb64n3rXn1Uj5P_OsMptOzIbowd8aYRPVb3xSRAZ9y-KgC1f9Yo_5FzfU1H60pi90ITBe0bUqX4ppZZjpfHiWiqX40hcwzm6ehEUVJkjT6ZnT5rvE5J3EXePmSZOb2J3vYWcyud4D6LdJ3GuKE4fpJiaMVELGwIyrjO5F3barV3zzGSysO0nVEAIIl0NG6GIpFc6i72aieItn3e",
+                    "duration": "3m 35s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C560DAQGiI_t79dOGAw/learning-public-crop_675_1200/0/1625163615628?e=1644066000&v=beta&t=DkwBeY8aejpd0k2yu5Igb_OmhePDxNn6jkcqdfMlZc0",
+                    "slug": "defining-the-project",
+                    "title": "Defining the project",
+                    "url": "/learning/using-sql-with-python/defining-the-project?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C4D0DAQEfm98jGYOWeg/learning-original-video-vbr-720/0/1621973421366?e=1644066000&v=beta&t=1Zz6hIt__qbArTdQ6Al079vUwjqQKmTS-plGOHAE0S4"
                 },
                 {
-                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQKsjf4aWL0l3wAAAX7DBlAdRV8evUUK0q_bIkaBDGS84lWpMzjQ4nh96pp-kN0aWmnRVzNUOR1d2OooOI4XGZKykD-HviXI3WiPiigJLLtIjEmN-z6g0dBNCxgr9Ren2YuzVK5eLSdMroYpef8JldwDW2c4d4URycy9bMeJtkrGW2UyI6IL1lx_dXObw8098YQZxRA87tHVV-JHMeCsCieoN39qx2aQLMZHdhkevc-SXrE5wpneH1f-64ptyt9tH28cJeWU4BcDwQze3W8s-UbCpUNNtERbRYisqytpPGtgoRforhCGGeALBTKJqax2sQKkLrMxO9-aWwM4RLPbkR65o4ursI9P98LPSy5AN3RFtwYZ6zIqmgpVIsd_6Q3yF5FPl5-SIQSo8bxCYnvmKIORqM2GZWe1zm8KobDOLjELbFA4iO5kcyIejt_91dpdcNK0SqHYrRCSTpaNHR32whQt5PJUXcXKg-Ir2mZEbJCmvhO3Vu6UAIvb0k3c",
-                    "duration": "5m 52s",
-                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQGT_oCEAqNaGg/learning-public-crop_675_1200/0/1607698091454?e=1644037200&v=beta&t=s8GUT7wYtYB-dBTA6aW3rW49jUM_k5SCxlnO4k9HTLs",
-                    "slug": "submitting-a-form",
-                    "title": "Submitting a form",
-                    "url": "/learning/web-scraping-with-python/submitting-a-form?autoplay=false&resume=false&u=95231473",
-                    "videoUrl": "https://dms.licdn.com/playlist/C4D0DAQESGKeG-PlGXQ/learning-original-video-vbr-720/0/1607718085356?e=1644037200&v=beta&t=D64FojrOlXxUuOXQ3RLRwgCCa9WWpiYojuNDC3wktOY"
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQJE7XFCrFGw4QAAAX7EvivkvJ2nxrCwstmAhtmOepift7CEQOOCwRezb_kVgrEfGCqP6QNQ3SCSlmwcAfM4FzeMOHpL6QCgkUJS4INMvyib-_r_MdVth-aKYOI5VhduKjKQPwkZtvkopI0nA1i9BL4Sku1x1CaQjoeNGGXTp38lu8DEbFRYByHXoZK-AglkhVG2pv-QzhXJTnSDlTEtanvxRrMNXh7q6aY0xymUg8fSg4JKQAyEDvLo0x4G1uL9komhM7Kcc-VIt5UUNmxYZ11vBzL0mdXs3R4SAfMROUDA-dZ7MfX210xKRuWxoAlM1UaHzCCugGGraGWhS_MacSxVscCEG_eMbQ_9xOtN0FzhAJmQKmQDtViRax_mkHoiryRWRg7p2Lhixpw7oDi0pcRKbULbyZ9QBGYo7l4piGYmVOT0Bd8icJD8UCvC_6TFW55-gH07yeCW9tbQ5qr-_lKWFEJ-pdBc3dB1P01ldSeWG6B2MrAPz2ROTLAm",
+                    "duration": "3m 51s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C560DAQGiI_t79dOGAw/learning-public-crop_675_1200/0/1625163615628?e=1644066000&v=beta&t=DkwBeY8aejpd0k2yu5Igb_OmhePDxNn6jkcqdfMlZc0",
+                    "slug": "testing-a-web-application",
+                    "title": "Testing a web application",
+                    "url": "/learning/using-sql-with-python/testing-a-web-application?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C4D0DAQGWVahnG_9vZg/learning-original-video-vbr-720/0/1621973432628?e=1644066000&v=beta&t=Mmpfe6OEoWY_CCriul1gkwzbA-reZif7CIdNeJlxQ98"
                 },
                 {
-                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQKwW6r3rnfzKQAAAX7DBnd6qGkI2tvK_u7q-OiJy4kvJCRFjoNY_0RSgl7PUigvhm53Pdf_gSklCFMbNmp3Jz6k7jj7NNgvPSIo68Ba_Z-5YJmrcBOxLwSiYMELiabVhz--cIgtotM2q3eWGmozbsDK6e1mzxmuC7e11dfCUcMlNLA0OAqCuhLtXPsFsmWrlpw5GKONOceCXekU5tawRReqBd5h5cX5CTA5Ei_lMIBwz64XpEFZFKvKeHvYfFDxXQ6gog5c8eB774fzV3oGWAmtjbtHpejOwWMhSmhHWWFMhYPLspJN3lQmWyxmC4S2kJV-aF5wjKicpgrzWqQ5Sz-5UumHEGfDsnDGqWoQF_ipKE9U02-P3tVDfVhknDYCHqDJW-4axbBX5f9WR_n9pR7bLdHNh9n6ty_y0ajNuhHzewn5syvlf-K8DdfjgYBYCC1BfKb33yBkUJCLuK0oZ6YSmgx4ds1ms5ersq0keMpfCzk6a2FXbUEBhsan",
-                    "duration": "4m 45s",
-                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQGT_oCEAqNaGg/learning-public-crop_675_1200/0/1607698091454?e=1644037200&v=beta&t=s8GUT7wYtYB-dBTA6aW3rW49jUM_k5SCxlnO4k9HTLs",
-                    "slug": "finding-and-using-hidden-apis",
-                    "title": "Finding and using hidden APIs",
-                    "url": "/learning/web-scraping-with-python/finding-and-using-hidden-apis?autoplay=false&resume=false&u=95231473",
-                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQHx2uyVFDDwig/learning-original-video-vbr-720/0/1607718079281?e=1644037200&v=beta&t=lhFshTjv05fktNZ8LSOXzTjwHffMP5oedxmXakrVlyQ"
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQLek-1vBtxAQAAAAX7Evk21p6vv4z81iD9jsKwPN3xC3vW25qifrUg5lwMbmBo5boAGpnj2UzNZm2gQvby67QCkUmvLBzArn6G7CxDs2n5GoOzEH5I6JrIvD34WBqbwOVkHbODKSCJruvpLf5GKKLemkYu1IE44jeeHN28lsxf3KAG5Uj2RKf2TGoK9O2r1OstZUwCfxv22ZhoCm2XJUsECDaXEsTKB6Sa2QvEAeZzmP10hm6kqP7-ewW02zgqSid3GUxf0d07e5YodK3Lp42mz4l1GSWHKDajFvnNqe2vb4JsV5gO2YX9uw68zkNAmNHzAOMzzRgd2iFZmuZ_UYrFaiOxJ4qB0X5iOkijIPfF3mWRYL6gOgbEZ3ImfqEiFn6ukVih9WyxE51c_jTulpxgp02CQaYEZvDM4jphaEm8UDsuivAANbKJQe2RNhyrGTN_c5n5fovTbVEd9Zgwurglk8iK8wQMG_Wl5cHb_FFSLK3IvfMrXSdcyTrsx",
+                    "duration": "3m 37s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C560DAQGiI_t79dOGAw/learning-public-crop_675_1200/0/1625163615628?e=1644066000&v=beta&t=DkwBeY8aejpd0k2yu5Igb_OmhePDxNn6jkcqdfMlZc0",
+                    "slug": "code-demonstration",
+                    "title": "Code demonstration",
+                    "url": "/learning/using-sql-with-python/code-demonstration?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQEeAcSsoPVDaA/learning-original-video-vbr-720/0/1621973421504?e=1644066000&v=beta&t=vwaV36GZoWLCj8hDZS8CeTD9_uuMi3cCjWK3_aCYD7s"
                 },
                 {
-                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQKsNdh4iK0z3gAAAX7DBpw1xKblKvdtAFVRHgSjVfg12VU5QikN7ccIRKwBCdynlJEFpFQcWGYjtyip25z0IMi6Qa1_fiOa3LU04UZIUcmBHVjCBcjBHsVXpFjRSquT0nQvK653T3GDOoBX7FJEUluzrbq_RKS7bA2NJFNKU_Wmi_VIPOvigGiXeP2Cy9FNe9EvZAqIprc1shYdRPDjGfEhKlaPlFhhDt1wBBzwvH1gYl8P7z_aj8AQfpcRWReEriHAs7w4Zc0r4lZlKm7sEK2rk1WudLPKxuA7VjUhjmHttm9kMkH5uoJbFOh3WGGRcMm4tQSyxd9KduPnD2CBuk_LxOjdl1_0ET14wh-XemzxpDMxStEtCaAt7YT_KsQKyJ4NJritQf2SAgnqVItT031K9tTDLMzzxUl6tWP3IbHlyPRKrxexRbWQXtHOwyZ_6BxgIaThL3ZloZnTQiTYp9sXVr4ATTSzudsOycfU-AynSR27lyJShfKaWMeQ",
-                    "duration": "4m",
-                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQGT_oCEAqNaGg/learning-public-crop_675_1200/0/1607698091454?e=1644037200&v=beta&t=s8GUT7wYtYB-dBTA6aW3rW49jUM_k5SCxlnO4k9HTLs",
-                    "slug": "sitemaps-and-robots-txt",
-                    "title": "Sitemaps and robots.txt",
-                    "url": "/learning/web-scraping-with-python/sitemaps-and-robots-txt?autoplay=false&resume=false&u=95231473",
-                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQGxh8p_5xeevQ/learning-original-video-vbr-720/0/1607718097028?e=1644037200&v=beta&t=pFSK7HJw5gvAo9mhXqQH_3D7PNM2lBpTrMDAJU3X8X4"
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQI927HGePBAoAAAAX7EvnNdjUbPnsOOU8dIvZ67BxSFb2w6NM9imi0Jfiix4Lvn_qZvN6cvDIm8rD8t6mXKzclQR6qhuEGHboOdkHbyyvjCloOWVnFufwZD0XrIPDSs8Iq-XndOnyiynPh3ybQ01zRHAowJdPghYhTwbr_yWxByM8wL2TMwnnMdIrYzNo7TjWmzr9qA8i6-ybTRJJEFGAoBSRHfD5F3K7N4iVS0EohcaBfqonZyUk5bGp_RSP6pCglng0rEuA1hJifVrQmvER0Fyjads6AY_TLH1hv7bqyDiCsWZBbUYEw3arlnd9b4IDjsmvVFS491PQ3qkzWhWrycLmhyoPGTcUXkSIgo8jWlXcTxVYp4m0PKiAlLEb1o8JzN2YDZ5tKnXFnVZPn3vNEHjGG2EDgFRpwGp98vAIzBQCX0iuwKggC8GD4MyFfO1vRjnT7lUwz56pYKNswFnMwlSAgGNKJUGMYf70vfbcgmhI4RQ4FTTK74kzUM",
+                    "duration": "8m 13s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C560DAQGiI_t79dOGAw/learning-public-crop_675_1200/0/1625163615628?e=1644066000&v=beta&t=DkwBeY8aejpd0k2yu5Igb_OmhePDxNn6jkcqdfMlZc0",
+                    "slug": "touring-the-code",
+                    "title": "Touring the code",
+                    "url": "/learning/using-sql-with-python/touring-the-code?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C4D0DAQGpKjBP-de_bg/learning-original-video-vbr-720/0/1621973429145?e=1644066000&v=beta&t=KKDEkOjIn5ZP2vSOQOK_hLF31APjE3jY0mE5GrGjXS0"
                 },
                 {
-                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQLP5x1V0XHg3wAAAX7DBsCisHMBExyF4FZ1e-flvn9U15_ylmM908BkAWs9HZurtIae5qhrSo31e2eGP0y40KZ_cG9t0m7jS3a7ImL1XgM7GI31ta2aJeokBNUswHx9DpnJnmBz93lhLZE7IFqin9gxI1PDwXS4vvEwz41aMRsg-DCO6srzY9A7OYaHeijQR0c5IH2raWJCtmSNQflGEKmzwoDVH6Jg5dSCML-_5NjcfsNtrm4AbiZKHqKnjoZcf-IOZn3ANFBhQTG_lCUMKzHNh8IKDd8rE2-qicegNtJVoc7FXvUkAYvCdrvdVzeeYIyj8oVTdRUD1fn_AoQdd5R5ISmn7DH6b8M9siCOMia-hPxM4coP6kHZ3aLI_2y0GqsMsNbDQdkNSfvFNsCRuxGadi9sbA2JaO9rOLSQ6_DGcoL1IJRDuqiKsmrJTZ2GTBNhqbp24Qk05FHteoSAEm3sW_vOkDngEDNXHJhBAgjSPMFAlehbq-KV0XIH",
-                    "duration": "1m 12s",
-                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQGT_oCEAqNaGg/learning-public-crop_675_1200/0/1607698091454?e=1644037200&v=beta&t=s8GUT7wYtYB-dBTA6aW3rW49jUM_k5SCxlnO4k9HTLs",
-                    "slug": "challenge-using-cnn-s-sitemap",
-                    "title": "Challenge: Using CNN's sitemap",
-                    "url": "/learning/web-scraping-with-python/challenge-using-cnn-s-sitemap?autoplay=false&resume=false&u=95231473",
-                    "videoUrl": "https://dms.licdn.com/playlist/C4E0DAQGg3oIS8qpy6Q/learning-original-video-vbr-720/0/1607718074275?e=1644037200&v=beta&t=0h-q9tl79ejuSAKviuRgZrzX39MxRoC6yKr6HoWv0cU"
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQJSLE_A-k6bsQAAAX7EvqUyerChnMi-SAJcZQ2ntJX_R02HkrFdC9I1GgGmSHUYXkLyy40UH3s_Q0dWT_iK5dy0eVwL0BY8PO_ODIQ0n4RJEkQk_TeRo5vZAe15eHluHqwzaSHTenNRO4Ex07G6q9SIybP_Eex1dEBcy_Th0kWSn915shhVq9KyhQeyiBBmbVG3broxi_hVp3DC0wOlseNB3OxVuY02zKdcOlKV0Nf8HlNYvod_LjNQGfPrNqP0-OgSe-CAUVMprmNaYEGgM-vx_eRsXXmgUFSnxVtVgOuVicH4VgyAqM4mV9Ren9I5p8oEf1ZTFQXr-zToxwAlZjdoLI_gouJtcZ8nQ1lDfUoWYFxJLHFmR64nPH_SxAqSCTjd2Z_jwzW20-jDw0y5vmi3YyChLlp-x9Ca95f-wbUyAB5g1P2mp110vgDxm3LzGxRpnp0OvDjEZXH5ns6H14K7HV4wxeMI7utUbvddie4gWT3FIZpt_Rsy9Ij-",
+                    "duration": "36s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C560DAQGiI_t79dOGAw/learning-public-crop_675_1200/0/1625163615628?e=1644066000&v=beta&t=DkwBeY8aejpd0k2yu5Igb_OmhePDxNn6jkcqdfMlZc0",
+                    "slug": "challenge",
+                    "title": "Challenge",
+                    "url": "/learning/using-sql-with-python/challenge?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQFuNhL9p6RiZw/learning-original-video-vbr-720/0/1624919417971?e=1644066000&v=beta&t=HZldopeELEZptIvigt2q9Sby_yUTuprOb9vHITR_RPc"
                 },
                 {
-                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQJolIfRfhn7owAAAX7DBuW5XpIKPEQnttSnVtAnv6rxmFzdImVMZceIgA2DEn63sSAIYJdsGEBUeMJZqSwgx2O1OOg_e9ZStUYpeAPBjgeqOJssAS3lYlzJMA-hiR7DpC_ZgUAO0qW0VXTUZsAkX5MM0qIwPT7_MWqHByCLzVZWd8L4XJUxV9yZCO1bL0hzo9TvrlG-vGy3XTE75fN4KsXoJZyhApJMbVjPDBX5LZmg4c3voQGeok_H-VMQn2b1mrXCqQonEIqvZ_eQ_ueNb9Q7c6tbMcaPsGlfmCg8BKau-lXjQfNgduGsrVWviud7zJ6yIFquS1LR-5YSWppT7ozBBqwTzwnz0M8iRKLfm94rbWss6lc_gtmKDpGbIXVLJCtCuX9CE-C8qXk0mHR32kaqVOVJAYUoZ9Kznx0vATHiUKaqWEsiN4tgTU875CZXWdEfPGa-YSuXjoWNdwbmdt-U5jucLmFQqoCC9eZ0kHUQZUBcrhi4zNKoHfxn",
-                    "duration": "3m 28s",
-                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQGT_oCEAqNaGg/learning-public-crop_675_1200/0/1607698091454?e=1644037200&v=beta&t=s8GUT7wYtYB-dBTA6aW3rW49jUM_k5SCxlnO4k9HTLs",
-                    "slug": "solution-using-cnn-s-sitemap",
-                    "title": "Solution: Using CNN's sitemap",
-                    "url": "/learning/web-scraping-with-python/solution-using-cnn-s-sitemap?autoplay=false&resume=false&u=95231473",
-                    "videoUrl": "https://dms.licdn.com/playlist/C4E0DAQFoEAGr30ygfg/learning-original-video-vbr-720/0/1607718075330?e=1644037200&v=beta&t=_WDSP8lBOWx3bhoUTFiaRXFOx6qXlMvpulFOYlQrcb8"
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQJM7B8FJJLeIwAAAX7EvtQk7iXQnmKt32kmL5XwZjgQDu35_oYzRjBGMY-cXA1PijFgGQD2z3wp_jdMeeOQ4IGxcW1PVQ7sOQBJBRQeMiQ2Fk5OH4KvN82kRdmfh364Q1SR_oJSo47sWckpjuaNcEW_1BDJaG4oLD9W9bP0rzndfI64XHTM500-X-4O3pVnEyXSbMDLFyY_61hCv5Oo8mTpJ8NRw0S0uyExxctr3mURFtC6q_R_YyvOENPA8Vf-c4GR3CSUqDZftOfH6Gw-L2_0_ZbZpFVLpm9QzTuawfJnLhfOPHswgQ4IxDaLWLNnI9HX96MlU3QXlqVaz8FqKP4QTBPz8g_tXCFS10ySJFt2I8QyPpnGAt4XyeFr_lsjdMm-7g0nS09zik1DRvK30ITtTwg9c13ZzWIRq_dFv6tLJedfza2fhyxRO3nq2CE0YpAC_x3huKZstXobEBu7HxUn23t8yESr2rNDf5-khrziY-5mqUyaRpZox9Li",
+                    "duration": "2m 41s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C560DAQGiI_t79dOGAw/learning-public-crop_675_1200/0/1625163615628?e=1644066000&v=beta&t=DkwBeY8aejpd0k2yu5Igb_OmhePDxNn6jkcqdfMlZc0",
+                    "slug": "solution-13981253",
+                    "title": "Solution",
+                    "url": "/learning/using-sql-with-python/solution-13981253?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQF7fscwfpi1kw/learning-original-video-vbr-720/0/1624919419890?e=1644066000&v=beta&t=wia5-mRXRAMXbzhvvQx58BBRVPxH_22cgep1Xv8aHa4"
                 },
                 {
-                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQIRKA638tfbHQAAAX7DBwpPUk4RaSDcKZ89UVIi7O1at2gRz2g5fFWvYslkMZtIIqC71ZDFP6WNi_o7hApadtybwdxSRbK_Z0aiYluaHpYvxMRyOb92URbUXoeckvfZM5p7rR0cfU0GCOsElg-Zsp-wwyQPS9F738CnM-sgICZzT7M5uzOKjFwZVzsGVIMqQUi29goJwotWTN2ptGoa6x3FFG2Ak0n_HgSDfWXw6tyTmruvHf5LU7bDdgFkz2Ys0w58OaDL5nI_Ao2ZN76UGhzhmsh0dpdUEJZCd-lfSL2iNtlReWDyk6QeF5gAZDiotkQyc0VG1Nw5i6FetLYciGeLJXYxKyLYyaADAVwkrkXFFR85tXYz70CrpU5Jt_iAI00r2bfUH4lcRGlIBej_gCf64L9pLtwqtR79FT5eSn1OtBUdjaJ8_QOVJiFRMSCwcfRpes-drhLdGznOs5MMd1VeUP0ZIFiYJNN5ofH5OQ_52VEwVa-lWXLCx4t9",
-                    "duration": "4m 22s",
-                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQGT_oCEAqNaGg/learning-public-crop_675_1200/0/1607698091454?e=1644037200&v=beta&t=s8GUT7wYtYB-dBTA6aW3rW49jUM_k5SCxlnO4k9HTLs",
-                    "slug": "logging-in",
-                    "title": "Logging in",
-                    "url": "/learning/web-scraping-with-python/logging-in?autoplay=false&resume=false&u=95231473",
-                    "videoUrl": "https://dms.licdn.com/playlist/C4D0DAQE_cJIzbJe7nQ/learning-original-video-vbr-720/0/1607718090607?e=1644037200&v=beta&t=lwtYcOmQnWErQZNAryWij4JpYpPDqUmeo5b3kb5uOAw"
-                },
-                {
-                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQJm_pfQORsQdQAAAX7DByxpRzXCOhw4Im5FIJxVEDhQq-z0CaBHkKXWyAbU40qgGiOwEAqe5EyYUr_LX4zLyn6GZhZGc8l_I32OSYn3WS7p2DO--lO1LGQB7byvydRKl2yTCqCYZK1nYmmKG43dnuN1t_MZMzbSCAdctoZkfNlTeXOJXUppK_KyQKxIqj9iP0ELK0fQa9bzjtf856r1JvZTZLS-zzKJQGQnXRmaXHolo13xYhweohZvvk0tCBmrsAMg6xIlKlVzB3QfPgtdqNqctNLoMtzxbHIuK8-hkgbzNXMrMmCLRALZMe8WqV_MMOJ-iokAQjg1ezgqbr9F2bjeozLdbFR7btQdm6fckFXsAeVpG53Z6lQcddlM8XbD2ujfRm0jbqvqaaemPS_oE8adKpik0kql0U6CHwWAkIMuGNNW89jePvcdcL64F69lg69HqDSwfukVdrOGmjlWW0E6xxFtHgmvjry3edK37jjs_KzAZE1SfKMduH-v",
-                    "duration": "5m 15s",
-                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQGT_oCEAqNaGg/learning-public-crop_675_1200/0/1607698091454?e=1644037200&v=beta&t=s8GUT7wYtYB-dBTA6aW3rW49jUM_k5SCxlnO4k9HTLs",
-                    "slug": "browser-automation-with-selenium",
-                    "title": "Browser automation with Selenium",
-                    "url": "/learning/web-scraping-with-python/browser-automation-with-selenium?autoplay=false&resume=false&u=95231473",
-                    "videoUrl": "https://dms.licdn.com/playlist/C4D0DAQEkN3AxgygG_Q/learning-original-video-vbr-720/0/1607718080088?e=1644037200&v=beta&t=aujb1OqsKdO2DqTEKk-ypwfDAuLx9hRFF4z-BX2kTCg"
-                },
-                {
-                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQKTW8Kk35fVlAAAAX7DB1LfVAbCM976OZDbsV6kX8PClfehc1FTCLPvJXOu2ahDit3oG716kegX2TYWnpQe5k7mB0nR5wjitxlyJNgvAso-L-MuCZnRoHH5c61hTc6byP-yXcAhTCdEVGPX0g-z7s7hjs2Jd0uKr70pI4eZvs39hoCq23WNAqTtTwkH_lE55AwHd-S4rvHZIa5HuOejB5Ce8c9nN4hRu2vp1AUq4dxDb5NJCrznRrSU2q-NI_FdS06rfCQ1mmjdnaEbtt26NOstFH7411RjFCjnEpXiTeH4BLBomDz6uG-3OyZIRcRf0Um0cvr-k8gL78DAKkjB4S9utYevvAtE1SjAlnZzb9m83P8CzjmDs0OlQpGl4xG7V9sq0oVtyAvyHqS9Q6Q7MZX87Qk21p912ph0M5QwtNm4CY_ZtQkN3gm1vT6i18OuFaefA6jj01bJbaGZk2HV0vDcoKISC7Ak0JC3h5DzsV0YGgdX83BL6ej4ameK",
-                    "duration": "5m 14s",
-                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQGT_oCEAqNaGg/learning-public-crop_675_1200/0/1607698091454?e=1644037200&v=beta&t=s8GUT7wYtYB-dBTA6aW3rW49jUM_k5SCxlnO4k9HTLs",
-                    "slug": "interacting-with-a-page",
-                    "title": "Interacting with a page",
-                    "url": "/learning/web-scraping-with-python/interacting-with-a-page?autoplay=false&resume=false&u=95231473",
-                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQEAGXYaIR6idA/learning-original-video-vbr-720/0/1607718076306?e=1644037200&v=beta&t=2GLuFU-Kp75_S8E_C1rzvdYMR6cTvbv-vDoCQXryZAc"
-                },
-                {
-                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQIKp9P5lT6TbAAAAX7DB3d0R-Wcs3YKXs_Whs7zyXUTrdmeeHNs7QFgLc8R0NgH-hWxU2JDIlvDKx9Dv54MQS4LxKMaUbw0x3a7lFhOaPf_9HxzMSpAHeN8xDhojPgJbSOk8PBlVZ5rhb3yptJvNXZ9740hEG-iIKb04mREmO-KwQFnxMLmWPkTbepPfG1k7tjfE2jxms0_fdnkwgvbPgCTvH8SgmJ7L_Ur-BrbBawAnpZrNFJ5E-bl2sTfsREkTDir2o07De_vCHXAX2yPqYz94gGrLhipfrkxf8EJut82t5RA3o9frb-OTX-eT5QNzfXO62m8lOdZXcRhqOuiQ2Ab6tQZvS85OMgtclT0EsnYOhrxoIZPKaOCj75ufM0NBXyAjWAnQrAuN7VDk6EUkZ-nmP-nhM7Z5gku-T-SdutiSdgTa_PmrWMR_v-k72rgQzGHdxxkwdz9Rf9dzvKQQN35j_KeycYm2w7Srn7nGdHUJ1n5IAoDUocJj4LS",
-                    "duration": "2m 25s",
-                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQGT_oCEAqNaGg/learning-public-crop_675_1200/0/1607698091454?e=1644037200&v=beta&t=s8GUT7wYtYB-dBTA6aW3rW49jUM_k5SCxlnO4k9HTLs",
-                    "slug": "next-steps",
-                    "title": "Next steps",
-                    "url": "/learning/web-scraping-with-python/next-steps?autoplay=false&resume=false&u=95231473",
-                    "videoUrl": "https://dms.licdn.com/playlist/C4D0DAQFZZLCy7L7EAA/learning-original-video-vbr-720/0/1607718091818?e=1644037200&v=beta&t=dSXAGU0CJhLtO7Q4V39kSeQ-hFfrbBEQx78CzQ7hT1A"
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQKv6MpIJVwMPQAAAX7EvvoHoaG1DnsSj7OTkrsLsNzu-6Ct8wHWqJUKCGE4QtMjbA1KTkeKGcNC6Ig-0gYf51TkiAn__UyjOnO2CgwYjWkRrEejYwWuI3FAe99WHNHlnTM4XgfYOE1DVTEnem5GHiPwoa8Wgvwc5-QD5GkSSlULLxFFpp9O9boDNCs4NjkiamtKVePn_jmVuq2jfI_hQ064EVR22-i5ra9_TJxGHW3t8DFvdfpFybWYMFsJ4UkzDN9c9cCv1S5HqoEbxVc5zRnaHq6EKPAzoMPIqSNM7wP24zjbrfFQjTGKQC-mMjtpDjJ_n5W7I7c_4ZME4B7NgoxQd4XrAv16DNnYs6dl_HsNfUBEbAqaniUaYwzq05sprP36BdtKSDWciBzPbZ-KFpJUkNNMyXnW16GmYVngm14ygHP_LWI-foI4E7BSkSEKmwrrwSauRwK2o_kMqxraTnkdbCQ_PWqVgAxbCefeyCzxsopXWd5djvG5ibaj",
+                    "duration": "49s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C560DAQGiI_t79dOGAw/learning-public-crop_675_1200/0/1625163615628?e=1644066000&v=beta&t=DkwBeY8aejpd0k2yu5Igb_OmhePDxNn6jkcqdfMlZc0",
+                    "slug": "thank-you",
+                    "title": "Thank you",
+                    "url": "/learning/using-sql-with-python/thank-you?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQH8rsPHx642PQ/learning-original-video-vbr-720/0/1621973413127?e=1644066000&v=beta&t=Ywa6EYev2t0WwcRDQBRIGP54bZhg9CSgFegrfsKOA1k"
                 }
             ]
         }

@@ -31,34 +31,18 @@ def get_download_dir(courseTitle):
 
 def retry_download(url, filename):
     global RETRY
-    retry_count = RETRY.get(url)
-    if(retry_count <= 3 ):
+    retry_count = RETRY.get(filename)
+    if(retry_count <= 7 ):
         print('Retry %d' %(retry_count))
         return download_file(url, filename)
 def download_file(url, filename):
     global RETRY
-    headers = {
-        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9", 
-        "Accept-Encoding": "gzip, deflate", 
-        "Accept-Language": "en-GB,en-US;q=0.9,en;q=0.8", 
-        "Dnt": "1", 
-        "Host": "httpbin.org", 
-        "Upgrade-Insecure-Requests": "1", 
-        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36", 
-    }
+   
     if url == '':
         return True
     if(os.path.exists(filename)):
         return True
-    try:    
-        # r  = requests.get(url, allow_redirects=True)
-        # fh = open(filename, 'wb')
-        # fh.write(r.content)
-        # fh.close()
-        # return True
-        # url = "http://www.ovh.net/files/10Mb.dat" #big file test
-        # Streaming, so we can iterate over the response.
-        proxies=dict(http='socks5://127.0.0.1:1080',https='socks5://127.0.0.1:1080')
+    try:
         print("Downloading:%s" % (filename))
         print("url:%s" % (url))
         response = requests.get(url, stream=True, allow_redirects=True,timeout=30)
@@ -72,28 +56,36 @@ def download_file(url, filename):
         progress_bar.close()
         print(total_size_in_bytes,progress_bar.n,os.path.exists(filename))
         if (total_size_in_bytes != 0 and progress_bar.n != total_size_in_bytes ) or not os.path.exists(filename):
-            print(filename + " ERROR, something went wrong RETRY:%d",RETRY.get(url))
-            if(RETRY.get(url) == None):
-                RETRY[url] = 1
-                retry_download(url, filename)
+            print(filename + " ERROR, something went wrong RETRY: ",  RETRY.get(filename))
+            if(RETRY.get(filename) == None):
+                RETRY[filename] = 1
+                return retry_download(url, filename)
             else:
-                retry_download(url, filename)
-                RETRY[url] += 1
-
-
-            return False
+                RETRY[filename] += 1
+                return retry_download(url, filename)
         else:
-            return True 
-    except requests.exceptions.ConnectTimeout as e:
-        print(filename + " ERROR, something went wrong RETRY:%d",RETRY.get(url))
-        if(RETRY.get(url) == None):
-            RETRY[url] = 1
-            return retry_download(url, filename)
-        else:
-            return retry_download(url, filename)
-            RETRY[url] += 1
-    finally:
+            return True
         return False
+    except requests.exceptions.RequestException as e:
+        print(filename + " ERROR, something went wrong RETRY: ",  RETRY.get(filename))
+        if(RETRY.get(filename) == None):
+            RETRY[filename] = 1
+            return retry_download(url, filename)
+        else:
+            RETRY[filename] += 1
+            return retry_download(url, filename)
+        return False
+    except requests.exceptions.ConnectTimeout as e:
+        print(filename + " ERROR, something went wrong RETRY: ",  RETRY.get(filename))
+        if(RETRY.get(filename) == None):
+            RETRY[filename] = 1
+            return retry_download(url, filename)
+        else:
+            RETRY[filename] += 1
+            return retry_download(url, filename)
+        return False
+    return False
+
 def get_tocs(sessionId, courseTitle):
     global SESSION
     tocs = {}
@@ -117,8 +109,9 @@ async def start_download(sessionId, courseTitle, callback, index=1):
         status_mp4 = download_file(videoUrl, mp4File )
         dl_status = vttFile and mp4File
         message = json.dumps({"courseTitle": courseTitle, "videoUrl": videoUrl, "type": "dl", "sessionId": sessionId, "status":dl_status,"tocs":tocs, "index": idx, "slug": slug, "callback": callback})
-        if USERS:  # asyncio.wait doesn't accept an empty list
-            await asyncio.wait([user.send(message) for user in USERS])
+        if USERS:
+            task = asyncio.create_task(notify_client(message))
+            await asyncio.wait({task})
         idx +=1
 
 async def resolve_video_url(sessionId, courseTitle, slug, videoUrl, posterUrl, captionUrl, callback):
@@ -144,7 +137,8 @@ async def resolve_video_url(sessionId, courseTitle, slug, videoUrl, posterUrl, c
 
     message = json.dumps({"courseTitle": courseTitle, "videoUrl": videoUrl, "posterUrl": posterUrl, "type": "video", "sessionId": sessionId, "status":dl_status,"tocs":tocs, "index": idx, "slug": slug, "callback": callback})
     if USERS:  # asyncio.wait doesn't accept an empty list
-        await asyncio.wait([user.send(message) for user in USERS])
+        task = asyncio.create_task(notify_client(message))
+        await asyncio.wait({task})
 
 def init_session_db():
     global SESSION
@@ -157,10 +151,18 @@ def init_session_db():
         update_session_db()
 
 def update_session_db():
+    global SESSION
     jsonString = json.dumps(SESSION,indent=4, sort_keys=True)
     jsonFile = open(SESSION_DB_PATH, "w")
     jsonFile.write(jsonString)
     jsonFile.close()
+async def notify_client(message):
+    for user in USERS:
+        try:
+            await user.send(message)
+        except websockets.exceptions.ConnectionClosedError as e:
+            pass
+    return True
 
 async def session_check(sessionId, courseTitle, callback):
     global SESSION
@@ -171,17 +173,21 @@ async def session_check(sessionId, courseTitle, callback):
     if(status):
         status = len(SESSION[sessionId][courseTitle]['tocs']) > 0;
     message = json.dumps({"type":"session","sessionId":sessionId,"courseTitle": courseTitle,"status":status, "callback":callback})
-    if USERS:  # asyncio.wait doesn't accept an empty list
-        await asyncio.wait([user.send(message) for user in USERS])
+    if USERS:
+        task = asyncio.create_task(notify_client(message))
+        await asyncio.wait({task})
 
 async def session_create(sessionId, courseInfo, callback):
-    SESSION[sessionId] = {}
+    if SESSION.get(sessionId) == None:
+        SESSION[sessionId] = {}
+    
     SESSION[sessionId][courseInfo['courseTitle']] = courseInfo;
 
     message = json.dumps({"type":"session","sessionId":sessionId, "courseTitle": courseInfo['courseTitle'],  "status":True, "callback":callback})
     update_session_db()
-    if USERS:  # asyncio.wait doesn't accept an empty list
-        await asyncio.wait([user.send(message) for user in USERS])
+    if USERS:
+        task = asyncio.create_task(notify_client(message))
+        await asyncio.wait({task})
 def state_event():
     return json.dumps({"type": "state", **STATE})
 
@@ -193,13 +199,15 @@ def users_event():
 async def notify_state():
     if USERS:  # asyncio.wait doesn't accept an empty list
         message = state_event()
-        await asyncio.wait([user.send(message) for user in USERS])
+        task = asyncio.create_task(notify_client(message))
+        await asyncio.wait({task})
 
 
 async def notify_users():
     if USERS:  # asyncio.wait doesn't accept an empty list
         message = users_event()
-        await asyncio.wait([user.send(message) for user in USERS])
+        task = asyncio.create_task(notify_client(message))
+        await asyncio.wait({task})
 
 
 async def register(websocket):

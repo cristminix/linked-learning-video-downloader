@@ -75,7 +75,7 @@ def download_file(url, filename):
             return False
         else:
             return True 
-    except requests.exceptions.ConnectTimeout as e:
+    except requests.exceptions.RequestException as e:
         print(filename + " ERROR, something went wrong RETRY:%d",RETRY.get(url))
         if(RETRY.get(url) == None):
             RETRY[url] = 1
@@ -83,8 +83,7 @@ def download_file(url, filename):
         else:
         	return retry_download(url, filename)
         	RETRY[url] += 1
-    finally:
-        return False
+
 
 def get_tocs(sessionId, courseTitle):
     global SESSION
