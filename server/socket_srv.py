@@ -59,8 +59,9 @@ def download_file(url, filename):
         # url = "http://www.ovh.net/files/10Mb.dat" #big file test
         # Streaming, so we can iterate over the response.
         proxies=dict(http='socks5://127.0.0.1:1080',https='socks5://127.0.0.1:1080')
-        print("Downloading:%s" % (url))
-        response = requests.get(url, stream=True, allow_redirects=True,proxies=proxies)
+        print("Downloading:%s" % (filename))
+        print("url:%s" % (url))
+        response = requests.get(url, stream=True, allow_redirects=True,timeout=30)
         total_size_in_bytes= int(response.headers.get('content-length', 0))
         block_size = 1024 #1 Kibibyte
         progress_bar = tqdm(total=total_size_in_bytes, unit='iB', unit_scale=True)
@@ -69,22 +70,30 @@ def download_file(url, filename):
                 progress_bar.update(len(data))
                 file.write(data)
         progress_bar.close()
+        print(total_size_in_bytes,progress_bar.n,os.path.exists(filename))
         if (total_size_in_bytes != 0 and progress_bar.n != total_size_in_bytes ) or not os.path.exists(filename):
             print(filename + " ERROR, something went wrong RETRY:%d",RETRY.get(url))
             if(RETRY.get(url) == None):
                 RETRY[url] = 1
-                return retry_download(url, filename)
+                retry_download(url, filename)
             else:
-                return retry_download(url, filename)
+                retry_download(url, filename)
                 RETRY[url] += 1
 
 
             return False
         else:
             return True 
+    except requests.exceptions.ConnectTimeout as e:
+        print(filename + " ERROR, something went wrong RETRY:%d",RETRY.get(url))
+        if(RETRY.get(url) == None):
+            RETRY[url] = 1
+            return retry_download(url, filename)
+        else:
+            return retry_download(url, filename)
+            RETRY[url] += 1
     finally:
         return False
-
 def get_tocs(sessionId, courseTitle):
     global SESSION
     tocs = {}

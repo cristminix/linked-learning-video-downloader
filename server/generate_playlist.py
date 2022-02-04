@@ -114,7 +114,45 @@ def do_generate_m3u(courseTitle):
 		f.close()
 	print(buffer)
 
-courseTitle='advanced-python'
-init_session_db()
-query_filenames(courseTitle, True)
-do_generate_m3u(courseTitle)
+def get_tocs(sessionId, courseTitle):
+    global session
+    tocs = {}
+    if session[sessionId].get(courseTitle) != None:
+        if session[sessionId][courseTitle].get('tocs') != None:
+            if(len(session[sessionId][courseTitle]['tocs']) > 0):
+                tocs = session[sessionId][courseTitle]['tocs'] 
+    return tocs 
+    
+
+
+
+def get_course_list():
+	session_with_course = [{}]
+	inputIndex = 1
+	for sessionId in session:
+		print(sessionId,':')
+		for courseTitle in session[sessionId]:
+			session_with_course.append( {"sessionId":sessionId,"courseTitle":courseTitle})
+			print("\t"+courseTitle,"[",inputIndex,"]")
+			inputIndex += 1
+	if(inputIndex > 1):
+		# print()
+		courseNumber = int(input("Please select the course number:"))
+		if(courseNumber > 0 and courseNumber < inputIndex):
+			print(session_with_course[int(courseNumber)])
+			course = session_with_course[courseNumber]
+			# start_download(course['sessionId'], )
+			query_filenames(course['courseTitle'], True)
+			do_generate_m3u(course['courseTitle'])
+		else:
+			print("You have not select valid course number")
+	else:
+		print("There is no course to download.")
+def main():
+	init_session_db()
+	get_course_list()
+	pass
+
+
+if __name__ == "__main__":
+	main()
