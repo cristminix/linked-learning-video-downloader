@@ -47,9 +47,15 @@ SocketProxy = {
         let firstIndexChecked = Manager.isFirstIndexChecked();
         Manager.UI.setChkIndex(firstIndexChecked?'Yes':'No');
         SocketProxy.send('resolve_video_url',{sessionId:Manager.getSessionId(),courseTitle: Manager.getCourseTitle(),captionUrl:captionUrl,slug: videoSlug, videoUrl: videoUrl, posterUrl: posterUrl},_callback);
+    } ,
+    startDownload : (_callback) => {
+        SocketProxy.send('start_download',{sessionId:Manager.getSessionId(),courseTitle: Manager.getCourseTitle()},_callback);
     } 
 };
 let Cb = {
+    afterStartDownload:(data)=>{
+        console.log(data)
+    },
     startWaiters : ()=>{
         clearInterval(handleVideoData.siHandler);
         handleVideoData.siHandler = setInterval(()=>{
@@ -78,27 +84,28 @@ let Cb = {
         Manager.UI.setChkIndex(firstIndexChecked?'Yes':'No');
         // $('video')[0].stop();
         console.log(data);
-        
+        const tocs = data.tocs;    
         if(data.status){
             if(data.index == 0 && !firstIndexChecked){
                 Manager.createFirstIndexState();
-                Cb.resolveNextVideo(data.index, data.videoUrl,data.posterUrl);
+                Cb.resolveNextVideo(data.index, data.videoUrl,data.posterUrl,tocs);
 
             }
             else if(data.index > 0 && !firstIndexChecked  ){
                 Manager.createFirstIndexState();
                 console.log('Starting from the first videos');
 
-                Cb.resolveNextVideo(-1, data.videoUrl,data.posterUrl);
+                Cb.resolveNextVideo(-1, data.videoUrl,data.posterUrl,tocs);
             }else{
-                Cb.resolveNextVideo(data.index, data.videoUrl,data.posterUrl);
+                Cb.resolveNextVideo(data.index, data.videoUrl,data.posterUrl,tocs);
             }
         }else{
-            Cb.resolveNextVideo(data.index-1, data.videoUrl,data.posterUrl);
+            Cb.resolveNextVideo(data.index-1, data.videoUrl,data.posterUrl,tocs);
         }
         
     },
-    resolveNextVideo: (index,videoUrl,posterUrl) => {
+    resolveNextVideo: (index,videoUrl,posterUrl,tocs) => {
+        Manager.courseInfo.tocs = tocs;
         try{
             Manager.courseInfo.tocs[index].videoUrl=videoUrl;
             Manager.courseInfo.tocs[index].posterUrl=posterUrl;
@@ -118,7 +125,8 @@ let Cb = {
             },1000);
         }else{
             console.log('You have reach the last video');
-            eraseCookie(Manager.sessionKey+'_chkFirstIndex');
+            SocketProxy.startDownload('afterStartDownload')
+            // eraseCookie(Manager.sessionKey+'_chkFirstIndex');
         }
     }
 };

@@ -1,415 +1,227 @@
 {
     "2ab178c0ae5ace53838e7144cbcafca0": {
-        "learning-coffeescript": {
-            "coursePath": "learning/learning-coffeescript",
-            "courseTitle": "learning-coffeescript",
-            "courseUrl": "https:///www.linkedin.com/learning/learning-coffeescript",
-            "fullUrl": "https://www.linkedin.com/learning/learning-coffeescript/next-steps?autoAdvance=true&autoSkip=false&autoplay=true&resume=true&u=95231473",
+        "learning-django-2": {
+            "coursePath": "learning/learning-django-2",
+            "courseTitle": "learning-django-2",
+            "courseUrl": "https:///www.linkedin.com/learning/learning-django-2",
+            "fullUrl": "https://www.linkedin.com/learning/learning-django-2/rapidly-create-web-applications?autoAdvance=true&autoSkip=false&autoplay=true&resume=false&u=95231473",
             "hostname": "www.linkedin.com",
             "tocs": [
                 {
-                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQELpN1PQ6KSPQAAAX60ljKojysC57khKOrSrXB3zMN-fbVj6t7Ji8KNBa03WwCvHFhB6hON2J59KtVQ8ktQL8Q5pb_YVnBmSMCWv2gKwbAb4SWfnNyIODsW8aA0hj9MaGVY_Pu0M2yJwVUEzwm3g7TNSM9tGCT78mhdK9-wLdLLeIWTLDM4RYcil87OdYQkS2Ci4-9Qtmb-OfXVi3M4iC1wPJVEsvl0Y2EagXzhQAlJSeM9MyvbBrzH0qFoe4iskr2s5YuUGZ4gg0Y4NyEUT9fRV2pfOhTr7-hqkFt-L7VjIHbTU2ZZXrO3kIJD_rCCixH3YKASYZrYkWeDvzFgmdgpxyFCL1pGb_CqIQMwKxUKbl72NA7_fzwTXRZ3a8kGt5X-LaceawE5aSZU46JV17UR8AQDY4RgOFbkcnSMJ81nNhyQiYFoq7DV-zFovfHMpSAA0Td2BQRbo8y_vKfKnMbZ8OESdiAXtObnb1nFBMvhyzs693jdmCzn8Q3g",
-                    "duration": "1m 9s",
-                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQHdN-6IgHOLIA/learning-public-crop_675_1200/0/1567117975500?e=1643796000&v=beta&t=KSWPAwEjC8_ULdhjC8-53R5uNifVRJSMI2-nv_Ar3tQ",
-                    "slug": "welcome",
-                    "title": "Welcome",
-                    "url": "/learning/learning-coffeescript/welcome?autoplay=false&resume=false&u=95231473",
-                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQGLkUBuoiSqOA/learning-original-video-vbr-720/0/1598572580164?e=1643796000&v=beta&t=X-afgb5B4nr4XtujgYg6UHXRr8XCsGV2z7XuXEkzlVE"
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQIv6TlTuBQ24QAAAX6_SnRZpP_u5wvYNaFeUIPIaJY5CgsL_8LaIrNDUAIqpzBiG34En_q9kzl-xUR9GSj3SLrGLk95cnaBjwa208aEZ8MK1M-smimIYKf9KQWQGrt4ha6z3dwZahbxvVhZaFBYSKJ93n6blQJ3PlJPXmtWIQBW1SMmLmxoZfnlgrpv13T9AOzI099cS2x7YpQFzGe3hIe5aon520Mb0dCUJ56Nadcnf-5j8RyaDoNgJu88gVlfIfgGAaLwDR88ZvT9-Wg6nC7khIodBG1hgUzZ6eE7AEyKSgibNtTv96-4SrLPHMQLLlf20xaVaxbK2JC7qTr34vHRoVhKmzC6ooTEwj6R_pE2KjZaR4yB7Q_JC9BScdghqUCixU3ZWmpydOLcZcs-DFap6PW3ilP4aOe67Qo8yRIgl2MNS_Vet0KyeNCcaDcaQHhZOYYynPGSmrFwzJRneknnLr0TCT1x-nbWgSE3Ui8LGwpNLfGTAXTDhS3k",
+                    "duration": "49s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQF8Gl4CggLCKw/learning-public-crop_675_1200/0/1587484799173?e=1643976000&v=beta&t=d8Gk5JB7oyHe1b9t8Ho9tF8pE_ngjraynXTKORktVAk",
+                    "slug": "rapidly-create-web-applications",
+                    "title": "Rapidly create web applications",
+                    "url": "/learning/learning-django-2/rapidly-create-web-applications?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C4E0DAQEyhyzqCddq6A/learning-original-video-vbr-720/0/1598814453965?e=1643976000&v=beta&t=YFDB4oCzoWAOaOToQjGCXsfp10wLE1EwOlu8Ii5Ek0Q"
                 },
                 {
-                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQHYicax_FICbQAAAX60lDC8t2FKUkGsO3wqOjPwOmCNXX0KM10senogcnoZSEZOut4uIl2_ahCi99_X7JtbDy91hwaHmxdyFWSpIFYfnKM1eGKW3PE1JYXki71t1OfoHybOeyVSbcivOlFrMA5yM_q08C9pCslqT78wfVOPIzBM_7Umw6Uv0XvthcVdBc-z6MYjHPo9UMIFb1EhvkY-g2BzTW5LN6cy_rImdz_ZlPuHoRlDTAdDL5Xmp7Sa-8mAlWjqBEvZArHqoMsYkt2rb0n90VM_Jes6vAm6RdENHctFqkcU7dcBn_gy2z7JMlw9qOlIBK5-kIqW7iwY9JtDJNqF9c2ASEEMcvukAwMisu0f_VqrIf_G-Cost7bpwoSlR6bazFV1CbmTGeruGHjM5PKBU5MX78PglzAR_QEB-GkzNlbf7qmoXwbrWMUjMKgxw6BaDhfy9dDG6jJEMLmmxtxAIDUVCH3EcPyjEbWASGww1_5p0F2nXiYjyyS6",
-                    "duration": "58s",
-                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQHdN-6IgHOLIA/learning-public-crop_675_1200/0/1567117975500?e=1643796000&v=beta&t=KSWPAwEjC8_ULdhjC8-53R5uNifVRJSMI2-nv_Ar3tQ",
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQKGxiSYHIZfdAAAAX6_S2ZOEpgqpn3OHjOShMH5Ohj9U7ewoon0vXjc8azQHknMCZddjBUnoN7Be7014MYvi2MyaoRkCIQm0gTSSqVSnfWjDSPiq4RO8ChWoyGFuUjgyo2fZyJMqOzpq8ppw0zoLDYNJWytVQvXSnhDss-QHAB_EdT7iPGbGV3t0QlpZ2h7uKT7nkGsfeDsGlTW6XbLH0ik3Mf60rkaWad42mTgHp5Cj1PbYEWConLfIVwcfP-oO75nm6OwR0HD4gVglHeQeibFzS1YFkuDhcYA7mrML0aeq_7DL4kWes9Ssc3njjlXF3EpXVNWhj4uxLlLcXnzUKGhmhmAoLr5q8rcC3yeGekq1xsEOQzpiTHskKRl7440Bjp-gfcdQU5-dFoRS4VAQHjA5e45zXk7UFrKvMUHRozmAFSo5fQiZZ4y4pwGn07E0ivaDH6WjvrqBOsAPCigZww3pR6FnFnyfEfaabRQLpF7wFWfE9S5v7iu4zDE",
+                    "duration": "57s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQF8Gl4CggLCKw/learning-public-crop_675_1200/0/1587484799173?e=1643976000&v=beta&t=d8Gk5JB7oyHe1b9t8Ho9tF8pE_ngjraynXTKORktVAk",
                     "slug": "what-you-should-know",
                     "title": "What you should know",
-                    "url": "/learning/learning-coffeescript/what-you-should-know?autoplay=false&resume=false&u=95231473",
-                    "videoUrl": "https://dms.licdn.com/playlist/C4E0DAQGIRFHDor0ZDw/learning-original-video-vbr-720/0/1598656435557?e=1643796000&v=beta&t=iRpmnFaRnBp_AW1nrskvE4k1Q2yPWlKk5ugmxZQSjmE"
+                    "url": "/learning/learning-django-2/what-you-should-know?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C4D0DAQEmTgSTVHsM8A/learning-original-video-vbr-720/0/1598806499765?e=1643976000&v=beta&t=l9Y2rSQQyI2gXFJJBJSLuFTUXlm4BX6JUy8NXZ7vaJg"
                 },
                 {
-                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQExzdTOFhljggAAAX60lF5xQI3v7d20DFGfzdwPJ9LYKAqWuaveOvD6fz2kpiFxOWgOxHiMmkjaMWfyGAILnrvJRVikd83D2nLrll8TtyMtNKDVu1CZkec8W0lcwUUWtUNE8NBFhNYX4b64RvXo_s76zg0GRK0bhdNvQri2Tol8h6Njr5-9JHFJJgnQVT6aGoituibFg7dnA7Itp22O3P0rMlEY7dZ0t0pYf06a2tMnoVgWVlQT2A7MP0IpYMsvVuoVMuWVQTIIYdp48bEPw_A0k2E2EcgAmoFNXUoY4BsqCWnhAXiMmEGSeFRi-8aGfBGWOmN86LgG0lVIpz5v0O_WsuyL-yg2cMsBwEldBizh1qjYITQMsz68q3s4vQ6inwVXYLmZi3kjF03kUbvILQ5y32tjV-QymFuYJwT8k7jDkbZ_QOWfWCL88Var8hWfc-eQQy0gfXQ7eMhc8G8M6AhYQjOgi_99h-IK8tLR4cwX0Si8kWsuS-N9OmSn",
-                    "duration": "45s",
-                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQHdN-6IgHOLIA/learning-public-crop_675_1200/0/1567117975500?e=1643796000&v=beta&t=KSWPAwEjC8_ULdhjC8-53R5uNifVRJSMI2-nv_Ar3tQ",
-                    "slug": "using-the-exercise-files",
-                    "title": "Using the exercise files",
-                    "url": "/learning/learning-coffeescript/using-the-exercise-files?autoplay=false&resume=false&u=95231473",
-                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQGLtXLeewK2OA/learning-original-video-vbr-720/0/1598655786569?e=1643796000&v=beta&t=vLVaLThQZt_RScXBrAWEIRTjM6MM5dHyZzndhQjdznw"
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQJlHFoDC2lESgAAAX6_S4sbsdhXUWlcCjXkY7tfhQbXTgjTSlLxHx0qelEEsfeMuv89o6BTJac73IyrFW_DKXqRCoa8BFj5_jkjYRuKKZKBGZHkMiERVS9GDva3f2UF9INGhlB_o4PvNjAyWM7lRlOJ8AILv0nlgd-t4LRwNxh6jAcbu4Vgb748j3xkqXGeVUd2YRSuLaAejOJSrfpGf0ODQSnLO7n7u-dIxHw_WvHpf3LPOUKaWnTafwmqXxcN1EMU9vx2Z5nQnwFSy4k_FkPaxwYbEDgUkS1-ogQrQGNxuSMg5P5ozLWe0Mzt_IeVU21ctNt-80V6Zm8fag6iIvV3hzHVR5vYaO4q3cHChFMsAh_KvYMIBf588qhfahqribTNO4qg2W_sVnWGbxoEemwzbv019KYEThQYJybORdTvbPGYXGDtukSOS-K9buMywXGxJmcapPOWBdekDztFQ98fLvEYlKv39aAbPpFnT0mhO2eae6jVKUOSMmgw",
+                    "duration": "44s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQF8Gl4CggLCKw/learning-public-crop_675_1200/0/1587484799173?e=1643976000&v=beta&t=d8Gk5JB7oyHe1b9t8Ho9tF8pE_ngjraynXTKORktVAk",
+                    "slug": "github-and-the-exercise-files",
+                    "title": "GitHub and the exercise files",
+                    "url": "/learning/learning-django-2/github-and-the-exercise-files?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQE6jOXziGKFXA/learning-original-video-vbr-720/0/1598877536839?e=1643976000&v=beta&t=2dD7WVYPTdp4s9sNtL5FXYZl6U02jmRn_abOGWX4Ljk"
                 },
                 {
-                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQE8lltU9tmFMQAAAX60lWTF6P5Ou57W0mCsRe4VTaDNpAevA0PLAo8QHmsn1ZlLyAoT6lSLw4ZkT8Zejar9CVGU6acYLHxWNAnzoLh_K5NongJ4s8AoLU6sAL1cZnMBCOd5Yz3JJQVdjsBXzjxTu9cA3XYccK6V5CnV0AbS4WP3STLrhOvZGFtg49RpX8hiMk7AxMxoYfTpMy9RoITUeUlYPPxqbrCa8vnqRCjKVN8FjpaJS2w9T_EtYXxrw_6CGbDUoy335T1TUyQl-Ob7AyDJRV4r3H3THMCIxLGAPc14xqbciMO9sDtFc5bFcSmfd57luTbk3bCXTLK7gZfwtOoDQiBJ-i9wLQ2BPzcRPjIiMNM__WIWXxLO5LtXMS8t0UrsqvixEHI4oJOkPH-FiuFiJOGpVLT8G6Nwrp19DrzSUjdfdnk1xL6RCQLlQENJPPLgRsV2wsJO6H4bBg6C94a7QVYG-dAdIX-f9jpfGsDXcF4cewZEHQ_L6T-u",
-                    "duration": "3m 31s",
-                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQHdN-6IgHOLIA/learning-public-crop_675_1200/0/1567117975500?e=1643796000&v=beta&t=KSWPAwEjC8_ULdhjC8-53R5uNifVRJSMI2-nv_Ar3tQ",
-                    "slug": "what-is-coffeescript",
-                    "title": "What is CoffeeScript?",
-                    "url": "/learning/learning-coffeescript/what-is-coffeescript?autoplay=false&resume=false&u=95231473",
-                    "videoUrl": "https://dms.licdn.com/playlist/C4E0DAQG7zIyfeF6Cqw/learning-original-video-vbr-720/0/1598660971092?e=1643796000&v=beta&t=6NEH19crIJLCD9q7ZffeKCqPW47KGR5TxWxFZLayGHw"
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQICldm-xqTgUgAAAX6_UrkBW306qp230-GfqaJDaN3mdKJRFs-IwADGgfJUxfaqFPqusrx_wnGiJkCVIhRGagQobwtIN8M68oZaWGIhpebOtMLA7QuNb2V_8gQ-tHgLQpZ4UvRW_-r0TZz8y8sFLbqtF1bLtCGkth6N55AMnxFQ1S_maLifjdjlnVE8-T-FaCSnE9WdM-tokMbJmNrA8OIH-_qIXDrCD1LrIiKBEK_WEeuU2uEvVFGJk75preWozCC8nfUaVmwnvJp352WCOMochetYXWKgBBXmL8uCV7EjIpXxywn-_SXTxjxwZ81Sm8ccH2reMBxLgK0_nJEgn5niFZkGwyLU8dGPMLoPyqo_wK0DXBOqU7jZ8YPDmf8o6OYL07ywM-hDM7J4vdcVv_QMh3fRL0CXbMseCma591JjDpv7woAY6EhZ1CKcCZ-F7dhQCa__G-Q1OCum_OSAtsGzB0n9KeFoA04fNJhknGkysT3J2gMiFj-KgNTB",
+                    "duration": "1m 43s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQF8Gl4CggLCKw/learning-public-crop_675_1200/0/1587484799173?e=1643976000&v=beta&t=d8Gk5JB7oyHe1b9t8Ho9tF8pE_ngjraynXTKORktVAk",
+                    "slug": "what-is-django",
+                    "title": "What is Django?",
+                    "url": "/learning/learning-django-2/what-is-django?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C4D0DAQHUPaGEx7KcyA/learning-original-video-vbr-720/0/1598806514479?e=1643976000&v=beta&t=RX_ISCefZqG1BrdNQZCQHGnOtLHmBiDnr2GWiwVsKU0"
                 },
                 {
-                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQHOljTp68o-VAAAAX60fg7mlUiIrzG26syjMHKwEropQmV0OfWFl_QT4ivttHgUT5W1ZI5Ju_TGr-o9-E9l6udtQf54mZiSLEtk92klYReuZHqFn6zqaM0-IZsKQlBd4HzyEqF2xFpfi0ArAg7cbhqx1RGT8sfemTh9rTW0l0pelyAIMW88CPBrQbDUWuhnxb5gDQpnszUY8jJ3hvDSB6r35sUcreumnyRzWcLk6GPF1blLDyc2Uvsn37tUL2jFJ8E7OjU4GaqzV9xEgUWZgv3HrXP3x-EvFHR-LAZVHBvN9kP6jRTQSnvRIQEhdO8QDOEUy7nLp7k_pED0FYsO5cT9XvdHfV7K9aEmD3WH1tWhBto3Rc5Nf1aG8d9ZPswY8fUfT4vwhOlrW0UuMq9uNq50G2bd3MGwjsrW0JmopQuJv3RXxlr6zj_hu3PFqkylDpeO_3qdR2zJSluFlY-UPgjsO8PCj-vA4_9ILlwXqrOE_PM_0vMH-L9MMVqw",
-                    "duration": "2m 40s",
-                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQHdN-6IgHOLIA/learning-public-crop_675_1200/0/1567117975500?e=1643792400&v=beta&t=mlgBshWRGmyJVHifBPWMLs3pLlc1m84UeLaPQQUmVuI",
-                    "slug": "using-online-tools-to-process-coffeescript",
-                    "title": "Using online tools to process CoffeeScript",
-                    "url": "/learning/learning-coffeescript/using-online-tools-to-process-coffeescript?autoplay=false&resume=false&u=95231473",
-                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQF9thpFLC-B4w/learning-original-video-vbr-720/0/1598560663537?e=1643792400&v=beta&t=gBDmmUJGUqSfaZiWw5qLoxSr_TO3258YGAiO7r-NV8A"
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQLte_QcjzN8dgAAAX6_UwNewS4aaKr2zjKXaPwVrSlS_zTRhO7fAqpxJt00VYubo39W4lO4omNFqVzpFzImq7lFMsS-x7oy1qwsxoEfLPVe4nL6sBYbaYUOA86xGl5_UmkK1iV3opsyiLqw3x9qrt05pDloOrrgqv5wFYMFfzeBRtUuxYIZXisrr21j0p8JSDqucpuy2rj0DCiHkLPsqMygI7WfG0NAWnyBWkcmxaB3Y4lAWJTzeevkASS2-6EuyD8_bZK9uIuvUUMsAXB5XAv8ioKY8embIm0oqkwyoFRnNo9Fcj-xJPJDSnuPjPTP-GXODv6R_uomxL9rEqpb6pBMFpa8L2dN99pLT_HgdBFUYBoL1QyZE_10FnTUNU_W2CqWSrUMjAcbBbJFsqJ9dTIxgl57oqfTKnwY4T4lw8Xv5LdcLvilvboMS4mcDkyFEVOFLI92iHjgpSNX4f5RcKFQtabx4_3cKxZJqVteZ1LfzhnszjaIt06EZ8ci",
+                    "duration": "2m 5s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQF8Gl4CggLCKw/learning-public-crop_675_1200/0/1587484799173?e=1643976000&v=beta&t=d8Gk5JB7oyHe1b9t8Ho9tF8pE_ngjraynXTKORktVAk",
+                    "slug": "install-python-and-django",
+                    "title": "Install Python and Django",
+                    "url": "/learning/learning-django-2/install-python-and-django?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C4D0DAQFQ3Og_5qZACw/learning-original-video-vbr-720/0/1598806816436?e=1643976000&v=beta&t=Fm-6bw4yUHPsUBZFc9yvZEgzLwdysdeqx-DWaI1YVTY"
                 },
                 {
-                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQG65JnguhA9igAAAX60fj0667h8LKutOjQf1Ia8jAoKv5B2Y0KzlhauN15YaDpjWgZ1DURHThuN44AtUQBO3TdqmQ1E6PGd0XnuRL8C7-IdI20yI3FkRgA14Uv_p_tXe_yMWFek28v-ERifvKrgiyKa31_h3alXPhSKY7-42foUt5HFgjpKaAGOGPfjgfpQJWZnq096CscIqf7YuJLRjEepE4zMsTPF0Nv1To947qjj12A7728nzj2yLMgTsfmOQDhrIOg6GZrcsxFEgyh0om-gzdCKt9xmwS-B4J3djUJuOtQoE0glwBPS6uN6E69LQFtlo-3ql10DvekLirfw39KJkSKxi7reBuqaFbyPkXlvCzUg5ZJnVB5XYnw5MoSvHOfGuqn7ZWYEfZrYjZioUVG3DaG003bAVCpJAtwT9k45tmyQk2kpKdpSdbndTYS6x2tAizfLcyAPJ4DKJnMoKKsXEVH39bbE-TZmXxHrlSJuMIlV_jBDqUvHdl_U",
-                    "duration": "4m 23s",
-                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQHdN-6IgHOLIA/learning-public-crop_675_1200/0/1567117975500?e=1643792400&v=beta&t=mlgBshWRGmyJVHifBPWMLs3pLlc1m84UeLaPQQUmVuI",
-                    "slug": "comparing-installation-options",
-                    "title": "Comparing installation options",
-                    "url": "/learning/learning-coffeescript/comparing-installation-options?autoplay=false&resume=false&u=95231473",
-                    "videoUrl": "https://dms.licdn.com/playlist/C4E0DAQFxfz0E26gPoQ/learning-original-video-vbr-720/0/1598661241834?e=1643792400&v=beta&t=VcgsFhytftHUI9Qj9eah-N-XYxJjVYL0sPkSq2jiorU"
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQLchhSVCaPSGQAAAX6_Uyb7UvQCIlGZ_ij8GXCP1Y9nJ4fytEqjupfVkFl4XviIY5_pJ4FG1CnhcHW8whkBYQfKmJq5CWlP_mMfVuCHP6a9S8fOeTc6r-EOTHL2qBNQi1UM962plcjl21j72u5oD_x_0QxC5BrVzScwnHONZKGxw62UZWAib0crzdb_5g03_v9wf9In-5jdrLiXKvlJdV3gJK0rZzJR-LjiUurxBkyiSseBgagwiQkjIGCRRvfAaAQQeoQ7iIIGbeYQJ1ljqqqWiMfxMDKBD4x8MoR07KXw1f6lcKq8vKFKQUhL9b-eRuCh9YVXxO0S3FKMRapnwD53vUFpkmNTI5Z_7Ilh3bEqDa3zM-q1_HTz4FvyVkOa7RKQAq6ms92El4EmWytutLQWhXEtv00uKIEWM05xDvF4jXkPLWTVdBg2iv9Z9LY-vWRl3smr7HDW2i7c-wjYCsw-_sY0Pv4juYCtTdjzrU0HGqxOus7DMU9-RQWT",
+                    "duration": "4m 45s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQF8Gl4CggLCKw/learning-public-crop_675_1200/0/1587484799173?e=1643976000&v=beta&t=d8Gk5JB7oyHe1b9t8Ho9tF8pE_ngjraynXTKORktVAk",
+                    "slug": "create-a-django-project",
+                    "title": "Create a Django project",
+                    "url": "/learning/learning-django-2/create-a-django-project?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C4D0DAQHP_EfrV0EECA/learning-original-video-vbr-720/0/1598806879714?e=1643976000&v=beta&t=shm23DzkjPwCT55AW3RlShP_h7yvyDQa7Ta0QYPHFgw"
                 },
                 {
-                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQGhbGoPHr4WygAAAX60fmG93e4grc4sDfRm5ODHbOTafz9siKSDSbloSCs0BnC6zKDA737TihJItv7xBBuxO0QTpv0Hm-5a9K9uspNUme2E6lkUhawDfOS_qpNGLgt01_j94H1yzIeGC0h8_CNZR-JyEVyr6BbE0UUO8KILEw3FpUxesiP097n5f1JV_Qo36QDjbAruF57zWXhJVs4JpI7t7uNWVZeW9DUoZFRrl1yBDpUCskr3imPpQliBZ_rFtVPzHhHKgppsrN4komwFpXn4IAYjnmn6XKYNSgv_ymfvKIr5IHCMZ0vsrFREiSXltpbaz4NlG31Mpi4hRp1J_vgCNScnlrx7vmiW9PeXaz47u2Yrxs6e29VdhbGPg0sdEUvCrb1fcALyUSSXdB9EhlQh5W8exxIsNGUeUloM7M3bWNMhVpzC1zKa5pemOBD9wGBEEZCKLXgjWsXWJw6pTxx-ixo6d6z0WhrENFPkgHJfOYyf1vKFj1YbWARC",
-                    "duration": "9m 50s",
-                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQHdN-6IgHOLIA/learning-public-crop_675_1200/0/1567117975500?e=1643792400&v=beta&t=mlgBshWRGmyJVHifBPWMLs3pLlc1m84UeLaPQQUmVuI",
-                    "slug": "setting-up-a-project-with-gulp-js",
-                    "title": "Setting up a project with Gulp.js",
-                    "url": "/learning/learning-coffeescript/setting-up-a-project-with-gulp-js?autoplay=false&resume=false&u=95231473",
-                    "videoUrl": "https://dms.licdn.com/playlist/C4E0DAQF9xvgP2pBhDw/learning-original-video-vbr-720/0/1598560960767?e=1643792400&v=beta&t=j4hUwqxbV9jyK_zDCJBj9molSJf6XTRmMS_J4qY-hEg"
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQKwvX3av7SyGwAAAX6_U0xbArqw1w1wXo7GE2UhLLlKysE4r4sxVABe-BqEu3R5yHAM50Hetq3qxri0BEjoUNJPeQPIS3QKM20Yg6lzcnKpgcLF-K3b1IGrTvDlDiej_hogtWUXx-qM8B-cgkI9Aj4K4RSknAfa96Wkk_KfoHmQKnf6OqXL3rVCJIel6osG93Tode27yFEe3G5LfcC17fEGr_8iDtPvY_P26RtkUiPT4huceDP298qjufsTINHRluSISvp6Ody74LCi4T_FaDUYl2gIHw_2o9E6b3OON1Pb_LQymRwDUxYTAQQAqbQXmTt1j83m6N0l0L8OvymWsl3G22BSRtScc91M6uJ4zL5dGMGh86ooLGFIPIg8R-XS8LENzYyR6gpoPc3qeDUsfX8l8DIqFdYmegai6f6S1mGAETW-e0sMQS1hnS3VP2QyMZJVj4wVkMKlustRWrCGciVPyKgiAhEdZGBwimX-OS8azy_j8USaAXdmwNdC",
+                    "duration": "4m 20s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQF8Gl4CggLCKw/learning-public-crop_675_1200/0/1587484799173?e=1643976000&v=beta&t=d8Gk5JB7oyHe1b9t8Ho9tF8pE_ngjraynXTKORktVAk",
+                    "slug": "create-a-django-app",
+                    "title": "Create a Django app",
+                    "url": "/learning/learning-django-2/create-a-django-app?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C4E0DAQEA0WQ1-cKwsA/learning-original-video-vbr-720/0/1598814253254?e=1643976000&v=beta&t=p_6jW3hcfsjLEq8nMMeN0zUFsnaP6cBvMvjEUk1Qqp4"
                 },
                 {
-                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQFsMcZ1LKwZWQAAAX60foIw0Lsnzux0H3y_YVHYiV4LlcuHFmObIMvQcJgKblatF3x5k4l0CUSXA2Ipc4SYfOJfCvYlP7fle22OjBwQvGHNDyw435tXkhBZ2A0Q7JBQqhfTeoCRbYU15E6vINDG1jGxQ0IqJ3sHVZDwFlj4Kjwbrz9XMX1yHnqvhyn9G7ZSR-E3CSLJF5Z6haJs1krdbTzstPgJtDRvj7rG2_nwp_P_4BjfcKIr5-iqCwgchdsFYbH6Yk8sm8iB2fO3PKfr6KZKZkpRsxhXcXK1WKDuAg0GIwKfBz0CJPczTSSkHmb_OSUx4B_c6e4jyDEcS_WRn2kiR26CUsnEnU4Rd9x1_C4X1PB-V4NqDXYlJXpbzXI23axmVg6z-Fu-jNeWuuaArX74BCt6BPngarAgL3yh97u5guaDOwL9RjQh6d9b2TK_afBSEAry_Ovzny6z4WAgTHvjtS5vw_pQzB7aX2kygsBwez5X05-LB3EptxPR",
-                    "duration": "7m 33s",
-                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQHdN-6IgHOLIA/learning-public-crop_675_1200/0/1567117975500?e=1643792400&v=beta&t=mlgBshWRGmyJVHifBPWMLs3pLlc1m84UeLaPQQUmVuI",
-                    "slug": "creating-simple-javascript-automation",
-                    "title": "Creating simple JavaScript automation",
-                    "url": "/learning/learning-coffeescript/creating-simple-javascript-automation?autoplay=false&resume=false&u=95231473",
-                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQFSpTObqQcE-Q/learning-original-video-vbr-720/0/1598562027444?e=1643792400&v=beta&t=mxvMrl8G8r4RUh3FWUsLc-V3ACl2ceQTMDokYrB4Oh8"
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQJsn0TCsHM7nwAAAX6_U3043gIZWGNrhWt2UarcjtoHptZgrRG3f9fwP5GuMmHMzBa8ouGHBhHD7PJZxx8NwQnsZ72tQZUqulwXWjvfuU6HoDmIgbu9G-z2p0s24iVPKqWQJcTTJ73oAVZb6qzdFLkFtAkoocjdbZB2V-JRPCfkZOBAbFM4Lub__UGXrP5SNBDhVDQsBuzvr2hjzYdnV2p9oBGayeC2WKdhqi76L6MkD-lTBUsI5Ziomx3nu8ucSyTKhgqttp25Iua15VJ90sjgGtEnrEhRPSST2rLdPjpJZb_DypVV5bdS6JDqCh8mi4rioKtUwWAf4yxPlVm_fxwJcbNFOvuNd9Utk8E4NLefw0SHDHEvBZ-08jV_bEYQGSgDQ27XJIN-6XC_kqKlkRWKV2taH39u4AfgKoI5A7li4UJLDgv8rSDwbM_2oBuTcYheV-ghl6F52EU21GxOeds19WgAipxtFJ0CVm9QWA12kLQtO6LTUpF6FO8j",
+                    "duration": "3m 55s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQF8Gl4CggLCKw/learning-public-crop_675_1200/0/1587484799173?e=1643976000&v=beta&t=d8Gk5JB7oyHe1b9t8Ho9tF8pE_ngjraynXTKORktVAk",
+                    "slug": "models-routing-views-and-templates",
+                    "title": "Models, routing, views, and templates",
+                    "url": "/learning/learning-django-2/models-routing-views-and-templates?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C4E0DAQH_4Jt_XC62-g/learning-original-video-vbr-720/0/1598813426302?e=1643976000&v=beta&t=3u45SpJnNGB0FpyXXpiOGEO3nwModB1DLVBq38dDKmY"
                 },
                 {
-                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQF4SlN6i7KFjgAAAX60fqP7Ap6tlq51hfpDkSChc3cS2QpQlabvrx_lgEhO2WanvUVyArUu4NTpYr8HEhasvdT8u8bV1oqH-I0kVB9ZnbUZZUPElgcOfHvvQoT3Ak5kTYmSotTcGp6LCf828bTAzXdPkR-3yaPpWtPFW8HbRxTfFMtZz-_uvUmtqzJmiKugbtEmb_K-_W0olu_5pLxlyUfUeYuiTsvvBKHJJv6FNe0rQD-ccuXyjJ_JbbxqklCtlEDM4EXEkyXfAg_FhDqCKnF7e15keACGkMOI-6F1aWBMQb-OuMFvVlcXjqB8Uu0rmKJgoKraL3e4d9fTQ2927vxLhMsx2apnWwHbcgw4VxJS0qkdESCZqZmNDKD_2_7iE2CAMDSuoiO9CZARlslSRRWATodgHzGouscEF8HOEWADtqxpzWarjyxNK0VjF_8HVALdibeRkYQ3gMBWNP2NPa8qWtjLTWsGeyPZXQi3bKdDZtjt44nRH-rjaVMY",
-                    "duration": "10m 47s",
-                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQHdN-6IgHOLIA/learning-public-crop_675_1200/0/1567117975500?e=1643792400&v=beta&t=mlgBshWRGmyJVHifBPWMLs3pLlc1m84UeLaPQQUmVuI",
-                    "slug": "adding-a-default-task-and-live-reloading",
-                    "title": "Adding a default task and live reloading",
-                    "url": "/learning/learning-coffeescript/adding-a-default-task-and-live-reloading?autoplay=false&resume=false&u=95231473",
-                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQFTVJdFdwwWrg/learning-original-video-vbr-720/0/1598655775902?e=1643792400&v=beta&t=Jbx2Iq0uCfZfI6lQiGnpL7OQA6ntcgnolDz_Fit0WSY"
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQJ2Ydj1YSgD5gAAAX6_U6O8bFDaEuqEaDqGr8dZBhvgIEOputZKDdXTTG-Gh2m_Z42fm_GeE0i6JFjtqv3i7y2x91mvyZsv10vzHtT5JmxY2yjG7c6P3ia314rZ-Fg_RowwNns3eTKki0Q30xwN4Wp7Px6kseSXN7p9w6aqKQoSAz5Sr047vTZa2iJ0NOKBv6lRBw0ZSm_GtBBJQN5UDGCvIOvmLa9DKOxoIJ4de_6dJeTaBKT89OUxMbEbJ0zCyZxL-0AscbnBwg_M2oI8qudqb5daxsJ4BeHolHljoz7XZRA1ol5uWlZudCnxOpBdv83sUbBqPc0fWBctSB6SMNKBhQ-LbyJLEXVFfxQ5zNam0PONyO64LtB_6OJs_nncBxnNfSZWthp2zsmO4pmtivdVc9HJ1V-mB6VPnbbBFGnpJlQoENhMjaAHRiV_D3Bt4kwa5-PHEahSYPKmlAFkkkqpn0buZwP6NKz18UGl7296GUrxSD0u0v3LinwG",
+                    "duration": "1m 19s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQF8Gl4CggLCKw/learning-public-crop_675_1200/0/1587484799173?e=1643976000&v=beta&t=d8Gk5JB7oyHe1b9t8Ho9tF8pE_ngjraynXTKORktVAk",
+                    "slug": "django-models",
+                    "title": "Django models",
+                    "url": "/learning/learning-django-2/django-models?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQGFQ_XORkcN1A/learning-original-video-vbr-720/0/1598806500990?e=1643976000&v=beta&t=lvFNONSU6J_Pq8VloOUawyF1LWq2bOf_Yvg_lrGRx7g"
                 },
                 {
-                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQIZcF5uLcF5IAAAAX60gCMbZrZnvqbdz_-eDVCojSrF1aA7vlbWxSyTdAwehqaJOjRKBCaUafX8x-DzBElXzW2HhOxv9mx3XdJ9WOsTYpTLtsG8fMJu-rXBb2mH98CdYmPdGxRoJn_Hf93ueYFvAyJXi-dYScZ10afxPlXHFmtBAiouJYNO34MKJBoFxoChtQn7gjh8JBEMVcoTH6CukRi59E6c-EXEc_rIxXnmKR2_-rYw6iJGh2i4vYSO8NyiKAp03FumZpYgnT55qqLK2rKa0PUe-ksQ9tqbymCLaNHy0ugxRUC46S3MuNxGyt2WZhJgjQIjFPDiuWA7zHndzIKoItMpFn72vYMBWNBlqexxC5cAYsqh2rxdHOL3h4KXoLPFAgy1sZKZRHiLUTTnBzRlmeTuK1Ic--5IHC66nCLz0NBXiMsylLQSjDQU433-dQTvtoCSUb2LsqPL3qxvRzYh8qGpMzksOHp6Kz6bJfdhkVAovlNy5nriSvN8",
-                    "duration": "8m 56s",
-                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQHdN-6IgHOLIA/learning-public-crop_675_1200/0/1567117975500?e=1643792400&v=beta&t=mlgBshWRGmyJVHifBPWMLs3pLlc1m84UeLaPQQUmVuI",
-                    "slug": "processing-sass-files",
-                    "title": "Processing Sass files",
-                    "url": "/learning/learning-coffeescript/processing-sass-files?autoplay=false&resume=false&u=95231473",
-                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQGtGVyJPr05dw/learning-original-video-vbr-720/0/1598560113960?e=1643792400&v=beta&t=-kz0YmD1mFFbVveQrjN36k3wS35-HQhaQ1DYQA-Wt5Y"
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQLphPQ63uEWegAAAX6_VBo4mxknLsXUUhCytm2Iasz1FzBjvF8CgcLwLEA2B-K4VckcaaoJm5ElTujnw_BhSJSGAQgKi5uRYJQmmtm9UOq6BRgCtw9zlR3c7KNjbnzjMEZwSFmYakj5lYgUnwnHZVig_6MftQTUJWWhpId_arKlckl_X6WlfAWtrteAvh-SfA-Ph-C0mGRjzDdWRhTxHKn5mAFNE6GI7NNKKGdxqNyy8iGzNYCU2u6RzOwoVEhYz7vs9lY2cEL08OrxI03hRLYrGEAb8lbDKJy-y2I7GV8YYIBOnO2wU7WKkfFFBgYyUhihiLkF2BtO44ncX27WYicvdLc8s0oWgXC8cWS_CKMdc_9olCI4h4kIIKmZ2oSu17_KUaJJWlWfhlysXG6iXM4NJpodkRh3_lEcs9hLMXV9iJIP2GQMTjfz_S-T9DpVB1uwlAnEyHhCz2oHAMzoN7kxpfaCv9U-ninqzN_BOP5qzLOItyPwnTv1_grz",
+                    "duration": "3m 46s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQF8Gl4CggLCKw/learning-public-crop_675_1200/0/1587484799173?e=1643976000&v=beta&t=d8Gk5JB7oyHe1b9t8Ho9tF8pE_ngjraynXTKORktVAk",
+                    "slug": "django-fields",
+                    "title": "Django fields",
+                    "url": "/learning/learning-django-2/django-fields?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C4E0DAQH15GfK8b5Jqg/learning-original-video-vbr-720/0/1598814152631?e=1643976000&v=beta&t=421KkeZTjH15buFq9d7QfAdrw54eGe5Rrv9az1zza98"
                 },
                 {
-                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQK3wr4jDgS6kwAAAX60gZAUSTso_pE5jw6q-AisnK0WYTExvEGVc8gN70Ldd5D_SqaB_Z55LYFJ70pLfp_iuxr9nO0nbCyNg4VSYgR5RgKiSZb0-II9TOQxU_dkiwDO69haq67_2cAlQIA2-nIaSwocEJZ9ydXsypdVaSs3Gg1n_KnpNEOSZoWTEmTobQ9dJ_STNpXSjB8NIsStnWOVaW1L9sdUmOoOrnNyU3HcCd9kUUnFA0XYnKpdFYzQdn4m39IkkgoWJNs89d1WdIWpG0z39EDdSGQHyb9wDnFKMXtB3TVoe4QMXUXNgFxmDwjcpMU1Y40ssGmNXQXak1p9mqi-jm_UCBKBh6eQi1bFuhiHLzShsC4AgxkXnEDeyrzDlmUpAhyo6NKvasqjYVZCNYJqwkIwQRL8woERXUwx7iKp40mRvROT7NWSXTEM-PzaioBOlsJvmVxXiiYotJGDbSR-Hvdm4WlzJ81ud-jb9fsNMv04KizQqHCLO8o9",
-                    "duration": "7m",
-                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQHdN-6IgHOLIA/learning-public-crop_675_1200/0/1567117975500?e=1643792400&v=beta&t=mlgBshWRGmyJVHifBPWMLs3pLlc1m84UeLaPQQUmVuI",
-                    "slug": "adding-coffeescript",
-                    "title": "Adding CoffeeScript",
-                    "url": "/learning/learning-coffeescript/adding-coffeescript?autoplay=false&resume=false&u=95231473",
-                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQGeObo6dddSzg/learning-original-video-vbr-720/0/1598562035015?e=1643792400&v=beta&t=MOd8bClACA33uuKTn3KsjCunrUrGrYmYMvsvBemxiFc"
-                },
-                {
-                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQIHqr80YC0j0AAAAX60gc9zXY7-U_31AwjEZGFxWfEzb7ee7pTq_jceVt6bnPKJ58mNvlybDZSRFhF3EWD3eGfo7yIeG35w2e6-oEPklz2Px-fC2ixMaI43AzERxgDhyZ5Q2VUWo5ubEPTe2tkB_IdsYuadUeOsr-ogAvehXiwOKmcKJXr-VW1xN7-0Sy9ZeJxbKU7wzARwo7Ee8hkA8aNCnwSJ5OJpP5s6m2cpubPs6ugF8sXGTEl1uCHKM24C4x42k3r8HXEOYLUuY5OoBkZ5SIYno28PO31_Nr2sOMAx2CID7qTeGw5ezI8ajGT_dzaFixGXAbzabSbSk6dnzHn_uSlnwPUsJ-nNhkR0qL8HXBxWmUgfwJmoVh86AB-xXTIiLpF3jXLtqkycN-AxzOZBv71z2iWUGxRiG4wJJrryLAHP-OMBd46ZG1Lkvy0i9ZXlHChsNkfhE2QdVXMGCJOOlDQN2DoG6X4FAGLiiQ3TVibHOxcr4Q6XB8cb",
-                    "duration": "7m 15s",
-                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQHdN-6IgHOLIA/learning-public-crop_675_1200/0/1567117975500?e=1643792400&v=beta&t=mlgBshWRGmyJVHifBPWMLs3pLlc1m84UeLaPQQUmVuI",
-                    "slug": "basic-coffeescript-syntax",
-                    "title": "Basic CoffeeScript syntax",
-                    "url": "/learning/learning-coffeescript/basic-coffeescript-syntax?autoplay=false&resume=false&u=95231473",
-                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQGw7llu__I1Rg/learning-original-video-vbr-720/0/1598560834664?e=1643792400&v=beta&t=EhTkWsrufMKYvEpKu8YprtDJWOkbwhBUyzu0IFMUubM"
-                },
-                {
-                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQHSsGVNA0os4QAAAX60gs98VBluKb9X9In-vo3I6AOUTsh3KFiA7oC8c6mnpbJLT5ZNX7FFrE4tez7kGjQ5Z88fhjW-Y3Nlb6RmP4IJpwkRor6jlSySBinZC2XFWW3wGhGac_XHYu3RK01Egg2Hrd-5KeJkCPEGdB_DKo9odzUonneUwLEG1oGmCyD8z07ItNF0i4PBz-ofwCGu2ug6Yxale1EsyEPOuQS1L1krHqHnMW3aw5H6SzUkh__ofesLh5rFP-D_WnNZjRVC-h_lpObGUAPH0qixhrIrHrL5xYx5h8ICEb3QuAgNLvgaZOHRb7NGaX8Sfo_EG65CK32i4_DvMeogqGVrkoxJWJcFy_ISnYVNiMyc3aE1EdXSHDeVVucrY5ptYkSBgQH8ArG30mfYuSjgBHNVFEH8NkgXNIoTIZ6i6lk1RswyjvsN0IxUC0DDzPVX9OJs5RtAgrQ10XIjekWsj0w83Jmkha1_uCnnjrTtS3r2HUfg2Nv2",
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQIGEVbHZG0pigAAAX6_VEz6D6HStQQjGa7xEHgrwEV7gSTK9z6SMAGGi7CiF4SLqxMZLF23N6Vk2G2ExUqsKhOWOBv5wxOnETUaBccBQNZO94AYI2PftpO7zEoRH4WsOMHda1hOjjJ34CsavoP-Ut24gvREatyy0-Nv5_Lf79K6z4wvO-A1OkX7QAr3_iNHv391MlZJvqpm1ArOtCoIsq1iYq_fZPXKolf7wxYsA28naFZU0UqhfElJjpRiz2z4TCM-jMjwQfGezlyU7rZGhSusTivTD6HS7Ei9DBa29DH1_KF47v4w91uq3S2R6C2CyOl5uNI4eQJO6BrCAREx7vme4GazGHxXbA69FP_t9wwExixtsPw8j9vVSPsNsBHz0DE7yX6oJvfzdcECw2SXa-9W080tLv-U_w-zyHS86G5FaGaih_Z7fPA905lF1nKmkOrR8ohJ3iONWefaD9SBwYJs2o2MpYVpDA83dwsOOzhkrZTB21eNWUOkEd4f",
                     "duration": "5m 24s",
-                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQHdN-6IgHOLIA/learning-public-crop_675_1200/0/1567117975500?e=1643792400&v=beta&t=mlgBshWRGmyJVHifBPWMLs3pLlc1m84UeLaPQQUmVuI",
-                    "slug": "using-realistic-assets",
-                    "title": "Using realistic assets",
-                    "url": "/learning/learning-coffeescript/using-realistic-assets?autoplay=false&resume=false&u=95231473",
-                    "videoUrl": "https://dms.licdn.com/playlist/C4E0DAQGrWpPeoYzr8A/learning-original-video-vbr-720/0/1598656575942?e=1643792400&v=beta&t=Fho_b0nyNTJYjhDd-HVpJyos8yNTAip_ySzA2W1pQUY"
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQF8Gl4CggLCKw/learning-public-crop_675_1200/0/1587484799173?e=1643976000&v=beta&t=d8Gk5JB7oyHe1b9t8Ho9tF8pE_ngjraynXTKORktVAk",
+                    "slug": "implement-model-and-fields",
+                    "title": "Implement model and fields",
+                    "url": "/learning/learning-django-2/implement-model-and-fields?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C4E0DAQF1Ne25uUj2cg/learning-original-video-vbr-720/0/1598806542738?e=1643976000&v=beta&t=HPlOY4dUtRNgzB_F7f5EMV8Ittt2BKGo6MCzjk6nk8o"
                 },
                 {
-                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQKU4k606_NgFQAAAX60g8_N8QR7Q0YjTqnm_8fBl0sqhk8I8B_MG03Vevmq0aFwunOghUVsX3u8u6xv_d1x0a4h_WgSgZscaxiddujg9k750Ck_belaR0vw9rbhKWWqCyOwSEpLjrAxi408_bnD5Gh5-tWXfdnaUdQJj-AmT04tuKXetacPqgAiFJOXez1kQybdtgpv9PEfQ5iN8CM3IyIiXAJVBSw3Xen50yCVjfcVVqurQC5atlhxE9FjYWUb5R9Tke7AnEhNPlXRZ6QYw05nHl5aBARWz9SJnzRtqK0OJcZAqcNkxij65QZXAEYMc6UsY123wXpj9oPHzM4g8GK6qE4o3p_wiK4soj3RZJwXBA4KeO5eUpSt7B1svfrHGz1-S9NUwLzcC7GA9RjuUOR-LVcpJSqU8D2e7fTI7p44FtI2fCLWb3hc66H50HTBGpbUmcS2GI2-rU3YdWKZVAOmPlVEyr1Hj1axT46YTt3W7lt840WAWCsG4h9P",
-                    "duration": "10m 11s",
-                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQHdN-6IgHOLIA/learning-public-crop_675_1200/0/1567117975500?e=1643796000&v=beta&t=KSWPAwEjC8_ULdhjC8-53R5uNifVRJSMI2-nv_Ar3tQ",
-                    "slug": "understanding-variables",
-                    "title": "Understanding variables",
-                    "url": "/learning/learning-coffeescript/understanding-variables?autoplay=false&resume=false&u=95231473",
-                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQH9blFh_zHsVA/learning-original-video-vbr-720/0/1598579777755?e=1643796000&v=beta&t=x-veOD_8_wp5sOJc8HqZnSIwSo22LRXR0en7q0kmHmw"
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQLu8BV8gcyvsAAAAX6_VG-5z0OzUs6Q0G14FbAYd7l092i05Bksi9eIjmruU5XiBx5KtvCSigeWthXXuSYNoTVl5Uwu5xfBtlStkYNj-SkI_GCy0eMvS_HdwK2RHBh35FibvOqkfZe1Ug6NxI9EDz3lhjPEMRAOKrbVjjWMhy_DOKrxVkR8kKjsGIPFo6MfWQbrMI41aoWj6Vm2neWt6qYYepzVFIN_TvhCjdYSOnJxM7bzxxcMAxcNIzXa-LRidupL_4-gPKSwxzlGhjKIPKjtmmDqcq9PsIGP6SstRFsI0NaH7R2FuJATZprS9lnOE1ni7f0YFT5zFgMKWAdeKFE4h7EtNo_8qwirw6KDP0IIFL4sfc7v3sk-qPcZfV70wpMFx26hOldisBYHauiqozwKOBW2OkqZpXLMZeX_lwiK8ZAQAk4WBOl9_HiAdVY7917OyjgfFfrbVX3D2FIIBGttOwsXPxgqtIJtiekQ9r3QDBFTj2jQyrgo4Jmm",
+                    "duration": "6m 5s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQF8Gl4CggLCKw/learning-public-crop_675_1200/0/1587484799173?e=1643976000&v=beta&t=d8Gk5JB7oyHe1b9t8Ho9tF8pE_ngjraynXTKORktVAk",
+                    "slug": "django-migrations",
+                    "title": "Django migrations",
+                    "url": "/learning/learning-django-2/django-migrations?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQH2NfiQQkOKQQ/learning-original-video-vbr-720/0/1598806546111?e=1643976000&v=beta&t=8qUTqzRxju5J79HaOvsImSq4Bi-wK0XgUfw8tC6W1bY"
                 },
                 {
-                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQIbdtjlAkbKfQAAAX60hDW9ic7R-cfnEhq0pvdFCbEXfCGzUiyMqh3p2wcZjgrsdu7ItgzfsfZtQo5S6IMaI58UEZxnJS3QO0dFsEIAY4nCkX8_wqCt3abt0sRz6sN104j86IB9XTeEdzQ65c0RC8gRFM5k57SPEOqClLOuISbd06BqEVX1JRe7q7rwE5N9m-9c8itYHN4oeHtkLrv0Vbcb_LUgVNKWmjZ2tni6dDbJFkxMtgF3D56EcrvtSBhksvoQbGBN84CnSSZtkq2kuQb4IAVa1dTG0f7eHHr5FULCPb0A4cuMkPXMWvt0cImCtN-Zt2KIvCIVyeO0sIOmM5A3lCQtwpvjHmPWlC_xenRoBR3O13IJjAxETXDF5tEzCs3aCmc1gpkVknnZY74yi2-PqLz6KsevEDIUOHw6GoJYO4qLMr8E_RVp7ifwgzdtaBevFk_VWL8MOaE-v23CgB-A7HHHnGjSsgIJi6tnGHi1Jw1dme5QVDjxPR0c",
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQIG9kDNDizHlwAAAX6_VJaHKw78xhZRtx47zcqWmT-pVdwwBkulscXdFXtAY5FfHzKp4JMmlm1PZvwrRnwBrEiCpkQMPXIxtB3BKBwGaYVReNtH5iAOurzclmQIJVyW1lDdZ286PRoOUOK_KsqYQXYb2K-qnM5A96I3dc7W4YmOgTT-Hepu8dw1ZX9NK3tFhqkDQzm2sT9wPpXyRbQf2UckTnYFWs63uX-vUGo0qCHNE_1gWPvoQdSWO99VSS0q6rkIEtP477Exr44C4gMVDJ7PjorR8XN2Y7q1ZnP_Ty3rG-5V7cIa5RmQOWH5LoD9i7bVxTa_aMlCopIq4rzWYzFWxUVw3wp7OJTDKDVJ7Uiir4jweBsgoWXm1kMrZK2D6kxBEK9MyIWknWdDsoabu8QNq7eOS_ku9csFnHJGdVjJTOnZxN7M4c21RIbTpRW1FCE2zcFeHGGKuWyxws2C-Cu7uO7KJ5zmZehhorLA2vV9trH_exrO-9MYESY8",
+                    "duration": "6m 24s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQF8Gl4CggLCKw/learning-public-crop_675_1200/0/1587484799173?e=1643976000&v=beta&t=d8Gk5JB7oyHe1b9t8Ho9tF8pE_ngjraynXTKORktVAk",
+                    "slug": "import-csv-data",
+                    "title": "Import CSV data",
+                    "url": "/learning/learning-django-2/import-csv-data?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C4D0DAQG5579WuCi-CQ/learning-original-video-vbr-720/0/1598820865457?e=1643976000&v=beta&t=5xThZ-Ghvs_oD5cEei4UjdJ4kW-a9azTZfDw6YWOd6g"
+                },
+                {
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQLZ86iqbMJnlgAAAX6_VL2vGElxMrY4Fd2LJbjKvQ6UTI5SgZ7LCNUVNrUVbNbrRi2-fl6Z-sZI_ehmVGjw8vhbwVoJYB8QIYCqGuw1a4C2yKNzswALsOL3KU8-dDWD5R2x8IfaS96P59NxTg2ZpDyiCg-Rq0okhlPcFJos0SZDipgTREjF54iolKTx5V4vOdNxc8A7nvJ48asxH7250W3pO1C3CxaGEmnW0x05l_1GRcMPEcMW8yj7gu5_6yqd0HfjS3PcSF_RWu-T8lXY766m7s6AsX52z3EBLGz8hTJqyhwOilpRY2Am_kAPM-Av2jfdMG-QKeuNJIsnhokMclqPqob5oYPUV5Wzz5Va60OnqnfjesUUd0WByuYwLV8ar1DmDZ-Ljj6Ok9i0zcD-1-bRNFcsoLnKbl6K-vhJNMrdxHticNWQKWLR9yaRgxZC7YhpR5X3cm7ewULrcnjv1PCVXcVxDfeQQ4sPHNPOAYSNZMUjE1Bbt8h11BvJ",
+                    "duration": "7m 18s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQF8Gl4CggLCKw/learning-public-crop_675_1200/0/1587484799173?e=1643976000&v=beta&t=d8Gk5JB7oyHe1b9t8Ho9tF8pE_ngjraynXTKORktVAk",
+                    "slug": "work-with-the-django-admin",
+                    "title": "Work with the Django admin",
+                    "url": "/learning/learning-django-2/work-with-the-django-admin?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C4D0DAQHSxA9C9cMMjA/learning-original-video-vbr-720/0/1598806546002?e=1643976000&v=beta&t=DbtnpoV1BPfLPztnVlU0ZMzBElvKMLNDr25Xw2xdbR4"
+                },
+                {
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQKZTbqvgxUubwAAAX6_VOWb34xZuwgv6MtKRIVD4i8LfA5oyqq9G6K1d_nr-s_WSsNnwptdm9aHmJVjw4KPnjz5xV4zjH4w-VlP_mlgPvb9eNAZQ07i2X8txZertYwGXz49cKgmmiCSdUwm3bvfsASxbnB7T3zZ_50UORE4gsLpGUGQVYsHw_j3t1UXqBaMjWryFzd6gAm16yqGppiMmYGdz9YzKlIy5SVabW9yZ3vTvFnLqOExqBuvqd4Bqf6V3TjxHCBcvppFZsNw3iTGgeelcfBTXlffvxIt6cHGbbAz2mOxoBBlcv4uxjb4i7U-NCzRrliLfYNfHmAVM0zLnx-j8qUH7zsVZtfpwUhAPxdgCBs4mJhrScOn3H8ZFiHvOob_GFLBQqWT4sC6j-R789z1ZeSmMuEtUZLuBE0JvjJ2s1H1naJW_Uf7JwEjLAb-1MNfNn_62tlpG6-fVgjF4Er6tsR9WA2D3mBLvH0gYJkuHdur5bvTCe1SjPez",
+                    "duration": "6m 42s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQF8Gl4CggLCKw/learning-public-crop_675_1200/0/1587484799173?e=1643976000&v=beta&t=d8Gk5JB7oyHe1b9t8Ho9tF8pE_ngjraynXTKORktVAk",
+                    "slug": "query-data-with-the-django-orm",
+                    "title": "Query data with the Django ORM",
+                    "url": "/learning/learning-django-2/query-data-with-the-django-orm?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C4D0DAQFyWWMboUr1SQ/learning-original-video-vbr-720/0/1598806503766?e=1643976000&v=beta&t=MGax420HnD3Nl8ugY5S23ynN1taZo1vfAx2CPQB3KNo"
+                },
+                {
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQK2aCS2suRzkQAAAX6_VQqMUW2OHd7bzu2vteDKM9FcbC0bvUSwLB8ZKbzMqXP2AHvnRxb8MRYtwt05eOZb8PIvncexeu96VDblkQ86yEZzX8KRvP-mFkUBhAAkW42aUvYoQE2DXL8AAlovlrTYkL4n2mYaYVkj5J92kLwI6P1nANFJj0hg5cB6Hc7CXPnuSLbsmopSYxxt3vo-cm0mIVC7A2FH6D8-492RhQ5QZW_r8eGfO6VWTO_wG_I9jyFywejqUQ3PTU1dyXBPRCW4oMsFzh8lRgXuxsQi4k56ZRdq0J98Dvw_0thuC82noSJWCY9EuqqmQRy_0y0bJSV2tlX1Zj5JE9wtK09CQpOkuPrSg4QqGGQWx3lpYzDzjNM4a4hrwO9RPkVOCCJvn-A5MujvSX6jQy1exll56ind8xYvfIM2IZu4LBg1ZSx9jWe-J7SDvIRDzDbpMWIA2kVAqQOZFbbgIzoLPPJVHL6cJ4V0MgvXVTg480Wcom2h",
+                    "duration": "4m 45s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQF8Gl4CggLCKw/learning-public-crop_675_1200/0/1587484799173?e=1643976000&v=beta&t=d8Gk5JB7oyHe1b9t8Ho9tF8pE_ngjraynXTKORktVAk",
+                    "slug": "understand-url-patterns",
+                    "title": "Understand URL patterns",
+                    "url": "/learning/learning-django-2/understand-url-patterns?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C4D0DAQFuN_2oXev8Wg/learning-original-video-vbr-720/0/1598806535362?e=1643976000&v=beta&t=29m_CWg6c43EKzA4T6GZrhirznguEhTsliXgj4UKNX0"
+                },
+                {
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQLxe9Q2zKxKvAAAAX6_VTAKPDriQv-Y1S6uLCDvAX2myMvG358M46-TpSpor6RjeFxLyvr1SoqVfDUvZB1aDq-kd-72n77A9Y2lq_jNIxvq_5uiY2kH6F3usJEOrSlu9pK2Rdb_l7fPeTPYW-gisXKhJqv95ZqShCkKXwAiiBu8DAZ9P5Mjv-0mZLtsnqmgo3xrLMWb4oE0btx6Ru6hopB5e45rSAME-mc-v7im2dQhcI3t2_dogPeM0kXCysGxLFMe3PolFpdmBB4R3tC99iMgOmDhTqX9G9p6DCfczdc-zyyLBUuXLahW8f_9df7gr_8M7aZi4hta4_qzU9Q7svvLmu1T7lcCcKRFBQbb2RUFT4cHG6c8iLvo--f563y6R7SOw_lvsgX1lERbAhJiRutkEIRBLLWG5zDcNE-nJd0luDWJH-0uJ10LoYMG4ktkfh9N7zuXFTXc-MKvWzmqDy-7nlN9FzU1X_OAuOhzPab0LcRLfaCHLHZnciFi",
+                    "duration": "7m 4s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQF8Gl4CggLCKw/learning-public-crop_675_1200/0/1587484799173?e=1643976000&v=beta&t=d8Gk5JB7oyHe1b9t8Ho9tF8pE_ngjraynXTKORktVAk",
+                    "slug": "implement-url-patterns",
+                    "title": "Implement URL patterns",
+                    "url": "/learning/learning-django-2/implement-url-patterns?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C4E0DAQHQvB0Io8NqqA/learning-original-video-vbr-720/0/1598814411501?e=1643976000&v=beta&t=YPPW4OUEM0dBSpR6oI1HjY9kGFNjcyKY7_en1Re65MU"
+                },
+                {
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQKUG6-TqciIIQAAAX6_VVRlURyNguZk9dfmYtWR6XFkBWGgGwr2LtVnL-5XHk0wjJ40wjsnGKTF0bL3tYlLonUx7bJeS3J94Dx8VmYMmqpRe2iW8mbHivDjwXehz3nEXo6Inr9wD43qfpnVJt0A8e7uvUKWQdBVV7OE6woGyVy4HV-dIwonVcMp9mC-fHpafHzfmD3KE2lQWnB1do5cJ0YyWMLXz6xONpA7Y0G4eBDRCdMZoM1z5-R5TTBAgl0bNRM6zO8CFcQOy186dcB_rS95LaSAyhVP0uzVOQqkZSAidpCu9Wp_ZQj-ub0nkzvD1PphpQEy2-Ukn2f-13259zJ4iS6HgKiXPCGyRRIqd0GDH4WXz_Pxl5Zn8iOMoM2qVaFbhcHg2OlDkah4I_7SxWTNtGILIZbA0D_qCKZfXFmSdGp_DGJBI3dfTbBboLoU9P9rNnEyw7mY2yXvNTN0TghXxxcxLCPtackw_tfvqOI_-rx8bZx2oBADjP9L",
+                    "duration": "7m 21s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQF8Gl4CggLCKw/learning-public-crop_675_1200/0/1587484799173?e=1643976000&v=beta&t=d8Gk5JB7oyHe1b9t8Ho9tF8pE_ngjraynXTKORktVAk",
+                    "slug": "implement-django-views",
+                    "title": "Implement Django views",
+                    "url": "/learning/learning-django-2/implement-django-views?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQEwWO4gcAnFLg/learning-original-video-vbr-720/0/1598806541227?e=1643976000&v=beta&t=7vZob4h1aIxaoSq3ng-2JyZUGV1xQQHQVzM9mwQPaag"
+                },
+                {
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQLec0Zz4n4v6AAAAX6_VXoBSlfyH31XflfJnWQKD_iONYfbfHHecKYwhjHXyDIpMLDtPYeKLHzJFOvmMIU964qoOCSSpakZaF12_-cKBnb02cQ0rOaumwzzumcdBe7eFytf9awf1TNY4utxKTzfUmQLdFNndTUF2rvVSrE3JEd5CRWzjpmgvEMHlk5SreJWWOMibFKDyWj0spYgLNVcVH6MpLsDZ2VxqrjxAci5vavcWOfpzkWEDmw0LUWjyuq7s9jR2wOlSo7NdsOKVvsY_4K78gErdQn_BoOqrNhjlQj9cJ4Qh8grcA26uDMWe_RCBswUrUPEj_QWMRdfiKX3QPL8w6aqJ1fJK1Klx8Kg0rj_f6AV30wDa0ojVWu8VfORc45LN2IJzzLTV819WslKQOA1_rzDuwi6wMtZrW8mNT0Qk_5ZsNMI0H_kMwarj_GVPcmSiYcVtetJfxVHfJxH0zmjVSbPUDkP0GpDKqKagfhzadsuxdbzkclUheCx",
+                    "duration": "5m 12s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQF8Gl4CggLCKw/learning-public-crop_675_1200/0/1587484799173?e=1643976000&v=beta&t=d8Gk5JB7oyHe1b9t8Ho9tF8pE_ngjraynXTKORktVAk",
+                    "slug": "django-templates",
+                    "title": "Django templates",
+                    "url": "/learning/learning-django-2/django-templates?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C4D0DAQHxNlJ5FsntAA/learning-original-video-vbr-720/0/1598806579327?e=1643976000&v=beta&t=TZ3xQz0kYgUt-08NNyZm_YgfYKLM6iOcKj2XlaHO2Ow"
+                },
+                {
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQKyHDWGH7seEQAAAX6_VZ9Nf2GeHP_SAVpP0hx_y0AnO6Xbu4IhHAuThtg2z1EyzwIZZPpVJnCWT6M9tvsrTk_HnxPOFlWpw9GKrB90yK5RNGDGJaTQ2DZZ6AzC2YTBd2iGjGRGF_GbQ8FIfdh1qu4JOGAi6YWp-sBcmhMeXDOlw5PtoGLFeFkVup9HrPyo1doWpex2zKG3xHJ-O-_ry9hwer8V9hVynOwLPhZ-yfiuODpFVjBif42fDCKDTaIgI243AHfj0q8UULVqF8SxFH3nnzgTb1A7QQJl375eB6S6Un2rRw7S6mTqGEaZONAmzgGRzfGcPVSCN2dMJgLV4MmkseMjWfYxdQjYgWx_ussQkGyTp0r7_gnuVGQG573wSHuL-LJwJANs4Qhqm3avzMsSU4Gt5mLJuicBjtVSFR7EaiZK3qbCdxwCLpUznge05Ytuxpxn32npUVC7lUy087_ROTGNhsDvEaPfyG9u1LyH3AG_67koQegR0B3Q",
                     "duration": "4m",
-                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQHdN-6IgHOLIA/learning-public-crop_675_1200/0/1567117975500?e=1643796000&v=beta&t=KSWPAwEjC8_ULdhjC8-53R5uNifVRJSMI2-nv_Ar3tQ",
-                    "slug": "dealing-with-array-ranges",
-                    "title": "Dealing with array ranges",
-                    "url": "/learning/learning-coffeescript/dealing-with-array-ranges?autoplay=false&resume=false&u=95231473",
-                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQGZm6f2tBFd0g/learning-original-video-vbr-720/0/1598560779744?e=1643796000&v=beta&t=4ThSPbtGYHqTQvj3y_Hjo09LnVowdIbfLRz0-YW1x7c"
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQF8Gl4CggLCKw/learning-public-crop_675_1200/0/1587484799173?e=1643976000&v=beta&t=d8Gk5JB7oyHe1b9t8Ho9tF8pE_ngjraynXTKORktVAk",
+                    "slug": "create-your-first-django-template",
+                    "title": "Create your first Django template",
+                    "url": "/learning/learning-django-2/create-your-first-django-template?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C4D0DAQF_7KPrEDPXyQ/learning-original-video-vbr-720/0/1598860205713?e=1643976000&v=beta&t=uANi2qJrsCt5LA0mZj73MebUEGNYr6sjoy8zeBbX9Zw"
                 },
                 {
-                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQKUvk0SLX29VgAAAX60hHOCU6l4m71g3UF53gWMPrOiN8PRKcEy5FK3Y-kzhktTm_lJuhm4DFDLtc_oIU1HRpn4478WOxnRFVNxOFg6456wumk4ffmK0_a6SQ9YuhcDYs0Sz7fQ8tU4FX3wMMN0b1z77iyEHMUHoSxb1EI9yTzu0kmLVIkDp4DSof6Hr5PCKntCHilmAmKoJe0edUYNF_jYTLdqx2AaES96oEXxKPcz6kEYQ7ZgZjvVOJFPaJBZBbf_LIhHT932Hv3fCgq0MUBnbitCr24nWYyJ0SwEQa4A8WzqSsQkfEzC4KqjoOj3T3x4IG-5e0HMtp-mxxSKOaiuZSQ_ZBKUTZGk5Y4C34HiCwI_kSvqVEN3jUtRwVOhsKXGxLJnrP1QEKhd7E8vbQ2VDiUxAfjJesI3GuVuzgvFR2Rh3FZLVPCOiF4X7eziJscnYQb6gEirdNVTB8nfm0YTVa4ZaDJfkQYTtVeyOUJiPLo3KEHWlULmGrFr",
-                    "duration": "5m 2s",
-                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQHdN-6IgHOLIA/learning-public-crop_675_1200/0/1567117975500?e=1643796000&v=beta&t=KSWPAwEjC8_ULdhjC8-53R5uNifVRJSMI2-nv_Ar3tQ",
-                    "slug": "working-with-conditional-statements",
-                    "title": "Working with conditional statements",
-                    "url": "/learning/learning-coffeescript/working-with-conditional-statements?autoplay=false&resume=false&u=95231473",
-                    "videoUrl": "https://dms.licdn.com/playlist/C4E0DAQHP9NDVT6_USA/learning-original-video-vbr-720/0/1598559290180?e=1643796000&v=beta&t=BW8nrDyVNOi52CKE_xykXEZ27r083ybJed_xzjrFs7g"
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQJzCW7ZdoIMuwAAAX6_VcefLK64EYLshQu4a2rshzi3GIatwXJohQ5yVDQ3Y82D8dKcs7kOliJIwxin3qSrGQTADnPJlZ5y_5Lv2DO2E5CvoU-vA3HqSlEhw1SY08Fz-Pev_cIRmuPO5Jh7Eyxe56_cuWJEElYEX50-8XkZzLQt8OBpR7BfrYEdsqTpbebMlowpG1DZggyESYq2p0Op14AQEgl0YKmV-8-KXbZvA7Lbl8I6eAQoksQfUw8gzwRwYEgqrNaQQbFPzRYYsbkOFGkjSHTTr7snC2LqNg_8dGnxNDAMlHX3iN0AlWf29w9sqIJaSmTiqem1nFdL8RqccwLekyZg49QZinFGHd7W-1RWK4g-O3M4Rovml5tU5pfFd_bzkoDh_4YmL7UnEtDfPZnEZE47fyll1rSmKuujJYMJaN3h2yZ2APWTIrEBFDbgP5JvAfaUFC9G8BdTOI35g0jqhBlnJ2JaIDaNarIgpxNOnyN2tfTWXjfY9n6y",
+                    "duration": "5m 40s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQF8Gl4CggLCKw/learning-public-crop_675_1200/0/1587484799173?e=1643976000&v=beta&t=d8Gk5JB7oyHe1b9t8Ho9tF8pE_ngjraynXTKORktVAk",
+                    "slug": "doing-more-with-django-templates",
+                    "title": "Doing more with Django templates",
+                    "url": "/learning/learning-django-2/doing-more-with-django-templates?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQF44i1YfrBCQw/learning-original-video-vbr-720/0/1598826980632?e=1643976000&v=beta&t=4K-nBi0kIcmXJyUlVhpZzFV2W9F_h8HY4rnYZLLSEhw"
                 },
                 {
-                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQKPkrKt0FVkZgAAAX60hZJaP8cHVlJUD8gFh0_rpE6vDz76dWMHFXi0tZdtjHQOR0KQ9a0bnQf37AZUJGlvrlatldoMnGkf8UErjXRCJ2sAzl3UGGs-Wh_A7hJZEfx4fQUGZJJ0s0dLdNj4s9llOO0Kx5ZGXuqXC77j7Zc6Vew3IXZWPq_qCPnf0eLCcrHzDBAg8Csuh6JjEB0QTnQzjxuvhtdJZSaLr9BzBa2-OjxvT8oecLdUtFdBRUIaex8D3YTrcne7pXJfnqxqVqELi2AfMmekugwAi5M31Sg6Fikb8Bsmwkkrm8q268nmWf1OFZKiQFxHd4exZcFGM0YfxX1V0X0ToSbVtHoiYji9DNDxaxS2-2Scu07hnQo7QXfh8FtKBsc0izfbHzhgFkLyIWQFdhfg4joZTLyDSiU0YfGORBtJNoNPHwxfAPXvbTcx-R1HsEzNff0n3Z0jEItRF6IWuJVbmCOA0t8hPOWKYzTuMIGiqkUJcEQcKbuU",
-                    "duration": "4m 14s",
-                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQHdN-6IgHOLIA/learning-public-crop_675_1200/0/1567117975500?e=1643796000&v=beta&t=KSWPAwEjC8_ULdhjC8-53R5uNifVRJSMI2-nv_Ar3tQ",
-                    "slug": "using-loops-and-comprehensions",
-                    "title": "Using loops and comprehensions",
-                    "url": "/learning/learning-coffeescript/using-loops-and-comprehensions?autoplay=false&resume=false&u=95231473",
-                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQFfvlfefnEfRg/learning-original-video-vbr-720/0/1598559258754?e=1643796000&v=beta&t=eK-u773ZfWJfFpP_A8rTFrTR9DWFaDiI0bZUJ_8FjkI"
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQLpZ6wR3We2TQAAAX6_Vex33TVdXN276Jeg1bor8Thbg8YcrfoAI8tEW4yCe-cSwlgVjuyrn9Sv9Mw9qpq-Kt1W9QK4W1XoeHZ99PLvsI9n_Uh5gbNLCvZE2oKSmiV9sMiU5c5vifbH6zFxKcEZNjZpBui6nut_1tykP1Oix3C8RRw4ougcpWXFHv9WERSTeps2u9rVYr1ygA6f9etvnmPk2gH7Rw2EHjnHcbFH4jjRX_cR_r2x0yGfBxM0XMQvXTvKX-xeLA-ToTr1c55Oghi8hxmIR9WY5SRrozXNxp_OeWSMBKec5-9ZmGQro81MNEAG85UZcb407ZyVY4yKFDP7-2LuZgdPkrhK5LgMOcoErCCbuJbtTxmfv7yLSzyXHlF2f54mYdHOEYEuE__aUIWrYVTPUb1R1QYMjNyaYg7PUp54BsGOxXHCT6SA29TXwFTl42xxauG3JwzI89YLZfFMeRUS0bE2NfJLjNydnWfjaeAUNYn5wsOXuTOI",
+                    "duration": "3m 13s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQF8Gl4CggLCKw/learning-public-crop_675_1200/0/1587484799173?e=1643976000&v=beta&t=d8Gk5JB7oyHe1b9t8Ho9tF8pE_ngjraynXTKORktVAk",
+                    "slug": "structure-templates",
+                    "title": "Structure templates",
+                    "url": "/learning/learning-django-2/structure-templates?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C4D0DAQEXSky_nSKVhQ/learning-original-video-vbr-720/0/1598806530564?e=1643976000&v=beta&t=l-EtP7MNePRy1yMGdWYDSsZo1BtY_EO-OnwPIn9Brcg"
                 },
                 {
-                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQLf-nA3DSD_DwAAAX60htOpNzWy7hwjxrGxwk1D5FuEHaf1eRLcrkUJV3BJXUuZRgtr4z67FL7J_pkP_3hBRnAVGSaANZVxBu77kf7D0cRwS70xDkuX7TqyDGSUPgSu4efLT0jH2zXqB53DSVtCdmL7QJdcPP5ssf310u3Un5_XsVYs3tu2h3PrhhxNs8duWGpfLGOAtUf6HY3j5NIPP8MtTBOw3fiSbD4wqSrv8g1VGgz_krHqDTcOramScLB10XCbaTzjWCGC4mIPr9GGEppr6iMPqc3bH_EUruvGkBJMdaqvpP6ry82dfUGDAArI7eBNsJpBQjBfWbvxPwcNNuxm7iQPOxGaLfCwe4rA3BbRGP2GkIUMaoeNvXx4MsWXTl9BVZEthLrodVLqO9JsVu3GWzqyW0zQNc-MCzf_TKXd-9oP2cUnEdi43au1RETKiUKx-33VNQQ2OiLf4ZBbutXc7iaqlAGqqlLIcu61Gwt10pZPOobNeDhdzUp9",
-                    "duration": "2m 57s",
-                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQHdN-6IgHOLIA/learning-public-crop_675_1200/0/1567117975500?e=1643796000&v=beta&t=KSWPAwEjC8_ULdhjC8-53R5uNifVRJSMI2-nv_Ar3tQ",
-                    "slug": "adding-basic-functions",
-                    "title": "Adding basic functions",
-                    "url": "/learning/learning-coffeescript/adding-basic-functions?autoplay=false&resume=false&u=95231473",
-                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQG-Y9CraXC9ww/learning-original-video-vbr-720/0/1598579697465?e=1643796000&v=beta&t=6W2Tb5UtgWpcKmNeaq6wOquxzHAhzKLy8YgNtcItSN4"
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQLy_X82VqrkUAAAAX6_Vh9ZeVKxQZyzShoiaNVLYKptiioCe3a34Wo1n8iWp-hescr6tewgl4txanncJPLvVzWU2l1UkML1MWGvRwSPQqz6bOdDXQ6P8mWqmy0ELaVAUx8-X-_bt7PEoNI57WG2yxnu_1LGFK7hkh1m3cGE6DAP5JaKvVV87VoIgOUKnptuviyUDo-iqKSYZXJBck4F6wznXAgoWXP5JO_XsXNkD0e77Lcxois1yhR-ZjRns5jlxFOQT0-YMr_SBrHwj54_anv_tMjpy61TbJS3vfScLZegdFzQL3st9sN_Ta3BIGg8c3ySsxVNtqUsIsJyItTxFxTYLwMjU-dE-cVMlMV6uTNJZrlGuKN8WU9h4JbTLR4VksjfcGnXMwJa1BAIMT6De3tlAcH__10wj-vqGx9sO4rRo7hVs35xSBrVaMKy5OYVKn4S0yEpEHyBx7z68GpMNWq7BttRcRR_T-QOP309EdVdsWioA3twzslXW2b4",
+                    "duration": "5m 47s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQF8Gl4CggLCKw/learning-public-crop_675_1200/0/1587484799173?e=1643976000&v=beta&t=d8Gk5JB7oyHe1b9t8Ho9tF8pE_ngjraynXTKORktVAk",
+                    "slug": "integrate-css-and-javascript",
+                    "title": "Integrate CSS and JavaScript",
+                    "url": "/learning/learning-django-2/integrate-css-and-javascript?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQFrD3O0WrZ04A/learning-original-video-vbr-720/0/1636470316819?e=1643976000&v=beta&t=oZVfc3wCSqv6B5HduuckHzjKqQbuJc05NoSolj1yxrM"
                 },
                 {
-                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQKWWVY_OjnOegAAAX60jjH9o55d5rQ76yde-zkSuH1M5EXhws_V6_gPZGbo_T5z8mChJSE9-9MY4mHRLmFjjog3dIR0pWXkLJ5DMymLC-TpNFKb5tuxr1YYOKXC2FOachKsBiJOfKx2ra_fq1e8BySQhUtAaEE-1m6cfoOyN1hwx9dJIAKsbWJDO5fcMe264IAeKCvo8b0v94PIxtpR92U5mucLDuUna3_zU0C_dBCMmEdsKPTif-53OUgclBc1OG1tyo8F5-CxpVH4dfkSSLwJcbn6tZ_F8uoQJ2DAmL5agfMpAXVHNOIDAkRRibl_vNJnRQNHZga2nkdiEM4Xtj-owB7mdy1P_4S6MLaOQJdVlpDioepkKr075QWa3n4bJVYSyDL3R1b0Ikx3VQHr6cn9fuoPrHoKjPzd2zrxTypdW3Q86QBIKwOq0g68gCqUO3jR_sGs7ZvaODtFqAjj4gamuwL7qfHh1_HWdQPNBl9YQ5XP1PgnOa-uIcLC",
-                    "duration": "3m 28s",
-                    "posterUrl": "",
-                    "slug": "working-with-splats",
-                    "title": "Working with splats",
-                    "url": "/learning/learning-coffeescript/working-with-splats?autoplay=false&resume=false&u=95231473",
-                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQGWGwtNU_lZOw/learning-original-video-vbr-720/0/1598572589344?e=1643796000&v=beta&t=edDafW-vw0FEOsZeQR1S-kyCZYAuIMlYSyDZSe_cem4"
-                },
-                {
-                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQLOj1WEvmXWUAAAAX60j6ksPCfZi1tvGjGaRFKzSpXOee5rEOT-eLK7wXbPtN-VGZuXg6NpqnCTSDdZ8kYClKlYJWZpvB5_yM3jXKnMLV5hIq_dBFPtgPaljiUovy6QyIsNvJlW18atThEIP5WxGKgVmt3izXiNWOiO_PfLDYhLm8_U2yw_CrjCMbjnKuLLNN9ekFW-UsbKGt4jyW2uL82zgU1HbozT0WsyrhytANogvSJPqtcRI-g8EJKxS6Xg-skQi80j3ywGI5GqMT9zFIuhQiFm0HtajN_BxGhFrUf9k7K73LfcyU7HvbEnOaS1hCB6mRGkv6m8L_S59AJjn4G-ceccpszMUOWMvnHkKfgc8ThDuEVCwOtWrLtGFkrn-KOQIyHTmWEPjBMVnKjispoHjSvc_XUgZOaBWpdlNVCYFZmRt2LbVna4OO_feKI8mm4KEXbFbzf_lWeuaBhONJLwP0CCMvYEibeTcBBiLkAxG3eHSLLI_uZ9H4TK",
-                    "duration": "2m 51s",
-                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQHdN-6IgHOLIA/learning-public-crop_675_1200/0/1567117975500?e=1643796000&v=beta&t=KSWPAwEjC8_ULdhjC8-53R5uNifVRJSMI2-nv_Ar3tQ",
-                    "slug": "using-the-switch-statement",
-                    "title": "Using the switch statement",
-                    "url": "/learning/learning-coffeescript/using-the-switch-statement?autoplay=false&resume=false&u=95231473",
-                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQHTussYYPLtqw/learning-original-video-vbr-720/0/1598560577527?e=1643796000&v=beta&t=QYib3EJyqAJF1mRfuJiSz8QeLyuIp_tIQtjQv-lJPB8"
-                },
-                {
-                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQGy8inuBFb7nwAAAX60kTttja8FxXbqNTtNvJrMUBapIpp5cScovwxMs4a3Am39fT5VuMUUi0-lHgq5r28dmVhotCMxUAWMcE3UX3s_VW3LlSy5A0LklxrEehETSsNjBZFdCQcyxozwb1T3DD5Ev48oU--WkUKto-f0ylbGNkdJVa2LrNfA7Q5N84QqEy11nmYJKyjeKE93MxqAQLytLltO9HgVpWQeeSbBSqmh8FledCV83EBlgoIn1cx7vEfa0UsBp3wl4bAK_B7Bjy2N0GgWP9Uc7VLMPxIkQK2efEVDRzzY7sDWzCcIlAJbJdneo3dIpXXcA1iRDR0opki_JHHD4Ghk8OwASpzufKYeCGYuM6psKUlX8Hbcv9KFs3A69xjVPOpl6dVMNOQEZhzKyXdj6tf-9qoSYnS5Dzkt5nN-RyVCq8ljkDIbi5AxOpn7skT3RXiuIo5ItRSshv3vQe9s_JKgl8ZphmhGRfKeG9GoZ6E-lXb-nFTozvFg",
-                    "duration": "3m 57s",
-                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQHdN-6IgHOLIA/learning-public-crop_675_1200/0/1567117975500?e=1643796000&v=beta&t=KSWPAwEjC8_ULdhjC8-53R5uNifVRJSMI2-nv_Ar3tQ",
-                    "slug": "using-aliases-for-this-and-other-tidbits",
-                    "title": "Using aliases for \"this\" and other tidbits",
-                    "url": "/learning/learning-coffeescript/using-aliases-for-this-and-other-tidbits?autoplay=false&resume=false&u=95231473",
-                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQG1E4FTDNJ8wQ/learning-original-video-vbr-720/0/1598559329495?e=1643796000&v=beta&t=JSfj9rfSvJrjmWLR44iAXhx_bDqO90ERX3ZSE1xAXMs"
-                },
-                {
-                    "duration": "1m 21s",
+                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQJjuhjW_j0HggAAAX6_oqyenzuWTW5vDOPQqaTNoCQcEozv4uvjYzagfGVYn41cSKdOQcU7dIczOJkrCXVXYDf8qSFg4JqQhLoL-oaNvpxAiQofrska4BazngSBddgiq2fBpBdwCnriGutctP9GGb-tjvT5maY-X8-jdS7wpqwn3R72AjFfS0ZKPFzqSz0s6bJxMMtZ6dnttH85MAdvKfLKfurBxx7Sn6nUlHhWwa8KX4NVEq4g6RDOQu-nI6uZeFY27nzGInPoTjHw6-e2WJiKB7_Lu8WtoTWfL92ZZnrPkUIlIqCLEg1PIW2jvE0T_w-ZvtclQ28ycknPNqFN1To7E5uLWvEBoshqRIuFQ1XkD0UZMuTaU4XZiESGj5ym5XWL0Yy8kzEPaOhuu6vG_t0qbTkrUB_A4N-Sv7kpzzU6Uz7gTKN0emz4dSKBVfSnI1ypty1RpgTnopDd11lcH5wQayrqqfjTjI-D4XwHaImYIVl65ZpwGEBNiw8r",
+                    "duration": "43s",
+                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQF8Gl4CggLCKw/learning-public-crop_675_1200/0/1587484799173?e=1643979600&v=beta&t=iNzf6DCwqPuDJBWpk7BW5fAR-IlvRmPGsBv8dptY-9Y",
                     "slug": "next-steps",
                     "title": "Next steps",
-                    "url": "/learning/learning-coffeescript/next-steps?autoplay=false&resume=false&u=95231473"
-                }
-            ]
-        }
-    },
-    "39fb5c08164b09f7593ceb3c866fc9a9": {
-        "learning-coffeescript": {
-            "coursePath": "learning/learning-coffeescript",
-            "courseTitle": "learning-coffeescript",
-            "courseUrl": "https:///www.linkedin.com/learning/learning-coffeescript",
-            "fullUrl": "https://www.linkedin.com/learning/learning-coffeescript/welcome?autoAdvance=true&autoSkip=false&autoplay=true&resume=true&u=95231473",
-            "hostname": "www.linkedin.com",
-            "tocs": [
-                {
-                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQEDZd_BsbN8zgAAAX6naBBj-tlHh4COzkh-e9VreJwImdKvBTbapFcXRuHfkZJ3fWczqmD-csb-9_LcfJ0c6rdo9mTmb8RpNbz-pdxUrdX169lzRH7Pq5mp2n9gyxZ93USP3Bv5uYLv13XkO_Yia0UM79jGMe75sZZl-CQXuc4YCQN3LXbhIcwmff5AvBUcENoA6JcJpmmOsFMdWRVJK6-Iq4zgCWY0ZBN1rSxqQ67RrqSi6OQJHJpsYonaxh9B3L9LQSSreFUzP1qCzG00jtSyDQ9DwKJTRXPRhJoqHdNg_YDVt4FNxH2ve8Zl8wMP1g3XcgDlq6-s_pL1MGmwJO-Jf1riunli4dkyyb7m4V6tRv34N7m7r_XcO8sXfIXrock3COgsvJWvtEKHWx1yfAEuA8RnfjfBej8ZsJnvi8V0ciEbSXlCksURtTnLroRly-Mfc5FhLQX1g71U0GUtvzhAal980BVwq2TDenR6YZuHy0zykf1H1Epuqa3X",
-                    "duration": "1m 9s",
-                    "posterUrl": "",
-                    "slug": "welcome",
-                    "title": "Welcome",
-                    "url": "/learning/learning-coffeescript/welcome?autoplay=true&resume=false&u=95231473",
-                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQGLkUBuoiSqOA/learning-original-video-vbr-720/0/1598572580164?e=1643572800&v=beta&t=ApBR0GydtUAF0jf-xPPlEe3x9FlAmycToWlkMyD4WqY"
-                },
-                {
-                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQGDAmsCOGwPYgAAAX6naGFQHwhIqD0deq6G_1fwfRkN4PGcrhKUoNlfAYKCQD7qQbmTsz_O9EkwF6AmnF1ITLLhpNgRIqr5Xmg9q4ZKEXLTJIZgGIzpb-41n2stQwiM9LCmwwyPRVcV6tTm96I3UkTYIB1Qor-XKlAwLaVRUh7G-Uf4E8Stug7HB27SnLnVi59yrIGskMU7lkdmACMF1jZtLZS-ovFI3ychdNzadd1pKkj9rFvnSyP6O167h5BX6krUUzewvowc_FtC4GCMk1ZPCLxNZOwAEyDeIFr4DrmXDg4QEJQ_rRXH34hcDTi4A4ORWI54s557kzKTzy6C1ni0LfevKprvwOt1fnW3lIDC6uqhFlDF0S36dS_-bTr-ZkpMswcubCVLJvRPUM3CMPYgoV6TAMbMQQHbL7tsp3X8nKZLBmq-0Ut0coGJbM43qq5kjbajGGtdSvGbXTzDJre-JFukNvjc2S47KnvXVzJlM1xW_BcMWG4GcSH5",
-                    "duration": "58s",
-                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQHdN-6IgHOLIA/learning-public-crop_675_1200/0/1567117975500?e=1643572800&v=beta&t=1udkeDWVqdhd8vr2IXF17KU7BO7BzqMsp7oeB8cVNXM",
-                    "slug": "what-you-should-know",
-                    "title": "What you should know",
-                    "url": "/learning/learning-coffeescript/what-you-should-know?autoplay=true&resume=false&u=95231473",
-                    "videoUrl": "https://dms.licdn.com/playlist/C4E0DAQGIRFHDor0ZDw/learning-original-video-vbr-720/0/1598656435557?e=1643572800&v=beta&t=IY67de27mb8lTqqzWugUb4zrfDPovhGJjvA-DvXBRt0"
-                },
-                {
-                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQEgD1rd7fsMvAAAAX6naHU2tCZZBS8yEx_0FeURlJQ3Tr9OG0SM3czkJHDMppReqvhwrIM30oHg_xEDWexRPrXcoP-CBAZR0FA8Hj97Aq8fVHNMeC4blN35dmJJhBsRnX0-qa2gycuwz22Qg3P2d7bw2NOG5rvqectrcRgx2K32FfKHKH0uGay_6isvGSlF7TMtMePtn2bgu31NCbCwdDAxNXXIyBflynzdfq0w1utgG8X28877E0LOYm0InipOUzBGAyRGLR309lCGdjGkUE4pD4H_w4LYlWj740dproEWl2hnikesZcI2qANC3H6om3X9O8mUyO5e4l1MDNiBO0wkbRG0e0Xr0_6OFjyQQVq2OrEgszP4glM1z1MxZRqH0-Uzy5AYLE2QeahMyHonN6kruoL-50OTG1dlyKpeJfhbWaETa4ynUsriTx_tcNZXP_etTrwI4DNvh5JexHhvcRPVlWspoUGfJ5ttv17o-sZPx5LPGMe9ecWgn1wt",
-                    "duration": "45s",
-                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQHdN-6IgHOLIA/learning-public-crop_675_1200/0/1567117975500?e=1643572800&v=beta&t=1udkeDWVqdhd8vr2IXF17KU7BO7BzqMsp7oeB8cVNXM",
-                    "slug": "using-the-exercise-files",
-                    "title": "Using the exercise files",
-                    "url": "/learning/learning-coffeescript/using-the-exercise-files?autoplay=true&resume=false&u=95231473",
-                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQGLtXLeewK2OA/learning-original-video-vbr-720/0/1598655786569?e=1643572800&v=beta&t=ouMt8oYMHMv2q7Sb_U5dD4Duu_gACh5MKJc0vfnXkhU"
-                },
-                {
-                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQHXZgShHIXvMQAAAX6naIo0sG1vOaDHWKrVXYdnLNG6oc5tcLcDzHP41hvwP_wwBFon4hHqyg-zaS8tnYUf8yV0xNtB8R13U8HpzW3bK5dFHgIr5ynk-wco8qsKDV8230aiSL11w8bJmkX4zVbn0JP4UAbHkbhB0kAVQ5RTxq-sySAzK3IbYq5su7RYiVoHaLYv9a6s-U2o1is9M0D61gMev0xuo1-0GadjRczkkfIlYWHggrHg3HB4cW36cOclelUcJzhRYAdwUx7hXha-RB5rvOSbZjk5tZoupTLFe-w7spIv1uZ-R5ZFDwPffru3sytEgAo1wBCijMZrbWG4FMnypnQC_SlFZ0_TXpFUz5oCDBX8pmOrIF3cFRXAM0Kqbnn1WisPlJ_coFC68MQgZW2xPsTLD-Q_dJdz98xi5qh6tvpls00kb1MFlyXoUPfTKPD75wkGIxxxSzi5tEt3nSamQi5gCM5J7-77eImF8vBYAijMvp0cPJ6bzlLt",
-                    "duration": "3m 31s",
-                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQHdN-6IgHOLIA/learning-public-crop_675_1200/0/1567117975500?e=1643572800&v=beta&t=1udkeDWVqdhd8vr2IXF17KU7BO7BzqMsp7oeB8cVNXM",
-                    "slug": "what-is-coffeescript",
-                    "title": "What is CoffeeScript?",
-                    "url": "/learning/learning-coffeescript/what-is-coffeescript?autoplay=true&resume=false&u=95231473",
-                    "videoUrl": "https://dms.licdn.com/playlist/C4E0DAQG7zIyfeF6Cqw/learning-original-video-vbr-720/0/1598660971092?e=1643572800&v=beta&t=rxjAqNg68XE2xlDLyzmwrA426Kq_eZg4J33Jp6xW5PQ"
-                },
-                {
-                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQEBUg92CiI9uAAAAX6naJ2FVQ565aqyD-PgWg2ttPUx05fwA-7IBd-PP63GTjlZsCk0BUaWDnleJ3ea9h7dXUQcYTAvdnNrD1C7iVK9ol7PIaK7jjKF9tpVWo4BC4gMLOsIE59Rg38GFHBbpxzHpA_K2HFHO7AxhUfeTJnUhcUprJXweYvUic5E0rQtkmoJGqhPjRPLoGrYfztLiE0qbyQUAWZt4sSXCczYOrqHpge7sqqXR942LzQhsZ1gg8ujhTdDqWq3slvuc2qGAbmH58eYTy4-yB1TT8gVosOey5DVQOxIJalGMxZljzw4C2Xe2JtNXfloR2lGrQXKwdGVK2tfVCrPQz78dkrBvtO8YiRZke2_839ZaCnL2yaL_xAtT7_nrqRyvXJidC2v6FVHmoZLRl8fLXLW63XFpxUQnhXIl2Cs_IUs6AQ7X5XAtYUJb5yYCtXERGgC_k2QST2NaruysYJjGWR2bYTh9k8B9EWTp29QgVrdvO03RVrf",
-                    "duration": "2m 40s",
-                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQHdN-6IgHOLIA/learning-public-crop_675_1200/0/1567117975500?e=1643572800&v=beta&t=1udkeDWVqdhd8vr2IXF17KU7BO7BzqMsp7oeB8cVNXM",
-                    "slug": "using-online-tools-to-process-coffeescript",
-                    "title": "Using online tools to process CoffeeScript",
-                    "url": "/learning/learning-coffeescript/using-online-tools-to-process-coffeescript?autoplay=true&resume=false&u=95231473",
-                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQF9thpFLC-B4w/learning-original-video-vbr-720/0/1598560663537?e=1643572800&v=beta&t=c7cAG0MI9Wi02iL5ZqhhoijeGObLKT19NmKhK56Uj-U"
-                },
-                {
-                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQHc2X0bi0_qJAAAAX6naLEH8fq0cFSsXKU5xnpmculidoc3Q59B_1xI-M_WcwsyfVcUQK3CSDiIPgB5hotHZzBPvi4u3bV6zzrvaXuOjazJ7ok0LJBXV4HvU6eEHAwQ23gZq_XXM8qsFcrxNsT3p74Ky6dwgliV9cYtol6DK8dqg0CrjZ-iTyittTyzXFPhsJPlnfBjsvhP6QRiQdzWr54fPRUFIIaNd71za0wkHeFBj-sos-9UtGUAwO6TFsK4a_rbSk4__540LaWCDoLBawnjhwfMZS2eFPpAPyX-HixO4EsBCWqXN9t-MEIay90jioZJCBJbVuvd0bD9aYEC6qgNKDrqUtV5vYeptLE8BGzN1K-bDrmSTl0w3dqrwOK9azJyICoSP45KBMe1w2tTM1uAYqkwBNKncglrTaGfvNrR7n_n5fDWGFDdk1n2-PaQ3Mgxuzn3AVsarcakX0i01zkCilRdiIKq6Ui4Xnghi5kVLfWiMXBACHF7ZPUL",
-                    "duration": "4m 23s",
-                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQHdN-6IgHOLIA/learning-public-crop_675_1200/0/1567117975500?e=1643572800&v=beta&t=1udkeDWVqdhd8vr2IXF17KU7BO7BzqMsp7oeB8cVNXM",
-                    "slug": "comparing-installation-options",
-                    "title": "Comparing installation options",
-                    "url": "/learning/learning-coffeescript/comparing-installation-options?autoplay=true&resume=false&u=95231473",
-                    "videoUrl": "https://dms.licdn.com/playlist/C4E0DAQFxfz0E26gPoQ/learning-original-video-vbr-720/0/1598661241834?e=1643572800&v=beta&t=zGFaZmVeN2GEV3djlxiKVjgQDqEwauQ-vbI08ziPMao"
-                },
-                {
-                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQGyzsp8a4iycQAAAX6naMQk0ebGrmZPIHP5dUOFy9tWcAREc4AZwesQuf3XHT01WEldEZFD2zrqz3PUwT-dc8ZSyOH00UB1kklidjJORDrgqnCAbuT7bnUfR7eAEkgWCML1anDmaZtemAkrYpH9Xqmru7xsejN61voV8CGGkcsqoIkDzEwGytFXkqZ-7GrLroS63wQ3i5WfrrmRFRDD8SutbP--5QgVQwirNxZFkHKF9mkzokOYt9fZubNdmDIXzIWRSL25_e0EIMYic0abegC1O75O741Mx6dnC2bg41UT8yP64W8FGL6jGDQpQlVHFpaPFcyOssGGFnVHNwZ3fjE_D_ta_HNrOGSB7_evzHrT3hJjAyRbcYSQZCiy5w2rYkDrwPQM6wufomMy5U1zSgSkfQ-5NuWiaQ_AtIDmj7hwfmhHaxXgTP9FB3cV78K5LURZQFNWusEipFd0jPrMO9DmhNePPaSAcoGVEtGfWGEPv3C5gxtfKseO54Pm",
-                    "duration": "9m 50s",
-                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQHdN-6IgHOLIA/learning-public-crop_675_1200/0/1567117975500?e=1643572800&v=beta&t=1udkeDWVqdhd8vr2IXF17KU7BO7BzqMsp7oeB8cVNXM",
-                    "slug": "setting-up-a-project-with-gulp-js",
-                    "title": "Setting up a project with Gulp.js",
-                    "url": "/learning/learning-coffeescript/setting-up-a-project-with-gulp-js?autoplay=true&resume=false&u=95231473",
-                    "videoUrl": "https://dms.licdn.com/playlist/C4E0DAQF9xvgP2pBhDw/learning-original-video-vbr-720/0/1598560960767?e=1643572800&v=beta&t=WSLSYJvAALKWEY8GHGpIZb_muN68QwHi2-2ZGLVpG_k"
-                },
-                {
-                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQFR63oH8N5D9AAAAX6naNZplywjElkwLxuR6-CnE7-QGtJZ6ZURHXU-YK8mYtlQG_KBoPDEHsung2xgmI8XWNZbuQpj3QpMxuuR2hYM_45xC__4BscMeyQehqhxL0bvv6Xy3nYYn6rDuBis9NI73ZfSfaxuFulYspOnRVu9rJvSBBL7MWA_QYVc3vRCT3Jvc8AVDQ6cFLBAM2IVrUlcMirvGVzcF-eDExs_KttiY87FwyHrWwZnx84L8ttVmiydjb1DicVXW8-ifIYiXDGXm2h8cYP0O0FnEYhrbeDwSDFXeGwx3vkKjRTjbjW7VsrVrhWKU3bYCz5ZeAwA1fLG1BlBBn2-Ldd1DwnpsIWPJrmrU_qZiECbhT2-3hXluKzblvlFGlrluAM80MkRk9YocjEHT5SZ-KPdmC30m95kvzDfZIK-zCcDLiiDfLqrT5UC43KdwC4VKzR1cPYaG8L-urJtcdTnMsfjo2f-gh770j6Y66_f690WpOpEgFNU",
-                    "duration": "7m 33s",
-                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQHdN-6IgHOLIA/learning-public-crop_675_1200/0/1567117975500?e=1643572800&v=beta&t=1udkeDWVqdhd8vr2IXF17KU7BO7BzqMsp7oeB8cVNXM",
-                    "slug": "creating-simple-javascript-automation",
-                    "title": "Creating simple JavaScript automation",
-                    "url": "/learning/learning-coffeescript/creating-simple-javascript-automation?autoplay=true&resume=false&u=95231473",
-                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQFSpTObqQcE-Q/learning-original-video-vbr-720/0/1598562027444?e=1643572800&v=beta&t=Bsvt8jXy4qBSjwJlj79wZ56pA8Rsfp0ScDuujOlKruQ"
-                },
-                {
-                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQEx4a1afcgQ0QAAAX6naOlDhKw6NC1Y-PcfSc7iZnJo1BnIXbMhEkeFFGhORrgcwnLagS0fM0-HyqeSp6LGLenCbe_FkvwOh1yJ5Q3Imk64_nKPTWer1j0ynfmEBCzRNsAqf4JpW0onZd4gzpG6GWSAI0i2JbfY9L0OLiNb2JE3r21WV-h9JbiV-iEzeiNMKjhalmcBtt4XChGYCRfNcaS9_QZy1HT9av3-bd5FW8T2J8aKcASvNGx8mZJviCGSxfZaBDkLaC5JyYYqYOm-wo4f7Hbtuc40dWCrGtqQgJZP2fkV78z1VNYsbH7xL7zJEPSvy7tcNnl55dk7q5iSA7-qJq0HeULaFE_yZzYSxLfYPomtWOq9OBL2OUljSs1FJ0x2knhavwZPZ5sg10SmeIlAGcLq7VubZ3NkIYfZeL_d5t5vzkBF7HSb0yaiisw5oMomMRCPwiW6uNYKlst3_4mQpvp0x2ijvFKN_vk1TUPm_GZnwKS_caXIoe56",
-                    "duration": "10m 47s",
-                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQHdN-6IgHOLIA/learning-public-crop_675_1200/0/1567117975500?e=1643572800&v=beta&t=1udkeDWVqdhd8vr2IXF17KU7BO7BzqMsp7oeB8cVNXM",
-                    "slug": "adding-a-default-task-and-live-reloading",
-                    "title": "Adding a default task and live reloading",
-                    "url": "/learning/learning-coffeescript/adding-a-default-task-and-live-reloading?autoplay=true&resume=false&u=95231473",
-                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQFTVJdFdwwWrg/learning-original-video-vbr-720/0/1598655775902?e=1643572800&v=beta&t=Jk78--Atrgz8qPG4dtkOvsdmmhDQbfj09ijmc4AjBXM"
-                },
-                {
-                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQF47LjkSYya1wAAAX6naPvXvVj0Wowh-oaMujZhhwls8VIxEPAbziRy4VngNflWnEXcgbmWBI-oHD_QcCSyPveYyX7zE-TV2MBAmybWHwjeEMMvqug9xDoEpbM4V2b6VkcMsKPkHux8Pf9e8KJQs-VUEzTl3Gsf5sNLVhFUbXkhEbGuPLSlTPZf84I0-ZbJkxFDnENUCz62nWnCgTzf3OBV_gz-SKhjadb84YG1K_D30ubh8TKlMjM3X4sfjGQF_0rDgQgyDxueFwv69uzzhGNLvA0_O5baNHccHvm1HKbhuNuBhvQS2m5Aquvpv57CIqUSyiw4OlzBO6vWsvRxQJOgODh9kKuazsVdqDUU2SJWM1S4LUcTz3gK-NxLRgI37JhpKeGWmtY0NKrD02p-CTAfVBK9WEYHD2zNIGhC1vgzgnggCPNfQrTMax95_ehny9OtRpZSfEIOHl8K7xkFeNrI96DB0yBttrcxgfJ4cmz2B6TIhFasqKwDkcPh",
-                    "duration": "8m 56s",
-                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQHdN-6IgHOLIA/learning-public-crop_675_1200/0/1567117975500?e=1643572800&v=beta&t=1udkeDWVqdhd8vr2IXF17KU7BO7BzqMsp7oeB8cVNXM",
-                    "slug": "processing-sass-files",
-                    "title": "Processing Sass files",
-                    "url": "/learning/learning-coffeescript/processing-sass-files?autoplay=true&resume=false&u=95231473",
-                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQGtGVyJPr05dw/learning-original-video-vbr-720/0/1598560113960?e=1643572800&v=beta&t=kqb80KhFW-8c1nKDQu64Xxs_AMQQ-0WjZkIa-4Y8QDQ"
-                },
-                {
-                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQHNaLD5oXcFeAAAAX6naQ8Qnl_Lah0MDPk3dxC9BfQIFZl-aeHoNbOpyDiH8fZAmd8rVL-wWK6o2iyFvIW9y1konWqjLpVBPIezjSEADJpMqlQpON67iVT-8GF2nFifdP0mOeaXjmFfq-iXl9zqu-DPDvvIPybCZiFaLStWHQwdZ4lJCdPNPANSAAgq0rnwNitatZlsc2ae8D12MNIf-Dp5lFwB-ijMNlElteTJTU_g4j9YoIigVxO8FIRIR_2-FvxxoTI8t62KOSwE4RyZwlkCa6rQiMNbQmMfgYZQ5WuYdyNVgCGjSYGkay0ADm3LwUF5vNIDTeBYtSn7bT7NRLstF5yAdEwK1MgMnOS6KV2DuozKKYn3d3NVAp76BAeRLYZqxliBUJmtcnKrUhohj0KknebiHaYhFdjp3Ymt1BQ3GF3JG0HE8fG1uHGXzKpkn_kTOL0MmM5ZcMhi_6EeuWjO7aPcMVC64oxMy_b0dm4oyXywbmnnn4B-w1Ea",
-                    "duration": "7m",
-                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQHdN-6IgHOLIA/learning-public-crop_675_1200/0/1567117975500?e=1643572800&v=beta&t=1udkeDWVqdhd8vr2IXF17KU7BO7BzqMsp7oeB8cVNXM",
-                    "slug": "adding-coffeescript",
-                    "title": "Adding CoffeeScript",
-                    "url": "/learning/learning-coffeescript/adding-coffeescript?autoplay=true&resume=false&u=95231473",
-                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQGeObo6dddSzg/learning-original-video-vbr-720/0/1598562035015?e=1643572800&v=beta&t=ysjCxVMo5wpUqHBFzenRT4yC8z7nUGos8SX49J3LhnA"
-                },
-                {
-                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQEzE4e70hcmiQAAAX6naSHu9_R0AzOM-PxQ9gubqWzyI5HDOMzpWi8oRCxb_4kVDMgftzF3OsqUoFl-uIciGti-ep7TsTFRs6ZqREAvEdUO6uKtSk5aJl4_Q8J9lqIsYhSj932QhYPvKqaaGFlfHouHEsMsIY3CyHRgeLNKPCElB6uwhIFkJPF-eevQIGJ9ruX-rjIXWKZB1t5r9YLCLWZiWD2SVJZvBSH6gKXMeOCYG7gEmEBNGnzj8atd6icn4gQ0b-6rC_AfGjOBogACM2UyKtAYiHPWWYwIj3dsEYdUny5dwsU0iFnwGPf4zfvj-0eIyMJ7ecRXTojgU6MkwGPp_mfRY1qblOwUhJLTkeHK0JsphSApX8WLozv69D7TPfOt_EaR72c9IqMvUz4xf8A2i_RzfMzr9JcJPC1cqoxXppFhJqHYZ-BZOw_p-YC1VS42PvMswApr3UiUQOa0OFiNA3OIrFcgBMqLv07VD_VNmaor1LTpWJV47m5N",
-                    "duration": "7m 15s",
-                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQHdN-6IgHOLIA/learning-public-crop_675_1200/0/1567117975500?e=1643572800&v=beta&t=1udkeDWVqdhd8vr2IXF17KU7BO7BzqMsp7oeB8cVNXM",
-                    "slug": "basic-coffeescript-syntax",
-                    "title": "Basic CoffeeScript syntax",
-                    "url": "/learning/learning-coffeescript/basic-coffeescript-syntax?autoplay=true&resume=false&u=95231473",
-                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQGw7llu__I1Rg/learning-original-video-vbr-720/0/1598560834664?e=1643572800&v=beta&t=VlNa36qtTzlIjrEXNt09c80u7tWkaj7rMG1e8xHSUBE"
-                },
-                {
-                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQFdOUM37Ny2YwAAAX6naTqDWOjcF0hnI05rjZFbvRyHE5PzZVq0XeKuOM1OxWUpCjQ5dF6DR0BrCOhn3BsCCx2MGwu9SBvyzOrWxNTjnO5M7VPLVVDYW8pBNh5DZct94RYT8AHEGLNpdonq9yn2CAM9GM_uPS1qPm0G9LqA4hqlINDLFfWJZxVMy-betbAnbakYo-J5tYxCu8T3IIegF-xJjIVgS0Hl4-d6Y445PuLaGxk4Rj7o1SPkB7c9etXBKNbUCvf9kTE6sY4rJAXZvcLt3kHyKDHh2r3QdV_hlIPZ2SK__OSC5oQCC0ZIw08UxkgM4BfBpOBnjYflwi-Kt-ABdjov_IEwGCgnccMzv59Ci6aouoGyYQgcG2xPhZgWjveFl3uJVDKm6xDBcDJ-lkIGVYKnvcxFhSReCy_RRKMggTgbgPSRTC0FMlEwKSb1IgB3egaZMBEzvnFd1wu0Jy4xIziBFiU6b12NPm2LUdbCHszP7Bzlkz4Sl31I",
-                    "duration": "5m 24s",
-                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQHdN-6IgHOLIA/learning-public-crop_675_1200/0/1567117975500?e=1643572800&v=beta&t=1udkeDWVqdhd8vr2IXF17KU7BO7BzqMsp7oeB8cVNXM",
-                    "slug": "using-realistic-assets",
-                    "title": "Using realistic assets",
-                    "url": "/learning/learning-coffeescript/using-realistic-assets?autoplay=true&resume=false&u=95231473",
-                    "videoUrl": "https://dms.licdn.com/playlist/C4E0DAQGrWpPeoYzr8A/learning-original-video-vbr-720/0/1598656575942?e=1643572800&v=beta&t=oCu07IfOFKUiHq_MNcstwP1BQHXxmHLK7WRCei29qso"
-                },
-                {
-                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQGRlJoTadDhogAAAX6naU7fdkjNWNmTypAEjGf0ePXOWkjFRFoi2AXm7B0J3Ur4J6cEGzfVtEFSILv6VHWo2sduWfDPbo1aNsy6R8P2ZL9vWwThCCHmSVd-97Op-IO0SLtktWnnCjcYN3zv1TPuSAdiCA7Zpbo3Ro_FphLT29h7IkmvlhZPMFvG3m6MwHFIhP4PO3iAvXsmmAYiA_gXa7w9UtCuZ1PMypuFE19wVUbyztqGCfkrudsZmM9s9erUrE4RkkG7qFy40jgk2xCn1jcQPDgPMzu9rS7vefrQXxNZSzeCjljDJqyrbaz1V6VE4DFR-t1EzHNtDKKh_SO2uhvrv10qsFUwuWM_SsrWvcFiCO8ak6fm-e9Ci0t4Cl8eK7SM4ifHPD23YjF0xp8EoIe399AZin5eTE8GO5BZH1kxJkbIY97cmbxKZFxBfpBXPzAIdBZOUtszpcqp_ci9_4uTVrXe97YQQDOfsdkn03heSyL9IAzQpwLFG2w9",
-                    "duration": "10m 11s",
-                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQHdN-6IgHOLIA/learning-public-crop_675_1200/0/1567117975500?e=1643572800&v=beta&t=1udkeDWVqdhd8vr2IXF17KU7BO7BzqMsp7oeB8cVNXM",
-                    "slug": "understanding-variables",
-                    "title": "Understanding variables",
-                    "url": "/learning/learning-coffeescript/understanding-variables?autoplay=true&resume=false&u=95231473",
-                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQH9blFh_zHsVA/learning-original-video-vbr-720/0/1598579777755?e=1643572800&v=beta&t=NxyXxbsNsvsj5YV3_S_gFLTV5HNl2GCUipxFa6ApLpA"
-                },
-                {
-                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQHaWMCdKTwkmwAAAX6naWODMUQYAys_JoOWbfQXD7nSIGwM9n9gMO8VEe35C1PukCPb_qDhr60wV_T0mTiCJh6G0cVCK1Y4My2LBLOwvzfIlJDkgj4DMhTaVXQktiBpJ0WVDVfFUEsLgVN6njCNE6e0pY-rOat8UsBrlW6CRBpzRif8_lUdaLql_lxgQ9iOCxqRxgrgh3Z8XVQ2Wl2YpEx1G4y9LCDG8YCQmsf2cC1pG5uFb4GE8PnNWX8wTPJgwiCwAKZvnw-qeXQhDcQ1oYGtjP7TilXKCsBCwB7R_yQFXPGlGkq8Qj8d9vn1M3HM5zlSGAzq3xFr-mNXuOK3Iaq0ItoxNGKM2Mb1quXc4sGwvg7n1Aygz0ucC702kaksx6g-eF-u7BYCRDMMK9ngQdH7dxO7vJ2BPcWMDHLI-pxB4uZy3U_9nyWCq45svjeTZQBX9_d-nQscVmcQJXr_8okCbrqs-LhObcXQ63RhCBqw7947Nd-_vYKgax3J",
-                    "duration": "4m",
-                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQHdN-6IgHOLIA/learning-public-crop_675_1200/0/1567117975500?e=1643572800&v=beta&t=1udkeDWVqdhd8vr2IXF17KU7BO7BzqMsp7oeB8cVNXM",
-                    "slug": "dealing-with-array-ranges",
-                    "title": "Dealing with array ranges",
-                    "url": "/learning/learning-coffeescript/dealing-with-array-ranges?autoplay=true&resume=false&u=95231473",
-                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQGZm6f2tBFd0g/learning-original-video-vbr-720/0/1598560779744?e=1643572800&v=beta&t=dQnx74GXK3PHzZ6zupuznKp5zxbuVBwprLeREVx31cY"
-                },
-                {
-                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQGR-9JNuIHfdQAAAX6naXbMu3auiHe12aYDc8_syl2LbHy5K2bF-_M6YIITI81DwLYBF29QUO3D4YlOEwlate4z7gem2Aaecgutpw9PVICizZg0O5dzb-iH6GA3GzuDxnfr7ZPDwKFt2PP8o3kmZr9HQcAawhpIsvY-p8GKSJarpH1ufAOg51jjwT5E5DY-9gQzIS5KP5iTzoTJaO9GKe6Q41K_MTXpRbwTTvdOn3eBzgtRGW-2KqwVIMY9eBgkb5t3VMWcJ2GqiXvZoKoNiG7iyoukU6Pi4GiNM3BKcNUXHStQe2_ace7GUOdrB8ar6s9Xk6oLhZ3RTTvc43dZQ5-AEEsyT73FhH2UB3gcImaWTh2frtO6WV86B2rEGq-9MYTsekvqExIMwg2IcJmFQQ6SSxm61VC6fbMHEXch9xakWDdWHX_s-mrtgxNM_iH6O2MhjQIA5xbD1MYvOMUN24ExevaXIGq3FwwPUlQZFWUDSWXbefK4BYxUR9Fb",
-                    "duration": "5m 2s",
-                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQHdN-6IgHOLIA/learning-public-crop_675_1200/0/1567117975500?e=1643572800&v=beta&t=1udkeDWVqdhd8vr2IXF17KU7BO7BzqMsp7oeB8cVNXM",
-                    "slug": "working-with-conditional-statements",
-                    "title": "Working with conditional statements",
-                    "url": "/learning/learning-coffeescript/working-with-conditional-statements?autoplay=true&resume=false&u=95231473",
-                    "videoUrl": "https://dms.licdn.com/playlist/C4E0DAQHP9NDVT6_USA/learning-original-video-vbr-720/0/1598559290180?e=1643572800&v=beta&t=LVWpTEPRH3ZoxspHT0-HWeiTtNfjJubvZ9V_0vJVPSc"
-                },
-                {
-                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQFquOidUM3ATwAAAX6naYodmidzLj3tP9m5Z3REidTi8IR4X8Z_MYa0DxdbAVVTeHauOW506D5YPRs0oZKJQOMpww0be4Qo_ec2Dok_uaBmHhMApuURazcOsLy0xk4_vamVHaQGS8jFQk1br0hLyy52rwspqnbzf1t1ZvO2sMT-Py1aw1t0703QM3R-tyPjbSKRd9ZYT8bPkO3KzD5ORIpj0Z4Am1Z4uBunY2ZdfsWqe-0VgFc1m8VvY4V-jIkXy1WYcWfePAvvNbHWMiZyWXuo_xi2-DiEGpFpScyPBx57262Y4C52NsJO9_h0cuBsrR7K7oEwpZpqtFFZik6dV5C9rbWL9iHimr0a_fVxN7FKMkPXzYa5l22Xtc8cKJA_coEEAcgbOdQqX3IC15xu6TdbK1NFfxSaLHVfUsx7K8Ywpq-hhWVjkXs_8TmcUGf20mJbHMQsQ6WvgIY4ehFc-hAV_M1BpCCTehR7IWt71JnL_mVhJ0pFRamNOzZy",
-                    "duration": "4m 14s",
-                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQHdN-6IgHOLIA/learning-public-crop_675_1200/0/1567117975500?e=1643572800&v=beta&t=1udkeDWVqdhd8vr2IXF17KU7BO7BzqMsp7oeB8cVNXM",
-                    "slug": "using-loops-and-comprehensions",
-                    "title": "Using loops and comprehensions",
-                    "url": "/learning/learning-coffeescript/using-loops-and-comprehensions?autoplay=true&resume=false&u=95231473",
-                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQFfvlfefnEfRg/learning-original-video-vbr-720/0/1598559258754?e=1643572800&v=beta&t=vPZe1OyORFngBKG9WjE0EABZ2Le1HBGW26ENsGlpKpg"
-                },
-                {
-                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQEwc0nG1-zEUgAAAX6naZ3tX-tnxeObemT8WRgy3nR_8ba2n4W_VFpi7_WtH244MGmUgI1W8HQzAy5fKrCFMxyJhd7sp_ChihM5SQGwe2yzUcLaIcf8UEIsY2f3WLSQ6i59PRLVb6-LKyfkGwDNgEJQuCKl7oOpKOflRGRh3pCpZA242Rr-xzStk9f0D05xgaMpgkJUY91Uyuio-CjPhzgF988M-SlkXZcx4Tw2R3MN1KriRfdQ5X2Eevw3UwX0D3g7VOkyLcxiZaKztDjlbPD26Afmhxep8QptVUwV3349cbCop4AcRGN8JIG5QCwu5Q5iWIQVNJ5Z4u1MdZCImDU0poa5CfEHj3VhfqcfBR0poyjgNfJCwevzqyNN0AWAiJCIQzZgRbEMuBkfFyGRSXzEmiWu_olcAgDqPhLK6yW78pjK5gQY_GdJSctRGZhPUm_t158bF1fkPq7c5_XunYyFvroseLTQy-6Q3rXlgV0d3G4gm6GfebLzOZrB",
-                    "duration": "2m 57s",
-                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQHdN-6IgHOLIA/learning-public-crop_675_1200/0/1567117975500?e=1643572800&v=beta&t=1udkeDWVqdhd8vr2IXF17KU7BO7BzqMsp7oeB8cVNXM",
-                    "slug": "adding-basic-functions",
-                    "title": "Adding basic functions",
-                    "url": "/learning/learning-coffeescript/adding-basic-functions?autoplay=true&resume=false&u=95231473",
-                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQG-Y9CraXC9ww/learning-original-video-vbr-720/0/1598579697465?e=1643572800&v=beta&t=T-5JcChkcwu-ZzbrMP64138GWSQ6uYDJhqvlUNyvPUY"
-                },
-                {
-                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQFVpY4K8xgVzAAAAX6nabFRXGWe-wXijbI7JB96YDyU1Mj0z7A-e61D1FyEVh_BOHiv0YX8s74HervZWuLe2OrDXMRCmLRmIDIHFb8UBbzicKZ94sTQkLFQe2T2hiaXowx2oW9PvbX7wjcz6zqXad1YYIaXsK6pGBIMfm58O5VyXOg396Ri9gaRLztV4yPvsc_r0zJONpFJqXWuQGHc9EF9OkReTPaXTdyDSyiqdcc_j-2ELzbYhfesb8vAzYuhgRLnE54PQhjmxUe3Ojm9wmrB8Q3jJzBgPX5xWO3wtjcgI_pEFL7Mxl1BGnvNM6JQbOpj3bT9GKkwaB2SVFYP8ocOTlxKr-vrrqKgVs7KV_pgxZUxiNnmpobrWvZzOv-_Id1JtFdvp5AOKzKbLFlTYGAoMiUYYEEINpYPQT3gPS5hyOrno6gecGmBom10d_uv6YFb3FyY7_A5naOxEv1IZcBChNQC5ONUhQhGweI3diJ7SnRXct4Dmwl9QUyD",
-                    "duration": "3m 28s",
-                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQHdN-6IgHOLIA/learning-public-crop_675_1200/0/1567117975500?e=1643572800&v=beta&t=1udkeDWVqdhd8vr2IXF17KU7BO7BzqMsp7oeB8cVNXM",
-                    "slug": "working-with-splats",
-                    "title": "Working with splats",
-                    "url": "/learning/learning-coffeescript/working-with-splats?autoplay=true&resume=false&u=95231473",
-                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQGWGwtNU_lZOw/learning-original-video-vbr-720/0/1598572589344?e=1643572800&v=beta&t=V7nnwzNbXqxkrRmnQNOVN4g6WSp2agf8OFkTMJ_z30g"
-                },
-                {
-                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQEHze-qJbv30AAAAX6nacTpAiOi2si2GO-pZNVYQIeAO5sOw9FOp6_UMd3Rmb3zFsVPNcuK_kVifPfVUTdfVdD1w6fXWd1-0KcEWF40Ltu-jrA_gpU7E-qrmTsOWXRq9_PZZ9XA1USPng6z8ORJQu7dQMwxiHIH-vAcJXeVhQzjyHFAp3wyItB7TTNNzcVrahLKU8Kiax2RPDN7XHgMWS9WfKJMfyFZRzNbYeew2yj5il3am5ukoMTUmeTelN4lROTwMG56LZY_lmrcho8DeKW2Aa5KR-4Vlrgcq6nPj3VOKRzfCaleH_Mhbt9wnKs8j2nqVNNiczwCUwNe5u5bbgN0mcZUgWZFeykdropzb4XJZsGtqcf_6V7VnlOwmk-JapWjuTm-ZFAkd3GeIFcNP-aKNl8asT2UY32PPCEbnOPld-nFzQSrjeh8yCpwa60uT_MQRFO7XnDdRkL-Ybp9bEFMLQSQQ081DGuye_yakxR8KosuG6vxxkDkxAnk",
-                    "duration": "2m 51s",
-                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQHdN-6IgHOLIA/learning-public-crop_675_1200/0/1567117975500?e=1643572800&v=beta&t=1udkeDWVqdhd8vr2IXF17KU7BO7BzqMsp7oeB8cVNXM",
-                    "slug": "using-the-switch-statement",
-                    "title": "Using the switch statement",
-                    "url": "/learning/learning-coffeescript/using-the-switch-statement?autoplay=true&resume=false&u=95231473",
-                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQHTussYYPLtqw/learning-original-video-vbr-720/0/1598560577527?e=1643572800&v=beta&t=T8_xLBOYuK9W13I8avnWBnogX_nBi5B45Scojje5rNI"
-                },
-                {
-                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQF0QvmIeUTtMgAAAX6nadhNBjPAMAceV7oA6JML9GT6TKUqvtnriz14kAesP7Eqr4JPDj-C8ix2gqRgtlIid5WHpAEMJTzOakM_j8B8k_ak3zf_twodCyiTaf8Jvo-JWVzYLCkxrm1JhTs_-S4V4U_9x_5NNhsnPhFBJnkyAGsyQpBopZHn33C9FoioxNoKMcPNS-n9zZM85K1-97WLzHgX0z32jvMDpZ0Rdbvdis4sRBMdTSz6fz2NTV1-QUV1euZ9ZUPC9QXMBMBmGlHUVrqwZBRW9dF3xLYZt51iOaPrAyvTbf6-EkEfEB0cetW5UeIaB2B1Oox6l4K5mOIYVPw34LfLBKUsJhpdHoCW8ZZlloms4_ANCglM1Ig28vhTTk3Ozm6aQ32cf2khLR_xE_myoYjU-SyfyReFH6SCFmzggrvI7WBVRK5qpEk__8TqyWsYjZZRoIItcnV2eFxBX4T0IpAp7kqWbuVULKV7ASBFU3efz43XX14qpECW",
-                    "duration": "3m 57s",
-                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQHdN-6IgHOLIA/learning-public-crop_675_1200/0/1567117975500?e=1643572800&v=beta&t=1udkeDWVqdhd8vr2IXF17KU7BO7BzqMsp7oeB8cVNXM",
-                    "slug": "using-aliases-for-this-and-other-tidbits",
-                    "title": "Using aliases for \"this\" and other tidbits",
-                    "url": "/learning/learning-coffeescript/using-aliases-for-this-and-other-tidbits?autoplay=true&resume=false&u=95231473",
-                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQG1E4FTDNJ8wQ/learning-original-video-vbr-720/0/1598559329495?e=1643572800&v=beta&t=adgZlDUw2kCnin-aSKUzNN2Jm1mfpDfXnVu1QdT0z1c"
-                },
-                {
-                    "captionUrl": "https://www.linkedin.com/ambry/?x-li-ambry-ep=AQFQyR5Hq4nKYwAAAX6naewGWxl4jMbtCe73jjlJsjKuEi6WDFhdy2zRZG2fsa4rRcYcZqmVrPQSv1kUdUgHUS4IwYEsL1OIxCRBf3NQIHR-3K3bPjDqUMQ-K4pyA-R5J8jNx_A22btrgYCDPmGcnW4wsnAtxmblK34PCkxOY-AqXdXH9vn19QsnBb5H3q0iDu6A1yz3jsddo_k5vlh9dWaq8hksIVTcNgfYjS-Vcr6IEbjohZ3EqOmEK-ypgXHJKxrnZysiI8LnXoLruCMqC2KviJ322oOkFk_yUbRzNGjHiMQ4h7mvBqRmuiSm948t72WFhjZFq3y2wnP8QoY1c0WjxpWpl7caIRTMwEvYeeFnljmxOjGSPdR6WAxxBekvgRAJdB1w7n98sz6HAtHNzQK6mgIhmVHaHQHH1-u3WspfqwyxVIFHlSJL-plZDg6ukAq7nETFbgu52OtTkHFu8iRX7Fsi5dPvN7YG2J8Dv0Cp3IXm4K-WQxAPh1tc",
-                    "duration": "1m 21s",
-                    "posterUrl": "https://media-exp1.licdn.com/dms/image/C4E0DAQHdN-6IgHOLIA/learning-public-crop_675_1200/0/1567117975500?e=1643572800&v=beta&t=1udkeDWVqdhd8vr2IXF17KU7BO7BzqMsp7oeB8cVNXM",
-                    "slug": "next-steps",
-                    "title": "Next steps",
-                    "url": "/learning/learning-coffeescript/next-steps?autoplay=true&resume=false&u=95231473",
-                    "videoUrl": "https://dms.licdn.com/playlist/C4E0DAQHhJJ455Cha7Q/learning-original-video-vbr-720/0/1598674185815?e=1643572800&v=beta&t=_1YsAhCtBLSvk3LEIPQSCae2uCtvk6n2foBNt6jvaPo"
+                    "url": "/learning/learning-django-2/next-steps?autoplay=false&resume=false&u=95231473",
+                    "videoUrl": "https://dms.licdn.com/playlist/C560DAQHDD2aEOwiICQ/learning-original-video-vbr-720/0/1598807110214?e=1643979600&v=beta&t=yg_mQsEwwmvfVZ1UPwoo51oMO7SgNMrlxzIyKWWL4z4"
                 }
             ]
         }
