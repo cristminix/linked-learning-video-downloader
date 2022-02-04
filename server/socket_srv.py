@@ -238,6 +238,9 @@ async def counter(websocket, path):
                 await start_download(data['sessionId'],data['courseTitle'],data['callback'],data.get('index'))
             else:
                 logging.error("unsupported event: %s", data)
+    except websockets.exceptions.ConnectionClosedError as e:
+        pass
+
     finally:
         await unregister(websocket)
 

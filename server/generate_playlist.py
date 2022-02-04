@@ -46,7 +46,7 @@ def query_filenames(courseTitle_, useLocal=False):
 					tocs = sessionData[courseTitle]['tocs']
 					index   = 1;
 					for item in tocs:
-						# print(item)
+						print(item)
 						slug 			= item['slug']
 						
 						videoFilename 	= slug+'.mp4'
@@ -60,7 +60,7 @@ def query_filenames(courseTitle_, useLocal=False):
 						# print('%s|%s ==> %s|%s' %(videoFilename, captionFilename, newVideoFilename, newCaptionFilename))
 						files_to_rename[videoFilename]		=	newVideoFilename
 						files_to_rename[captionFilename]	=	newCaptionFilename
-				return True
+		return True
 	for sessionId in session:
 		sessionData = session[sessionId]
 		for courseTitle in sessionData:
