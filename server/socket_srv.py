@@ -235,7 +235,8 @@ async def counter(websocket, path):
             elif data["action"] == "resolve_video_url":
                 await resolve_video_url(data['sessionId'],data['courseTitle'],data['slug'],data['videoUrl'],data['posterUrl'],data['captionUrl'],data['callback'])
             elif data["action"] == "start_download":
-                await start_download(data['sessionId'],data['courseTitle'],data['callback'],data.get('index'))
+                print('Grab complete please use server.py to download')
+                #await start_download(data['sessionId'],data['courseTitle'],data['callback'],data.get('index'))
             else:
                 logging.error("unsupported event: %s", data)
     except websockets.exceptions.ConnectionClosedError as e:

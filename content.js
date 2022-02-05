@@ -424,6 +424,7 @@ const handleUrlChanges = () => {
     // console.log('Checking Urls');
     if( Manager.fullUrl != window.location.href || handleUrlData.firstTime){
         // console.log(Manager.getInfo());
+        
         Manager.fullUrl = window.location.href;
         try{
             Manager.sayHi();

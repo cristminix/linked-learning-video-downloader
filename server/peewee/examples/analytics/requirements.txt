@@ -1,3 +1,0 @@
-peewee
-flask
-psycopg2
