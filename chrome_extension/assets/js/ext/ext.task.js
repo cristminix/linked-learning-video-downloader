@@ -2,6 +2,11 @@ Ext.task = {
 	queryTask : () => {
 		Ext.socket.init(()=>{
 			Ext.session.check((data)=>{
+				if(data.count == 0){
+					Ext.session.create((data)=>{
+						console.log(data)
+					});
+				}
 				console.log(data)
 			});
 		});

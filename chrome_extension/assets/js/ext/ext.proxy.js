@@ -6,7 +6,7 @@ Ext.proxy = {
         },_data);
         // console.log(payload);
         // Ws.conn.send(JSON.stringify(payload));
-        Ext.socket.connection.emit(_action, {data: payload});
+        Ext.socket.connection.emit(_action, payload);
     },
     resolveVideoUrl : (videoSlug, videoUrl, posterUrl,captionUrl, _callback) => {
         // Ext.manager.UI.setCurrentVideo(videoSlug);

@@ -4,8 +4,15 @@
     "version" : "0.0.2",
     "manifest_version" : 3,
     "host_permissions": [
+        "https://www.linkedin.com/learning/*",
+        "http://localhost:5000/*",
+        "http://127.0.0.1:5000"
+
     ],
     "permissions": [
+        "https://www.linkedin.com/learning/*",
+        "http://localhost:5000/*",
+        "http://127.0.0.1:5000"
     ],
     "content_scripts" :[
         {
