@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Calling Python from Electron!</title>
+    <script src="assets/js/jquery-1.12.4.min.js"></script>
+    <script src="assets/js/socket.io.js"></script>
+    <script src="assets/js/app.js"></script>
+
+</head>
+<body style="background-color:white;">
+
+    <h1 style="background-color:white;">Socket</h1>
+    <form id="emit" method="POST" action='#'>
+        <input type="text" name="emit_data" id="emit_data" placeholder="Message">
+        <input type="submit" value="Send Message">
+    </form>
+    <form id="broadcast" method="POST" action='#'>
+        <input type="text" name="broadcast_data" id="broadcast_data" placeholder="Message">
+        <input type="submit" value="Send Broadcast Message">
+    </form>
+
+    <form id="disconnect" method="POST" action="#">
+        <input type="submit" value="Disconnect Server">
+    </form>
+    <h2 style="background-color:white;">Logs</h2>
+    <div id="log" ></div>
+</body>
+</html>

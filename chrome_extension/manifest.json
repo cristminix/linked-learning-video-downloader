@@ -1,0 +1,42 @@
+{
+    "name"  :   "Linked Learnig Video Downloader",
+    "description" : "Download LinkedIn Learning course video chapter with closed caption and create playlist for offline viewing.",
+    "version" : "0.0.2",
+    "manifest_version" : 3,
+    "host_permissions": [
+    ],
+    "permissions": [
+    ],
+    "content_scripts" :[
+        {
+            "matches" : [
+                "https://www.linkedin.com/learning/*",
+                "http://localhost/*"
+            ],
+            "js" : [
+                "assets/js/jquery-3.6.0.min.js",
+                "assets/js/vue2.js",
+                "assets/js/axios.min.js",
+
+                "assets/js/md5.js",
+                "assets/js/socket.io.js",
+                "assets/js/util.js",
+
+                "assets/js/ext/ext.js",
+                "assets/js/ext/ext.config.js",
+                "assets/js/ext/ext.socket.js",
+                "assets/js/ext/ext.state.js",
+                "assets/js/ext/ext.manager.js",
+                "assets/js/ext/ext.session.js",
+
+                "assets/js/ext/ext.job.js",
+                "assets/js/ext/ext.task.js",
+                "assets/js/ext/ext.callback.js",
+                "assets/js/ext/ext.ui.js",
+                "assets/js/ext/ext.proxy.js",
+
+                "content.js"
+            ]
+        }
+    ]
+}
