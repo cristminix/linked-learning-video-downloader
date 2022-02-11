@@ -41,6 +41,15 @@ Ext.socket = {
 
 	onResponse : (msg,callbackFn) => {
 		console.log(msg,callbackFn);
-	}
+	},
+	send : (_action, _data, _callback) =>{
+        const payload = Object.assign({
+            action : _action,
+            callback : typeof _callback == 'string' ? _callback : 'noop'
+        },_data);
+        // console.log(payload);
+        // Ws.conn.send(JSON.stringify(payload));
+        Ext.socket.connection.emit(_action, payload);
+    },
 
 };

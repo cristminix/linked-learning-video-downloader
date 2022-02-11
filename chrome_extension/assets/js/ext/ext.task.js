@@ -1,16 +1,18 @@
 Ext.task = {
 	queryTask : () => {
-		Ext.socket.init(()=>{
-			Ext.session.check((data)=>{
-				if(data.count == 0){
-					Ext.session.create((data)=>{
-						console.log(data)
-					});
-				}
-				console.log(data)
-			});
-		});
-	},
+
+	}, 
+	resolveVideoUrl : (videoSlug, videoUrl, posterUrl,captionUrl, _callback) => {
+        // Ext.manager.UI.setCurrentVideo(videoSlug);
+        // Ext.manager.UI.setCurrentIndex(Ext.manager.getTocIndex(videoSlug));
+        // Ext.manager.UI.setTotalVideos(Ext.manager.courseInfo.tocs.length);
+        // let firstIndexChecked = Ext.manager.isFirstIndexChecked();
+        // Ext.manager.UI.setChkIndex(firstIndexChecked?'Yes':'No');
+        Ext.proxy.send('resolve_video_url',{sessionId:Ext.manager.getSessionId(),courseTitle: Ext.manager.getCourseTitle(),captionUrl:captionUrl,slug: videoSlug, videoUrl: videoUrl, posterUrl: posterUrl},_callback);
+    } ,
+    startDownload : (_callback) => {
+        Ext.proxy.send('start_download',{sessionId:Ext.manager.getSessionId(),courseTitle: Ext.manager.getCourseTitle()},_callback);
+    },
 	trackVideoChanges : () =>{
 		clearInterval(handleUrlData.siHandler);
 		handleUrlData.siHandler = setInterval(()=>{
@@ -94,6 +96,12 @@ Ext.task = {
 	        
 	    }
 	    handleUrlData.firstTime = false;
+	},
+    /****************************
+     * Related page check task
+     */
+	
+	checkValidCoursePage(){
+		return  $('.classroom-layout__content').length > 0;
 	}
-    ///////////////////////////
 };

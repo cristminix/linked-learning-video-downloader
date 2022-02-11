@@ -1,5 +1,6 @@
 let Ext = {
-	main : () =>{
-		Ext.job.init();
+	main : (historyChanged, url) =>{
+		Ext.job.init(historyChanged, url);
 	}
 };
+

@@ -5,6 +5,7 @@ from my_app.catalog.models import TBSession
 from datetime import datetime
 from flask_socketio import emit, disconnect
 from flask_cors import cross_origin
+
 catalog = Blueprint('catalog', __name__)
 import os
 # @catalog.route('/')
@@ -19,10 +20,8 @@ def home():
 @cross_origin
 @catalog.route('/session/<id>')
 def session_detail(id):
-	# session = TBSession.query.get_or_404(id)
-	session = TBSession.query.filter(TBSession.sessionId == id).first_or_404()
-
-	return "TBSession - %s, %s" % (session.id, session.sessionId)
+	session_ = TBSession.query.filter(TBSession.sessionId == id).first()
+	return jsonify(session_)
 
 @catalog.route('/sessions')
 def sessions():

@@ -1,6 +1,13 @@
+from dataclasses import dataclass
 from my_app import db
 
+
+@dataclass
 class TBSession(db.Model):
+	id : int
+	sessionId : str
+	createDate : str
+
 	id = db.Column(db.Integer, primary_key=True)
 	sessionId = db.Column(db.String(255),unique=True)
 	createDate = db.Column(db.String(12))
@@ -12,7 +19,17 @@ class TBSession(db.Model):
 	def __repr__(self):
 		return '<Session %d' % (self.id)
 
+@dataclass
 class TBCourse(db.Model):
+	id : int
+	sessionId : str
+	coursePath : str
+	courseTitle : str
+	url : str
+	fullUrl : str
+	hostname : str
+	createDate : str
+
 	id = db.Column(db.Integer, primary_key=True)
 	sessionId = db.Column(db.String(255))
 	coursePath = db.Column(db.String(255))
@@ -31,7 +48,18 @@ class TBCourse(db.Model):
 		self.hostname = hostname
 		self.createDate = createDate
 
+@dataclass
 class TBTocs(db.Model):
+	id : int
+	captionUrl : str
+	duration : str
+	posterUrl : str
+	slug : str
+	title : str
+	url : str
+	videoUrl : str
+	createDate : str
+
 	id = db.Column(db.Integer, primary_key=True)
 	captionUrl = db.Column(db.String(255))
 	duration = db.Column(db.String(255))
@@ -52,7 +80,16 @@ class TBTocs(db.Model):
 		self.videoUrl = videoUrl
 		self.createDate = createDate
 
+@dataclass
 class TBTask(db.Model):
+	id : int
+	name : str
+	sessionId : str
+	courseId : int
+	param : str
+	createDate : str
+
+
 	id = db.Column(db.Integer, primary_key=True)
 	name = db.Column(db.String(255))
 	sessionId = db.Column(db.String(255))

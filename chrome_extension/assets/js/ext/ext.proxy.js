@@ -1,22 +1,60 @@
 Ext.proxy = {
-	send : (_action, _data, _callback) =>{
-        const payload = Object.assign({
-            action : _action,
-            callback : typeof _callback == 'string' ? _callback : 'noop'
-        },_data);
-        // console.log(payload);
-        // Ws.conn.send(JSON.stringify(payload));
-        Ext.socket.connection.emit(_action, payload);
+	
+    
+    get : (url, cbSuccess, cbError) =>{
+        axios({
+            method:'get',
+            url: url,
+            headers: {
+                'Access-Control-Allow-Origin' : '*'
+            },
+
+        })
+        .then((response) => {
+            cbSuccess(response.data);
+        })
+        .catch((error) => {
+            cbError(error);
+            console.log(error)
+        });
     },
-    resolveVideoUrl : (videoSlug, videoUrl, posterUrl,captionUrl, _callback) => {
-        // Ext.manager.UI.setCurrentVideo(videoSlug);
-        // Ext.manager.UI.setCurrentIndex(Ext.manager.getTocIndex(videoSlug));
-        // Ext.manager.UI.setTotalVideos(Ext.manager.courseInfo.tocs.length);
-        // let firstIndexChecked = Ext.manager.isFirstIndexChecked();
-        // Ext.manager.UI.setChkIndex(firstIndexChecked?'Yes':'No');
-        Ext.proxy.send('resolve_video_url',{sessionId:Ext.manager.getSessionId(),courseTitle: Ext.manager.getCourseTitle(),captionUrl:captionUrl,slug: videoSlug, videoUrl: videoUrl, posterUrl: posterUrl},_callback);
-    } ,
-    startDownload : (_callback) => {
-        Ext.proxy.send('start_download',{sessionId:Ext.manager.getSessionId(),courseTitle: Ext.manager.getCourseTitle()},_callback);
+    post : (url,postData,cbSuccess,cbError,optArgs) => {
+        var formData = new FormData();
+
+        for(let key in postData){
+            formData.append(key, postData[key]);
+        }
+        // if(Config.debug){
+        //     console.log(`NET,POST:${url}\n`);       
+        // }
+        try{
+            if(typeof optArgs === 'object'){
+                for(n in optArgs){
+                    let f = optArgs[n];
+                    formData.append(n,f);
+                }
+            }
+        }catch(e){
+            console.log(e);
+        }
+        axios({
+            method:'post',
+            url: url,
+            data:formData,
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'multipart/form-data',
+                'Access-Control-Allow-Origin' : '*'
+            },
+
+        })
+        .then((response) => {
+            cbSuccess(response.data);
+        })
+        .catch((error) => {
+            cbError(error);
+            console.log(error)
+        });
+   
     }
 };
