@@ -127,7 +127,7 @@ Ext.task = {
 	 			sessionId : Ext.manager.getSessionId(),
 	 			coursePath : courseInfo.coursePath,
 	 			courseTitle : courseInfo.courseTitle,
-	 			url: courseInfo.url,
+	 			url: courseInfo.courseUrl,
 	 			fullUrl: courseInfo.fullUrl,
 	 			hostname: courseInfo.hostname 
 	 		});		
