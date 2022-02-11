@@ -5,6 +5,10 @@ Ext.socket = {
     lastCallbackFn : null,
 
 	init : (callbackFn) => {
+		if(Ext.socket.isConnected){
+			Ext.log('Ext.socket.init : already inited.');
+			return;
+		}
 		Ext.socket.lastCallbackFn = callbackFn;
 		Ext.socket.connection = io(Ext.config.getWsServerUrl(),{});
 	    Ext.socket.connection.on('connect', (socket)=>{
@@ -15,39 +19,39 @@ Ext.socket = {
 	    	}
 	    });
 	    Ext.socket.connection.on('my_response', function(msg, cb) {
-            console.log(msg, cb)
+            Ext.log(msg, cb)
         });
 	    Ext.socket.connection.on('disconnect', (socket)=>{Ext.socket.onDisconnect(socket)});
     	Ext.socket.connection.on('response', (msg,callbackFn)=>{Ext.socket.onResponse(msg,callbackFn)});
 	},
 
 	reconnect : () => {
-		console.log('Ext.socket: Mencoba lagi dalam '+(Ext.socket.autoReconnectInterval/1000)+' detik' );
+		Ext.log('Ext.socket: Mencoba lagi dalam '+(Ext.socket.autoReconnectInterval/1000)+' detik' );
         setTimeout(function(){
-            console.log("Ext.socket: Menyambung kembali...");
+            Ext.log("Ext.socket: Menyambung kembali...");
             Ext.socket.init(Ext.socket.lastCallbackFn);
         },Ext.socket.autoReconnectInterval);
 	},
 
 	onDisconnect : (socket) => {
 		Ext.socket.isConnected = true;
-		console.log(`io.socket-client disconnected .`);
+		Ext.log(`io.socket-client disconnected .`);
 		Ext.socket.reconnect();
 	},
 
 	onConnect : (socket) => {
-		console.log(`io.socket-client connected .`);
+		Ext.log(`io.socket-client connected .`);
 	},
 
 	onResponse : (msg,callbackFn) => {
-		console.log(msg,callbackFn);
+		Ext.log(msg,callbackFn);
 	},
 	send : (_action, _data, _callback) =>{
         const payload = Object.assign({
             action : _action,
             callback : typeof _callback == 'string' ? _callback : 'noop'
         },_data);
-        // console.log(payload);
+        // Ext.log(payload);
         // Ws.conn.send(JSON.stringify(payload));
         Ext.socket.connection.emit(_action, payload);
     },

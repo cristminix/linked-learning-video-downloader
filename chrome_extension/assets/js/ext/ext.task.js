@@ -82,26 +82,59 @@ Ext.task = {
 
 	},
 
-	handleUrlChanges : () => {
-	    // console.log('Checking Urls');
-	    if( Ext.manager.fullUrl != window.location.href || handleUrlData.firstTime){
-	        // console.log(Ext.manager.getInfo());
+	// handleUrlChanges : () => {
+	//     // console.log('Checking Urls');
+	//     if( Ext.manager.fullUrl != window.location.href || handleUrlData.firstTime){
+	//         // console.log(Ext.manager.getInfo());
 	        
-	        Ext.manager.fullUrl = window.location.href;
-	        try{
-	            Ext.manager.sayHi();
-	        }catch(e){
-	            console.log(e);
-	        }
+	//         Ext.manager.fullUrl = window.location.href;
+	//         try{
+	//             Ext.manager.sayHi();
+	//         }catch(e){
+	//             console.log(e);
+	//         }
 	        
-	    }
-	    handleUrlData.firstTime = false;
-	},
+	//     }
+	//     handleUrlData.firstTime = false;
+	// },
     /****************************
      * Related page check task
      */
 	
 	checkValidCoursePage(){
 		return  $('.classroom-layout__content').length > 0;
+	},
+	/****
+	 * For async await return
+	 * */
+	getTask: async () => {
+		try {
+	 		const url = `${Ext.config.getServerUrl()}task/${Ext.manager.getSessionId()}/${Ext.manager.getCourseTitle()}`;
+	 		let res = await Ext.proxy.create(url,'get');		
+	        return res.data;
+	    }
+	    catch (err) {
+	        return false;
+	    }
+	},
+
+	createTask: async ()=>{
+		try {
+	 		const url = `${Ext.config.getServerUrl()}task_create`;
+	 		const courseInfo = Ext.manager.getCourseInfo();
+
+	 		let res = await Ext.proxy.create(url,'post',{
+	 			sessionId : Ext.manager.getSessionId(),
+	 			coursePath : courseInfo.coursePath,
+	 			courseTitle : courseInfo.courseTitle,
+	 			url: courseInfo.url,
+	 			fullUrl: courseInfo.fullUrl,
+	 			hostname: courseInfo.hostname 
+	 		});		
+	        return res.data;
+	    }
+	    catch (err) {
+	        return false;
+	    }
 	}
 };

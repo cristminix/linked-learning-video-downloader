@@ -1,6 +1,32 @@
 Ext.proxy = {
 	
-    
+    create : async (url,method,postData)=>{
+        
+        let headers = {
+            'Accept': 'application/json',
+            'Access-Control-Allow-Origin' : '*'
+        };
+        let options = {
+            method:method,
+            url: url,
+            headers: headers,
+        };
+        if(method == 'post'){
+            var formData = new FormData();
+            for(let key in postData){
+                formData.append(key, postData[key]);
+            }  
+            options.headers['Content-Type']='multipart/form-data';
+            options['data'] = formData;  
+        }
+        let response = await axios(options).then((response)=>{
+            return response;
+        }).then((response)=>{
+            return response;
+        });
+
+        return response;
+    },
     get : (url, cbSuccess, cbError) =>{
         axios({
             method:'get',

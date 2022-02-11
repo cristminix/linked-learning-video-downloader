@@ -86,7 +86,7 @@ Ext.manager = {
             fullUrlSplit : fullUrlSplit
         };
     },
-	getInfo:()=>{
+	getCourseInfo:()=>{
         const extractedUrl  = Ext.manager.extractUrl();
         const fullUrl       = extractedUrl.fullUrl;
         const protoSplitStr = extractedUrl.protoSplitStr;
@@ -94,15 +94,17 @@ Ext.manager = {
         const proto         = extractedUrl.proto; 
         const urlSplit      = extractedUrl.urlSplit;
 
-        Ext.manager.courseInfo.hostname      = urlSplit[0];
-        Ext.manager.courseInfo.coursePath    = `${urlSplit[1]}/${urlSplit[2]}`;
-        Ext.manager.courseInfo.courseUrl     = `${proto}${protoSplitStr}/${Ext.manager.courseInfo.hostname }/${Ext.manager.courseInfo.coursePath}`; 
-        Ext.manager.courseInfo.courseTitle   = urlSplit[2];
-        Ext.manager.courseInfo.tocs = Ext.manager.getToc();
-        Ext.manager.courseInfo.fullUrl = fullUrl;
+        let courseInfo = {};
+
+        courseInfo.hostname      = urlSplit[0];
+        courseInfo.coursePath    = `${urlSplit[1]}/${urlSplit[2]}`;
+        courseInfo.courseUrl     = `${proto}${protoSplitStr}/${courseInfo.hostname }/${courseInfo.coursePath}`; 
+        courseInfo.courseTitle   = urlSplit[2];
+        // Ext.manager.courseInfo.tocs = Ext.manager.getToc();
+        courseInfo.fullUrl = fullUrl;
 
 
-        return Ext.manager.courseInfo;
+        return courseInfo;
     },
 	getToc:()=>{
         const itemSelector      = '.classroom-toc-item .classroom-toc-item__content';
@@ -115,13 +117,18 @@ Ext.manager = {
             const titleContainer    = $(itemContainer[j]).find(titleSelector);
             const linkContainer     = $(itemContainer[j]).closest('a.ember-view');
             const durationContainer  = $(itemContainer[j]).find(durationSelector);
-            const linkUrl = linkContainer.attr('href').replace(/autoplay=true/,'autoplay=false');
+            const origLinkUrl = linkContainer.attr('href');
+            const linkUrl = origLinkUrl.replace(/autoplay=true/,'autoplay=false');
+
             const linkUrlSplit = linkUrl.split('/');
             const videoSlug = linkUrlSplit[3].split('?')[0];
             // console.log(titleContainer.text().trim().replace(/\n.*/g,''));
-            if(videoSlug != 'quiz')
-                tocs.push( {slug: videoSlug,url:linkUrl,title : titleContainer.text().trim().replace(/\n.*/g,'')
-            , duration: durationContainer.text().trim().replace(/\n.*/g,'')});
+            const titleText = titleContainer.text().trim().replace(/\n.*/g,'');
+            const durationText = durationContainer.text().trim().replace(/\n.*/g,'');
+
+            if(videoSlug != 'quiz'){
+                tocs.push( {slug: videoSlug,url:linkUrl,title : titleText, duration: durationText, origLinkUrl:origLinkUrl});
+            }
         }
         
         return tocs;
