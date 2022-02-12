@@ -1,3 +1,6 @@
 Ext.state = {
-	runOnceWaitForMainTag : false
+	runOnceWaitForMainTag : false,
+	firstIndexChecked: false,
+	lastTocIndexUpdate: -1,
+	currentTocsQueue: []
 };

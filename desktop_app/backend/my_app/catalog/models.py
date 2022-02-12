@@ -52,6 +52,7 @@ class TBCourse(db.Model):
 class TBTocs(db.Model):
 	id : int
 	courseId: int
+	idx : int
 	captionUrl : str
 	duration : str
 	posterUrl : str
@@ -63,6 +64,7 @@ class TBTocs(db.Model):
 
 	id = db.Column(db.Integer, primary_key=True)
 	courseId = db.Column(db.Integer)
+	idx = db.Column(db.Integer)
 	captionUrl = db.Column(db.String(255))
 	duration = db.Column(db.String(255))
 	posterUrl = db.Column(db.String(255))
@@ -72,8 +74,9 @@ class TBTocs(db.Model):
 	videoUrl = db.Column(db.String(255))
 	createDate = db.Column(db.String(12))
 
-	def __init__(self, courseId, captionUrl, duration, posterUrl, slug, title, url, videoUrl, createDate):
+	def __init__(self, courseId, idx, captionUrl, duration, posterUrl, slug, title, url, videoUrl, createDate):
 		self.courseId = courseId
+		self.idx = idx
 		self.captionUrl = captionUrl
 		self.duration = duration
 		self.posterUrl = posterUrl

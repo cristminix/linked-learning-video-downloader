@@ -27,45 +27,42 @@ Ext.manager = {
     checkCourseIsComplete:()=>{
         return Ext.manager.courseIsComplete;
     },
-    sayHi:()=>{
-        //0. Show UI
-        // Ext.manager.UI.constructUI();
-        // Ext.manager.getSessionId();
-        //1. check the current page is valid course page
-
-        //2. getToc 
-
-        //3. is current page is index 0 in tocs
-        // const isFirstIndex = Ext.manager.checkFirstPageIndex();
-        //4. wait user to confirm to go to course hompage to reach 0 index of tocs
+    getCurrentVideoInfo(){
+        const videoContainer = $('.vjs-tech');
+        const videoUrl  = videoContainer.attr('src');
+        let linkUrlSplit   = document.location.href.split('://');
+        linkUrlSplit = linkUrlSplit[1].split('/');
+        const videoSlug = linkUrlSplit[3].split('?')[0];
         
-        //5. check session
-        // console.log('checking session');
-        // Ext.manager.checkValidCourseUrl(()=>{
-        //     Ext.manager.UI.showUI();
-        //     SocketProxy.Session.check('afterSessionCheck');
-        // },()=>{
-        //     Ext.manager.UI.hideUI();
-        // });
-    },
-	checkValidCourseUrl:(callback_,callback_non)=>{
-        const extractedUrl = Ext.manager.extractUrl();
-        const urlSegment3 = extractedUrl.urlSplit[2]; 
-        if(urlSegment3.match(/\?/)){
-            return;
-        }
-        if(Ext.manager.isValidCoursePage()){
-            // console.log(extractedUrl);
-            if(typeof callback_ == 'function'){
-                callback_();
-            }
-        }else{
-            if(typeof callback_non == 'function'){
-                callback_non();
+
+        const posterUrl = $('.vjs-poster')[0].style.backgroundImage.replace(/url\(\"/,'').replace(/\"\)/,'');
+        const codeList = $('code');
+        let captionUrl = '';
+        for(let i = 0; i < codeList.length; i++){
+            const t = $(codeList[i]).text();
+            if(t.match(/captionFile/g)){
+                try{
+                    const metaData = JSON.parse(t);
+                    const presentation = metaData.included[2].presentation;
+                    const videoMetaData = presentation.videoPlay.videoPlayMetadata.transcripts[0];
+                    captionUrl = videoMetaData.captionFile;
+                    // console.log(captionUrl);
+                }catch(e){
+                    console.log('couldnot load vtt');
+                }
+                
+                break;
             }
         }
-        
+        return {
+            videoUrl : videoUrl,
+            posterUrl : posterUrl,
+            captionUrl: captionUrl,
+            videoSlug : videoSlug
+        }
     },
+    
+	
 	getCourseTitle : ()=>{
         const extractedUrl  = Ext.manager.extractUrl();
         courseTitle = extractedUrl.urlSplit[2];
@@ -122,7 +119,6 @@ Ext.manager = {
 
             const linkUrlSplit = linkUrl.split('/');
             const videoSlug = linkUrlSplit[3].split('?')[0];
-            // console.log(titleContainer.text().trim().replace(/\n.*/g,''));
             const titleText = titleContainer.text().trim().replace(/\n.*/g,'');
             const durationText = durationContainer.text().trim().replace(/\n.*/g,'');
 
@@ -134,10 +130,10 @@ Ext.manager = {
         return tocs;
 
     },
-	getTocIndex:(videoSlug)=>{
+	getTocIndexBySlug:(videoSlug)=>{
         try{
-            const tocs = Ext.manager.courseInfo.tocs;
-            for (var i = 1; i < tocs.length; i++) {
+            const tocs = Ext.state.currentTocsQueue;
+            for (var i = 0; i < tocs.length; i++) {
                 if(tocs[i].slug == videoSlug){
                     return i;
                 }

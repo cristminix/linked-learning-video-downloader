@@ -1,7 +1,5 @@
 Ext.task = {
-	queryTask : () => {
-
-	}, 
+	
 	resolveVideoUrl : (videoSlug, videoUrl, posterUrl,captionUrl, _callback) => {
         // Ext.manager.UI.setCurrentVideo(videoSlug);
         // Ext.manager.UI.setCurrentIndex(Ext.manager.getTocIndex(videoSlug));
@@ -13,90 +11,7 @@ Ext.task = {
     startDownload : (_callback) => {
         Ext.proxy.send('start_download',{sessionId:Ext.manager.getSessionId(),courseTitle: Ext.manager.getCourseTitle()},_callback);
     },
-	trackVideoChanges : () =>{
-		clearInterval(handleUrlData.siHandler);
-		handleUrlData.siHandler = setInterval(()=>{
-		    handleUrlChanges();
-		},2000);
-	},
-	trackUrlChanges : () => {
-		clearInterval(handleUrlData.siHandler);
-		handleUrlData.siHandler = setInterval(()=>{
-		    handleUrlChanges();
-		},2000);
-	},
-	//////////////////////////
-	handleUrlData : {
-	    firstTime : true,
-	    siHandler : 0 
-	},
-	handleVideoData : {
-	    siHandler : 0,
-	    lastVideoUrl : '',
-	    lastPosterUrl: '',
-	    lastVideoSlug: ''
-	},
-	handleVideoChanges : () => {
-	    // console.log('Checking Video Changes');
-	    try{
-	        const videoContainer = $('.vjs-tech');
-	        const videoUrl  = videoContainer.attr('src');
-	        let linkUrlSplit   = document.location.href.split('://');
-	        linkUrlSplit = linkUrlSplit[1].split('/');
-	        const videoSlug = linkUrlSplit[3].split('?')[0];
-	        
-
-	        const posterUrl = $('.vjs-poster')[0].style.backgroundImage.replace(/url\(\"/,'').replace(/\"\)/,'');
-	        if( handleVideoData.lastVideoUrl != videoUrl){
-	            handleVideoData.lastVideoUrl  = videoUrl;
-	            handleVideoData.lastPosterUrl = posterUrl;
-	            handleVideoData.lastVideoSlug = videoSlug;
-
-	            const codeList = $('code');
-	            let captionUrl = '';
-	            for(let i = 0; i < codeList.length; i++){
-	                const t = $(codeList[i]).text();
-	                if(t.match(/captionFile/g)){
-	                    try{
-	                        const metaData = JSON.parse(t);
-	                        const presentation = metaData.included[2].presentation;
-	                        const videoMetaData = presentation.videoPlay.videoPlayMetadata.transcripts[0];
-	                        captionUrl = videoMetaData.captionFile;
-	                        // console.log(captionUrl);
-	                    }catch(e){
-	                        console.log('couldnot load vtt');
-	                    }
-	                    
-	                    break;
-	                }
-	            }
-	            // console.log('resolveVideoUrl')
-	            // videoUrl = videoUrl
-	            SocketProxy.resolveVideoUrl(videoSlug, videoUrl, posterUrl,captionUrl, 'afterResolveVideoUrl');
-	            // console.log(handleVideoData);
-	            
-	        }   
-	    }catch(e){
-	        console.log(e)
-	    }
-
-	},
-
-	// handleUrlChanges : () => {
-	//     // console.log('Checking Urls');
-	//     if( Ext.manager.fullUrl != window.location.href || handleUrlData.firstTime){
-	//         // console.log(Ext.manager.getInfo());
-	        
-	//         Ext.manager.fullUrl = window.location.href;
-	//         try{
-	//             Ext.manager.sayHi();
-	//         }catch(e){
-	//             console.log(e);
-	//         }
-	        
-	//     }
-	//     handleUrlData.firstTime = false;
-	// },
+	
     /****************************
      * Related page check task
      */
@@ -127,10 +42,8 @@ Ext.task = {
 		try {
 			switch(taskName){
 				case 'create_course':
-					console.log(taskName)
 					url = `${Ext.config.getServerUrl()}task_create_course`;
 			 		
-
 			 		res = await Ext.proxy.create(url,'post',{
 			 			sessionId : Ext.manager.getSessionId(),
 			 			coursePath : courseInfo.coursePath,
@@ -143,7 +56,6 @@ Ext.task = {
 				break;
 
 				case 'create_toc':
-					console.log(taskName)
 
 					url = `${Ext.config.getServerUrl()}task_create_toc`;
 			 		const tocs = Ext.manager.getToc();
@@ -151,8 +63,29 @@ Ext.task = {
 			 		res = await Ext.proxy.create(url,'post',{
 			 			sessionId : Ext.manager.getSessionId(),
 			 			courseId : param.courseId,
-			 			length: tocs.length
+			 			length: tocs.length,
+			 			tocs: JSON.stringify(tocs)
+			 		});	
+
+			 			
+			        return res.data;
+				break;
+
+				case 'update_toc':
+
+					url = `${Ext.config.getServerUrl()}update_toc`;
+			 		// const tocs = Ext.manager.getToc();
+
+			 		res = await Ext.proxy.create(url,'post',{
+			 			slug : param.slug,
+			 			videoUrl : param.videoUrl,
+			 			posterUrl : param.posterUrl,
+			 			captionUrl : param.captionUrl
 			 		});		
+
+			 		Ext.state.currentTocsQueue[param.tocIndex].videoUrl = param.videoUrl;
+			 		Ext.state.currentTocsQueue[param.tocIndex].captionUrl = param.captionUrl;
+			 		Ext.state.currentTocsQueue[param.tocIndex].posterUrl = param.posterUrl;
 			        return res.data;
 				break;
 			}

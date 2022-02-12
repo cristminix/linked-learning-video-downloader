@@ -1,7 +1,7 @@
 from flask import request, jsonify, Blueprint, render_template, session, copy_current_request_context
 from my_app import app, db
 from my_app.socket import socket_
-from my_app.catalog.models import TBSession, TBCourse, TBTask
+from my_app.catalog.models import TBSession, TBCourse, TBTask, TBTocs
 from datetime import datetime
 from flask_socketio import emit, disconnect
 from flask_cors import cross_origin
@@ -74,17 +74,29 @@ def task_create_toc():
 		db.session.add(task)
 		db.session.commit()
 		db.session.flush()
+	tocs = json.loads(request.form.get('tocs'))
+
+	for idx, toc_ in enumerate(tocs):
+		toc = TBTocs.query.filter(TBTocs.courseId == request.form.get('courseId'), TBTocs.slug == toc_.get('slug')).first()
+		if not toc:
+			toc = TBTocs(request.form.get('courseId'),idx, toc_.get('captionUrl'), toc_.get('duration'), toc_.get('posterUrl'), toc_.get('slug'), toc_.get('title'), toc_.get('url'), toc_.get('videoUrl'),datetime.now())
+			db.session.add(toc)
+			db.session.commit()
+			db.session.flush()
+	# print(rjson)	
 	return jsonify(task)
 
 @cross_origin
-@catalog.route('/create_toc',methods=['POST'])
-def create_toc():
-	toc = TBTocs.query.filter(TBTocs.courseId == request.form.get('courseId') , TBTocs.slug == request.form.get('slug')).first()
-	if not toc:
-		toc = TBTocs(request.form.get('courseId'), request.form.get('captionUrl'), request.form.get('duration'), request.form.get('posterUrl'), request.form.get('slug'), request.form.get('title'), request.form.get('url'), request.form.get('videoUrl'),datetime.now())
-		db.session.add(toc)
+@catalog.route('/update_toc',methods=['POST'])
+def update_toc():
+	toc = TBTocs.query.filter(TBTocs.slug == request.form.get('slug')).first()
+	if toc:
+		toc.captionUrl = request.form.get('captionUrl')
+		toc.posterUrl =  request.form.get('posterUrl')
+		toc.videoUrl = request.form.get('videoUrl')
+		toc.captionUrl = request.form.get('captionUrl')
 		db.session.commit()
-		db.session.flush()
+		# db.session.flush()
 
 	return jsonify(toc)
 # # ----------------------------------------------------
