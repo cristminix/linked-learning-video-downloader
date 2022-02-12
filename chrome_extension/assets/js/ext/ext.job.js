@@ -88,9 +88,10 @@ Ext.job = {
 			// 5. jika belum dibuat
 			if(task == null){
 				// 5.1 buat task 
-				task = await Ext.task.createTask('create_course');
+				// const createCourseTask = await Ext.task.createTask('create_course');
+				task= [];
 			}
-			console.log(task)
+			// console.log(task)
 
 			// 6. kerjakan task
 			Ext.job.doTask(task);
@@ -100,7 +101,7 @@ Ext.job = {
 	},
 
 	doTask: async (task) =>{
-		Ext.log(task);
+		// Ext.log(task);
 		
 		try{
 			// 1. check create_course
@@ -113,8 +114,9 @@ Ext.job = {
 			let createTocTask = Ext.job.checkTask('create_toc',task);
 			if( typeof createTocTask != 'object'){
 				createTocTask = await Ext.task.createTask('create_toc',createCourseTask);
-				task.push(createCourseTask);
+				task.push(createTocTask);
 			}
+			console.log(task);
 		}catch(e){
 			console.log(e)
 		}
