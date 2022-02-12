@@ -1,12 +1,12 @@
 {
-  "name": "standalone-electron-socket.io-flask",
-  "version": "1.0.0",
-  "description": "Simple project standalone electron with web socket client communication through python flask",
+  "name": "linked-learning-video-downloader",
+  "version": "0.0.2-beta",
+  "description": "Simple chrome extension that can allow you grab video url and its caption from LinkedIn Learning.",
   "main": "main.js",
   "scripts": {
     "start": "electron ."
   },
-  "repository": "https://github.com/cristminix/standalone-electron-socket.io-flask",
+  "repository": "https://github.com/cristminix/linked-learning-video-downloader/tree/0.0.2-beta",
   "keywords": [
     "electron",
     "nodejs",

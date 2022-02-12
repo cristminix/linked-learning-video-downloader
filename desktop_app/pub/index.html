@@ -1,29 +1,225 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>Calling Python from Electron!</title>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LinkedIn Video Downloader</title>
+    
+    <link rel="stylesheet" type="text/css" href="assets/datatables/datatables.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/datatables/DataTables-1.11.4/css/dataTables.bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="assets/bootstrap-3.4.1-dist/css/bootstrap.min.css">
+  </head>
+  <body>
+<div class="container" style="padding-top: 2em;">
+  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#session">Session</a></li>
+    <li><a data-toggle="tab" href="#tasks">Tasks</a></li>
+    <li><a data-toggle="tab" href="#course">Course</a></li>
+    <li><a data-toggle="tab" href="#tocs">Tocs</a></li>
+    <li><a data-toggle="tab" href="#player">Player</a></li>
+    <li><a data-toggle="tab" href="#users">Users</a></li>
+  </ul>
+  <div class="tab-content">
+    <div id="session" class="tab-pane fade in active">
+      <h3>Session</h3>
+      <table class="table" id="session_list">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>SessionID</th>
+                <th>Created</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+    <div id="tasks" class="tab-pane fade">
+      <h3>Tasks</h3>
+      <table class="table" id="tasks_list" style="width:100%">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>SessionID</th>
+                <th>CourseID</th>
+                <th>Param</th>
+                <th>Status</th>
+                <th>Created</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+    <div id="course" class="tab-pane fade">
+      <h3>Course</h3>
+      <table class="table" id="course_list" style="width:100%">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>SessionID</th>
+                <th>CoursePath</th>
+                <th>CourseTitle</th>
+                <th>Url</th>
+                <th>Hostname</th>
+                <th>Created</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+    <div id="tocs" class="tab-pane fade">
+      <h3>Tocs</h3>
+      <table class="table" id="toc_list" style="width:100%">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>CourseID</th>
+                <th>Idx</th>
+                <th>CaptionUrl</th>
+                <th>Duration</th>
+                <th>PosterUrl</th>
+                <th>Slug</th>
+                <th>Title</th>
+                <th>Url</th>
+                <th>VideoUrl</th>
+                <th>Created</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>                
+
+    </div>
+    <div id="player" class="tab-pane fade">
+      <h3>Player</h3>
+      <p>Coming Soon</p>
+    </div>
+    <div id="users" class="tab-pane fade">
+      <h3>Users</h3>
+      <table class="table" id="clients_list" width="100%">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>User name</th>
+                <th>Address</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    </div>
+  </div>
+</div>
+
+
+
     <script src="assets/js/jquery-1.12.4.min.js"></script>
+    <script src="assets/js/axios.min.js"></script>
     <script src="assets/js/socket.io.js"></script>
+    <script src="assets/js/vue2.js"></script>
+    <script src="assets/bootstrap-3.4.1-dist/js/bootstrap.min.js"></script>
+    <script src="assets/datatables/datatables.min.js"></script>
     <script src="assets/js/app.js"></script>
-
-</head>
-<body style="background-color:white;">
-
-    <h1 style="background-color:white;">Socket</h1>
-    <form id="emit" method="POST" action='#'>
-        <input type="text" name="emit_data" id="emit_data" placeholder="Message">
-        <input type="submit" value="Send Message">
-    </form>
-    <form id="broadcast" method="POST" action='#'>
-        <input type="text" name="broadcast_data" id="broadcast_data" placeholder="Message">
-        <input type="submit" value="Send Broadcast Message">
-    </form>
-
-    <form id="disconnect" method="POST" action="#">
-        <input type="submit" value="Disconnect Server">
-    </form>
-    <h2 style="background-color:white;">Logs</h2>
-    <div id="log" ></div>
-</body>
+    <script>
+    $("#clients_list").dataTable({
+        serverSide: true,
+        processing: true,
+        ajax: "http://127.0.0.1:5000/data",
+        columns: [
+            {
+                data: "id",
+                "render": function(data, type, row){
+                    return $("<div>").append($("<a/>").attr("href", row.DT_RowData.link).text(data)).html();
+                }
+            },
+            { data: "name" },
+            { data: "address" }
+        ]
+    });
+    $('#session_list').dataTable({
+        serverSide: true,
+        processing: true,
+        ajax: "http://127.0.0.1:5000/datatables/sessions",
+        columns: [
+            {
+                data: "id",
+                "render": function(data, type, row){
+                    return $("<div>").append($("<a/>").attr("href", row.DT_RowData.link).text(data)).html();
+                }
+            },
+            { data: "sessionId" },
+            { data: "createDate" }
+        ]
+    });
+    $('#tasks_list').dataTable({
+        serverSide: true,
+        processing: true,
+        ajax: "http://127.0.0.1:5000/datatables/tasks",
+        columns: [
+            {
+                data: "id",
+                "render": function(data, type, row){
+                    return $("<div>").append($("<a/>").attr("href", row.DT_RowData.link).text(data)).html();
+                }
+            },
+            { data: "name" },
+            { data: "sessionId" },
+            { data: "courseId" },
+            { data: "param" },
+            { data: "status" },
+            { data: "createDate" }
+        ]
+    });
+    $('#course_list').dataTable({
+        serverSide: true,
+        processing: true,
+        ajax: "http://127.0.0.1:5000/datatables/courses",
+        columns: [
+            {
+                data: "id",
+                "render": function(data, type, row){
+                    return $("<div>").append($("<a/>").attr("href", row.DT_RowData.link).text(data)).html();
+                }
+            },
+            { data: "sessionId" },
+            { data: "coursePath" },
+            { data: "courseTitle" },
+            { data: "url" },
+            { data: "hostname" },
+            { data: "createDate" } 
+           
+        ]
+    });
+    $('#toc_list').dataTable({
+        serverSide: true,
+        processing: true,
+        ajax: "http://127.0.0.1:5000/datatables/tocs",
+        columns: [
+            {
+                data: "id",
+                "render": function(data, type, row){
+                    return $("<div>").append($("<a/>").attr("href", row.DT_RowData.link).text(data)).html();
+                }
+            },
+            { data: "courseId" },
+            { data: "idx" },
+            { data: "captionUrl" },
+            { data: "duration" },
+            { data: "posterUrl" },
+            { data: "slug" },
+            { data: "title" },
+            { data: "url" },
+            { data: "videoUrl" },
+            { data: "createDate" } 
+           
+        ]
+    });
+</script>
+  </body>
 </html>

@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 from my_app import db
-
+from datetime import datetime
 
 @dataclass
 class TBSession(db.Model):
@@ -112,3 +112,23 @@ class TBTask(db.Model):
 		self.status = status
 		self.createDate = createDate
 	
+# -----------------------------------------------------
+
+class User(db.Model):
+    __tablename__ = 'users'
+
+    id          = db.Column(db.Integer, primary_key=True)
+    full_name   = db.Column(db.Text)
+    created_at  = db.Column(db.DateTime, default=datetime.utcnow)
+
+    # Use lazy=joined to prevent O(N) queries
+    address     = db.relationship("Address", uselist=False, backref="user", lazy="joined")
+
+class Address(db.Model):
+    __tablename__ = 'addresses'
+
+    id          = db.Column(db.Integer, primary_key=True)
+    description = db.Column(db.Text, unique=True)
+    user_id     = db.Column(db.Integer, db.ForeignKey('users.id'))
+
+# -----------------------------------------------------

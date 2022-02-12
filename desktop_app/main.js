@@ -6,7 +6,7 @@ const kill = require('tree-kill')
 let mainWindow;
 
 // Starting the python backend server
-let shell = new PythonShell('./backend/server.py', options);
+// let shell = new PythonShell('./backend/server.py', options);
 
 createWindow = () => {
    mainWindow = new BrowserWindow({
@@ -38,7 +38,7 @@ app.on('window-all-closed', function () {
   if (process.platform !== 'darwin') app.quit()
   let childs = shell.childProcess
   // Kill the python process 
-  kill(childs.pid)	
+  // kill(childs.pid)	
 })
 
 /**

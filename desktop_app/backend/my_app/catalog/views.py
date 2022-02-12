@@ -1,10 +1,11 @@
-from flask import request, jsonify, Blueprint, render_template, session, copy_current_request_context
+from flask import request, jsonify, url_for,Blueprint, render_template, session, copy_current_request_context
 from my_app import app, db
 from my_app.socket import socket_
-from my_app.catalog.models import TBSession, TBCourse, TBTask, TBTocs
+from my_app.catalog.models import TBSession, TBCourse, TBTask, TBTocs, User, Address
 from datetime import datetime
 from flask_socketio import emit, disconnect
 from flask_cors import cross_origin
+from datatables import *
 import json
 catalog = Blueprint('catalog', __name__)
 import os
@@ -99,7 +100,95 @@ def update_toc():
 		# db.session.flush()
 
 	return jsonify(toc)
-# # ----------------------------------------------------
+# ----------------------------------------------------
+# Example
+def perform_search(queryset, user_input):
+    return queryset.filter(
+        db.or_(
+            User.full_name.like('%' + user_input + '%'),
+            Address.description.like('%' + user_input + '%')
+            )
+        )
+
+def perform_column_search(model_column, queryset, user_input):
+    return queryset.filter(model_column.like("%" + user_input + "%"))
+
+@app.route("/data")
+def datatables_users():
+    table = DataTable(request.args, User, db.session.query(User), [
+        "id",
+        ("name", "full_name", lambda i: "User: {}".format(i.full_name)),
+        ("address", "address.description"),
+    ])
+    table.add_data(link=lambda obj: 'view_user/%s'%(obj.id))
+    table.searchable(lambda queryset, user_input: perform_search(queryset, user_input))
+    # table.searchable_column(
+    #     lambda model_column, queryset, user_input:
+    #         perform_column_search(model_column, queryset, user_input)
+    # )
+
+    return json.dumps(table.json())
+# -----------------------------------------------------
+@cross_origin
+@catalog.route('/datatables/sessions')
+def datatables_sessions():
+	table = DataTable(request.args, TBSession, db.session.query(TBSession), [
+	    "id",
+	    "sessionId",
+	    "createDate"
+	])
+	table.add_data(link=lambda obj: 'view_user/%s'%(obj.id))
+	return json.dumps(table.json())
+
+@cross_origin
+@catalog.route('/datatables/tasks')
+def datatables_tasks():
+	table = DataTable(request.args, TBTask, db.session.query(TBTask), [
+	    "id",
+	    "name",
+	    "sessionId",
+	    "courseId",
+	    "param",
+	    "status",
+	    "createDate"
+	])
+	table.add_data(link=lambda obj: 'view_user/%s'%(obj.id))
+	return json.dumps(table.json())
+
+@cross_origin
+@catalog.route('/datatables/courses')
+def datatables_courses():
+	table = DataTable(request.args, TBCourse, db.session.query(TBCourse), [
+	    "id",
+	    "sessionId",
+	    "coursePath",
+	    "courseTitle",
+	    "url",
+	    "hostname",
+	    "createDate"
+	])
+	table.add_data(link=lambda obj: 'view_user/%s'%(obj.id))
+	return json.dumps(table.json())
+
+@cross_origin
+@catalog.route('/datatables/tocs')
+def datatables_tocs():
+	table = DataTable(request.args, TBTocs, db.session.query(TBTocs), [
+	    "id",
+	    "courseId",
+	    "idx",
+	    "captionUrl",
+	    "duration",
+	    "posterUrl",
+	    "slug",
+	    "title",
+	    "url",
+	    "videoUrl",
+	    "createDate"
+	])
+	table.add_data(link=lambda obj: 'view_user/%s'%(obj.id))
+	return json.dumps(table.json())
+# ----------------------------------------------------
 
 
 
