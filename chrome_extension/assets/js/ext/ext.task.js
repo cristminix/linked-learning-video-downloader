@@ -77,6 +77,7 @@ Ext.task = {
 			 		// const tocs = Ext.manager.getToc();
 
 			 		res = await Ext.proxy.create(url,'post',{
+			 			courseId:param.courseId,
 			 			slug : param.slug,
 			 			videoUrl : param.videoUrl,
 			 			posterUrl : param.posterUrl,

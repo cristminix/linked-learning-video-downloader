@@ -177,6 +177,7 @@ Ext.job = {
 				// const toc = 
 				const taskCreateToc = param;
 				const toc = {
+					courseId: param.courseId,
 					tocIndex : tocIndex,
 					slug: info.videoSlug,
 					videoUrl: info.videoUrl,
@@ -189,18 +190,22 @@ Ext.job = {
 					if(typeof taskUpdateToc.videoUrl == 'string'){
 						Ext.state.currentTocsQueue[tocIndex] = taskUpdateToc;
 
-						if(confirm('Would you like to go to next link ?')){
+						if(tocIndex <= Ext.state.currentTocsQueue.length){
 							console.log('Go to the next link toc index');
-							const toc = Ext.state.currentTocsQueue[tocIndex+1];
-							const url = toc.origLinkUrl;
-							const a = $("a[href='"+url+"']");
-							if(a.length>0){
-								setTimeout(()=>{
-									a[0].click()
-								},1000); 
-								break;
+							if(tocIndex < Ext.state.currentTocsQueue.length-1){
+								const toc = Ext.state.currentTocsQueue[tocIndex+1];
+								const url = toc.origLinkUrl;
+								const a = $("a[href='"+url+"']");
+								if(a.length>0){
+									setTimeout(()=>{
+										a[0].click()
+									},1000); 
+								}	
+							}else{
+								alert('Grabber Complete');
+								Ext.state.currentTocsQueue = [];
+								Ext.state.lastTocIndexUpdate = -1 ;
 							}
-							return;	
 						}
 					}
 				}

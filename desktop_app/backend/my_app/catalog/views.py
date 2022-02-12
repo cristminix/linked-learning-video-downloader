@@ -89,7 +89,7 @@ def task_create_toc():
 @cross_origin
 @catalog.route('/update_toc',methods=['POST'])
 def update_toc():
-	toc = TBTocs.query.filter(TBTocs.slug == request.form.get('slug')).first()
+	toc = TBTocs.query.filter(TBTocs.slug == request.form.get('slug'), TBTocs.courseId == request.form.get('courseId')).first()
 	if toc:
 		toc.captionUrl = request.form.get('captionUrl')
 		toc.posterUrl =  request.form.get('posterUrl')
