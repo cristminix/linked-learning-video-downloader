@@ -1,3 +1,3 @@
 Ext.state = {
-
+	runOnceWaitForMainTag : false
 };

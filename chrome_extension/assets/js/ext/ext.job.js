@@ -6,37 +6,63 @@ function makeDelay(ms) {
         timer = setTimeout(callback, ms);
     };
 };
-var delay = makeDelay(250);
+var delay_video = makeDelay(250);
+var delay_page = makeDelay(250);
 Ext.job = {
+
 	init :  (historyChanged, url)=>{
 		if(historyChanged){
-			Ext.log('History changed', url);
-			$("#vjs_video_3_html5_api").unbind("DOMSubtreeModified");
-			$("#vjs_video_3_html5_api").bind("DOMSubtreeModified", () => {
-				delay((e) => {
-				  Ext.job.start();
-				  try{
-						player=$('#vjs_video_3_html5_api')[0];
-						player.pause();
-						
-				  }catch(e){
-						Ext.log(e);	
-				  }
-				});
-			});	
+			Ext.runOnceWaitForMainTag = false;
+			console.log('History changed', url);
+			const vtag =$('#vjs_video_3_html5_api');
+			if(vtag.length){
+				Ext.job.waitForVideoTag();
+			}else{
+				Ext.job.waitForMainContentTag();
+			}
+				
 		}else{
 			Ext.job.start();	
 		}
 	},
+	waitForMainContentTag:()=>{
+		
+		$('main.init-body__main').unbind("DOMSubtreeModified");
+		$("main.init-body__main").bind("DOMSubtreeModified", () => {
+			delay_page((e) => {
+			  try{
+			  		console.log('init-body__main');
+					const vtag =$('#vjs_video_3_html5_api');
+					if(vtag.length && !Ext.runOnceWaitForMainTag){
+						Ext.runOnceWaitForMainTag = true;
+						$('main.init-body__main').unbind("DOMSubtreeModified");
+						console.log('Vtag detected.')
+			  			Ext.job.start();
+			  			player=$('#vjs_video_3_html5_api')[0];
+						player.pause();
+					}					
+			  }catch(e){
+					Ext.log(e);	
+			  }
+			});
+		});
+	},
+	waitForVideoTag : ()=>{
+		$("#vjs_video_3_html5_api").unbind("DOMSubtreeModified");
+		$("#vjs_video_3_html5_api").bind("DOMSubtreeModified", () => {
+			delay_video((e) => {
+			  Ext.job.start();
+			  try{
+					player=$('#vjs_video_3_html5_api')[0];
+					player.pause();
+					
+			  }catch(e){
+					Ext.log(e);	
+			  }
+			});
+		});
+	},
 	start :  async ()=>{
-		// 
-		// Ext.session.check((data)=>{
-		// 	Ext.log(data);
-		// },(error)=>{
-		// 	Ext.log(error)
-		// });
-		// Ext.task.queryTask();
-
 
 		// 1. Check valid Course Page
 
@@ -62,7 +88,7 @@ Ext.job = {
 			// 5. jika belum dibuat
 			if(task == null){
 				// 5.1 buat task 
-				task = await Ext.task.createTask();
+				task = await Ext.task.createTask('create_course');
 			}
 			console.log(task)
 
@@ -73,9 +99,34 @@ Ext.job = {
 		}
 	},
 
-	doTask(task){
-		Ext.log(task)
+	doTask: async (task) =>{
+		Ext.log(task);
+		
+		try{
+			// 1. check create_course
+			let createCourseTask = Ext.job.checkTask('create_course',task);
+			if( typeof createCourseTask != 'object'){
+				createCourseTask = await Ext.task.createTask('create_course');
+				task.push(createCourseTask);
+			}
+			// 1. check create_course
+			let createTocTask = Ext.job.checkTask('create_toc',task);
+			if( typeof createTocTask != 'object'){
+				createTocTask = await Ext.task.createTask('create_toc',createCourseTask);
+				task.push(createCourseTask);
+			}
+		}catch(e){
+			console.log(e)
+		}
+	},
+	checkTask(taskName, task){
+		for(let i=0 ; i < task.length; i++){
+			const r = task[i];
+			if(r.name == taskName){
+				return r;
+			}
+		}
+		return false;
 	}
-	
 };
 

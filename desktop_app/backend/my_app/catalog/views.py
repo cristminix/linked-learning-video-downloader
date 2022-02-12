@@ -5,7 +5,7 @@ from my_app.catalog.models import TBSession, TBCourse, TBTask
 from datetime import datetime
 from flask_socketio import emit, disconnect
 from flask_cors import cross_origin
-
+import json
 catalog = Blueprint('catalog', __name__)
 import os
 # @catalog.route('/')
@@ -36,31 +36,57 @@ def session_create():
 @cross_origin
 @catalog.route('/task/<sessionId>/<courseTitle>')
 def task_detail(sessionId, courseTitle):
-	course = TBCourse.query.filter(TBCourse.sessionId == sessionId and TBCourse.courseTitle == courseTitle).first()
+	course = TBCourse.query.filter(TBCourse.sessionId == sessionId , TBCourse.courseTitle == courseTitle).first()
 	if course:
-		task = TBTask.query.filter(TBTask.sessionId == sessionId and TBTask.courseId == course.id).all()
+		task = TBTask.query.filter(TBTask.sessionId == sessionId , TBTask.courseId == course.id).all()
 		return jsonify(task)
 
 	return jsonify(None)
 
 @cross_origin
-@catalog.route('/task_create',methods=['POST'])
+@catalog.route('/task_create_course',methods=['POST'])
 def task_create():
-	course = TBCourse(request.form.get('sessionId'), request.form.get('coursePath'), request.form.get('courseTitle'), request.form.get('url'), request.form.get('fullUrl'),  request.form.get('hostname'),datetime.now())
+	course = TBCourse.query.filter(TBCourse.sessionId == request.form.get('sessionId') , TBCourse.courseTitle == request.form.get('courseTitle')).first()
+	if not course:
+		course = TBCourse(request.form.get('sessionId'), request.form.get('coursePath'), request.form.get('courseTitle'), request.form.get('url'), request.form.get('fullUrl'),  request.form.get('hostname'),datetime.now())
+		
+		db.session.add(course)
+		db.session.commit()
+		db.session.flush()
 	
-	db.session.add(course)
-	db.session.commit()
-	db.session.flush()
-
-	task = TBTask('create_course', request.form.get('sessionId'), course.id, course.courseTitle,1,datetime.now())
-	
-	db.session.add(task)
-	db.session.commit()
-	db.session.flush()
+	task = TBTask.query.filter(TBTask.sessionId == request.form.get('sessionId') , TBTask.courseId == course.id , TBTask.name == 'create_course').first()
+	if not task:
+		task = TBTask('create_course', request.form.get('sessionId'), course.id, course.courseTitle,1,datetime.now())
+		
+		db.session.add(task)
+		db.session.commit()
+		db.session.flush()
 
 	return jsonify(task)
 
+@cross_origin
+@catalog.route('/task_create_toc',methods=['POST'])
+def task_create_toc():
+	task = TBTask.query.filter(TBTask.sessionId == request.form.get('sessionId') , TBTask.courseId ==  request.form.get('courseId') , TBTask.name == 'create_toc').first()
+	if not task:
+		jsonData = {'length': request.form.get('length'), "tocIds":[]}
+		task = TBTask('create_toc', request.form.get('sessionId'),  request.form.get('courseId'),  json.dumps(jsonData),0,datetime.now())
+		db.session.add(task)
+		db.session.commit()
+		db.session.flush()
+	return jsonify(task)
 
+@cross_origin
+@catalog.route('/create_toc',methods=['POST'])
+def create_toc():
+	toc = TBTocs.query.filter(TBTocs.courseId == request.form.get('courseId') , TBTocs.slug == request.form.get('slug')).first()
+	if not toc:
+		toc = TBTocs(request.form.get('courseId'), request.form.get('captionUrl'), request.form.get('duration'), request.form.get('posterUrl'), request.form.get('slug'), request.form.get('title'), request.form.get('url'), request.form.get('videoUrl'),datetime.now())
+		db.session.add(toc)
+		db.session.commit()
+		db.session.flush()
+
+	return jsonify(toc)
 # # ----------------------------------------------------
 
 

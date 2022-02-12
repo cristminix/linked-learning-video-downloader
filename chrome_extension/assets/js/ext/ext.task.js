@@ -107,9 +107,12 @@ Ext.task = {
 	/****
 	 * For async await return
 	 * */
-	getTask: async () => {
+	getTask: async (taskName) => {
 		try {
-	 		const url = `${Ext.config.getServerUrl()}task/${Ext.manager.getSessionId()}/${Ext.manager.getCourseTitle()}`;
+	 		let url = `${Ext.config.getServerUrl()}task/${Ext.manager.getSessionId()}/${Ext.manager.getCourseTitle()}`;
+	 		if(typeof taskName == 'string'){
+	 			url += `?name=${taskName}`;
+	 		}
 	 		let res = await Ext.proxy.create(url,'get');		
 	        return res.data;
 	    }
@@ -118,20 +121,42 @@ Ext.task = {
 	    }
 	},
 
-	createTask: async ()=>{
+	createTask: async (taskName, param)=>{
+		let url,res;
+		const courseInfo = Ext.manager.getCourseInfo();
 		try {
-	 		const url = `${Ext.config.getServerUrl()}task_create`;
-	 		const courseInfo = Ext.manager.getCourseInfo();
+			switch(taskName){
+				case 'create_course':
+					console.log(taskName)
+					url = `${Ext.config.getServerUrl()}task_create_course`;
+			 		
 
-	 		let res = await Ext.proxy.create(url,'post',{
-	 			sessionId : Ext.manager.getSessionId(),
-	 			coursePath : courseInfo.coursePath,
-	 			courseTitle : courseInfo.courseTitle,
-	 			url: courseInfo.courseUrl,
-	 			fullUrl: courseInfo.fullUrl,
-	 			hostname: courseInfo.hostname 
-	 		});		
-	        return res.data;
+			 		res = await Ext.proxy.create(url,'post',{
+			 			sessionId : Ext.manager.getSessionId(),
+			 			coursePath : courseInfo.coursePath,
+			 			courseTitle : courseInfo.courseTitle,
+			 			url: courseInfo.courseUrl,
+			 			fullUrl: courseInfo.fullUrl,
+			 			hostname: courseInfo.hostname 
+			 		});		
+			        return res.data;
+				break;
+
+				case 'create_toc':
+					console.log(taskName)
+
+					url = `${Ext.config.getServerUrl()}task_create_toc`;
+			 		const tocs = Ext.manager.getToc();
+
+			 		res = await Ext.proxy.create(url,'post',{
+			 			sessionId : Ext.manager.getSessionId(),
+			 			courseId : param.courseId,
+			 			length: tocs.length
+			 		});		
+			        return res.data;
+				break;
+			}
+	 		
 	    }
 	    catch (err) {
 	        return false;
