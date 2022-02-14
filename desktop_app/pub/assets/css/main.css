@@ -3,13 +3,14 @@ body{
 }
 
 #download_manager{
-	border: solid 1px #000;
+	/*border: solid 1px #000;*/
+	font-size: 80%;
 }
 
 #side_bar_lft{
-	border: solid #ddd;
+	/*border: solid #ddd;*/
 }
 
 #main_cnt{
-	border: solid maroon;
+	/*border: solid maroon;*/
 }

@@ -1,9 +1,22 @@
+
 let dm = {
 	instance : null,
 	init_2(){
 		
 	}
 };
+Vue.filter('makeTitle',
+			(slug)=> {
+			  slug = slug.replace(/(\d+)$/,'')	
+			  var words = slug.split('-');
+
+			  for (var i = 0; i < words.length; i++) {
+			    var word = words[i];
+			    words[i] = word.charAt(0).toUpperCase() + word.slice(1);
+			  }
+
+			  return words.join(' ');
+			});
 dm.init = ()=>{
 	dm.instance = new Vue({
 		el : '#download_manager',
@@ -15,7 +28,9 @@ dm.init = ()=>{
 				course : {}
 			}
 		},
+
 		methods:{
+			
 			updateQueue(course){
 				// console.log(course)
 				this.current.course = course;
