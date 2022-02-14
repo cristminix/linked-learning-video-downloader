@@ -12,11 +12,13 @@ createWindow = () => {
    mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
+    autoHideMenuBar: true,
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
       nodeIntegration: true,
       contextIsolation: true,
-      webSecurity:false
+      webSecurity:false,
+
     }
   });
 
@@ -36,7 +38,7 @@ app.whenReady().then(() => {
 
 app.on('window-all-closed', function () {
   if (process.platform !== 'darwin') app.quit()
-  let childs = shell.childProcess
+  // let childs = shell.childProcess
   // Kill the python process 
   // kill(childs.pid)	
 })

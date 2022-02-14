@@ -15,7 +15,8 @@
   <body>
 <div class="container" style="padding-top: 2em;">
   <ul class="nav nav-tabs">
-    <li class="active"><a data-toggle="tab" href="#session">Session</a></li>
+    <li class="active"><a data-toggle="tab" href="#download_manager">Download Manager</a></li>
+    <li><a data-toggle="tab" href="#session">Session</a></li>
     <li><a data-toggle="tab" href="#tasks">Tasks</a></li>
     <li><a data-toggle="tab" href="#course">Course</a></li>
     <li><a data-toggle="tab" href="#tocs">Tocs</a></li>
@@ -23,7 +24,27 @@
     <li><a data-toggle="tab" href="#users">Users</a></li>
   </ul>
   <div class="tab-content">
-    <div id="session" class="tab-pane fade in active">
+    <div id="download_manager" class="tab-pane fade in active">
+          <h3>Download Manager</h3>
+          <span class="sessionId">{{current.sessionId}}</span>
+          <div id="main_ui_cnt">
+            <div class="container">
+              <div id="side_bar_lft" class="col-md-3">
+                <div class="courseList">
+                    <h4>Course List</h4>
+                    <ul class="nav nav-pills nav-stacked"> 
+                      <li v-for="c in current.courseList"><a href="javascript:;" @click="updateQueue(c)">{{c.courseTitle}}</a></li>
+                    </ul>
+                </div>
+              </div>
+              <div id="main_cnt" class="col-md-9">
+                  {{current.downloadQueue}}
+              </div>
+            </div>
+          
+          </div>
+    </div>
+    <div id="session" class="tab-pane fade">
       <h3>Session</h3>
       <table class="table" id="session_list">
         <thead>
@@ -46,6 +67,7 @@
                 <th>Name</th>
                 <th>SessionID</th>
                 <th>CourseID</th>
+                <!-- <th>CourseTitle</th> -->
                 <th>Param</th>
                 <th>Status</th>
                 <th>Created</th>
@@ -75,17 +97,18 @@
     </div>
     <div id="tocs" class="tab-pane fade">
       <h3>Tocs</h3>
-      <table class="table" id="toc_list" style="width:100%">
+      <table class="table table-bordered" id="toc_list" style="width:100%">
         <thead>
             <tr>
                 <th>Id</th>
                 <th>CourseID</th>
                 <th>Idx</th>
+                <th>Title</th>
+                
                 <th>CaptionUrl</th>
                 <th>Duration</th>
                 <th>PosterUrl</th>
                 <th>Slug</th>
-                <th>Title</th>
                 <th>Url</th>
                 <th>VideoUrl</th>
                 <th>Created</th>
@@ -119,6 +142,7 @@
 
 
 
+    <script src="assets/js/moment-with-locales.js"></script>
     <script src="assets/js/jquery-1.12.4.min.js"></script>
     <script src="assets/js/axios.min.js"></script>
     <script src="assets/js/socket.io.js"></script>
@@ -126,100 +150,13 @@
     <script src="assets/bootstrap-3.4.1-dist/js/bootstrap.min.js"></script>
     <script src="assets/datatables/datatables.min.js"></script>
     <script src="assets/js/app.js"></script>
-    <script>
-    $("#clients_list").dataTable({
-        serverSide: true,
-        processing: true,
-        ajax: "http://127.0.0.1:5000/data",
-        columns: [
-            {
-                data: "id",
-                "render": function(data, type, row){
-                    return $("<div>").append($("<a/>").attr("href", row.DT_RowData.link).text(data)).html();
-                }
-            },
-            { data: "name" },
-            { data: "address" }
-        ]
-    });
-    $('#session_list').dataTable({
-        serverSide: true,
-        processing: true,
-        ajax: "http://127.0.0.1:5000/datatables/sessions",
-        columns: [
-            {
-                data: "id",
-                "render": function(data, type, row){
-                    return $("<div>").append($("<a/>").attr("href", row.DT_RowData.link).text(data)).html();
-                }
-            },
-            { data: "sessionId" },
-            { data: "createDate" }
-        ]
-    });
-    $('#tasks_list').dataTable({
-        serverSide: true,
-        processing: true,
-        ajax: "http://127.0.0.1:5000/datatables/tasks",
-        columns: [
-            {
-                data: "id",
-                "render": function(data, type, row){
-                    return $("<div>").append($("<a/>").attr("href", row.DT_RowData.link).text(data)).html();
-                }
-            },
-            { data: "name" },
-            { data: "sessionId" },
-            { data: "courseId" },
-            { data: "param" },
-            { data: "status" },
-            { data: "createDate" }
-        ]
-    });
-    $('#course_list').dataTable({
-        serverSide: true,
-        processing: true,
-        ajax: "http://127.0.0.1:5000/datatables/courses",
-        columns: [
-            {
-                data: "id",
-                "render": function(data, type, row){
-                    return $("<div>").append($("<a/>").attr("href", row.DT_RowData.link).text(data)).html();
-                }
-            },
-            { data: "sessionId" },
-            { data: "coursePath" },
-            { data: "courseTitle" },
-            { data: "url" },
-            { data: "hostname" },
-            { data: "createDate" } 
-           
-        ]
-    });
-    $('#toc_list').dataTable({
-        serverSide: true,
-        processing: true,
-        ajax: "http://127.0.0.1:5000/datatables/tocs",
-        columns: [
-            {
-                data: "id",
-                "render": function(data, type, row){
-                    return $("<div>").append($("<a/>").attr("href", row.DT_RowData.link).text(data)).html();
-                }
-            },
-            { data: "courseId" },
-            { data: "idx" },
-            { data: "captionUrl" },
-            { data: "duration" },
-            { data: "posterUrl" },
-            { data: "slug" },
-            { data: "title" },
-            { data: "url" },
-            { data: "videoUrl" },
-            { data: "createDate" } 
-           
-        ]
-    });
-</script>
+    <script src="assets/js/download.manager.js"></script>
+   
+<style type="text/css">
+tr.group,
+tr.group:hover {
+    background-color: #ddd !important;
+}
+</style>
   </body>
 </html>

@@ -92,6 +92,7 @@ class TBTask(db.Model):
 	name : str
 	sessionId : str
 	courseId : int
+	# courseTitle: str
 	param : str
 	createDate : str
 
@@ -103,6 +104,9 @@ class TBTask(db.Model):
 	param = db.Column(db.String(255))
 	status = db.Column(db.Integer)
 	createDate = db.Column(db.String(12))
+
+	# Use lazy=joined to prevent O(N) queries
+	# courseTitle     = db.relationship("TBCourse", uselist=False, backref="TBTask", lazy="joined")
 
 	def __init__(self, name, sessionId, courseId, param, status, createDate):
 		self.name = name

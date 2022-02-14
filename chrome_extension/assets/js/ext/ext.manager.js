@@ -22,6 +22,11 @@ Ext.manager = {
         setCookie(Ext.manager.sessionKey+'_chkFirstIndex','yes', 7); 
     },
 	isValidCoursePage:()=>{
+        const extractedUrl = Manager.extractUrl();
+        const urlSegment3 = extractedUrl.urlSplit[2]; 
+        if(urlSegment3.match(/\?/)){
+            return false;
+        }
         return $('.classroom-layout__content').length > 0;
     },
     checkCourseIsComplete:()=>{

@@ -23,8 +23,7 @@
                 "http://localhost/*"
             ],
             "matches" : [
-                "https://www.linkedin.com/learning/*",
-                "http://localhost/*"
+                "https://www.linkedin.com/learning/*"
             ],
             "js" : [
                 "assets/js/jquery-3.6.0.min.js",

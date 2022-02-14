@@ -1,0 +1,43 @@
+let dm = {
+	instance : null,
+	init_2(){
+		
+	}
+};
+dm.init = ()=>{
+	dm.instance = new Vue({
+		el : '#download_manager',
+		data:{
+			current : {
+				sessionId : '<none>',
+				courseList: [],
+				downloadQueue:[],
+				course : {}
+			}
+		},
+		methods:{
+			updateQueue(course){
+				// console.log(course)
+				this.current.course = course;
+				this.setCourseId(course.id);
+			},
+			setSessionId(sessionId){
+				this.current.sessionId = sessionId;
+				axios.get(`http://127.0.0.1:5000/course_by_session/${this.current.sessionId}`).then((r)=>{
+					this.current.courseList = r.data;
+				});
+			},
+			setCourseId(courseId){
+				axios.get(`http://127.0.0.1:5000/tocs_by_course/${courseId}`).then((r)=>{
+					this.current.downloadQueue = r.data;
+				});
+			}
+		},
+		mounted(){
+			const activeSessionId = '0793fdf069e8fe5b34822f60f5d8c9a7';
+			this.setSessionId(activeSessionId);
+		}
+	});
+};
+
+$(document).ready(dm.init());

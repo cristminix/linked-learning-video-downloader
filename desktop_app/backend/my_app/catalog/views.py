@@ -26,6 +26,25 @@ def session_detail(sessionId):
 	return jsonify(session_)
 
 @cross_origin
+@catalog.route('/course/<courseId>')
+def course_detail(courseId):
+	course = TBCourse.query.filter(TBCourse.id == courseId).first()
+	return jsonify(course)
+
+@cross_origin
+@catalog.route('/course_by_session/<sessionId>')
+def course_by_session(sessionId):
+	course = TBCourse.query.filter(TBCourse.sessionId == sessionId).all()
+	return jsonify(course)
+
+@cross_origin
+@catalog.route('/tocs_by_course/<courseId>')
+def tocs_by_course(courseId):
+	tocs = TBTocs.query.filter(TBTocs.courseId == courseId).all()
+	return jsonify(tocs)
+
+
+@cross_origin
 @catalog.route('/session_create',methods=['POST'])
 def session_create():
 	sess = TBSession(request.form.get('sessionId'), datetime.now())
@@ -144,13 +163,14 @@ def datatables_sessions():
 @catalog.route('/datatables/tasks')
 def datatables_tasks():
 	table = DataTable(request.args, TBTask, db.session.query(TBTask), [
-	    "id",
-	    "name",
-	    "sessionId",
-	    "courseId",
-	    "param",
-	    "status",
-	    "createDate"
+		"id",
+		"name",
+		"sessionId",
+		"courseId",
+		# ("courseTitle", "tbCourse.courseTitle"),
+		"param",
+		"status",
+		"createDate"
 	])
 	table.add_data(link=lambda obj: 'view_user/%s'%(obj.id))
 	return json.dumps(table.json())
@@ -177,11 +197,11 @@ def datatables_tocs():
 	    "id",
 	    "courseId",
 	    "idx",
+	    "title",
 	    "captionUrl",
 	    "duration",
 	    "posterUrl",
 	    "slug",
-	    "title",
 	    "url",
 	    "videoUrl",
 	    "createDate"
