@@ -187,3 +187,16 @@ $(document).ready(function() {
 
     });
 });
+
+const namespace = 'http://127.0.0.1:5000';
+var socket = io(namespace);
+
+socket.on('connect', function() {
+    console.log('connected to the SocketServer...');
+});
+
+socket.on('toc_download', function(msg, cb) {
+    // console.log(msg)
+    const progress = Math.floor((msg.progress/msg.total)*100)
+    $(`.statusTocId-${msg.tocId}`).text(`${progress} %`);
+});

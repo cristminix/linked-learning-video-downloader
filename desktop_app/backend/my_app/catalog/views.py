@@ -1,12 +1,16 @@
 from flask import request, jsonify, url_for,Blueprint, render_template, session, copy_current_request_context
 from my_app import app, db
 from my_app.socket import socket_
+from my_app.manager import *
 from my_app.catalog.models import TBSession, TBCourse, TBTask, TBTocs, User, Address
 from datetime import datetime
 from flask_socketio import emit, disconnect
 from flask_cors import cross_origin
 from datatables import *
 import json
+import asyncio
+# loop = asyncio.get_event_loop()
+import threading
 catalog = Blueprint('catalog', __name__)
 import os
 # @catalog.route('/')
@@ -43,6 +47,17 @@ def tocs_by_course(courseId):
 	tocs = TBTocs.query.filter(TBTocs.courseId == courseId).all()
 	return jsonify(tocs)
 
+@cross_origin
+@catalog.route('/download_by_toc/<tocId>')
+def download_by_toc(tocId):
+	toc = TBTocs.query.filter(TBTocs.id == tocId).first()
+	if toc:
+		course =  TBCourse.query.filter(TBCourse.id == toc.courseId).first()
+		download_dir = get_download_dir(course.courseTitle)
+		threading.Thread(target=download_file, args=(toc.videoUrl,"%s/%s.mp4" % (download_dir,toc.slug),toc,socket_)).start()
+		# loop.ensure_future(download_file)
+		# await asyncio.wait({task})
+	return jsonify(toc)
 
 @cross_origin
 @catalog.route('/session_create',methods=['POST'])

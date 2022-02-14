@@ -60,6 +60,13 @@ class TBTocs(db.Model):
 	title : str
 	url : str
 	videoUrl : str
+	dlCaptionSize: int
+	dlVideoSize: int
+	dlCaptionStatus: int
+	dlVideoStatus: int
+	size: int
+	status: int
+	lastTryDate : str
 	createDate : str
 
 	id = db.Column(db.Integer, primary_key=True)
@@ -72,6 +79,13 @@ class TBTocs(db.Model):
 	title = db.Column(db.String(255))
 	url = db.Column(db.String(255))
 	videoUrl = db.Column(db.String(255))
+	dlCaptionSize = db.Column(db.Integer)
+	dlVideoSize = db.Column(db.Integer)
+	dlVideoStatus = db.Column(db.Integer)
+	dlCaptionStatus = db.Column(db.Integer)
+	size = db.Column(db.Integer)
+	status = db.Column(db.Integer)
+	lastTryDate = db.Column(db.String(12))
 	createDate = db.Column(db.String(12))
 
 	def __init__(self, courseId, idx, captionUrl, duration, posterUrl, slug, title, url, videoUrl, createDate):

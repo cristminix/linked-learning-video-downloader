@@ -199,7 +199,7 @@ Ext.job = {
 								if(a.length>0){
 									setTimeout(()=>{
 										a[0].click()
-									},1000); 
+									},5000); 
 								}	
 							}else{
 								alert('Grabber Complete');

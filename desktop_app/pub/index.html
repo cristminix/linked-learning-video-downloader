@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="assets/css/main.css">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="assets/bootstrap-3.4.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/font-awesome-4.6.3/css/font-awesome.min.css">
   </head>
   <body>
 <div class="container" style="padding-top: 2em;">
@@ -43,8 +44,11 @@
                         <tr>
                             <th style="width:20px">No</th>
                             <th>Title</th>
-                            <th>Duration</th>
-
+                            <th style="width:30px">Duration</th>
+                            <th>Size</th>
+                            <th>Status</th>
+                            <th>Last Try Date</th>
+                            <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -52,6 +56,14 @@
                             <td>{{d.idx+1}}</td>
                             <td><span>{{d.title}}</span></td>
                             <td>{{d.duration}}</td>
+                            <td><div :class="'sizeTocId-'+d.id">{{d.size}}</div></td>
+                            <td><div :class="'statusTocId-'+d.id">{{d.status}}</div></td>
+                            <td><div :class="'lastTryDateTocId-'+d.id">{{d.lastTryDate}}</div></td>
+                            <td>
+                                <div :class="'actionTocId-'+d.id">
+                                    <a class="btn btn-xs" href="javascript:;" @click="downloadToc(d)"><i class="fa fa-play"></i></a>
+                                </div>
+                            </td>
                         </tr>
                         <tr v-if="current.downloadQueue.length==0">
                             <td colspan="2">Please select a course.</td>
