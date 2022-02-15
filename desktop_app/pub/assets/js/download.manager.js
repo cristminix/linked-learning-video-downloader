@@ -54,6 +54,11 @@ dm.init = ()=>{
 					// this.current.downloadQueue = r.data;
 					console.log(r.data);
 				});	
+			},
+			generatePlaylist(){
+				axios.get(`http://127.0.0.1:5000/generate_playlist/${this.current.course.id}`).then((r)=>{
+					console.log(data);
+				});
 			}
 		},
 		mounted(){

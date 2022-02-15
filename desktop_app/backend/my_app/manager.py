@@ -2,20 +2,55 @@
 import os
 import asyncio
 import json
-from tqdm import tqdm
-import time
-from datetime import datetime
-
-from my_app.catalog.models import db,TBTocs
-# from my_app.catalog.views import loop
+from datetime import datetime,timedelta
+from my_app.catalog.models import db,TBTocs,TBCourse
 import requests
-# from flask_socketio import emit
 from my_app.socket import socket_
-# import asyncio
-# loop = asyncio.get_event_loop()
+import cv2
+import urllib.parse
 
 RETRY = {}
+def get_video_duration(path):
+    print(path)
+    # create video capture object
+    data = cv2.VideoCapture(os.path.realpath(path))
+      
+    # count the number of frames
+    frames = data.get(cv2.CAP_PROP_FRAME_COUNT)
+    fps = int(data.get(cv2.CAP_PROP_FPS))
+      
+    # calculate dusration of the video
+    seconds = int(frames / fps)
+    video_time = str(timedelta(seconds=seconds))
+    # print("duration in seconds:", seconds)
+    # print("video time:", video_time)
+    return seconds
 
+def do_generate_m3u(courseId):
+    course = TBCourse.query.filter(TBCourse.id == courseId).first()
+    if course:
+        tocs = TBTocs.query.filter(TBTocs.courseId == courseId).all()
+        if len(tocs) > 0:
+            buffer = "#EXTM3U\n";
+            folder = get_download_dir(course.courseTitle)
+
+            for toc in tocs:
+                filename = "%s.mp4" % (toc.slug)
+                filenameEncoded = urllib.parse.quote(filename)
+                filenameSplitText = os.path.splitext( filename)
+                fileExt = filenameSplitText[1]
+                path = "%s/%s" % (folder,filename)
+                if fileExt == '.mp4': 
+                    if os.path.exists(path):
+                        videoDuration = get_video_duration(path)
+                        buffer += "#EXTINF:%d,%s\n" % (videoDuration, filename)
+                        buffer += filenameEncoded + "\n"
+            playlistFile = folder + '/' + 'playlist.m3u'
+            with open(playlistFile, 'w') as f:
+                f.write(buffer)
+                f.close()
+            return playlistFile
+       
 def get_download_dir(courseTitle):
     path = "downloads"
     if not os.path.exists(path):

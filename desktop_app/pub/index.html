@@ -52,6 +52,11 @@
                         </tr>
                     </thead>
                     <tbody>
+                        <tr>
+                            <td colspan="7">
+                                <a class="btn"href="javascript:;" @click="generatePlaylist()">Generate Playlist</a>
+                            </td>
+                        </tr>
                         <tr v-for="d in current.downloadQueue">
                             <td>{{d.idx+1}}</td>
                             <td><span>{{d.title}}</span></td>

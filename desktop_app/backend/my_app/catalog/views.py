@@ -48,13 +48,19 @@ def tocs_by_course(courseId):
 	return jsonify(tocs)
 
 @cross_origin
+@catalog.route('/generate_playlist/<courseId>')
+def generate_playlist(courseId):
+	path = do_generate_m3u(courseId)
+	return jsonify(path)	
+
+@cross_origin
 @catalog.route('/download_by_toc/<tocId>')
 def download_by_toc(tocId):
 	toc = TBTocs.query.filter(TBTocs.id == tocId).first()
 	if toc:
 		course =  TBCourse.query.filter(TBCourse.id == toc.courseId).first()
 		download_dir = get_download_dir(course.courseTitle)
-		threading.Thread(target=download_file, args=(toc.videoUrl,"%s/%s.mp4" % (download_dir,toc.slug),toc,socket_)).start()
+		threading.Thread(target=download_file, args=(toc.captionUrl,"%s/%s.vtt" % (download_dir,toc.slug),toc,socket_)).start()
 		# loop.ensure_future(download_file)
 		# await asyncio.wait({task})
 	return jsonify(toc)
