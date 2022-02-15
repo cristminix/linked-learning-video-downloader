@@ -1,4 +1,4 @@
-from flask import request, jsonify, url_for,Blueprint, render_template, session, copy_current_request_context
+from flask import request, send_from_directory, jsonify, url_for,Blueprint, render_template, session, copy_current_request_context
 from my_app import app, db
 from my_app.socket import socket_
 from my_app.manager import *
@@ -17,11 +17,20 @@ import os
 # @catalog.route('/home')
 # def home():
 # 	return "Welcome to the Catalog Home."
+
+
 @catalog.route('/')
 @catalog.route('/home')
 def home():
 	# return os.path.abspath('.')
     return render_template('index.html', async_mode=socket_.async_mode)
+
+# @cross_origin
+# @catalog.route('/downloads/<dir_>/<path_>')
+# def downloads(dir_,path_):
+# 	filename = '%s/%s' % (dir_,path_)
+# 	print( os.path.exists('downloads/%s'%(filename)) )
+# 	return send_from_directory(filename)
 
 @cross_origin
 @catalog.route('/session/<sessionId>')

@@ -45,7 +45,21 @@ dm.init = ()=>{
 				course : {}
 			}
 		},
-
+		 watch: {
+	    current: {
+	      handler: function (val, oldVal) {
+	        // Return the object that changed
+	        // var changed = val.filter( function( p, idx ) {
+	        //   return Object.keys(p).some( function( prop ) {
+	        //     return p[prop] !== oldVal[idx][prop];
+	        //   })
+	        // })
+	        // Log it
+	        console.log('changed')
+	      },
+	      deep: true
+	    }
+	  },
 		methods:{
 			updateIndividualDownloadQueueInfo(){
 
@@ -68,10 +82,14 @@ dm.init = ()=>{
 			},
 			downloadToc(toc,what){
 				const key = what == 'caption' ? 'dlCaption': 'dlVideo';
-				this.current.downloadQueue[toc.idx][`${key}Status`] = 'downloading';
-				this.current.downloadQueue[toc.idx][`${key}Size`] = 'calculating';
-				// this.current.downloadQueue[toc.idx][`${key}Retry`] = '0';
-				this.current.downloadQueue[toc.idx][`${key}LastTryDate`]= moment(new Date()).fromNow();
+				let activeTocs = this.current.downloadQueue;
+				let activeToc = this.current.downloadQueue[toc.idx];
+				activeToc[`${key}Complete`] = 1;
+				activeToc[`${key}Size`] = 'calculating';
+				activeToc[`${key}Retry`] = '0';
+				activeToc[`${key}LastTryDate`]= moment(new Date()).fromNow();
+				activeTocs[toc.idx] = activeToc;
+				this.current.downloadQueue  = activeTocs;
 
 				axios.get(`http://127.0.0.1:5000/download_by_toc/${toc.id}/${what}?cache_=${nocache()}`).then((r)=>{
 					// this.current.downloadQueue = r.data;
@@ -82,6 +100,12 @@ dm.init = ()=>{
 				axios.get(`http://127.0.0.1:5000/generate_playlist/${this.current.course.id}?cache_=${nocache()}`).then((r)=>{
 					console.log(data);
 				});
+			},
+			playToc(d){
+				const videoUrl = `http://127.0.0.1:5000/static/${this.current.course.courseTitle}/${d.slug}.mp4`;
+				const captionUrl = `http://127.0.0.1:5000/static/${this.current.course.courseTitle}/${d.slug}.vtt`;
+				videoPlayer.instance.setData(videoUrl,captionUrl,d.posterUrl);
+				$(`a[href*=player]`).click();
 			}
 		},
 		mounted(){

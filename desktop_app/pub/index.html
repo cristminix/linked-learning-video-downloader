@@ -12,6 +12,7 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="assets/bootstrap-3.4.1-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/font-awesome-4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/videojs/video-js.min.css">
   </head>
   <body>
 <div class="container" style="padding-top: 2em;">
@@ -75,11 +76,14 @@
                             </td>
                             <td>
                                 <div :class="'actionTocId-'+d.id">
-                                    <div>
-                                        <a class="btn btn-xs" href="javascript:;" @click="downloadToc(d,'caption')"><i class="fa fa-play"></i></a>
+                                    <div style="height: 20px;">
+                                        <a  v-if="d.dlCaptionComplete != 1" class="btn btn-xs" href="javascript:;" @click="downloadToc(d,'caption')"><i class="fa fa-download"></i></a>
                                     </div>
-                                    <div>
-                                        <a class="btn btn-xs" href="javascript:;" @click="downloadToc(d,'video')"><i class="fa fa-play"></i></a>
+                                    <div style="height: 20px;">
+                                        <a  v-if="d.dlVideoComplete != 1" class="btn btn-xs" href="javascript:;" @click="downloadToc(d,'video')"><i class="fa fa-download"></i></a>
+                                    </div>
+                                    <div style="height: 20px;">
+                                        <a  v-if="d.dlVideoComplete == 1" class="btn btn-xs" href="javascript:;" @click="playToc(d)"><i class="fa fa-play"></i></a>
                                     </div>
                                 </div>
                             </td>
@@ -172,7 +176,8 @@
     </div>
     <div id="player" class="tab-pane fade">
       <h3>Player</h3>
-      <p>Coming Soon</p>
+      <div class="player_cnt container"></div>
+
     </div>
     <div id="users" class="tab-pane fade">
       <h3>Users</h3>
@@ -201,6 +206,8 @@
     <script src="assets/bootstrap-3.4.1-dist/js/bootstrap.min.js"></script>
     <script src="assets/datatables/datatables.min.js"></script>
     <script src="assets/js/app.js"></script>
+    <script src="assets/videojs/video.min.js"></script>
+    <script src="assets/js/video.player.js"></script>
     <script src="assets/js/download.manager.js"></script>
    
 <style type="text/css">
