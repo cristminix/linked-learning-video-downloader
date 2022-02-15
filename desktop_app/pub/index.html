@@ -53,7 +53,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td colspan="7">
+                            <td colspan="7" v-if="current.downloadQueue.length>0">
                                 <a class="btn"href="javascript:;" @click="generatePlaylist()">Generate Playlist</a>
                             </td>
                         </tr>
@@ -61,17 +61,31 @@
                             <td>{{d.idx+1}}</td>
                             <td><span>{{d.title}}</span></td>
                             <td>{{d.duration}}</td>
-                            <td><div :class="'sizeTocId-'+d.id">{{d.size}}</div></td>
-                            <td><div :class="'statusTocId-'+d.id">{{d.status}}</div></td>
-                            <td><div :class="'lastTryDateTocId-'+d.id">{{d.lastTryDate}}</div></td>
+                            <td>
+                                <div :class="'dlCaptionSizeTocId-'+d.id"><i class="fa fa-file-text-o"></i> <span>{{d.dlCaptionSize|formatBytes}}</span></div>
+                                <div :class="'dlVideoSizeTocId-'+d.id"><i class="fa fa-file-video-o"></i> <span>{{d.dlVideoSize|formatBytes}}</span></div>
+                            </td>
+                            <td>
+                                <div :class="'dlCaptionStatusTocId-'+d.id"><i class="fa fa-file-text-o"></i> <span>{{d.dlCaptionStatus|formatBytes}}</span></div>
+                                <div :class="'dlVideoStatusTocId-'+d.id"><i class="fa fa-file-video-o"></i> <span>{{d.dlVideoStatus|formatBytes}}</span></div>
+                            </td>
+                            <td>
+                                <div :class="'dlCaptionLastTryDateTocId-'+d.id"><i class="fa fa-file-text-o"></i> <span>{{d.dlCaptionLastTryDate|fromNow}}</span></div>
+                                <div :class="'dlVideoLastTryDateTocId-'+d.id"><i class="fa fa-file-video-o"></i> <span>{{d.dlVideoLastTryDate|fromNow}}</span></div>
+                            </td>
                             <td>
                                 <div :class="'actionTocId-'+d.id">
-                                    <a class="btn btn-xs" href="javascript:;" @click="downloadToc(d)"><i class="fa fa-play"></i></a>
+                                    <div>
+                                        <a class="btn btn-xs" href="javascript:;" @click="downloadToc(d,'caption')"><i class="fa fa-play"></i></a>
+                                    </div>
+                                    <div>
+                                        <a class="btn btn-xs" href="javascript:;" @click="downloadToc(d,'video')"><i class="fa fa-play"></i></a>
+                                    </div>
                                 </div>
                             </td>
                         </tr>
                         <tr v-if="current.downloadQueue.length==0">
-                            <td colspan="2">Please select a course.</td>
+                            <td colspan="7">Please select a course.</td>
                         </tr>
                     </tbody>
                 </table>

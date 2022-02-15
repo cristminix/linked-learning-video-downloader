@@ -64,9 +64,14 @@ class TBTocs(db.Model):
 	dlVideoSize: int
 	dlCaptionStatus: int
 	dlVideoStatus: int
-	size: int
-	status: int
-	lastTryDate : str
+	# size: int
+	# status: int
+	dlCaptionLastTryDate : str
+	dlVideoLastTryDate : str
+	dlCaptionComplete : int
+	dlVideoComplete : int
+	dlCaptionRetry : int
+	dlVideoRetry : int
 	createDate : str
 
 	id = db.Column(db.Integer, primary_key=True)
@@ -83,9 +88,14 @@ class TBTocs(db.Model):
 	dlVideoSize = db.Column(db.Integer)
 	dlVideoStatus = db.Column(db.Integer)
 	dlCaptionStatus = db.Column(db.Integer)
-	size = db.Column(db.Integer)
-	status = db.Column(db.Integer)
-	lastTryDate = db.Column(db.String(12))
+	# size = db.Column(db.Integer)
+	# status = db.Column(db.Integer)
+	dlCaptionLastTryDate = db.Column(db.String(12))
+	dlVideoLastTryDate = db.Column(db.String(12))
+	dlCaptionComplete = db.Column(db.Integer)
+	dlVideoComplete = db.Column(db.Integer)
+	dlCaptionRetry = db.Column(db.Integer)
+	dlVideoRetry = db.Column(db.Integer)
 	createDate = db.Column(db.String(12))
 
 	def __init__(self, courseId, idx, captionUrl, duration, posterUrl, slug, title, url, videoUrl, createDate):
@@ -99,6 +109,8 @@ class TBTocs(db.Model):
 		self.url = url
 		self.videoUrl = videoUrl
 		self.createDate = createDate
+		self.dlVideoRetry = 0
+		self.dlCaptionRetry = 0
 
 @dataclass
 class TBTask(db.Model):

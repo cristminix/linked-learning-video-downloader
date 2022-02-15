@@ -16,6 +16,24 @@ Vue.filter('makeTitle',(slug)=> {
 
   return words.join(' ');
 });
+const formatBytes = (bytes, decimals = 2)=> {
+		bytes = parseFloat(bytes);
+		if(isNaN(bytes)){
+			bytes = 0;
+			return 'n/a';
+		}
+    if (bytes === 0) return '0 Bytes';
+
+    const k = 1024;
+    const dm = decimals < 0 ? 0 : decimals;
+    const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
+
+    const i = Math.floor(Math.log(bytes) / Math.log(k));
+
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + ' ' + sizes[i];
+};
+Vue.filter('fromNow',(data)=> {const str = moment(data).fromNow();return str.match(/Invalid/) ? 'n/a':str;});
+Vue.filter('formatBytes',formatBytes);
 dm.init = ()=>{
 	dm.instance = new Vue({
 		el : '#download_manager',
@@ -29,7 +47,9 @@ dm.init = ()=>{
 		},
 
 		methods:{
-			
+			updateIndividualDownloadQueueInfo(){
+
+			},
 			updateQueue(course){
 				// console.log(course)
 				this.current.course = course;
@@ -46,11 +66,14 @@ dm.init = ()=>{
 					this.current.downloadQueue = r.data;
 				});
 			},
-			downloadToc(toc){
-				this.current.downloadQueue[toc.idx].status = 'downloading';
-				this.current.downloadQueue[toc.idx].size = 'calculating';
-				this.current.downloadQueue[toc.idx].lastTryDate= moment(new Date()).fromNow();
-				axios.get(`http://127.0.0.1:5000/download_by_toc/${toc.id}?cache_=${nocache()}`).then((r)=>{
+			downloadToc(toc,what){
+				const key = what == 'caption' ? 'dlCaption': 'dlVideo';
+				this.current.downloadQueue[toc.idx][`${key}Status`] = 'downloading';
+				this.current.downloadQueue[toc.idx][`${key}Size`] = 'calculating';
+				// this.current.downloadQueue[toc.idx][`${key}Retry`] = '0';
+				this.current.downloadQueue[toc.idx][`${key}LastTryDate`]= moment(new Date()).fromNow();
+
+				axios.get(`http://127.0.0.1:5000/download_by_toc/${toc.id}/${what}?cache_=${nocache()}`).then((r)=>{
 					// this.current.downloadQueue = r.data;
 					console.log(r.data);
 				});	

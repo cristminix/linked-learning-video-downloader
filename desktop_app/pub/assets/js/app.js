@@ -195,9 +195,21 @@ socket.on('connect', function() {
     console.log('connected to the SocketServer...');
 });
 
-socket.on('toc_download', function(msg, cb) {
-    // console.log(msg)
-    const progress = Math.floor((msg.progress/msg.total)*100)
-    $(`.statusTocId-${msg.tocId}`).text(`${progress} %`);
-    $(`.sizeTocId-${msg.tocId}`).text(`${Math.ceil(msg.total/1024)}`);
+socket.on('toc_download', function(data, cb) {
+    // console.log(data)
+    if(data.what == 'caption'){
+        const key = 'dlCaption';
+         $(`.${key}SizeTocId-${data.tocId} > span`).text(`${formatBytes(data.total)}`);
+         $(`.${key}StatusTocId-${data.tocId} > span`).text(`${formatBytes(data.progress)}`);
+         $(`.${key}LastTryDateTocId-${data.tocId} > span`).text(`${moment(data.lastTryDate).fromNow()}`);
+    }else{
+        const key = 'dlVideo';
+         $(`.${key}SizeTocId-${data.tocId} > span`).text(`${formatBytes(data.total)}`);
+         $(`.${key}StatusTocId-${data.tocId} > span`).text(`${formatBytes(data.progress)}`);
+         $(`.${key}LastTryDateTocId-${data.tocId} > span`).text(`${moment(data.lastTryDate).fromNow()}`);
+
+    }
+    // const progress = Math.floor((data.progress/data.total)*100)
+    // $(`.statusTocId-${data.tocId}`).text(`${progress} %`);
+    // $(`.sizeTocId-${data.tocId}`).text(`${Math.ceil(data.total/1024)}`);
 });

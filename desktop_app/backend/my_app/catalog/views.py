@@ -44,7 +44,7 @@ def course_by_session(sessionId):
 @cross_origin
 @catalog.route('/tocs_by_course/<courseId>')
 def tocs_by_course(courseId):
-	tocs = TBTocs.query.filter(TBTocs.courseId == courseId).all()
+	tocs = TBTocs.query.filter(TBTocs.courseId == courseId).order_by(TBTocs.idx.asc()).all()
 	return jsonify(tocs)
 
 @cross_origin
@@ -54,15 +54,12 @@ def generate_playlist(courseId):
 	return jsonify(path)	
 
 @cross_origin
-@catalog.route('/download_by_toc/<tocId>')
-def download_by_toc(tocId):
+@catalog.route('/download_by_toc/<tocId>/<what>')
+def download_by_toc(tocId,what):
 	toc = TBTocs.query.filter(TBTocs.id == tocId).first()
 	if toc:
 		course =  TBCourse.query.filter(TBCourse.id == toc.courseId).first()
-		download_dir = get_download_dir(course.courseTitle)
-		threading.Thread(target=download_file, args=(toc.captionUrl,"%s/%s.vtt" % (download_dir,toc.slug),toc,socket_)).start()
-		# loop.ensure_future(download_file)
-		# await asyncio.wait({task})
+		threading.Thread(target=download_file, args=( what, course, toc, socket_)).start()
 	return jsonify(toc)
 
 @cross_origin
@@ -228,53 +225,3 @@ def datatables_tocs():
 	])
 	table.add_data(link=lambda obj: 'view_user/%s'%(obj.id))
 	return json.dumps(table.json())
-# ----------------------------------------------------
-
-
-
-
-# @socket_.on('my_event', namespace='/api')
-# def test_message(message):
-#     session['receive_count'] = session.get('receive_count', 0) + 1
-#     emit('my_response',
-#          {'data': message['data'], 'count': session['receive_count']})
-
-
-# @socket_.on('my_broadcast_event', namespace='/api')
-# def test_broadcast_message(message):
-#     session['receive_count'] = session.get('receive_count', 0) + 1
-#     emit('my_response',
-#          {'data': message['data'], 'count': session['receive_count']},
-#          broadcast=True)
-
-
-# @socket_.on('disconnect_request', namespace='/api')
-# def disconnect_request():
-#     @copy_current_request_context
-#     def can_disconnect():
-#         disconnect()
-
-#     session['receive_count'] = session.get('receive_count', 0) + 1
-#     emit('my_response',
-#          {'data': 'Disconnected!', 'count': session['receive_count']},
-#          callback=can_disconnect)
-
-# @socket_.on('session_check', namespace='/api')
-# def api_session_check(payload):
-#     print(payload)
-#     payload['count'] = TBSession.query.filter(TBSession.sessionId == payload.get('sessionId')).count()
-
-#     emit('my_response',payload,broadcast=True)
-
-
-# @socket_.on('query_task', namespace='/api')
-# def api_query_task(message):
-#     pass
-
-# @socket_.on('resolve_video_url', namespace='/api')
-# def api_resolve_video_url(message):
-#     pass
-
-# @socket_.on('start_download', namespace='/api')
-# def api_start_download(message):
-#     pass
