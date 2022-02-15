@@ -135,15 +135,16 @@ Ext.job = {
 	queryTask : async (taskName, param, tasks) =>{
 		switch(taskName){
 			case 'update_toc':
-				const info = Ext.manager.getCurrentVideoInfo();
 
 			 	if(Ext.state.currentTocsQueue.length == 0){
 			 		Ext.state.currentTocsQueue = Ext.manager.getToc();
 			 	}
+				const info = Ext.manager.getCurrentVideoInfo();
 
-				const tocIndex = Ext.manager.getTocIndexBySlug(info.videoSlug);
+				
+
 				// 1. check first index checked
-				if(!Ext.state.firstIndexChecked ){
+				/*if(!Ext.state.firstIndexChecked ){
 					// 1.2. jika tidak
 					Ext.state.firstIndexChecked = true;
 					// 1.3. goto first link confirm
@@ -164,7 +165,9 @@ Ext.job = {
 						}
 					}
 					
-				}
+				}*/
+				const tocIndex = info.tocIndex;
+
 				Ext.state.lastTocIndexUpdate = tocIndex ;
 
 				// 2. get current toc
@@ -174,7 +177,6 @@ Ext.job = {
 				// param.;
 
 
-				// const toc = 
 				const taskCreateToc = param;
 				const toc = {
 					courseId: param.courseId,
@@ -185,6 +187,9 @@ Ext.job = {
 					posterUrl: info.posterUrl
 				};
 				console.log('Updating toc', toc);
+				if(info.captionUrl=='none'){
+					alert('Capture subtitle failed');
+				}
 				const taskUpdateToc = await Ext.task.createTask('update_toc', toc);
 				if(taskUpdateToc != null){
 					if(typeof taskUpdateToc.videoUrl == 'string'){
@@ -199,7 +204,8 @@ Ext.job = {
 								if(a.length>0){
 									setTimeout(()=>{
 										a[0].click()
-									},5000); 
+										// document.location.href = toc.url
+									},6000); 
 								}	
 							}else{
 								alert('Grabber Complete');

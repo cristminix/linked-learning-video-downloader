@@ -199,5 +199,5 @@ socket.on('toc_download', function(msg, cb) {
     // console.log(msg)
     const progress = Math.floor((msg.progress/msg.total)*100)
     $(`.statusTocId-${msg.tocId}`).text(`${progress} %`);
-    $(`.sizeTocId-${msg.tocId}`).text(`${Math.floor(msg.total/1024)}`);
+    $(`.sizeTocId-${msg.tocId}`).text(`${Math.ceil(msg.total/1024)}`);
 });

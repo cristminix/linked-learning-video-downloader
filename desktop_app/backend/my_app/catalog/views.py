@@ -135,9 +135,8 @@ def update_toc():
 		toc.captionUrl = request.form.get('captionUrl')
 		toc.posterUrl =  request.form.get('posterUrl')
 		toc.videoUrl = request.form.get('videoUrl')
-		toc.captionUrl = request.form.get('captionUrl')
 		db.session.commit()
-		# db.session.flush()
+		db.session.flush()
 
 	return jsonify(toc)
 # ----------------------------------------------------

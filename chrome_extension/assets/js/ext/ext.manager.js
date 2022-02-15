@@ -39,9 +39,16 @@ Ext.manager = {
         linkUrlSplit = linkUrlSplit[1].split('/');
         const videoSlug = linkUrlSplit[3].split('?')[0];
         
+        const toc = Ext.manager.getTocBySlug(videoSlug);
+        const tocIndex = toc.tocIndex;
+        // console.log(toc);
 
         const posterUrl = $('.vjs-poster')[0].style.backgroundImage.replace(/url\(\"/,'').replace(/\"\)/,'');
+        const captionUrl = Ext.manager.getVttFromAjax(toc);
+        /*
         const codeList = $('code');
+
+
         let captionUrl = '';
         for(let i = 0; i < codeList.length; i++){
             const t = $(codeList[i]).text();
@@ -59,7 +66,13 @@ Ext.manager = {
                 break;
             }
         }
+       
+
+        
+        */
+        console.log('captionUrl:',captionUrl);
         return {
+            tocIndex : tocIndex,
             videoUrl : videoUrl,
             posterUrl : posterUrl,
             captionUrl: captionUrl,
@@ -67,7 +80,30 @@ Ext.manager = {
         }
     },
     
-	
+	getVttFromAjax(toc){
+        let captionUrl = 'none';
+        $.ajax({url:toc.url,async:false,success:(r)=>{
+                const codeList = $($.parseHTML(r)).filter('code');
+                for(let i = 0; i < codeList.length; i++){
+                    const t = $(codeList[i]).text();
+                    if(t.match(/captionFile/g)){
+                        try{
+                            const metaData = JSON.parse(t);
+                            const presentation = metaData.included[2].presentation;
+                            const videoMetaData = presentation.videoPlay.videoPlayMetadata.transcripts[0];
+                            captionUrl = videoMetaData.captionFile;
+                            
+                        }catch(e){
+                            console.log('couldnot load vtt');
+                        }
+                        
+                        break;
+                    }
+                }
+            }
+        });
+        return captionUrl;
+    },
 	getCourseTitle : ()=>{
         const extractedUrl  = Ext.manager.extractUrl();
         courseTitle = extractedUrl.urlSplit[2];
@@ -135,12 +171,13 @@ Ext.manager = {
         return tocs;
 
     },
-	getTocIndexBySlug:(videoSlug)=>{
+	getTocBySlug:(videoSlug)=>{
         try{
             const tocs = Ext.state.currentTocsQueue;
             for (var i = 0; i < tocs.length; i++) {
                 if(tocs[i].slug == videoSlug){
-                    return i;
+                    tocs[i].tocIndex = i;
+                    return tocs[i];
                 }
             }
         }catch(e){

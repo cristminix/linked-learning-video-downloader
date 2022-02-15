@@ -1,4 +1,4 @@
-
+const nocache = ()=>{return btoa(new Date())};
 let dm = {
 	instance : null,
 	init_2(){
@@ -37,12 +37,12 @@ dm.init = ()=>{
 			},
 			setSessionId(sessionId){
 				this.current.sessionId = sessionId;
-				axios.get(`http://127.0.0.1:5000/course_by_session/${this.current.sessionId}`).then((r)=>{
+				axios.get(`http://127.0.0.1:5000/course_by_session/${this.current.sessionId}?cache_=${nocache()}`).then((r)=>{
 					this.current.courseList = r.data;
 				});
 			},
 			setCourseId(courseId){
-				axios.get(`http://127.0.0.1:5000/tocs_by_course/${courseId}`).then((r)=>{
+				axios.get(`http://127.0.0.1:5000/tocs_by_course/${courseId}?cache_=${nocache()}`).then((r)=>{
 					this.current.downloadQueue = r.data;
 				});
 			},
@@ -50,13 +50,13 @@ dm.init = ()=>{
 				this.current.downloadQueue[toc.idx].status = 'downloading';
 				this.current.downloadQueue[toc.idx].size = 'calculating';
 				this.current.downloadQueue[toc.idx].lastTryDate= moment(new Date()).fromNow();
-				axios.get(`http://127.0.0.1:5000/download_by_toc/${toc.id}`).then((r)=>{
+				axios.get(`http://127.0.0.1:5000/download_by_toc/${toc.id}?cache_=${nocache()}`).then((r)=>{
 					// this.current.downloadQueue = r.data;
 					console.log(r.data);
 				});	
 			},
 			generatePlaylist(){
-				axios.get(`http://127.0.0.1:5000/generate_playlist/${this.current.course.id}`).then((r)=>{
+				axios.get(`http://127.0.0.1:5000/generate_playlist/${this.current.course.id}?cache_=${nocache()}`).then((r)=>{
 					console.log(data);
 				});
 			}

@@ -63,12 +63,12 @@ def get_download_dir(courseTitle):
     return path
 
 
-def retry_download(url, filename, toc=None):
+def retry_download(url, filename, toc, s):
     global RETRY
     retry_count = RETRY.get(filename)
     if(retry_count <= 7 ):
         print('Retry %d' %(retry_count))
-        return download_file(url, filename)
+        return download_file(url, filename, toc, s)
 
 # @socket_.on('toc_download', namespace='/api')
 def notify_download(data):
@@ -118,10 +118,10 @@ def download_file(url, filename, toc, s):
             print(filename + " ERROR, something went wrong RETRY: ",  RETRY.get(filename))
             if(RETRY.get(filename) == None):
                 RETRY[filename] = 1
-                return retry_download(url, filename)
+                return retry_download(url, filename, toc, s)
             else:
                 RETRY[filename] += 1
-                return retry_download(url, filename)
+                return retry_download(url, filename, toc, s)
         else:
             return True
         return False
@@ -129,18 +129,18 @@ def download_file(url, filename, toc, s):
         print(filename + " ERROR, something went wrong RETRY: ",  RETRY.get(filename))
         if(RETRY.get(filename) == None):
             RETRY[filename] = 1
-            return retry_download(url, filename)
+            return retry_download(url, filename, toc, s)
         else:
             RETRY[filename] += 1
-            return retry_download(url, filename)
+            return retry_download(url, filename, toc, s)
         return False
     except requests.exceptions.ConnectTimeout as e:
         print(filename + " ERROR, something went wrong RETRY: ",  RETRY.get(filename))
         if(RETRY.get(filename) == None):
             RETRY[filename] = 1
-            return retry_download(url, filename)
+            return retry_download(url, filename, toc, s)
         else:
             RETRY[filename] += 1
-            return retry_download(url, filename)
+            return retry_download(url, filename, toc, s)
         return False
     return False
