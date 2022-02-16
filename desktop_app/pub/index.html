@@ -23,6 +23,7 @@
     <li><a data-toggle="tab" href="#course">Course</a></li>
     <li><a data-toggle="tab" href="#tocs">Tocs</a></li>
     <li><a data-toggle="tab" href="#player">Player</a></li>
+    <li><a data-toggle="tab" href="#translator">Translator</a></li>
     <li><a data-toggle="tab" href="#users">Users</a></li>
   </ul>
   <div class="tab-content">
@@ -76,15 +77,19 @@
                             </td>
                             <td>
                                 <div :class="'actionTocId-'+d.id">
-                                    <div style="height: 20px;">
-                                        <a  v-if="d.dlCaptionComplete != 1" class="btn btn-xs" href="javascript:;" @click="downloadToc(d,'caption')"><i class="fa fa-download"></i></a>
+                                    <div style="height: 20px;"  v-if="d.dlCaptionComplete != 1">
+                                        <a class="btn btn-xs" href="javascript:;" @click="downloadToc(d,'caption')"><i class="fa fa-download"></i></a>
                                     </div>
-                                    <div style="height: 20px;">
-                                        <a  v-if="d.dlVideoComplete != 1" class="btn btn-xs" href="javascript:;" @click="downloadToc(d,'video')"><i class="fa fa-download"></i></a>
+                                    <div style="height: 20px;"  v-if="d.dlVideoComplete != 1" >
+                                        <a class="btn btn-xs" href="javascript:;" @click="downloadToc(d,'video')"><i class="fa fa-download"></i></a>
                                     </div>
-                                    <div style="height: 20px;">
-                                        <a  v-if="d.dlVideoComplete == 1" class="btn btn-xs" href="javascript:;" @click="playToc(d)"><i class="fa fa-play"></i></a>
+                                    <div>
+                                        <a class="translate-btn" href="javascript:;" @click="translateCaption(d)"></a>
                                     </div>
+                                    <div v-if="d.dlVideoComplete == 1">
+                                        <a class="btn btn-xs" href="javascript:;" @click="playToc(d)"><i class="fa fa-play"></i></a>
+                                    </div>
+                                    
                                 </div>
                             </td>
                         </tr>
@@ -179,6 +184,38 @@
       <div class="player_cnt container"></div>
 
     </div>
+    <div id="translator" class="tab-pane fade">
+      <h3>Translator</h3>
+      <div class="translator_cnt">
+        <div class="container">
+          <div class="col-md-6">
+              <textarea v-model="inputBuffer" class="form-control in-lang"></textarea>
+              <div style="padding:1em">
+                  <span>Total: {{bufferLength}} Character</span>
+                  <span v-if="bufferExceed"> Buffer exceed: {{bufferExceedLength}}</span>
+              </div>
+              <div>
+                <textarea style="margin:1em 0" v-for="(b,i) in inputBufferSegments" v-model="inputBufferSegments[i]" class="form-control in-lang"></textarea>
+              </div>
+          </div>
+          <div class="col-md-6">
+              <textarea v-model="outputBuffer" class="form-control out-lang"></textarea>
+              <div style="padding:1em">
+                  <span>&nbsp;</span>
+                  <span v-if="bufferExceed"> &nbsp;</span>
+              </div>
+              <div>
+                <textarea style="margin:1em 0" v-for="(b,i) in outputBufferSegments" v-model="outputBufferSegments[i]" class="form-control in-lang"></textarea>
+              </div>
+          </div>
+        </div>
+        <div class="toolbar">
+            <a class="btn btn-info" href="javascript:;" @click="loadVtt()"><i class="fa fa-refresh"></i> Load</a>
+            <a class="btn btn-info" href="javascript:;" @click="doTranslate()"><span class="translate-btn"></span>Translate</a>
+        </div>
+      </div>
+
+    </div>
     <div id="users" class="tab-pane fade">
       <h3>Users</h3>
       <table class="table" id="clients_list" width="100%">
@@ -208,6 +245,7 @@
     <script src="assets/js/app.js"></script>
     <script src="assets/videojs/video.min.js"></script>
     <script src="assets/js/video.player.js"></script>
+    <script src="assets/js/caption.translator.js"></script>
     <script src="assets/js/download.manager.js"></script>
    
 <style type="text/css">

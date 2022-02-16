@@ -25,12 +25,12 @@ def home():
 	# return os.path.abspath('.')
     return render_template('index.html', async_mode=socket_.async_mode)
 
-# @cross_origin
-# @catalog.route('/downloads/<dir_>/<path_>')
-# def downloads(dir_,path_):
-# 	filename = '%s/%s' % (dir_,path_)
-# 	print( os.path.exists('downloads/%s'%(filename)) )
-# 	return send_from_directory(filename)
+@cross_origin
+@catalog.route('/do_translate',methods=['POST'])
+def do_translate():
+	data = {"lines":json.loads(request.form.get('lines'))}
+	socket_.emit('do_translate',data,broadcast=True)
+	return jsonify(data)
 
 @cross_origin
 @catalog.route('/session/<sessionId>')

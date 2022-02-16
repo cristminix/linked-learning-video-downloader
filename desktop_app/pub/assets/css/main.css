@@ -14,3 +14,19 @@ body{
 #main_cnt{
 	/*border: solid maroon;*/
 }
+
+.translate-btn{
+	width: 16px;
+	height: 16px;
+	display: block;
+	float: left;
+	background: #fff url('../img/google-translate.png') top left;
+}
+.translator_cnt .toolbar{
+    text-align: center;
+    padding: 1em;
+}
+
+.in-lang,.out-lang{
+	height: 340px !important;
+}

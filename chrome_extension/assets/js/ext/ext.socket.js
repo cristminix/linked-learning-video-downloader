@@ -1,3 +1,4 @@
+
 Ext.socket = {
 	connection : 0,
     autoReconnectInterval : 5*1000,
@@ -18,8 +19,11 @@ Ext.socket = {
 	    		callbackFn();
 	    	}
 	    });
-	    Ext.socket.connection.on('my_response', function(msg, cb) {
-            Ext.log(msg, cb)
+	    Ext.socket.connection.on('do_translate', function(data, cb) {
+            if(document.location.host == 'translate.google.com'){
+            	Ext.translator.ignit(data);
+            }
+
         });
 	    Ext.socket.connection.on('disconnect', (socket)=>{Ext.socket.onDisconnect(socket)});
     	Ext.socket.connection.on('response', (msg,callbackFn)=>{Ext.socket.onResponse(msg,callbackFn)});

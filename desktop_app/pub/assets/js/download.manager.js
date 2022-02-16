@@ -61,8 +61,11 @@ dm.init = ()=>{
 	    }
 	  },
 		methods:{
-			updateIndividualDownloadQueueInfo(){
-
+			translateCaption(d){
+				console.log(d);
+				const captionUrl = `http://127.0.0.1:5000/static/${this.current.course.courseTitle}/${d.slug}.vtt`;
+				captionTranslator.instance.setCaptionUrl( captionUrl );
+				$(`a[href*=translator]`).click();
 			},
 			updateQueue(course){
 				// console.log(course)

@@ -97,6 +97,9 @@ Ext.job = {
 			Ext.job.doTask(tasks);
 		}else{
 			Ext.log('URL Is not valid course page, extension is not running');
+			if(document.location.hostname == 'translate.google.com'){
+				Ext.translator.afterTranslate();
+			}
 		}
 	},
 

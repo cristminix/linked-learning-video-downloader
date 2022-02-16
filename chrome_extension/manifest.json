@@ -5,6 +5,7 @@
     "manifest_version" : 2,
     "host_permissions": [
         "https://www.linkedin.com/learning/*",
+        "https://translate.google.com/*",
         "http://localhost:5000/*",
         "http://127.0.0.1:5000"
 
@@ -20,10 +21,12 @@
             "permissions":[
                 "tabs",
                 "https://www.linkedin.com/learning/*",
+                "https://translate.google.com/*",
                 "http://localhost/*"
             ],
             "matches" : [
-                "https://www.linkedin.com/learning/*"
+                "https://www.linkedin.com/learning/*",
+                "https://translate.google.com/*"
             ],
             "js" : [
                 "assets/js/jquery-3.6.0.min.js",
