@@ -9,15 +9,10 @@ from flask_cors import cross_origin
 from datatables import *
 import json
 import asyncio
-# loop = asyncio.get_event_loop()
+import shutil
 import threading
 catalog = Blueprint('catalog', __name__)
 import os
-# @catalog.route('/')
-# @catalog.route('/home')
-# def home():
-# 	return "Welcome to the Catalog Home."
-
 
 @catalog.route('/')
 @catalog.route('/home')
@@ -28,9 +23,44 @@ def home():
 @cross_origin
 @catalog.route('/do_translate',methods=['POST'])
 def do_translate():
-	data = {"lines":json.loads(request.form.get('lines'))}
+	data = {"lines":json.loads(request.form.get('lines')),"tocId":request.form.get('tocId')}
 	socket_.emit('do_translate',data,broadcast=True)
 	return jsonify(data)
+
+@cross_origin
+@catalog.route('/output_translate',methods=['POST'])
+def output_translate():
+	data = {"result":json.loads(request.form.get('result')),"tocId":request.form.get('tocId'),"lineNumber":request.form.get('lineNumber')}
+	socket_.emit('output_translate',data,broadcast=True)
+	return jsonify(data)
+
+@cross_origin
+@catalog.route('/do_translate_save_result',methods=['POST'])
+def do_translate_save_result():
+	lines = json.loads(request.form.get('lines'))
+	lines = "\n".join(lines.splitlines())
+	tocId = request.form.get('tocId')
+	toc = TBTocs.query.filter(TBTocs.id == tocId).first()
+	if toc:
+		course = TBCourse.query.filter(TBCourse.id == toc.courseId).first();
+		if course:
+			download_dir = get_download_dir(course.courseTitle)
+			captionFilePath = "%s/%s.vtt" % (download_dir, toc.slug)
+			backupDir = "%s/backups" % (download_dir)
+			if not os.path.exists(backupDir):
+				os.makedirs(backupDir)
+			backupCaptionPath = "%s/%s.vtt" % (backupDir, toc.slug)
+			if os.path.exists(backupCaptionPath):
+				return jsonify(False)
+			if os.path.exists(captionFilePath):
+				shutil.move(captionFilePath, backupDir)
+				print('MV :',captionFilePath,'-->',backupCaptionPath)
+			if not os.path.exists(captionFilePath):
+				with open(captionFilePath, "w") as file:
+					file.write(lines)
+					file.close()
+				return jsonify(True)
+	return jsonify(None)
 
 @cross_origin
 @catalog.route('/session/<sessionId>')

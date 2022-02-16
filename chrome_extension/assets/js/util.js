@@ -23,3 +23,24 @@ const eraseCookie = (name) => {
 const get_ws_server = () => {
     return "127.0.0.1"
 };
+
+function makeDelay(ms) {
+    var timer = 0;
+    return function(callback){
+        clearTimeout (timer);
+        timer = setTimeout(callback, ms);
+    };
+};
+
+function getQueryString(key) {
+    const queryStringObj = decodeURI(window.location.search)
+    .replace('?', '')
+    .split('&')
+    .map(param => param.split('='))
+    .reduce((values, [ key, value ]) => {
+    values[ key ] = value
+    return values
+    }, {});
+
+    return queryStringObj[key];
+}

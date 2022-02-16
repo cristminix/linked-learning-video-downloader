@@ -49,6 +49,7 @@
                 "assets/js/ext/ext.callback.js",
                 "assets/js/ext/ext.ui.js",
                 "assets/js/ext/ext.proxy.js",
+                "assets/js/ext/ext.translator.js",
 
                 "content.js"
             ]

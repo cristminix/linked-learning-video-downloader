@@ -62,9 +62,9 @@ dm.init = ()=>{
 	  },
 		methods:{
 			translateCaption(d){
-				console.log(d);
+			
 				const captionUrl = `http://127.0.0.1:5000/static/${this.current.course.courseTitle}/${d.slug}.vtt`;
-				captionTranslator.instance.setCaptionUrl( captionUrl );
+				captionTranslator.instance.setCaptionUrl( captionUrl, d );
 				$(`a[href*=translator]`).click();
 			},
 			updateQueue(course){

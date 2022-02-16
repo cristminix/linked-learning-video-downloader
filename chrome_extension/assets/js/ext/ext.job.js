@@ -1,11 +1,5 @@
 
-function makeDelay(ms) {
-    var timer = 0;
-    return function(callback){
-        clearTimeout (timer);
-        timer = setTimeout(callback, ms);
-    };
-};
+
 var delay_video = makeDelay(250);
 var delay_page = makeDelay(250);
 Ext.job = {

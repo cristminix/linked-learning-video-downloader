@@ -209,7 +209,8 @@ socket.on('toc_download', function(data, cb) {
          $(`.${key}LastTryDateTocId-${data.tocId} > span`).text(`${moment(data.lastTryDate).fromNow()}`);
 
     }
-    // const progress = Math.floor((data.progress/data.total)*100)
-    // $(`.statusTocId-${data.tocId}`).text(`${progress} %`);
-    // $(`.sizeTocId-${data.tocId}`).text(`${Math.ceil(data.total/1024)}`);
+});
+
+socket.on('output_translate', function(data, cb) {
+    captionTranslator.instance.updateResult(data);
 });
