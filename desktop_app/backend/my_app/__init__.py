@@ -8,6 +8,8 @@ template_dir = os.path.join(template_dir, 'templates')
 # print(template_dir)
 app = Flask(__name__, template_folder=template_dir,static_url_path='/static', static_folder=static_dir)
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024
+
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///../storage/session.db'
 db = SQLAlchemy(app)
 

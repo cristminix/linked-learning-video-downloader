@@ -206,7 +206,7 @@
                   <span v-if="bufferExceed"> &nbsp;</span>
               </div>
               <div>
-                <textarea style="margin:1em 0" v-for="(b,i) in outputBufferSegments" v-model="outputBufferSegments[i]" class="form-control in-lang"></textarea>
+                <textarea style="margin:1em 0" v-for="(b,i) in outputBufferSegments" :class="'outputBufferSegments_'+i" class="form-control in-lang"></textarea>
               </div>
           </div>
         </div>

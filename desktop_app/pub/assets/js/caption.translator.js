@@ -2,6 +2,14 @@ let captionTranslator={
 	instance : null,
 
 };
+const chunkStr = (str, n, acc) => {     
+    if (str.length === 0) {
+        return acc
+    } else {
+        acc.push(str.substring(0, n));
+        return chunkStr(str.substring(n), n, acc);
+    }
+};
 captionTranslator.init = () =>{
 	captionTranslator.instance = new Vue({
 		el : '#translator',
@@ -30,17 +38,46 @@ captionTranslator.init = () =>{
 		},
 		methods:{
 			extractBufferSegments(){
+				this.outputBuffer ='';
 				this.inputBufferSegments = [];
 				this.outputBufferSegments = [];
-				const bufferSegmentLength = Math.floor(this.inputBuffer.length/this.maxBufferExceed);
-				let pStart=0,pEnd=0;
-				for(let i= 0; i < bufferSegmentLength; i++ ){
-					pStart += (i==0?0:this.maxBufferExceed);
-					pEnd += (i==0?this.maxBufferExceed:pStart);
-					if(pEnd > this.inputBuffer.length){
-						pEnd =  this.inputBuffer.length;
+			 
+				
+				const bufferExceeded = this.inputBuffer.length > this.maxBufferExceed;
+				if(bufferExceeded){
+					let tmpBufferSegments = [];
+					let tmpBuffer = '';
+					let bufferedNl = this.inputBuffer.replace(/\r\n/g,"\n").split("\n");
+					for(let l = 0;l<bufferedNl.length;l++){
+						const line = bufferedNl[l].replace(/^\s+|\s+$/gm,'');
+
+						if(line != ''){
+							tmpBuffer += line + "\n";
+						}
+						if(line == ''){
+							tmpBuffer += "\n";
+							tmpBufferSegments.push(tmpBuffer);
+							tmpBuffer='';
+						}
 					}
-					this.inputBufferSegments[i] = this.inputBuffer.substr(pStart,pEnd);
+					tmpBuffer = '';
+					let tmpBufferSegments2=[];
+					for(let t=0;t<tmpBufferSegments.length;t++){
+						if((tmpBuffer.length + tmpBufferSegments[t].length) <= this.maxBufferExceed){
+							tmpBuffer += tmpBufferSegments[t];
+						}else{
+							tmpBufferSegments2.push(tmpBuffer);
+							tmpBuffer = '';
+							tmpBuffer += tmpBufferSegments[t];
+
+						}
+					}
+					tmpBufferSegments2.push(tmpBuffer);
+					this.inputBufferSegments = tmpBufferSegments2;
+					// console.log(tmpBufferSegments2s);
+					// chunkStr(this.inputBuffer, this.maxBufferExceed, this.inputBufferSegments);
+				}
+				for(let i= 0; i < this.inputBufferSegments.length; i++ ){
 					this.outputBufferSegments[i] = '';
 				}
 				console.log(this.inputBufferSegments)
@@ -72,7 +109,7 @@ captionTranslator.init = () =>{
 			},
 			loadVtt(){
 				axios.get(this.captionUrl).then((r)=>{
-					this.inputBuffer = r.data;
+					this.inputBuffer = r.data.replace(/(&quot\;)/g,"\"");
 					this.extractBufferSegments();
 					// console.log(r);
 				});
@@ -80,9 +117,9 @@ captionTranslator.init = () =>{
 			updateResult(data){
 				const bufferExceeded = this.inputBuffer.length > this.maxBufferExceed;
 				if(bufferExceeded){
-					let outputBufferSegments = this.outputBufferSegments;
-					outputBufferSegments[data.lineNumber] = data.result;
-					this.outputBufferSegments = outputBufferSegments;
+					const bIdx = parseInt(data.lineNumber);
+					this.outputBufferSegments[bIdx] = data.result;
+					$(`textarea.outputBufferSegments_${bIdx}`).val(data.result);
 				}else{
 					this.outputBuffer = data.result;
 				}

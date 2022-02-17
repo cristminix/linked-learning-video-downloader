@@ -31,6 +31,7 @@ def do_translate():
 @catalog.route('/output_translate',methods=['POST'])
 def output_translate():
 	data = {"result":json.loads(request.form.get('result')),"tocId":request.form.get('tocId'),"lineNumber":request.form.get('lineNumber')}
+	print(data['result'])
 	socket_.emit('output_translate',data,broadcast=True)
 	return jsonify(data)
 
