@@ -90,9 +90,9 @@ captionTranslator.init = () =>{
 			saveResult(){
 				let lines = this.outputBuffer;
 				const bufferExceeded = this.inputBuffer.length > this.maxBufferExceed;
-				if(bufferExceeded){
-					lines = this.inputBufferSegments.join('');
-				}
+				// if(bufferExceeded){
+				// 	lines = this.inputBufferSegments.join('');
+				// }
 				let payload = new FormData();
 				payload.append('lines',JSON.stringify(lines));
 				payload.append('tocId',JSON.stringify(this.toc.id));
@@ -118,10 +118,11 @@ captionTranslator.init = () =>{
 				const bufferExceeded = this.inputBuffer.length > this.maxBufferExceed;
 				if(bufferExceeded){
 					const bIdx = parseInt(data.lineNumber);
-					this.outputBufferSegments[bIdx] = data.result;
+					this.outputBufferSegments[bIdx] = data.result.replace(/(\d)(,)/g,'$1.');
 					$(`textarea.outputBufferSegments_${bIdx}`).val(data.result);
+					this.outputBuffer = this.outputBufferSegments.join("\n\n");
 				}else{
-					this.outputBuffer = data.result;
+					this.outputBuffer = data.result.replace(/(\d)(,)/g,'$1.');
 				}
 				 
 			},

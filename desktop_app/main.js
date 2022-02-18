@@ -1,13 +1,14 @@
 // Modules to control application life and create native browser window
-const {app, BrowserWindow,ipcMain} = require('electron')
+const {app, BrowserWindow,ipcMain,session} = require('electron')
 const path = require('path')
 const {PythonShell} = require('python-shell');
 const kill = require('tree-kill')
-let mainWindow;
+let mainWindow,ext;
 
 // Starting the python backend server
 // let shell = new PythonShell('./backend/server.py', options);
-
+ 
+  
 createWindow = () => {
    mainWindow = new BrowserWindow({
     width: 800,
@@ -18,14 +19,18 @@ createWindow = () => {
       nodeIntegration: true,
       contextIsolation: true,
       webSecurity:false,
+      webviewTag: true
 
     }
   });
-
+ 
   mainWindow.loadFile('pub/index.html');
 }
 
 app.whenReady().then(() => {
+  ext = session.defaultSession.loadExtension(path.join(__dirname, '../chrome_extension')).then((r)=>{
+    console.log('ext', r)
+  });
   createWindow();
 	
 	mainWindow.webContents.openDevTools()

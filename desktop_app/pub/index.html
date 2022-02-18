@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="assets/videojs/video-js.min.css">
   </head>
   <body>
+<webview id="webview" src="https://translate.google.com/?hl=id&tab=TT&sl=en&tl=id" style="position:absolute;width:80px;height:80px;"></webview>
+   
 <div class="container" style="padding-top: 2em;">
   <ul class="nav nav-tabs">
     <li class="active"><a data-toggle="tab" href="#download_manager">Download Manager</a></li>
@@ -26,6 +28,7 @@
     <li><a data-toggle="tab" href="#translator">Translator</a></li>
     <li><a data-toggle="tab" href="#users">Users</a></li>
   </ul>
+  
   <div class="tab-content">
     <div id="download_manager" class="tab-pane fade in active">
           <h3>Download Manager</h3>
@@ -184,10 +187,12 @@
       <div class="player_cnt container"></div>
 
     </div>
+
     <div id="translator" class="tab-pane fade">
       <h3>Translator</h3>
       <p>{{toc.title}}</p>
       <div class="translator_cnt">
+            
         <div class="container">
           <div class="col-md-6">
               <textarea v-model="inputBuffer" class="form-control in-lang"></textarea>

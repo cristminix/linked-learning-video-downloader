@@ -17,6 +17,7 @@ Ext.translator = {
 						if(jsname.length){
 							// console.log();
 							// Proxy.post()
+							$('c-wiz[jsrenderer=WFss9b]').unbind("DOMSubtreeModified");
 							const url = `${Ext.config.getServerUrl()}output_translate`;
 							const postData = {
 								tocId : getQueryString('tocId_'),
@@ -24,7 +25,25 @@ Ext.translator = {
 								result: JSON.stringify(jsname.text())
 							};
 							Ext.proxy.post(url,postData,(r)=>{
+								const rootKey = `translate_tocId.${getQueryString('tocId_')}`;
+								let lines = Ext.config.getLS(rootKey,'lines');
+								let lastLine = getQueryString('lineNumber_');
+								// if(!inspectedLines){
 
+								// }else{
+									if(lastLine >= 0){
+										if(lastLine >= (lines.length-1)){
+											// Ext.config.setLS(rootKey,'inspectedLines',[]);
+											// Ext.config.setLS(rootKey,'lastLine',false);
+											// Ext.config.setLS(rootKey,'lines',[]);
+											localStorage.removeItem(rootKey);
+											localStorage.clear();
+										}
+									}
+									
+								// }
+								
+								
 							},(r)=>{
 								// err
 							});
@@ -76,7 +95,7 @@ Ext.translator = {
 		}
 		
 		for(let lineNumber = 0; lineNumber < lines.length; lineNumber++){
-			if(inspectedLines.indexOf(lineNumber) == -1){
+			if(inspectedLinesLS.indexOf(lineNumber) == -1){
 				const line = linesLS[lineNumber];
 				Ext.translator.inspectTextArea(line,lineNumber,tocId);
 				break;
