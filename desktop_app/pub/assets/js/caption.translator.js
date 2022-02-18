@@ -15,6 +15,8 @@ captionTranslator.init = () =>{
 		el : '#translator',
 		data:{
 			isLoading:false,
+			isTranslating:false,
+			isSaving:false,
 			toc:{title:''},
 			captionUrl:'',
 			inputBuffer:'',
@@ -80,6 +82,7 @@ captionTranslator.init = () =>{
 				}
 				for(let i= 0; i < this.inputBufferSegments.length; i++ ){
 					this.outputBufferSegments[i] = '';
+					$(`textarea.outputBufferSegments_${i}`).val('');
 				}
 				console.log(this.inputBufferSegments)
 			},
@@ -108,7 +111,26 @@ captionTranslator.init = () =>{
 					console.log(r)
 				});
 			},
-			loadVtt(){
+			loadVtt(p){
+				if(p=='prev'){
+					console.log(this.toc);
+					if(this.toc.idx > 0){
+						const prevToc = dm.instance.current.downloadQueue[this.toc.idx-1];
+						console.log(prevToc);
+						const captionUrl = `http://127.0.0.1:5000/static/${dm.instance.current.course.courseTitle}/${prevToc.slug}.vtt`;
+						this.setCaptionUrl( captionUrl, prevToc );
+					}
+					return;
+				}else if(p=='next'){
+					console.log(this.toc);
+					if(this.toc.idx < dm.instance.current.downloadQueue.length){
+						const nextToc = dm.instance.current.downloadQueue[this.toc.idx+1];
+						console.log(nextToc);
+						const captionUrl = `http://127.0.0.1:5000/static/${dm.instance.current.course.courseTitle}/${nextToc.slug}.vtt`;
+						this.setCaptionUrl( captionUrl, nextToc );
+					}
+					return;
+				}
 				axios.get(this.captionUrl).then((r)=>{
 					this.inputBuffer = r.data.replace(/(&quot\;)/g,"\"");
 					this.extractBufferSegments();
@@ -119,13 +141,13 @@ captionTranslator.init = () =>{
 				const bufferExceeded = this.inputBuffer.length > this.maxBufferExceed;
 				if(bufferExceeded){
 					const bIdx = parseInt(data.lineNumber);
-					this.outputBufferSegments[bIdx] = data.result.replace(/(\d)(,)/g,'$1.').replace(/\:\s*/g,':').replace(/ \-\> /gm,' --> ').replace(/(\d+)\.$/g,'$1');
-					$(`textarea.outputBufferSegments_${bIdx}`).val(data.result);
+					this.outputBufferSegments[bIdx] = data.result.replace(/(\d)(,)/gm,'$1.').replace(/\:\s*/gm,':').replace(/ \-\> /gm,' --> ').replace(/(\d+)\.$/gm,'$1').replace(/WebVTT\./,'WEBVTT');
+					$(`textarea.outputBufferSegments_${bIdx}`).val(this.outputBufferSegments[bIdx]);
 					this.outputBuffer = this.outputBufferSegments.join("\n\n");
 				}else{
-					this.outputBuffer = data.result.replace(/(\d)(,)/g,'$1.').replace(/\:\s*/g,':').replace(/ \-\> /g,' --> ').replace(/(\d+)\.$/gm,'$1');
+					this.outputBuffer = data.result.replace(/(\d)(,)/gm,'$1.').replace(/\:\s*/gm,':').replace(/ \-\> /gm,' --> ').replace(/(\d+)\.$/gm,'$1').replace(/WebVTT\./,'WEBVTT');
 				}
-				this.isLoading = false; 
+				this.isTranslating = false; 
 			},
 			doTranslate(){
 				let lines = [];
@@ -158,7 +180,7 @@ $(document).ready(()=>{captionTranslator.init();
 const webview = document.querySelector('webview')
 webview.addEventListener('dom-ready', () => {
   // webview.openDevTools()
-  captionTranslator.instance.isLoading = false;
+  captionTranslator.instance.isTranslating = false;
 
 })
 webview.addEventListener('did-finish-load', () => {
@@ -169,7 +191,7 @@ webview.addEventListener('did-fail-load', () => {
 })
 webview.addEventListener('did-start-loading', () => {
   // webview.openDevTools()
-  captionTranslator.instance.isLoading = true;
+  captionTranslator.instance.isTranslating = true;
 })
 
 webview.addEventListener('console-message', (e) => {

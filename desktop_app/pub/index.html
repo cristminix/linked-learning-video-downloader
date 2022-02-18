@@ -190,9 +190,17 @@
 
     <div id="translator" class="tab-pane fade">
       <h3>Translator</h3>
-      <p>{{toc.title}}</p>
+      <p>{{toc.idx+1}}.{{toc.title}}</p>
       <div class="translator_cnt">
-            
+        <div class="toolbar">
+            <button :disabled="isLoading" class="btn btn-info" href="javascript:;" @click="loadVtt('prev')"><i class="fa fa-step-backward"></i></button>
+            <button :disabled="isLoading" class="btn btn-info" href="javascript:;" @click="loadVtt('next')"><i class="fa fa-step-forward"></i></button>
+        </div>
+        <div class="toolbar">
+            <button :disabled="isLoading" class="btn btn-info" href="javascript:;" @click="loadVtt()"><i class="fa fa-spinner fa-spin" v-if="isLoading"></i><i v-if="!isLoading" class="fa fa-refresh"></i> Load</button>
+            <button :disabled="isTranslating" class="btn btn-info" href="javascript:;" @click="doTranslate()"><i class="fa fa-spinner fa-spin" v-if="isTranslating"></i><span v-if="!isTranslating" class="translate-btn"></span>Translate</button>
+            <button :disabled="isSaving" class="btn btn-info" href="javascript:;" @click="saveResult()"><i class="fa fa-spinner fa-spin" v-if="isSaving"></i><i v-if="!isSaving" class="fa fa-save"></i> Save</button>
+        </div>    
         <div class="container">
           <div class="col-md-6">
               <textarea v-model="inputBuffer" class="form-control in-lang"></textarea>
@@ -215,11 +223,7 @@
               </div>
           </div>
         </div>
-        <div class="toolbar">
-            <a class="btn btn-info" href="javascript:;" @click="loadVtt()"><i class="fa fa-refresh"></i> Load</a>
-            <button :disabled="isLoading" class="btn btn-info" href="javascript:;" @click="doTranslate()"><i class="fa fa-spinner fa-spin" v-if="isLoading"></i><span v-if="!isLoading" class="translate-btn"></span>Translate</button>
-            <a class="btn btn-info" href="javascript:;" @click="saveResult()"><i class="fa fa-save"></i> Save</a>
-        </div>
+        
       </div>
 
     </div>
