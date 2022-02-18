@@ -217,7 +217,7 @@
         </div>
         <div class="toolbar">
             <a class="btn btn-info" href="javascript:;" @click="loadVtt()"><i class="fa fa-refresh"></i> Load</a>
-            <a class="btn btn-info" href="javascript:;" @click="doTranslate()"><span class="translate-btn"></span>Translate</a>
+            <button :disabled="isLoading" class="btn btn-info" href="javascript:;" @click="doTranslate()"><i class="fa fa-spinner fa-spin" v-if="isLoading"></i><span v-if="!isLoading" class="translate-btn"></span>Translate</button>
             <a class="btn btn-info" href="javascript:;" @click="saveResult()"><i class="fa fa-save"></i> Save</a>
         </div>
       </div>

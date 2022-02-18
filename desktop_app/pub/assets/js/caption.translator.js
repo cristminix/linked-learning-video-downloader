@@ -14,6 +14,7 @@ captionTranslator.init = () =>{
 	captionTranslator.instance = new Vue({
 		el : '#translator',
 		data:{
+			isLoading:false,
 			toc:{title:''},
 			captionUrl:'',
 			inputBuffer:'',
@@ -118,13 +119,13 @@ captionTranslator.init = () =>{
 				const bufferExceeded = this.inputBuffer.length > this.maxBufferExceed;
 				if(bufferExceeded){
 					const bIdx = parseInt(data.lineNumber);
-					this.outputBufferSegments[bIdx] = data.result.replace(/(\d)(,)/g,'$1.');
+					this.outputBufferSegments[bIdx] = data.result.replace(/(\d)(,)/g,'$1.').replace(/\:\s*/g,':').replace(/ \-\> /gm,' --> ').replace(/(\d+)\.$/g,'$1');
 					$(`textarea.outputBufferSegments_${bIdx}`).val(data.result);
 					this.outputBuffer = this.outputBufferSegments.join("\n\n");
 				}else{
-					this.outputBuffer = data.result.replace(/(\d)(,)/g,'$1.');
+					this.outputBuffer = data.result.replace(/(\d)(,)/g,'$1.').replace(/\:\s*/g,':').replace(/ \-\> /g,' --> ').replace(/(\d+)\.$/gm,'$1');
 				}
-				 
+				this.isLoading = false; 
 			},
 			doTranslate(){
 				let lines = [];
@@ -152,4 +153,26 @@ captionTranslator.init = () =>{
 	});
 
 };
-$(document).ready(captionTranslator.init());
+$(document).ready(()=>{captionTranslator.init();
+	// Translate.google.com checker
+const webview = document.querySelector('webview')
+webview.addEventListener('dom-ready', () => {
+  // webview.openDevTools()
+  captionTranslator.instance.isLoading = false;
+
+})
+webview.addEventListener('did-finish-load', () => {
+  // webview.openDevTools()
+})
+webview.addEventListener('did-fail-load', () => {
+  // webview.openDevTools()
+})
+webview.addEventListener('did-start-loading', () => {
+  // webview.openDevTools()
+  captionTranslator.instance.isLoading = true;
+})
+
+webview.addEventListener('console-message', (e) => {
+  console.log('translate.google.com:', e.message)
+})
+});

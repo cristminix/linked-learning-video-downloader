@@ -214,3 +214,5 @@ socket.on('toc_download', function(data, cb) {
 socket.on('output_translate', function(data, cb) {
     captionTranslator.instance.updateResult(data);
 });
+
+
