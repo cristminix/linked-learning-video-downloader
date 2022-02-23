@@ -190,15 +190,19 @@
 
     <div id="translator" class="tab-pane fade">
       <h3>Translator</h3>
-      <p>{{toc.idx+1}}.{{toc.title}}</p>
+      <p>{{toc.idx+1}}.{{toc.title}} <span v-if="bufferExceed">&lt;Segment Length:{{bufferSegmentLength}}&gt;</span></p>
       <div class="translator_cnt">
         <div class="toolbar">
+            <label><input type="checkbox" v-model="autoClickTranslateBtn" :checked="autoClickTranslateBtn"> Auto Click Translate Button</label>
+            <label><input type="checkbox" v-model="autoTranslateSegments" :checked="autoTranslateSegments"> Auto Translate Segments</label>
+            <label><input type="checkbox" v-model="autoSaveOnComplete" :checked="autoSaveOnComplete"> Auto Save</label>
+            <label><input type="checkbox" v-model="autoPage" :checked="autoPage"> Auto Page</label>
             <button :disabled="isLoading" class="btn btn-info" href="javascript:;" @click="loadVtt('prev')"><i class="fa fa-step-backward"></i></button>
             <button :disabled="isLoading" class="btn btn-info" href="javascript:;" @click="loadVtt('next')"><i class="fa fa-step-forward"></i></button>
         </div>
         <div class="toolbar">
             <button :disabled="isLoading" class="btn btn-info" href="javascript:;" @click="loadVtt()"><i class="fa fa-spinner fa-spin" v-if="isLoading"></i><i v-if="!isLoading" class="fa fa-refresh"></i> Load</button>
-            <button :disabled="isTranslating" class="btn btn-info" href="javascript:;" @click="doTranslate()"><i class="fa fa-spinner fa-spin" v-if="isTranslating"></i><span v-if="!isTranslating" class="translate-btn"></span>Translate</button>
+            <button :disabled="isTranslating" class="btn btn-info" href="javascript:;" @click="doTranslate()"><i class="fa fa-spinner fa-spin" v-if="isTranslating"></i><span v-if="!isTranslating" class="translate-btn"></span> Translate({{idxPtr+1}})</button>
             <button :disabled="isSaving" class="btn btn-info" href="javascript:;" @click="saveResult()"><i class="fa fa-spinner fa-spin" v-if="isSaving"></i><i v-if="!isSaving" class="fa fa-save"></i> Save</button>
         </div>    
         <div class="container">

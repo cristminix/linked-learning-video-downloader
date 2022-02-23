@@ -24,6 +24,11 @@ captionTranslator.init = () =>{
 			maxBufferExceed: 4950,
 			inputBufferSegments:[],
 			outputBufferSegments:[],
+			autoTranslateSegments:true,
+			autoClickTranslateBtn:false,
+			autoSaveOnComplete:true,
+			autoPage:true,
+			idxPtr: 0
 		},
 		computed:{
 			bufferLength(){
@@ -36,7 +41,11 @@ captionTranslator.init = () =>{
 				return this.inputBuffer.length - this.maxBufferExceed;
 			},
 			bufferSegmentLength(){
-				return Math.floor(this.inputBuffer.length/this.maxBufferExceed);
+				// if(this.bufferExceeded){
+
+				// }
+				return this.inputBufferSegments.length;
+				// return Math.ceil(this.inputBuffer.length/this.maxBufferExceed);
 			} 
 		},
 		methods:{
@@ -84,7 +93,16 @@ captionTranslator.init = () =>{
 					this.outputBufferSegments[i] = '';
 					$(`textarea.outputBufferSegments_${i}`).val('');
 				}
-				console.log(this.inputBufferSegments)
+				console.log(this.inputBufferSegments);
+
+				if(this.autoClickTranslateBtn){
+					console.log(`Performing autoClickTranslateBtn`);
+					let self = this;
+
+					setTimeout(()=>{
+						self.doTranslate();
+					},500);
+				}
 			},
 			setCaptionUrl(url,toc){
 				this.toc = toc;
@@ -107,8 +125,13 @@ captionTranslator.init = () =>{
 	                'Content-Type': 'multipart/form-data',
 	                'Access-Control-Allow-Origin' : '*'
 	            };
+	            let self = this;
 				axios({method:'post',url:url,data:payload,headers:headers}).then((r)=>{
-					console.log(r)
+					console.log(r);
+					if(self.autoPage){
+						console.log(`Performing autoPage`);
+						self.loadVtt('next');
+					}
 				});
 			},
 			loadVtt(p){
@@ -117,7 +140,7 @@ captionTranslator.init = () =>{
 					if(this.toc.idx > 0){
 						const prevToc = dm.instance.current.downloadQueue[this.toc.idx-1];
 						console.log(prevToc);
-						const captionUrl = `http://127.0.0.1:5000/static/${dm.instance.current.course.courseTitle}/${prevToc.slug}.vtt`;
+						const captionUrl = `http://127.0.0.1:5000/static/${dm.instance.current.course.courseTitle}/${prevToc.slug}.vtt?nocache_=${nocache()}`;
 						this.setCaptionUrl( captionUrl, prevToc );
 					}
 					return;
@@ -126,12 +149,13 @@ captionTranslator.init = () =>{
 					if(this.toc.idx < dm.instance.current.downloadQueue.length){
 						const nextToc = dm.instance.current.downloadQueue[this.toc.idx+1];
 						console.log(nextToc);
-						const captionUrl = `http://127.0.0.1:5000/static/${dm.instance.current.course.courseTitle}/${nextToc.slug}.vtt`;
+						const captionUrl = `http://127.0.0.1:5000/static/${dm.instance.current.course.courseTitle}/${nextToc.slug}.vtt?nocache_=${nocache()}`;
 						this.setCaptionUrl( captionUrl, nextToc );
 					}
 					return;
 				}
 				axios.get(this.captionUrl).then((r)=>{
+					this.idxPtr = 0;
 					this.inputBuffer = r.data.replace(/(&quot\;)/g,"\"");
 					this.extractBufferSegments();
 					// console.log(r);
@@ -146,8 +170,37 @@ captionTranslator.init = () =>{
 					this.outputBuffer = this.outputBufferSegments.join("\n\n");
 				}else{
 					this.outputBuffer = data.result.replace(/(\d)(,)/gm,'$1.').replace(/\:\s*/gm,':').replace(/ \-\> /gm,' --> ').replace(/(\d+)\.$/gm,'$1').replace(/WebVTT\./,'WEBVTT');
+					if(this.autoSaveOnComplete){
+						console.log(`Performing auto saving ...`);
+						this.saveResult();
+					}
 				}
 				this.isTranslating = false; 
+				console.log('translate.done');
+				let self = this;
+				if(bufferExceeded){
+					setTimeout(()=>{
+						if(self.autoTranslateSegments){
+							
+							console.log(`checking outputBufferSegments index count: ${self.bufferSegmentLength}`);
+							const nextIdxPtr = parseInt(data.lineNumber)+1;
+							if(nextIdxPtr < self.bufferSegmentLength){
+								self.idxPtr = nextIdxPtr;
+								console.log(`Translating next segment [${nextIdxPtr}]`);
+								self.doTranslate();
+							}
+							if(nextIdxPtr == self.bufferSegmentLength){
+								// self.idxPtr = 0;
+								if(self.autoSaveOnComplete){
+									console.log(`Performing auto saving ...`);
+									self.saveResult();
+								}
+							}
+						}
+					},500);
+					
+
+				}
 			},
 			doTranslate(){
 				let lines = [];
@@ -158,6 +211,7 @@ captionTranslator.init = () =>{
 					lines.push(this.inputBuffer);
 				}
 				let payload = new FormData();
+
 				payload.append('lines',JSON.stringify(lines));
 				payload.append('tocId',JSON.stringify(this.toc.id));
 
@@ -167,6 +221,7 @@ captionTranslator.init = () =>{
 	                'Content-Type': 'multipart/form-data',
 	                'Access-Control-Allow-Origin' : '*'
 	            };
+	            this.isTranslating = true;
 				axios({method:'post',url:url,data:payload,headers:headers}).then((r)=>{
 					console.log(r)
 				});

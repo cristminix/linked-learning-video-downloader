@@ -19,7 +19,7 @@ createWindow = () => {
       nodeIntegration: true,
       contextIsolation: true,
       webSecurity:false,
-      webviewTag: true
+      // webviewTag: true
 
     }
   });

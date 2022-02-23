@@ -63,7 +63,7 @@ dm.init = ()=>{
 		methods:{
 			translateCaption(d){
 			
-				const captionUrl = `http://127.0.0.1:5000/static/${this.current.course.courseTitle}/${d.slug}.vtt`;
+				const captionUrl = `http://127.0.0.1:5000/static/${this.current.course.courseTitle}/${d.slug}.vtt?nocache_=${nocache()}`;
 				captionTranslator.instance.setCaptionUrl( captionUrl, d );
 				$(`a[href*=translator]`).click();
 			},
@@ -105,8 +105,8 @@ dm.init = ()=>{
 				});
 			},
 			playToc(d){
-				const videoUrl = `http://127.0.0.1:5000/static/${this.current.course.courseTitle}/${d.slug}.mp4`;
-				const captionUrl = `http://127.0.0.1:5000/static/${this.current.course.courseTitle}/${d.slug}.vtt`;
+				const videoUrl = `http://127.0.0.1:5000/static/${this.current.course.courseTitle}/${d.slug}.mp4?nocache_=${nocache()}`;
+				const captionUrl = `http://127.0.0.1:5000/static/${this.current.course.courseTitle}/${d.slug}.vtt?nocache_=${nocache()}`;
 				videoPlayer.instance.setData(videoUrl,captionUrl,d.posterUrl);
 				$(`a[href*=player]`).click();
 			}
