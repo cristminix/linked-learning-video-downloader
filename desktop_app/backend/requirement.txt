@@ -5,8 +5,8 @@ Flask_SocketIO==4.3.1
 itsdangerous==1.1.0
 Jinja2==3.0.3
 MarkupSafe==2.0.1
-python-engineio
-python-socketio
+python-engineio=3.13.2
+python-socketio=4.6.0
 six==1.11.0
 flask-sqlalchemy==2.5.1
 dataclasses
