@@ -18,8 +18,9 @@ npm install
 python3.9 ./backend/run.py 
 ```
 #start gui app
-```npm start
-```       
+```
+npm start
+```
 
 #load extension to google  chrome
 ```
