@@ -212,6 +212,7 @@ captionTranslator.init = () =>{
 				}
 				let payload = new FormData();
 
+				payload.append('idxPtr',JSON.stringify(this.idxPtr));
 				payload.append('lines',JSON.stringify(lines));
 				payload.append('tocId',JSON.stringify(this.toc.id));
 
@@ -222,8 +223,15 @@ captionTranslator.init = () =>{
 	                'Access-Control-Allow-Origin' : '*'
 	            };
 	            this.isTranslating = true;
+	      let self = this;      
 				axios({method:'post',url:url,data:payload,headers:headers}).then((r)=>{
 					console.log(r)
+					if(self.idxPtr == lines.length-1){
+						self.idxPtr = 0;
+					}
+					else if(self.idxPtr < lines.length-1){
+						self.idxPtr += 1;
+					}
 				});
 			}
 		}

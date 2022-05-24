@@ -2,3 +2,4 @@ backup
 /desktop_app/backend/my_app/__pycache__
 __pycache__
 /venv/
+/desktop_app/downloads/

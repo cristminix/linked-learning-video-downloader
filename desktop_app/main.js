@@ -28,9 +28,9 @@ createWindow = () => {
 }
 
 app.whenReady().then(() => {
-  ext = session.defaultSession.loadExtension(path.join(__dirname, '../chrome_extension')).then((r)=>{
-    console.log('ext', r)
-  });
+  // ext = session.defaultSession.loadExtension(path.join(__dirname, '../chrome_extension')).then((r)=>{
+  //   console.log('ext', r)
+  // });
   createWindow();
 	
 	mainWindow.webContents.openDevTools()

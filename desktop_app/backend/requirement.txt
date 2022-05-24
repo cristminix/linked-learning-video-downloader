@@ -10,7 +10,8 @@ python-socketio
 six==1.11.0
 flask-sqlalchemy==2.5.1
 dataclasses
-opencv-contrib-python
+werkzeug==2.0.3
+opencv-python=git+https://github.com/opencv/opencv-python.git
 requests
 datatables
 flask_cors

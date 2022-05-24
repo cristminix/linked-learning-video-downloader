@@ -36,8 +36,8 @@ Ext.translator = {
 											// Ext.config.setLS(rootKey,'inspectedLines',[]);
 											// Ext.config.setLS(rootKey,'lastLine',false);
 											// Ext.config.setLS(rootKey,'lines',[]);
-											localStorage.removeItem(rootKey);
-											localStorage.clear();
+											//localStorage.removeItem(rootKey);
+											//localStorage.clear();
 										}
 									}
 									
@@ -78,6 +78,7 @@ Ext.translator = {
 
 		const lines = data.lines;
 		const tocId = data.tocId;
+		const idxPtr = parseInt(data.idxPtr);
 
 		const rootKey = `translate_tocId.${tocId}`;
 
@@ -93,14 +94,14 @@ Ext.translator = {
 			inspectedLinesLS = inspectedLines;
 			Ext.config.setLS(rootKey,'inspectedLines',inspectedLines);
 		}
-		
-		for(let lineNumber = 0; lineNumber < lines.length; lineNumber++){
-			if(inspectedLinesLS.indexOf(lineNumber) == -1){
+		lineNumber = idxPtr;
+		// for(let lineNumber = 0; lineNumber < lines.length; lineNumber++){
+			// if(inspectedLinesLS.indexOf(lineNumber) == -1){
 				const line = linesLS[lineNumber];
 				Ext.translator.inspectTextArea(line,lineNumber,tocId);
-				break;
-			}
+				// break;
+			// }
 			
-		}
+		// }
 	}
 };

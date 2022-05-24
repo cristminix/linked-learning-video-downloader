@@ -1,4 +1,4 @@
-from flask import request, send_from_directory, jsonify, url_for,Blueprint, render_template, session, copy_current_request_context
+from flask import request, send_from_directory, jsonify,Response, url_for,Blueprint, render_template, session, copy_current_request_context
 from my_app import app, db
 from my_app.socket import socket_
 from my_app.manager import *
@@ -20,10 +20,37 @@ def home():
 	# return os.path.abspath('.')
     return render_template('index.html', async_mode=socket_.async_mode)
 
+
+@catalog.route('/pub/<path:path>')
+def pub(path):
+	mimetypes = {
+	    ".css": "text/css",
+	    ".html": "text/html",
+	    ".js": "application/javascript",
+	}
+	root_dir = os.path.abspath(os.path.dirname(__file__)+'/../../../pub')
+	complete_path = os.path.join(root_dir, path)
+	ext = os.path.splitext(path)[1]
+	mimetype = mimetypes.get(ext, "text/html")
+	# return jsonify({"path":complete_path})
+	# print(complete_path)
+	try:
+	    # src = os.path.join(root_dir(), filename)
+	    # Figure out how flask returns static files
+	    # Tried:
+	    # - render_template
+	    # - send_file
+	    # This should not be so non-obvious
+	    content = open(complete_path).read()
+	except IOError as exc:
+	    content = str(exc)
+	# content = get_file(complete_path)
+	return Response(content, mimetype=mimetype)
+
 @cross_origin
 @catalog.route('/do_translate',methods=['POST'])
 def do_translate():
-	data = {"lines":json.loads(request.form.get('lines')),"tocId":request.form.get('tocId')}
+	data = {"idxPtr":request.form.get('idxPtr'),"lines":json.loads(request.form.get('lines')),"tocId":request.form.get('tocId')}
 	socket_.emit('do_translate',data,broadcast=True)
 	return jsonify(data)
 

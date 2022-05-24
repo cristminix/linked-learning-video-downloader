@@ -5,13 +5,14 @@
     "manifest_version" : 2,
     "host_permissions": [
         "https://www.linkedin.com/learning/*",
-        "https://translate.google.com/*",
-        "http://localhost:5000/*",
-        "http://127.0.0.1:5000"
+        "https://translate.google.com/*"
+
 
     ],
     "permissions": [
-        "webNavigation"
+        "cookies",
+        "webNavigation",
+        "*://*.linkedin.com/*"
     ],
     "background": {
         "scripts": ["background.js"]
@@ -22,7 +23,9 @@
                 "tabs",
                 "https://www.linkedin.com/learning/*",
                 "https://translate.google.com/*",
-                "http://localhost/*"
+          
+                "cookies",
+                "*://*.linkedin.com/*"
             ],
             "matches" : [
                 "https://www.linkedin.com/learning/*",

@@ -21,6 +21,7 @@ Ext.socket = {
 	    });
 	    Ext.socket.connection.on('do_translate', function(data, cb) {
             if(document.location.host == 'translate.google.com'){
+            	console.log(data)
             	Ext.translator.ignit(data);
             }
 
