@@ -3,11 +3,11 @@ Simple chrome extension that can allow you grab video url and its caption from L
 
 
 ```
-python3.9 -m venv venv
-source venv/bin
+python -m venv venv
+source venv/bin/activate
 
 cd ./desktop_app/backend/
-pip3.9 install -r requirement.txt
+pip install -r requirement.txt
 
 cd ..
 
@@ -15,7 +15,7 @@ npm install
 ```
 #start server app
 ```
-python3.9 ./backend/run.py 
+python ./backend/run.py 
 ```
 #start gui app
 ```
