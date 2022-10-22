@@ -43,7 +43,10 @@ Ext.manager = {
         const tocIndex = toc.tocIndex;
         // console.log(toc);
 
-        const posterUrl = $('.vjs-poster')[0].style.backgroundImage.replace(/url\(\"/,'').replace(/\"\)/,'');
+        let posterUrl = '';
+        try{
+            $('.vjs-poster')[0].style.backgroundImage.replace(/url\(\"/,'').replace(/\"\)/,'');
+        }catch(e){}
         const captionUrl = Ext.manager.getVttFromAjax(toc);
         /*
         const codeList = $('code');

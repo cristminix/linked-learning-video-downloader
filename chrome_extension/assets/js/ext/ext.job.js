@@ -32,8 +32,17 @@ Ext.job = {
 						$('main.init-body__main').unbind("DOMSubtreeModified");
 						console.log('Vtag detected.')
 			  			Ext.job.start();
-			  			player=$('video.vjs-tech')[0];
-						player.pause();
+			  			let vid=$('video.vjs-tech')[0];
+						// let mediaPlayer = require('media-player');
+						// let vjs = mediaPlayer.videojs(vid);
+						// player.pause();
+						if (!vid.paused) {               // Check that video is playing when clicked
+							setTimeout(() => {           // V. brief timer to allow default action to occur
+								if (!vid.paused) {       // Is it still playing?
+									vid.pause();         // Pause it
+								}
+							}, 1000);
+						}
 					}					
 			  }catch(e){
 					Ext.log(e);	
@@ -185,7 +194,8 @@ Ext.job = {
 				};
 				console.log('Updating toc', toc);
 				if(info.captionUrl=='none'){
-					alert('Capture subtitle failed');
+					console.log('Capture subtitle failed');
+					return;
 				}
 				const taskUpdateToc = await Ext.task.createTask('update_toc', toc);
 				if(taskUpdateToc != null){
