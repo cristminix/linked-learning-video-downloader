@@ -1,5 +1,21 @@
 Ext.task = {
-	
+	updateCourseCookie :(param)=>{
+		let taskName = 'update_course_cookie';
+		let url = `${Ext.config.getServerUrl()}${taskName}`;
+		let _courseId = '';
+		try{
+			_courseId = Ext.state.currentTocsQueue[0].courseId;
+		}catch(e){
+			_courseId = Ext.state.lastCourseId;
+		}
+		let _cookie = param;
+		console.log(`${taskName}:courseId=${_courseId},cookie=${_cookie}`);
+
+		return Ext.proxy.create(url,'post',{
+			courseId : _courseId,
+			cookie : _cookie
+		});
+	},
 	resolveVideoUrl : (videoSlug, videoUrl, posterUrl,captionUrl, _callback) => {
         // Ext.manager.UI.setCurrentVideo(videoSlug);
         // Ext.manager.UI.setCurrentIndex(Ext.manager.getTocIndex(videoSlug));
@@ -90,19 +106,7 @@ Ext.task = {
 			        return res.data;
 				break;
 
-				case 'update_course_cookie':
-					url = `${Ext.config.getServerUrl()}${taskName}`;
-					let courseId = Ext.state.currentTocsQueue[0].courseId;
-					let _cookie = param;
-					console.log(`${taskName}:courseId=${courseId},cookie=${_cookie}`);
-
-					res = await Ext.proxy.create(url,'post',{
-						courseId:courseId,
-						cookie : _cookie
-					});
-
-					return res.data;
-				break;
+				
 
 			}
 	 		

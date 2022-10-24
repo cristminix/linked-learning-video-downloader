@@ -82,6 +82,11 @@ def download_file(what, course, toc, s):
     with app.app_context():
         # global RETRY
         download_dir = get_download_dir(course.courseTitle)
+        course_cookies = json.loads(course.cookie)
+        cookies = {}
+        for cookie in course_cookies:
+            cookies[cookie['name']] = cookie['value']
+        print(cookies)
         if what == 'caption':
             filename = "%s/%s.vtt" % (download_dir, toc.slug)
             url = toc.captionUrl
@@ -97,7 +102,7 @@ def download_file(what, course, toc, s):
             print("Downloading:%s" % (filename))
             print("url:%s" % (url))
     
-            response = requests.get(url, stream=True, allow_redirects=True,timeout=30)
+            response = requests.get(url, stream=True, allow_redirects=True,timeout=30, cookies=cookies)
             total_size_in_bytes= int(response.headers.get('content-length', 0))
             block_size = int(1024*(1024/5)) #1 Kibibyte
             notify_download({"what":what,"lastTryDate": str(datetime.now()),"url":url,"tocIndex":toc.idx,"tocId":toc.id,"progress":0,"total":total_size_in_bytes,"filename":filename})

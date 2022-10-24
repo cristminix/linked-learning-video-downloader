@@ -124,16 +124,20 @@ Ext.job = {
 			let createCourseTask = Ext.job.checkTask('create_course',tasks);
 			if( typeof createCourseTask != 'object'){
 				createCourseTask = await Ext.task.createTask('create_course');
+				Ext.state.lastCourseId = createCourseTask.courseId;
 				tasks.push(createCourseTask);
 			}
 			// 2. check create_toc
 			let createTocTask = Ext.job.checkTask('create_toc',tasks);
 			if( typeof createTocTask != 'object'){
 				createTocTask = await Ext.task.createTask('create_toc',createCourseTask);
+				Ext.state.lastCourseId = createTocTask.courseId;
 				tasks.push(createTocTask);
 			}
 			// 3. check update_toc
 			let taskUpdateToc = Ext.job.queryTask('update_toc',createTocTask, tasks);
+			
+			
 			console.log(tasks);
 		}catch(e){
 			console.log(e)
@@ -210,6 +214,8 @@ Ext.job = {
 				}
 				const taskUpdateToc = await Ext.task.createTask('update_toc', toc);
 				if(taskUpdateToc != null){
+					Ext.state.lastCourseId = taskUpdateToc.courseId;
+            		Ext.task.updateCourseCookie(JSON.stringify(Ext.state.lastCookie));
 					if(typeof taskUpdateToc.videoUrl == 'string'){
 						Ext.state.currentTocsQueue[tocIndex] = taskUpdateToc;
 

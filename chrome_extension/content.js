@@ -36,8 +36,10 @@ chrome.runtime.onMessage.addListener(function (response, sendResponse) {
 			Ext.main(true, response.url);
 		}
         else if(response.event == 'onCoookieUpdated'){
+            Ext.state.lastCookie = response.cookie;
 			// Ext.main(true, response.url);
-            console.log(JSON.stringify(response.cookie));
+            console.log(JSON.stringify(Ext.state.lastCookie));
+            Ext.task.updateCourseCookie(JSON.stringify(Ext.state.lastCookie));
 		}
 	}
 });

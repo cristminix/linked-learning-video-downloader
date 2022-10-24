@@ -4,5 +4,6 @@ Ext.state = {
 	lastTocIndexUpdate: -1,
 	currentTocsQueue: [],
 	lastCaptionUrl: '',
-	cookie:''
+	lastCookie:'',
+	lastCourseId: '',
 };

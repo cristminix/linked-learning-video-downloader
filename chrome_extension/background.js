@@ -10,9 +10,7 @@ chrome.webNavigation.onHistoryStateUpdated.addListener(function(details) {
 	});
 });
 
-setTimeout(()=>{
-	history.pushState({}, "title 1", 'setting-up-the-development-environment?autoAdvance=true&autoSkip=false&autoplay=true&resume=false&u=95231473');
-},2000);
+
 
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
 	console.log(request,sender)
