@@ -196,6 +196,17 @@ def task_create_toc():
 			db.session.flush()
 	# print(rjson)	
 	return jsonify(task)
+#
+@cross_origin
+@catalog.route('/update_course_cookie',methods=['POST'])
+def update_course_cookie():
+	course = TBCourse.query.filter(TBCourse.id == request.form.get('courseId')).first()
+	if course:
+		course.cookie = request.form.get('cookie')
+		db.session.commit()
+		db.session.flush()
+
+	return jsonify(course)
 
 @cross_origin
 @catalog.route('/update_toc',methods=['POST'])

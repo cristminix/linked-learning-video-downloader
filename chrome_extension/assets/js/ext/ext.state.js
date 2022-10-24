@@ -3,5 +3,6 @@ Ext.state = {
 	firstIndexChecked: false,
 	lastTocIndexUpdate: -1,
 	currentTocsQueue: [],
-	lastCaptionUrl: ''
+	lastCaptionUrl: '',
+	cookie:''
 };

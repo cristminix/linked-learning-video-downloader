@@ -6,6 +6,7 @@ from datetime import datetime,timedelta
 from my_app.catalog.models import db,TBTocs,TBCourse
 import requests
 from my_app.socket import socket_
+from my_app import app
 import cv2
 import urllib.parse
 
@@ -78,66 +79,95 @@ def notify_download(data):
     socket_.emit('toc_download',data,broadcast=True)
 
 def download_file(what, course, toc, s):
-    # global RETRY
-    download_dir = get_download_dir(course.courseTitle)
-    if what == 'caption':
-        filename = "%s/%s.vtt" % (download_dir, toc.slug)
-        url = toc.captionUrl
-    else:
-        filename = "%s/%s.mp4" % (download_dir, toc.slug)
-        url = toc.videoUrl
-   
-    if url == '':
-        return True
-    # if(os.path.exists(filename)):
-    #     return True
-    try:
-        print("Downloading:%s" % (filename))
-        print("url:%s" % (url))
-  
-        response = requests.get(url, stream=True, allow_redirects=True,timeout=30)
-        total_size_in_bytes= int(response.headers.get('content-length', 0))
-        block_size = int(1024*(1024/5)) #1 Kibibyte
-        notify_download({"what":what,"lastTryDate": str(datetime.now()),"url":url,"tocIndex":toc.idx,"tocId":toc.id,"progress":0,"total":total_size_in_bytes,"filename":filename})
-        # progress_bar = tqdm(total=total_size_in_bytes, unit='iB', unit_scale=True)
-        toc = TBTocs.query.filter(TBTocs.id == toc.id).first()
+    with app.app_context():
+        # global RETRY
+        download_dir = get_download_dir(course.courseTitle)
         if what == 'caption':
-            toc.dlCaptionSize = total_size_in_bytes
-            toc.dlCaptionStatus = 0
-            toc.dlCaptionComplete = 0
-            toc.dlCaptionLastTryDate = datetime.now()
+            filename = "%s/%s.vtt" % (download_dir, toc.slug)
+            url = toc.captionUrl
         else:
-            toc.dlVideoSize = total_size_in_bytes
-            toc.dlVideoStatus = 0
-            toc.dlVideoComplete = 0
-            toc.dlVideoLastTryDate = datetime.now()
-        
-        db.session.commit()
-        
-        byte_written = 0
-        with open(filename, 'wb') as file:
-            for data in response.iter_content(block_size):
-                byte_written += len(data)
-                # progress_bar.update(byte_written)
-                obj={"what":what,"lastTryDate": str(datetime.now()),"url":url,"tocIndex":toc.idx,"tocId":toc.id,"progress":byte_written,"total":total_size_in_bytes,"filename":filename}
-                notify_download(obj)
-                if what == 'caption':
-                    toc.dlCaptionStatus = byte_written
-                    if toc.dlCaptionStatus == toc.dlCaptionSize:
-                        toc.dlCaptionComplete = 1
-                else:
-                    toc.dlVideoStatus = byte_written
-                    if toc.dlVideoStatus == toc.dlVideoSize:
-                        toc.dlVideoComplete = 1
-                db.session.commit()
-                file.write(data)
-
-        # db.session.flush()
-        # progress_bar.close()
-        # print(total_size_in_bytes,progress_bar.n,os.path.exists(filename))
-        if not os.path.exists(filename):
+            filename = "%s/%s.mp4" % (download_dir, toc.slug)
+            url = toc.videoUrl
+    
+        if url == '':
+            return True
+        # if(os.path.exists(filename)):
+        #     return True
+        try:
+            print("Downloading:%s" % (filename))
+            print("url:%s" % (url))
+    
+            response = requests.get(url, stream=True, allow_redirects=True,timeout=30)
+            total_size_in_bytes= int(response.headers.get('content-length', 0))
+            block_size = int(1024*(1024/5)) #1 Kibibyte
+            notify_download({"what":what,"lastTryDate": str(datetime.now()),"url":url,"tocIndex":toc.idx,"tocId":toc.id,"progress":0,"total":total_size_in_bytes,"filename":filename})
+            # progress_bar = tqdm(total=total_size_in_bytes, unit='iB', unit_scale=True)
+            toc = TBTocs.query.filter(TBTocs.id == toc.id).first()
             if what == 'caption':
-                retryCount = toc.dlCaptionRetry
+                toc.dlCaptionSize = total_size_in_bytes
+                toc.dlCaptionStatus = 0
+                toc.dlCaptionComplete = 0
+                toc.dlCaptionLastTryDate = datetime.now()
+            else:
+                toc.dlVideoSize = total_size_in_bytes
+                toc.dlVideoStatus = 0
+                toc.dlVideoComplete = 0
+                toc.dlVideoLastTryDate = datetime.now()
+            
+            db.session.commit()
+            
+            byte_written = 0
+            with open(filename, 'wb') as file:
+                for data in response.iter_content(block_size):
+                    byte_written += len(data)
+                    # progress_bar.update(byte_written)
+                    obj={"what":what,"lastTryDate": str(datetime.now()),"url":url,"tocIndex":toc.idx,"tocId":toc.id,"progress":byte_written,"total":total_size_in_bytes,"filename":filename}
+                    notify_download(obj)
+                    if what == 'caption':
+                        toc.dlCaptionStatus = byte_written
+                        if toc.dlCaptionStatus == toc.dlCaptionSize:
+                            toc.dlCaptionComplete = 1
+                    else:
+                        toc.dlVideoStatus = byte_written
+                        if toc.dlVideoStatus == toc.dlVideoSize:
+                            toc.dlVideoComplete = 1
+                    db.session.commit()
+                    file.write(data)
+
+            # db.session.flush()
+            # progress_bar.close()
+            # print(total_size_in_bytes,progress_bar.n,os.path.exists(filename))
+            if not os.path.exists(filename):
+                if what == 'caption':
+                    retryCount = toc.dlCaptionRetry
+                else:
+                    retryCount = toc.dlVideoRetry
+                print(filename + " ERROR, something went wrong RETRY: ",  retryCount)
+                if(retryCount == None):
+                    retryCount = 1
+                    if what == 'caption':
+                        toc.dlCaptionRetry = retryCount 
+                    else:
+                        toc.dlVideoRetry = retryCount
+                    
+                    db.session.commit()
+                        
+                    return retry_download(what, course, toc, s)
+                else:
+                    retryCount += 1
+                    if what == 'caption':
+                        toc.dlCaptionRetry = retryCount 
+                    else:
+                        toc.dlVideoRetry = retryCount
+                    
+                    db.session.commit()
+                    return retry_download(what, course, toc, s)
+            else:
+                return True
+            return False
+        except requests.exceptions.RequestException as e:
+            if what == 'caption':
+                    retryCount = toc.dlCaptionRetry
             else:
                 retryCount = toc.dlVideoRetry
             print(filename + " ERROR, something went wrong RETRY: ",  retryCount)
@@ -160,59 +190,31 @@ def download_file(what, course, toc, s):
                 
                 db.session.commit()
                 return retry_download(what, course, toc, s)
-        else:
-            return True
-        return False
-    except requests.exceptions.RequestException as e:
-        if what == 'caption':
-                retryCount = toc.dlCaptionRetry
-        else:
-            retryCount = toc.dlVideoRetry
-        print(filename + " ERROR, something went wrong RETRY: ",  retryCount)
-        if(retryCount == None):
-            retryCount = 1
+            return False
+        except requests.exceptions.ConnectTimeout as e:
             if what == 'caption':
-                toc.dlCaptionRetry = retryCount 
+                    retryCount = toc.dlCaptionRetry
             else:
-                toc.dlVideoRetry = retryCount
-            
-            db.session.commit()
+                retryCount = toc.dlVideoRetry
+            print(filename + " ERROR, something went wrong RETRY: ",  retryCount)
+            if(retryCount == None):
+                retryCount = 1
+                if what == 'caption':
+                    toc.dlCaptionRetry = retryCount 
+                else:
+                    toc.dlVideoRetry = retryCount
                 
-            return retry_download(what, course, toc, s)
-        else:
-            retryCount += 1
-            if what == 'caption':
-                toc.dlCaptionRetry = retryCount 
+                db.session.commit()
+                    
+                return retry_download(what, course, toc, s)
             else:
-                toc.dlVideoRetry = retryCount
-            
-            db.session.commit()
-            return retry_download(what, course, toc, s)
-        return False
-    except requests.exceptions.ConnectTimeout as e:
-        if what == 'caption':
-                retryCount = toc.dlCaptionRetry
-        else:
-            retryCount = toc.dlVideoRetry
-        print(filename + " ERROR, something went wrong RETRY: ",  retryCount)
-        if(retryCount == None):
-            retryCount = 1
-            if what == 'caption':
-                toc.dlCaptionRetry = retryCount 
-            else:
-                toc.dlVideoRetry = retryCount
-            
-            db.session.commit()
+                retryCount += 1
+                if what == 'caption':
+                    toc.dlCaptionRetry = retryCount 
+                else:
+                    toc.dlVideoRetry = retryCount
                 
-            return retry_download(what, course, toc, s)
-        else:
-            retryCount += 1
-            if what == 'caption':
-                toc.dlCaptionRetry = retryCount 
-            else:
-                toc.dlVideoRetry = retryCount
-            
-            db.session.commit()
-            return retry_download(what, course, toc, s)
+                db.session.commit()
+                return retry_download(what, course, toc, s)
+            return False
         return False
-    return False

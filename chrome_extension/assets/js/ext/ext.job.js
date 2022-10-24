@@ -203,8 +203,9 @@ Ext.job = {
 					posterUrl: info.posterUrl
 				};
 				console.log('Updating toc', toc);
-				if(info.captionUrl=='none'){
+				if(info.captionUrl=='none' || info.captionUrl==''){
 					console.log('Capture subtitle failed');
+					// alert('Capture subtitle failed, operation stoped');
 					return;
 				}
 				const taskUpdateToc = await Ext.task.createTask('update_toc', toc);

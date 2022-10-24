@@ -8,9 +8,11 @@ class TBSession(db.Model):
 	sessionId : str
 	createDate : str
 
+
 	id = db.Column(db.Integer, primary_key=True)
 	sessionId = db.Column(db.String(255),unique=True)
 	createDate = db.Column(db.String(12))
+	
 
 	def __init__(self, sessionId, createDate):
 		self.sessionId = sessionId
@@ -29,7 +31,7 @@ class TBCourse(db.Model):
 	fullUrl : str
 	hostname : str
 	createDate : str
-
+	cookie : str
 	id = db.Column(db.Integer, primary_key=True)
 	sessionId = db.Column(db.String(255))
 	coursePath = db.Column(db.String(255))
@@ -38,6 +40,7 @@ class TBCourse(db.Model):
 	fullUrl = db.Column(db.String(255))
 	hostname = db.Column(db.String(255))
 	createDate = db.Column(db.String(12))
+	cookie = db.Column(db.String(4096))
 
 	def __init__(self, sessionId, coursePath, courseTitle, url, fullUrl, hostname, createDate):
 		self.sessionId = sessionId

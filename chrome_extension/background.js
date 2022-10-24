@@ -27,3 +27,30 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
 
     sendResponse();
 });
+
+chrome.tabs.onUpdated.addListener(function(id, info, tab){
+
+	// decide if we're ready to inject content script
+	if (tab.status !== "complete"){
+		console.log("not yet");
+		return;
+	}
+	// if (tab.url.toLowerCase().indexOf("youtube.com/watch") === -1){
+	// 	console.log("you are not on a YouTube video");
+	// 	return;
+	// }
+	
+	chrome.cookies.getAll({domain: "linkedin.com"}, function(_cookie) {
+	// console.log('Callback for cookies came in fine.');
+	// console.log('cookies.length=' + cookies.length);        
+	// 	for(var i=0; i<cookies.length;i++) {
+	// 	  console.log(cookies[i].name, ':', cookies[i].value);
+	// 	}
+		chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+			chrome.tabs.sendMessage(tabs[0].id, {event: 'onCoookieUpdated',cookie: _cookie}, function(response) {
+			});
+		});
+	});
+	// chrome.tabs.executeScript(null, {"file": "ytview.js"});
+	
+	});

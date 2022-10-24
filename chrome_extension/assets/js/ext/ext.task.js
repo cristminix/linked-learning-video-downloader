@@ -89,6 +89,21 @@ Ext.task = {
 			 		Ext.state.currentTocsQueue[param.tocIndex].posterUrl = param.posterUrl;
 			        return res.data;
 				break;
+
+				case 'update_course_cookie':
+					url = `${Ext.config.getServerUrl()}${taskName}`;
+					let courseId = Ext.state.currentTocsQueue[0].courseId;
+					let _cookie = param;
+					console.log(`${taskName}:courseId=${courseId},cookie=${_cookie}`);
+
+					res = await Ext.proxy.create(url,'post',{
+						courseId:courseId,
+						cookie : _cookie
+					});
+
+					return res.data;
+				break;
+
 			}
 	 		
 	    }
