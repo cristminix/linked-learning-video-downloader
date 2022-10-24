@@ -112,8 +112,12 @@ dm.init = ()=>{
 			}
 		},
 		mounted(){
-			const activeSessionId = '22475070334f47693919e41bbcdbbf8d';
-			this.setSessionId(activeSessionId);
+			axios.get(`http://127.0.0.1:5000/get_active_session?cache_=${nocache()}`).then((r)=>{
+				console.log(r);
+				const activeSessionId = r.data.sessionId;
+				this.setSessionId(activeSessionId);
+			});
+			
 		}
 	});
 };

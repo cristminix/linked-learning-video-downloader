@@ -47,7 +47,8 @@ Ext.manager = {
         try{
             $('.vjs-poster')[0].style.backgroundImage.replace(/url\(\"/,'').replace(/\"\)/,'');
         }catch(e){}
-        const captionUrl = Ext.manager.getVttFromAjax(toc);
+        const captionUrl = Ext.state.lastCaptionUrl;
+        Ext.state.lastCaptionUrl = '';
         /*
         const codeList = $('code');
 

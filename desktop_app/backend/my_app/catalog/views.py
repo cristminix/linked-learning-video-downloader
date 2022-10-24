@@ -97,6 +97,12 @@ def session_detail(sessionId):
 	return jsonify(session_)
 
 @cross_origin
+@catalog.route('/get_active_session')
+def get_active_session():
+	session_ = TBSession.query.order_by(TBSession.createDate.desc()).first()
+	return jsonify(session_)
+
+@cross_origin
 @catalog.route('/course/<courseId>')
 def course_detail(courseId):
 	course = TBCourse.query.filter(TBCourse.id == courseId).first()

@@ -31,18 +31,22 @@ Ext.job = {
 						Ext.runOnceWaitForMainTag = true;
 						$('main.init-body__main').unbind("DOMSubtreeModified");
 						console.log('Vtag detected.')
-			  			Ext.job.start();
+			  			
 			  			let vid=$('video.vjs-tech')[0];
 						// let mediaPlayer = require('media-player');
 						// let vjs = mediaPlayer.videojs(vid);
 						// player.pause();
-						if (!vid.paused) {               // Check that video is playing when clicked
+
+						// if (!vid.paused) {               // Check that video is playing when clicked
+							queryMP();
 							setTimeout(() => {           // V. brief timer to allow default action to occur
-								if (!vid.paused) {       // Is it still playing?
-									vid.pause();         // Pause it
-								}
-							}, 1000);
-						}
+							console.log(Ext.state.lastCaptionUrl);
+							Ext.job.start();
+							// 	if (!vid.paused) {       // Is it still playing?
+							// 		vid.pause();         // Pause it
+							// 	}
+							}, 120);
+						// }
 					}					
 			  }catch(e){
 					Ext.log(e);	
@@ -54,10 +58,16 @@ Ext.job = {
 		$("video.vjs-tech").unbind("DOMSubtreeModified");
 		$("video.vjs-tech").bind("DOMSubtreeModified", () => {
 			delay_video((e) => {
-			  Ext.job.start();
+			//   Ext.job.start();
 			  try{
-					player=$('video.vjs-tech')[0];
-					player.pause();
+				queryMP();
+				setTimeout(() => {           // V. brief timer to allow default action to occur
+				console.log(Ext.state.lastCaptionUrl);
+				Ext.job.start();
+				// 	if (!vid.paused) {       // Is it still playing?
+				// 		vid.pause();         // Pause it
+				// 	}
+				}, 120);
 					
 			  }catch(e){
 					Ext.log(e);	
@@ -210,7 +220,7 @@ Ext.job = {
 								const a = $("a[href='"+url+"']");
 								if(a.length>0){
 									setTimeout(()=>{
-										a[0].click()
+										// a[0].click()
 										// document.location.href = toc.url
 									},6000); 
 								}	
