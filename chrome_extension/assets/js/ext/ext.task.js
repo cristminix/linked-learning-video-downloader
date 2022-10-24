@@ -1,5 +1,10 @@
 Ext.task = {
 	updateCourseCookie :(param)=>{
+		if(!Ext.task.checkValidCoursePage()){
+			Ext.state.lastCourseId = '';
+			Ext.state.lastCookie = '';
+			return;
+		}
 		let taskName = 'update_course_cookie';
 		let url = `${Ext.config.getServerUrl()}${taskName}`;
 		let _courseId = '';

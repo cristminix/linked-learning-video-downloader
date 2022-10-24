@@ -197,6 +197,7 @@ def task_create_toc():
 	# print(rjson)	
 	return jsonify(task)
 #
+
 @cross_origin
 @catalog.route('/update_course_cookie',methods=['POST'])
 def update_course_cookie():

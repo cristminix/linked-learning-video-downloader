@@ -227,7 +227,7 @@ Ext.job = {
 								const a = $("a[href='"+url+"']");
 								if(a.length>0){
 									setTimeout(()=>{
-										// a[0].click()
+										a[0].click()
 										// document.location.href = toc.url
 									},6000); 
 								}	
