@@ -61,9 +61,11 @@ linked-learning-video-downloader/chrome_extension
 
 # Downloading course video and generate playlist
 Part1
+
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/vwAtxajNgRw/0.jpg)](https://www.youtube.com/watch?v=vwAtxajNgRw)
 
 Part2
+
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/Sem0ArTsr1o/0.jpg)](https://www.youtube.com/watch?v=Sem0ArTsr1o)
 
 
