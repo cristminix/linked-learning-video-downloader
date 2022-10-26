@@ -40,7 +40,7 @@ Ext.job = {
 						// if (!vid.paused) {               // Check that video is playing when clicked
 							queryMP();
 							setTimeout(() => {           // V. brief timer to allow default action to occur
-							console.log(Ext.state.lastCaptionUrl);
+							// console.log(Ext.state.lastCaptionUrl);
 							Ext.job.start();
 							// 	if (!vid.paused) {       // Is it still playing?
 							// 		vid.pause();         // Pause it
@@ -62,7 +62,7 @@ Ext.job = {
 			  try{
 				queryMP();
 				setTimeout(() => {           // V. brief timer to allow default action to occur
-				console.log(Ext.state.lastCaptionUrl);
+				// console.log(Ext.state.lastCaptionUrl);
 				Ext.job.start();
 				// 	if (!vid.paused) {       // Is it still playing?
 				// 		vid.pause();         // Pause it
@@ -82,6 +82,7 @@ Ext.job = {
 		const isValidCoursePage = Ext.task.checkValidCoursePage();
 		Ext.log('Checking valid course Page :');
 		if(isValidCoursePage){
+			Ext.ui.showUI();
 			Ext.log('URL Is valid course page');
 			Ext.log('Await getting session');
 
@@ -110,6 +111,7 @@ Ext.job = {
 			Ext.job.doTask(tasks);
 		}else{
 			Ext.log('URL Is not valid course page, extension is not running');
+			Ext.ui.hideUI();
 			if(document.location.hostname == 'translate.google.com'){
 				Ext.translator.afterTranslate();
 			}
@@ -155,12 +157,16 @@ Ext.job = {
 	queryTask : async (taskName, param, tasks) =>{
 		switch(taskName){
 			case 'update_toc':
-
+				
 			 	if(Ext.state.currentTocsQueue.length == 0){
 			 		Ext.state.currentTocsQueue = Ext.manager.getToc();
 			 	}
 				const info = Ext.manager.getCurrentVideoInfo();
-
+				if(info.captionUrl=='none' || info.captionUrl==''){
+					console.log('Capture subtitle failed');
+					// alert('Capture subtitle failed, operation stoped');
+					return;
+				}
 				
 
 				// 1. check first index checked
@@ -207,11 +213,7 @@ Ext.job = {
 					posterUrl: info.posterUrl
 				};
 				console.log('Updating toc', toc);
-				if(info.captionUrl=='none' || info.captionUrl==''){
-					console.log('Capture subtitle failed');
-					// alert('Capture subtitle failed, operation stoped');
-					return;
-				}
+				
 				const taskUpdateToc = await Ext.task.createTask('update_toc', toc);
 				if(taskUpdateToc != null){
 					Ext.state.lastCourseId = taskUpdateToc.courseId;
@@ -221,13 +223,17 @@ Ext.job = {
 
 						if(tocIndex <= Ext.state.currentTocsQueue.length){
 							console.log('Go to the next link toc index');
+							if(!Ext.state.autoNavigateTocIndex){
+								console.log('autoNavigateTocIndex is disabled' );
+								return;
+							}
 							if(tocIndex < Ext.state.currentTocsQueue.length-1){
 								const toc = Ext.state.currentTocsQueue[tocIndex+1];
 								const url = toc.origLinkUrl;
 								const a = $("a[href='"+url+"']");
 								if(a.length>0){
 									setTimeout(()=>{
-										a[0].click()
+										a[0].click();
 										// document.location.href = toc.url
 									},6000); 
 								}	

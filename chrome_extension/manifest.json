@@ -1,5 +1,5 @@
 {
-    "name"  :   "Linked Learnig Video Downloader",
+    "name"  :   "Linked Learning Video Downloader",
     "description" : "Download LinkedIn Learning course video chapter with closed caption and create playlist for offline viewing.",
     "version" : "0.0.2",
     "manifest_version" : 2,

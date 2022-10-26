@@ -6,4 +6,5 @@ Ext.state = {
 	lastCaptionUrl: '',
 	lastCookie:'',
 	lastCourseId: '',
+	autoNavigateTocIndex: 1
 };

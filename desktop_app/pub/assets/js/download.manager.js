@@ -32,7 +32,7 @@ const formatBytes = (bytes, decimals = 2)=> {
 
     return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + ' ' + sizes[i];
 };
-Vue.filter('fromNow',(data)=> {const str = moment(data).fromNow();return str.match(/Invalid/) ? 'n/a':str;});
+Vue.filter('fromNow',(data)=> {const str = moment(data).fromNow();return str.match(/Invalid/) ? '':str;});
 Vue.filter('formatBytes',formatBytes);
 dm.init = ()=>{
 	dm.instance = new Vue({

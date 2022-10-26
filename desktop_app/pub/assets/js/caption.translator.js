@@ -10,6 +10,7 @@ const chunkStr = (str, n, acc) => {
         return chunkStr(str.substring(n), n, acc);
     }
 };
+
 captionTranslator.init = () =>{
 	captionTranslator.instance = new Vue({
 		el : '#translator',

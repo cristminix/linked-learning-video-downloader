@@ -1,58 +1,51 @@
+function contains(selector, text) {
+	var elements = document.querySelectorAll(selector);
+	return [].filter.call(elements, function(element){
+	  return RegExp(text).test(element.textContent);
+	});
+  }
 var delay_translator = makeDelay(250);
+var delay_polite = makeDelay(250);
 Ext.translator = {
 
 	afterTranslate(){
 		if(document.location.href.match(/src\_\=com\.malinkcorporation\.ext/)){
-			console.log('after translate')
-			console.log($('c-wiz[jsrenderer=WFss9b]'))
-			$('c-wiz[jsrenderer=WFss9b]').unbind("DOMSubtreeModified");
-			$("c-wiz[jsrenderer=WFss9b]").bind("DOMSubtreeModified", () => {
-				// let jsname = $('span[jsName=W297wb]');
-				// console.log(jsname.text())
-
-				delay_translator((e) => {
-				  try{
-				  		console.log('span[jsName=W297wb]');
-						const jsname =$('span[jsName=W297wb]');
-						if(jsname.length){
-							// console.log();
-							// Proxy.post()
-							$('c-wiz[jsrenderer=WFss9b]').unbind("DOMSubtreeModified");
+			console.log('after translate');
+			// let a = contains('button','star');
+			// let b = a[0].parentNode.parentNode.parentNode.parentNode.parentNode.nextSibling;
+			// let c = b.firstChild.firstChild.firstChild.firstChild.firstChild.textContent;
+			// console.log(c)
+			$('div[aria-live=polite]').unbind("DOMSubtreeModified");
+			$("div[aria-live=polite]").bind("DOMSubtreeModified", (a) => {
+				 
+					if($(a.target).attr('data-language-code')=="id"){
+						
+						// $('div[aria-live=polite]').unbind("DOMSubtreeModified");
+						delay_translator((e) => {
+							// console.log(a.target)
+							// console.log($(a.target).attr('data-text'));
 							const url = `${Ext.config.getServerUrl()}output_translate`;
 							const postData = {
 								tocId : getQueryString('tocId_'),
 								lineNumber:getQueryString('lineNumber_'),
-								result: JSON.stringify(jsname.text())
+								result: JSON.stringify($(a.target).attr('data-text'))
 							};
 							Ext.proxy.post(url,postData,(r)=>{
 								const rootKey = `translate_tocId.${getQueryString('tocId_')}`;
 								let lines = Ext.config.getLS(rootKey,'lines');
 								let lastLine = getQueryString('lineNumber_');
-								// if(!inspectedLines){
-
-								// }else{
-									if(lastLine >= 0){
-										if(lastLine >= (lines.length-1)){
-											// Ext.config.setLS(rootKey,'inspectedLines',[]);
-											// Ext.config.setLS(rootKey,'lastLine',false);
-											// Ext.config.setLS(rootKey,'lines',[]);
-											//localStorage.removeItem(rootKey);
-											//localStorage.clear();
-										}
+								
+								if(lastLine >= 0){
+									if(lastLine >= (lines.length-1)){
 									}
-									
-								// }
-								
-								
+								}
 							},(r)=>{
 								// err
 							});
-						}					
-				  }catch(e){
-						Ext.log(e);	
-				  }
-				});
+						});
 
+						return;
+					} 
 			});
 		}
 	},

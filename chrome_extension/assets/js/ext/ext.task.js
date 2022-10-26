@@ -13,8 +13,14 @@ Ext.task = {
 		}catch(e){
 			_courseId = Ext.state.lastCourseId;
 		}
+		if(typeof _courseId == 'undefined'){
+			return;
+		}
+		if(_courseId == ''){
+			return;
+		}
 		let _cookie = param;
-		console.log(`${taskName}:courseId=${_courseId},cookie=${_cookie}`);
+		console.log(`${taskName}:courseId=${_courseId}`);
 
 		return Ext.proxy.create(url,'post',{
 			courseId : _courseId,

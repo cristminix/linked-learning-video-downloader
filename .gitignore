@@ -3,3 +3,5 @@ backup
 __pycache__
 /venv/
 /desktop_app/downloads/
+/desktop_app/storage/session.db
+/downloads/
