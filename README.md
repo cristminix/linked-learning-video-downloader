@@ -1,11 +1,16 @@
 # What is this for ?
 Simple chrome extension that can allow you grab video url and its caption from LinkedIn Learning.
 
+# Warning
+This project still in progress and maybe not working on your environment,
+for simple video grabber chrome extension please refer to this LLFetcher project
+```
+https://github.com/cristminix/LLFetcher
+````
 # Clone the repo
 ```
 git clone https://github.com/cristminix/linked-learning-video-downloader
 ```
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/Y29kVWTFsv4/0.jpg)](https://www.youtube.com/watch?v=Y29kVWTFsv4)
 
 
 # Initialize project
