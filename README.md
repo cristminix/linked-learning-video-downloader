@@ -4,9 +4,9 @@ Simple chrome extension that can allow you grab video url and its caption from L
 # Warning
 This project still in progress and maybe not working on your environment,
 for simple video grabber chrome extension please refer to this LLFetcher project
-```
+
 https://github.com/cristminix/LLFetcher
-````
+
 # Clone the repo
 ```
 git clone https://github.com/cristminix/linked-learning-video-downloader
