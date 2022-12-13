@@ -1818,6 +1818,35 @@
   var i8 = r2;
 
   // src-ui/src/main.ts
+  function addMessage(div, message) {
+    let v3 = div.value;
+    div.value = message;
+  }
+  var backendDiv = document.getElementById("backend");
+  c2("message", (event) => {
+    addMessage(backendDiv, event.payload);
+  });
+  var frontendDiv = document.getElementById("frontend");
+  var command = a6.sidecar("binaries/appx");
+  command.on("close", (data) => {
+    addMessage(
+      frontendDiv,
+      `command finished with code ${data.code} and signal ${data.signal}`
+    );
+  });
+  command.on(
+    "error",
+    (error) => addMessage(frontendDiv, `command error: "${error}"`)
+  );
+  command.stdout.on(
+    "data",
+    (line) => addMessage(frontendDiv, `command stdout: "${line}"`)
+  );
+  command.stderr.on(
+    "data",
+    (line) => addMessage(frontendDiv, `command stderr: "${line}"`)
+  );
+  command.spawn();
   var $ = document.querySelector.bind(document);
   document.addEventListener("DOMContentLoaded", async function() {
     const helloEl = $("div.hello");

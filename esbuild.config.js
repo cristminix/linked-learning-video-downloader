@@ -4,9 +4,13 @@ import { build } from 'esbuild';
 import esbuildPluginBowserSync from 'esbuild-plugin-browser-sync';
 
 import * as main from './esbuild.config.d/main.js';
+import * as app from './esbuild.config.d/app.js';
+import * as server from './esbuild.config.d/server.js';
 
 const isServe = process.argv.includes('serve');
 const isMain = process.argv.includes('main');
+const isApp = process.argv.includes('app');
+const isServer = process.argv.includes('server');
 
 let buildOptions = {};
 let entryPoints = [];
@@ -17,6 +21,14 @@ let entryPoints = [];
   if(isMain){
     buildOptions = {...main.getBuildOptions()};
     entryPoints = [...main.getEntryPoints()];
+  }
+  if(isApp){
+    buildOptions = {...app.getBuildOptions()};
+    entryPoints = [...app.getEntryPoints()];
+  }
+  if(isServer){
+    buildOptions = {...server.getBuildOptions()};
+    entryPoints = [...server.getEntryPoints()];
   }
 
   buildOptions.entryPoints = entryPoints;
@@ -31,7 +43,7 @@ if(isServe){
       }
       else {
         console.log('watch build succeeded:', result);
-        // onRebuild(error);
+        onRebuild(error);
       }
     },
   };
@@ -57,7 +69,7 @@ function onRebuild(r){
 }
 build(buildOptions).then((r)=>{
   console.log(r);
-//   onRebuild(r);
+  onRebuild(r);
 });
 
 // console.log(buildOptions);
